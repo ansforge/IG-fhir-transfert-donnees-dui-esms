@@ -4,18 +4,18 @@ Le README ci-dessous constitue un template à adapter et compléter pour chaque 
 # Contexte
 
 ## Contexte métier du projet
-Le Programme ESMS numérique, porté par la Caisse nationale de solidarité pour l'autonomie (CNSA), vise à généraliser l’utilisation du numérique dans les établissements et services sociaux et médico-sociaux (ESSMS). Il repose principalement sur le déploiement d’un dossier usager informatisé (DUI) pour chaque personne accompagnée. Ce DUI centralise l’ensemble des informations qui concerne la personne accompagnée en structure et service sociale et médico-sociale, et son parcours de santé et de vie. Ce dossier unique comprend :
-•	Des données administratives ;
-•	Des données liées à l’accompagnement de l’usager ;
-•	Des données liées à la coordination des différents acteurs.
-•	Des données médicales ;
+Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour l'Autonomie (CNSA), vise à généraliser l’utilisation du numérique dans les Établissements et Services Sociaux et Médico-Sociaux (ESSMS). Il repose principalement sur le déploiement d’un Dossier Usager Informatisé (DUI) pour chaque personne accompagnée. Ce DUI centralise l’ensemble des informations qui concerne la personne accompagnée en structure et service sociale et médico-sociale, et son parcours de santé et de vie. Ce dossier unique comprend :
+*	Des données administratives ;
+*	Des données liées à l’accompagnement de l’usager ;
+*	Des données liées à la coordination des différents acteurs ;
+*	Des données médicale.
 Les logiciels DUI doivent permettre, entre autres, de mieux construire et de suivre le projet personnalisé de la personne accompagnée, d’éviter les ruptures de parcours en cas d’évolution des besoins, de changement d’établissement médico-social, de retour à domicile ou d’hospitalisation. 
 Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert de données DUI ». L’objectif de ce volet est de définir la nature et le format des données à transmettre lors d’un export depuis un logiciel DUI afin d’assurer le transfert de données des usagers pour les cas d’usage définis dans la partie « 0.1 Exemple de cas d’usage ».
 
 
 ## Contexte technique du projet
-Les données du DUI seront transportées dans un document CDA
-Le transport de ce document CDA s'effectuera par échange d'une ressource documentReference entre 2 acteurs.
+Les données du DUI seront transportées dans un document CDA.
+Le transport de ce document CDA s'effectuera par échange d'une ressource FHIR DocumentReference entre 2 acteurs.
 Il n'existe pas à l'heure actuelle d'architecture qui permettrait de stocker ces données médico-sociales, et donc de s'orienter vers une gestion telle que celle décrite dans le volet PDSm. 
 
 # CI/CD
