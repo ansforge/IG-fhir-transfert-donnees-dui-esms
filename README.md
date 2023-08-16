@@ -8,7 +8,7 @@ Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour
 *	Des données administratives ;
 *	Des données liées à l’accompagnement de l’usager ;
 *	Des données liées à la coordination des différents acteurs ;
-*	Des données médicale.
+*	Des données médicales.
   
 Les logiciels DUI doivent permettre, entre autres, de mieux construire et de suivre le projet personnalisé de la personne accompagnée, d’éviter les ruptures de parcours en cas d’évolution des besoins, de changement d’établissement médico-social, de retour à domicile ou d’hospitalisation. 
 Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert de données DUI ». L’objectif de ce volet est de définir la nature et le format des données à transmettre lors d’un export depuis un logiciel DUI afin d’assurer le transfert de données des usagers pour les cas d’usage définis dans la partie « 0.1 Exemple de cas d’usage ».
