@@ -1,0 +1,15 @@
+@startuml
+
+:"Rôle"\nProducteur: as P #Moccasin
+:"Rôle"\nConsommateur: as C #Moccasin
+:"Système"\nLogiciel DUI: as L1 #Moccasin
+:"Système"\nLogiciel DUI: as L2 #Moccasin
+
+(Changer de logiciel métier DUI) as c #Moccasin
+
+c - C
+P - c
+P -- L1
+C -- L2
+
+@enduml
