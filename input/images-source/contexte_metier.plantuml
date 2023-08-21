@@ -1,7 +1,7 @@
 @startuml
 
-package "Transférer des données DUI" #FloralWhite {
-    package "Transférer les données DUI vers un SI tiers" as transfert #Moccasin {
+package "Transférer des données DUI" as transfert #FloralWhite {
+    package "Transférer les données DUI vers un SI tiers" as transfertSI #Moccasin {
         package "Transférer des données DUI vers d'autres SI" #Moccasin
         package "Transférer les données d'un logiciel DUI vers SIDOBA" #LightBlue
     }
@@ -11,12 +11,13 @@ package "Transférer des données DUI" #FloralWhite {
     }
 }
 
-package "Suivi des décisions d'orientation" #FloralWhite {
+package "Suivi des décisions d'orientation" as suivi #FloralWhite {
     package "SI-ESMS" #FloralWhite
     package "SI-SdO" #FloralWhite
 }
 
-[portabilite] -[hidden]- [transfert]
+portabilite -[hidden]- transfertSI
 [SI-SdO] -[hidden]- [SI-ESMS]
+
 
 @enduml
