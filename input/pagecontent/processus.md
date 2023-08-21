@@ -189,8 +189,7 @@ Le consommateur est l’acteur qui reçoit les données. C’est un système.
   <tr>
     <td>Changer de logiciel métier</td>
     <td rowspan="2"><b>DUI</b> : Logiciel Métier utilisé par les ESSMS permettant de gérer les dossiers des usagers avant, pendant et après son accompagnement. <br>
-    Il s’agit dans ces différents cas d’un autre DUI que celui du producteur
-</td>
+    Il s’agit dans ces différents cas d’un autre DUI que celui du producteur</td>
   </tr>
   <tr>
     <td>Changer d’ESSMS</td>
