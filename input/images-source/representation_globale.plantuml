@@ -1,0 +1,12 @@
+@startuml
+
+object Usager
+
+package Administratif {
+  object "Droit sociaux et de santé" as droit
+  object "Autorisations administratives" as autorisation
+}
+
+Usager -- Administratif
+
+@enduml

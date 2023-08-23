@@ -1,0 +1,20 @@
+@startuml
+
+hide empty methods
+
+class Usager {
+    numeroIndividu : Identifiant [0..1]
+    INS : INS [0..1]
+}
+
+class Adresse
+
+class Telecommunication
+
+class Courrier
+
+Usager "1" -- "*" Adresse
+Usager "1" -- "*" Telecommunication
+Usager "1" -- "*" Courrier
+
+@enduml

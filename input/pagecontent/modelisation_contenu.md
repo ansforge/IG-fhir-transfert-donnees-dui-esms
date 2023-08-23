@@ -1,7 +1,6 @@
 ### Représentation globale du DUI
 
-#schéma
-
+<div>{reprensentation_globale.svg%}</div>
 
 ### Données administratives
 
@@ -10,7 +9,7 @@
 
 #### Identification et coordonnées
 
-#schéma
+<div>{%include bloc_identitification_coordonnees.svg%}</div>
 
 
 ##### Classe Usager 

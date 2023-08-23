@@ -23,6 +23,8 @@ pages:
         title: Accueil
     specifications_fonctionnelles.md:
         title: Spécifications fonctionnelles
+        cadre_orientations.md:
+            title : Cadre juridique et orientations organisationnelles
         contexte_metier.md:
             title : Organisation du contexte métier
         processus.md:
@@ -50,6 +52,7 @@ pages:
 menu:
     Accueil: index.html
     Spécifications fonctionnelles : 
+        Cadre juridique et orientations organisationnelles : cadre_orientations.html
         Organisation du contexte métier : contexte_metier.html
         Définition des processus collaboratifs : processus.html
         Modélisation du contenu du DUI : modelisation_contenu.html
