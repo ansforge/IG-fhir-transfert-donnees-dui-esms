@@ -1,23 +1,23 @@
 @startuml
 
-package "Transférer des données DUI" as transfert #FloralWhite {
-    package "Transférer les données DUI vers un SI tiers" as transfertSI #Moccasin {
-        package "Transférer des données DUI vers d'autres SI" #Moccasin
-        package "Transférer les données d'un logiciel DUI vers SIDOBA" #LightBlue
+package "<<GroupProcessus>>\nTransférer des données DUI" #FloralWhite {
+    package "<<GroupProcessus>>\nTransférer les données DUI vers un SI tiers" as transfertSI #Moccasin {
+        package "<<GroupProcessus>>\nTransférer des données\nDUI vers d'autres SI" #Moccasin
+        package "<<Processus>>\nTransférer les données d'un\nlogiciel DUI vers SIDOBA" #LightBlue
     }
-    package "Portabilité de données DUI" as portabilite #Moccasin {
-        package "Changer d'ESMS" #LightBlue
-        package "Changer de logiciel métier" #LightBlue
+    package "<<GroupProcessus>>\nPortabilité de données DUI" as portabilite #Moccasin {
+        package "<<Processus>>\nChanger d'ESMS" #LightBlue
+        package "<<Processus>>\nChanger de logiciel métier" #LightBlue
     }
 }
 
-package "Suivi des décisions d'orientation" as suivi #FloralWhite {
-    package "SI-ESMS" #FloralWhite
-    package "SI-SdO" #FloralWhite
+package "<<GroupProcessus>>\nSuivi des décisions d'orientation" #FloralWhite {
+    package "<<GroupProcessus>>\nSI-ESMS" #FloralWhite
+    package "<<GroupProcessus>>\nSI-SdO" #FloralWhite
 }
 
 portabilite -[hidden]- transfertSI
-[SI-SdO] -[hidden]- [SI-ESMS]
+[<<GroupProcessus>>\nSI-SdO] -[hidden]- [<<GroupProcessus>>\nSI-ESMS]
 
 
 @enduml

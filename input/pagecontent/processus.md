@@ -2,20 +2,7 @@
 
 #### Processus collaboratif « Changer de logiciel métier (DUI) »
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                {%include processus1.svg%}
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align ="center">
-            <b>Processus collaboratif « Changer de logiciel métier (DUI) »</b>
-        </td>
-    </tr>
-</table>
+<div>{%include processus1.svg%}</div>
 
 <table style="width:100%">
   <tr>
@@ -44,20 +31,7 @@
 
 #### Processus collaboratif « Changer d’ESSMS »
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                {%include processus2.svg%}
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align ="center">
-            <b>Processus collaboratif « Changer d’ESSMS »</b>
-        </td>
-    </tr>
-</table>
+<div>{%include processus2.svg%}</div>
 
 <table style="width:100%">
   <tr>
@@ -88,20 +62,7 @@
 
 #### Processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                {%include processus3.svg%}
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align ="center">
-            <b>Processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »</b>
-        </td>
-    </tr>
-</table>
+<div>{%include processus3.svg%}</div>
 
 <table style="width:100%">
   <tr>
