@@ -2,15 +2,15 @@
 
 <div>{%include  representation_globale.svg%}</div>
 
+
 ### Données administratives
 
-#schéma
+<div>{%include donnees_admin.svg%}</div>
 
 
 #### Identification et coordonnées
 
 <div>{%include bloc_identification_coordonnees.svg%}</div>
-
 
 
 ##### Classe Usager 
@@ -266,8 +266,7 @@ Adresse de courrier de l’usager.
 
 #### Autorisations administratives
 
-#schéma
-
+<div>{%include bloc_autorisations_administratives.svg%}</div>
 
 ##### Classe AutorisationAdministrative
 

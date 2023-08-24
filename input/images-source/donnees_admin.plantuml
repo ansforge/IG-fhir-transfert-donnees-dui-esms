@@ -1,0 +1,90 @@
+@startuml
+
+object Usager
+
+
+package "Identification et coordonnées" as id {
+    object Courrier
+    object Adresse
+    object Télécommunication
+}
+
+Télécommunication - Usager
+Adresse - Usager
+Courrier - Usager
+
+package "Autorisations administratives" as Auto {
+    object "Autorisation\nadministrative" as auto
+}
+
+auto -- Usager
+
+
+package "Droits sociaux et de santé" as Droit {
+    object "Assurance maladie\ncomplémentaire" as assC
+    object "Assurance maladie\nobligatoire" as assO
+    object Décision 
+    object "Droit\nprestation" as presta
+    object "Détail\nprestation" as detail
+    object "Prise charge" as pc
+    object Quantification
+}
+
+Usager -- assC
+Usager -- assO
+Usager -- Décision
+Décision - presta
+presta -- detail
+pc - detail
+Quantification - pc
+
+assO -[hidden]- assC
+
+
+package Séjours {
+    object Séjour
+    object Solde
+    object Réservation 
+    object Inventaire
+    object ESSMS
+    object Contrat
+}
+
+Usager - Séjour
+Solde - Séjour
+Inventaire -- Séjour
+ESSMS -- Séjour
+Contrat -- Séjour
+Réservation -- Usager
+Réservation -- presta
+Séjour -- presta
+
+Séjour -[hidden]- Réservation
+
+
+package "Environnement et ressources" as Env {
+    object "Contact personne\nmorale" as contactM
+    object "Contact personne\nphysique" as contactP
+    object "Permis conduire" as permis
+    object Transport
+    object "Compte bancaire" as cb
+    object Ressource
+    object "Mesure protection" as mp
+}
+
+Usager - contactM
+Usager - contactP 
+Usager - permis 
+Usager - Transport 
+Usager - cb
+Usager - Ressource
+Usager - mp
+
+cb -[hidden]- contactP
+Ressource -[hidden]- contactM
+mp -[hidden]- Transport
+
+
+id -[hidden]- Env
+
+@enduml
