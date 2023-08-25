@@ -15,16 +15,18 @@ autorisation -[hidden]- id
 id -[hidden]- env
 env -[hidden]- sejour
 
-package "Coordination des acteurs" as Coord #LightGreen {
-  object "Traçabilité des échanges" as traca #LightGreen
-  object "Agenda" as agenda #LightGreen
-  object "Présence / Absence" as pres #LightGreen
-  object "GED" as ged #LightGreen
+
+package "Coordination des acteurs" as Coord #PaleGreen {
+  object "Traçabilité des échanges" as traca #PaleGreen
+  object "Agenda" as agenda #PaleGreen
+  object "Présence / Absence" as pres #PaleGreen
+  object "GED" as ged #PaleGreen
 }
 
 traca -[hidden]- agenda
 agenda -[hidden]- pres
 pres -[hidden]- ged
+
 
 package "Accompagnement" as Acc #LightYellow {
   object "Cahier de liaison" as cahier #LightYellow
@@ -32,9 +34,11 @@ package "Accompagnement" as Acc #LightYellow {
   object "Parcours" as parc #LightYellow
   object "Projet presonnalisé" as projP #LightYellow
 }
+
 cahier -[hidden]- eval
 eval -[hidden]- parc
 parc -[hidden]- projP
+
 
 package "Soins" as Soin #Thistle {
   object "Maladies et sujets de santé" as mal #Thistle 

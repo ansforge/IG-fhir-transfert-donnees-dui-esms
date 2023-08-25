@@ -1,0 +1,63 @@
+@startuml
+
+hide empty methods
+
+class Usager #LightPink
+
+class Decision #LightYellow
+
+class DroitPrestation #LightYellow
+
+class Reservation #Thistle {
+    type : Code [0..1]
+    dateDepot : Date [0..1]
+    dateAdmissionPrevue : Date [0..1]
+    etablissementSouhaite : [0..*]
+}
+
+class Sejour #Thistle {
+    dateSoldeFinal : Date [0..1]
+    soldeFinalDepense : Montant [0..1]
+    soldeFinalDepense : Montant [0..1]
+    dateSoldeJour : Date [0..1]
+    soldeFinalRecette : Montant [0..1]
+    soldeFinalRecette : Montant [0..1]
+}
+
+class ESSMS #Thistle {
+    idNat_Struct : Identifiant [1..1]
+}
+
+class Inventaire #Thistle { 
+    trousseau : texte [0..1]
+}
+
+class Solde #Thistle {
+    dateSoldeFinal : Date [0..1]
+    soldeFinalDepense : Montant [0..1]
+    soldeFinalDepense : Montant [0..1]
+    dateSoldeJour : Date [0..1]
+    soldeFinalRecette : Montant [0..1]
+    soldeFinalRecette : Montant [0..1]
+}
+
+class Contrat #Thistle {
+    libellePrestation : Texte [0..1]
+    prixUnitaire : Montant [0..1]
+    tauxTVA : Mesure [0..1]
+    dateEffet : Date [0..1]
+    termePaiement : Indicateur  [0..1]
+}
+
+Usager "1" -- "*" Decision
+Decision "1" -- "0..1" DroitPrestation
+Reservation "*" - "1" DroitPrestation
+Reservation "1" - "*" Usager
+DroitPrestation "1" -- "*" Sejour
+ESSMS "1" - "*" Sejour 
+Sejour "1" -- "0..1" Inventaire
+Sejour "1" - "*" Solde
+Sejour "*" -- "*" Contrat
+Usager - Sejour
+
+@enduml

@@ -1,33 +1,34 @@
 @startuml
 
-object Usager
+object Usager #LightPink
 
 
-package "Identification et coordonnées" as id {
-    object Courrier
-    object Adresse
-    object Télécommunication
+package "Identification et coordonnées" as id #PaleGreen {
+    object Courrier #PaleGreen
+    object Adresse #PaleGreen
+    object Télécommunication #PaleGreen
 }
 
 Télécommunication - Usager
 Adresse - Usager
 Courrier - Usager
 
-package "Autorisations administratives" as Auto {
-    object "Autorisation\nadministrative" as auto
+
+package "Autorisations administratives" as Auto #PeachPuff {
+    object "Autorisation\nadministrative" as auto #PeachPuff
 }
 
 auto -- Usager
 
 
-package "Droits sociaux et de santé" as Droit {
-    object "Assurance maladie\ncomplémentaire" as assC
-    object "Assurance maladie\nobligatoire" as assO
-    object Décision 
-    object "Droit\nprestation" as presta
-    object "Détail\nprestation" as detail
-    object "Prise charge" as pc
-    object Quantification
+package "Droits sociaux et de santé" as Droit #LightYellow {
+    object "Assurance maladie\ncomplémentaire" as assC #LightYellow
+    object "Assurance maladie\nobligatoire" as assO #LightYellow
+    object Décision #LightYellow
+    object "Droit\nprestation" as presta #LightYellow
+    object "Détail\nprestation" as detail #LightYellow
+    object "Prise charge" as pc #LightYellow
+    object Quantification #LightYellow
 }
 
 Usager -- assC
@@ -41,13 +42,13 @@ Quantification - pc
 assO -[hidden]- assC
 
 
-package Séjours {
-    object Séjour
-    object Solde
-    object Réservation 
-    object Inventaire
-    object ESSMS
-    object Contrat
+package Séjours #Thistle {
+    object Séjour #Thistle
+    object Solde #Thistle
+    object Réservation #Thistle
+    object Inventaire #Thistle
+    object ESSMS #Thistle
+    object Contrat #Thistle
 }
 
 Usager - Séjour
@@ -62,14 +63,14 @@ Séjour -- presta
 Séjour -[hidden]- Réservation
 
 
-package "Environnement et ressources" as Env {
-    object "Contact personne\nmorale" as contactM
-    object "Contact personne\nphysique" as contactP
-    object "Permis conduire" as permis
-    object Transport
-    object "Compte bancaire" as cb
-    object Ressource
-    object "Mesure protection" as mp
+package "Environnement et ressources" as Env #LightBlue {
+    object "Contact personne\nmorale" as contactM #LightBlue
+    object "Contact personne\nphysique" as contactP #LightBlue
+    object "Permis conduire" as permis #LightBlue
+    object Transport #LightBlue
+    object "Compte bancaire" as cb #LightBlue
+    object Ressource #LightBlue
+    object "Mesure protection" as mp #LightBlue
 }
 
 Usager - contactM

@@ -312,7 +312,7 @@ Droit temporel et exceptionnel conféré à une personne ou une organisation.
 
 #### Droits sociaux et de santé 
 
-#schéma 
+<div>{%include bloc_droits_sociaux_sante.svg%}</div>
 
 
 ##### Classe AssuranceMaladieObligatoire
@@ -630,6 +630,8 @@ Quantification de la prise en charge.
 
 
 #### Environnement et ressources
+
+<div>{%include bloc_environnement_ressources.svg%}</div>
 
 ##### Classe ContactPersonnePhysique
 
@@ -981,7 +983,7 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 #### Sejours 
 
-#schema 
+<div>{%include bloc_sejours.svg%}</div>
 
 
 ##### Classe Sejour
@@ -1175,7 +1177,7 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 #### Evaluation
 
-#schema
+<div>{%include bloc_evaluation.svg%}</div>
 
 
 ##### Classe Evaluation

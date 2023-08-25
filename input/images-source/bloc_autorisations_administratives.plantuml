@@ -2,9 +2,9 @@
 
 hide empty methods
 
-class Usager
+class Usager #LightPink
 
-class AutorisationAdministrative {
+class AutorisationAdministrative #PeachPuff {
     type : Code [0..1]
     auteur : PersonnePhysique [0..*]
     dateSignature : Date [0..1]
