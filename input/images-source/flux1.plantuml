@@ -1,6 +1,16 @@
 @startuml flux1
-actor Consommateur
-actor ECLAIRE
-Consommateur -> ECLAIRE : Requête : Critère de recherche
-ECLAIRE --> Consommateur: Réponse : Essais cliniques + ressources liées
+
+:P: 
+:C:
+:L1: 
+:L2:
+
+(c)
+
+c - C
+P - c
+P -- L1
+C -- L2
+
+
 @enduml
