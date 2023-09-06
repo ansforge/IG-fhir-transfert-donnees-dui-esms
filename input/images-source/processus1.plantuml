@@ -1,4 +1,4 @@
-@startuml
+@startuml processus1
 
 :"Rôle"\nProducteur: as P #Moccasin
 :"Rôle"\nConsommateur: as C #Moccasin
