@@ -1,0 +1,6 @@
+@startuml flux1
+actor Consommateur
+actor ECLAIRE
+Consommateur -> ECLAIRE : Requête : Critère de recherche
+ECLAIRE --> Consommateur: Réponse : Essais cliniques + ressources liées
+@enduml
