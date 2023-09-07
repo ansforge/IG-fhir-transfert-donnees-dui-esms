@@ -1,4 +1,4 @@
-@startuml flux1
+@startuml test1
 
 @startuml flux1
 actor Actor1
