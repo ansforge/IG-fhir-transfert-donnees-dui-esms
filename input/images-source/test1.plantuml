@@ -1,6 +1,5 @@
 @startuml test1
 
-@startuml flux1
 actor Actor1
 actor Actor2
 Actor1 -> Actor2 : Requête
