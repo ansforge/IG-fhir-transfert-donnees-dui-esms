@@ -74,5 +74,10 @@ Dans la continuité des travaux menés dans le cadre du programme ESMS numériqu
   </tr>
 </table>
 
-{%include test1.svg%}
-{%include test2.svg%}
+
+
+
+
+<div>{%include test1.svg%}</div>
+
+<div>{%include test2.svg%}</div>
