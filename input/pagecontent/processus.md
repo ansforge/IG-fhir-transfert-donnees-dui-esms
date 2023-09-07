@@ -4,8 +4,6 @@
 
 <div>{%include processus1.svg%}</div>
 
-{%include flux1.svg%}
-
 <table style="width:100%">
   <tr>
     <th>Service attendu</th>
