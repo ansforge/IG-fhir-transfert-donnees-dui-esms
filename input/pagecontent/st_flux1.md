@@ -1,9 +1,3 @@
+Ce flux permet l'ajout d'un document.
 
-### Nom du flux 
-
-Description du flux 
-
-
-### Construction du flux
-
-Explication de comment doit être construit le flux
+<div>{%include flux1.svg%}</div>
