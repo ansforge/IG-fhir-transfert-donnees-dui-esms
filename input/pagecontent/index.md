@@ -73,11 +73,3 @@ Dans la continuité des travaux menés dans le cadre du programme ESMS numériqu
     <td>Système d’Information de l’Offre de la Branche Autonomie</td>
   </tr>
 </table>
-
-
-
-
-
-<div>{%include test1.svg%}</div>
-
-<div>{%include test2.svg%}</div>

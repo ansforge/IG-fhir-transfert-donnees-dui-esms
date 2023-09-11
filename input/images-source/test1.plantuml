@@ -1,8 +1,0 @@
-@startuml test1
-
-actor Actor1
-actor Actor2
-Actor1 -> Actor2 : Requête
-Actor2 --> Actor1 : Réponse
-
-@enduml
