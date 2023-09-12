@@ -55,6 +55,34 @@ Dans cette section, une mise en correspondance est faite entre :
 - Les éléments XML proposés par CDA ;
 - Les données structurées décrites dans les Spécification fonctionnelle de contenu v0.4 du volet « Transfert de données DUI ».
 
+#### Structure générale du document CDA
+
+Cette section présente la structure générale des données de l’usager organisées en entête et corps.
+
+[Lien vers le PDF spécifiant la structure des documents CDA](CISIS-TEC_SPECIFICATIONS_TECHNIQUES_Transfert_Donnees_DUI_v0.1.4.pdf)
+
+#### Description des données d’entête du document
+
+Cette section présente le contenu de l’en-tête du document CDA. On y retrouve différentes parties :
+- RecordTarget ;
+- Author ;
+- Custodian ;
+- LegalAuthentificator ;
+- DocumentationOf ;
+- ComponentOf ;
+- Adresse.
+
+[Lien vers le PDF spécifiant la structure des documents CDA](CISIS-TEC_SPECIFICATIONS_TECHNIQUES_Transfert_Donnees_DUI_v0.1.4.pdf)
+
+#### Description du corps du document
+
+Cette section présente le contenu du corps du document CDA. On y retrouve différentes sections :
+- FR-Evaluation-du-statut-fonctionnel ;
+- FR-Documents-ajoutes.
+
+[Lien vers le PDF spécifiant la structure des documents CDA](CISIS-TEC_SPECIFICATIONS_TECHNIQUES_Transfert_Donnees_DUI_v0.1.4.pdf)
+
+
 ### Annexes
 
 #### Glossaire
