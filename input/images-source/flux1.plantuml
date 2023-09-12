@@ -1,6 +1,6 @@
 @startuml
 
-"Logiciel DUI" -> "Logiciel DUI ou SIDOBA" : POST [base]/DocumentReference
-"Logiciel DUI" <- "Logiciel DUI ou SIDOBA" : OK 201
+"Logiciel DUI" -> "Logiciel DUI ou SIDOBA" : Flux 1.1 **TransfertDossier** \n HTTP POST [base] (+ ressource "DocumentReference")
+"Logiciel DUI" <-- "Logiciel DUI ou SIDOBA" : Flux 1.2 **ResultatTransfertDossier** \n HTTP 201 Created (+ ressource "DocumentReference")
 
 @enduml
