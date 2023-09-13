@@ -59,7 +59,7 @@ menu:
         Modélisation du contenu du DUI : modelisation_contenu.html
     Contenu du dossier : contenu_dossier.html
     Description des flux:
-        Construction des flux: construction_des_flux.html
+        Vue d'ensemble: construction_des_flux.html
         Flux 1 - Transfert d'un dossier: st_flux1.html
         Flux 2 - Transfert d'un lot de dossiers: st_flux2.html
     Ressources de conformité: artifacts.html
