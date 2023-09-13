@@ -1,3 +1,11 @@
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
+<b>Brief description of this Implementation Guide</b><br>
+Context.
+The aim of this implementation guide is to define the specifications ...
+</p>
+
+### Introduction
+
 Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour l'Autonomie (CNSA), vise à généraliser l’utilisation du numérique dans les établissements et services sociaux et médico-sociaux (ESSMS). Il repose principalement sur le déploiement d’un Dossier Usager Informatisé (DUI) pour chaque personne accompagnée. Ce DUI centralise l’ensemble des informations qui concerne la personne accompagnée en structure et service sociale et médico-sociale, et son parcours de santé et de vie. Ce dossier unique comprend :
 * Des données administratives ;
 * Des données liées à l’accompagnement de l’usager ;
@@ -13,6 +21,22 @@ Cet guide d'implémentation contient :
 - Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
 - La spécification technique de contenu : section <a href="contenu_dossier.html">Contenu du dossier</a>
 - La spécification technique de transport : sections <a href="construction_des_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
+
+### Flux
+
+| Flux | Emetteur | Récepteur |
+| ----- | ----- | ----- |
+| <a href="st_flux1.html">Flux 1 : Transfert d'un dossier</a> | Logiciel DUI | Logiciel DUI ou SIDOBA |
+| <a href="st_flux2.html">Flux 2 : Transfert d'un lot de dossier</a> | Logiciel DUI | Logiciel DUI ou SIDOBA |
+
+Pour en savoir davantage, rendez-vous sur la page <a href="construction_des_flux.html">construction des flux</a>.
+
+### Ressources profilées
+
+| Ressource | Modifications apportées | Profil |
+| ----- | ----- | ----- |
+| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> |  | Création du profil [DUIDocumentReference](StructureDefinition-dui-docuementreference.html) |
+| <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a>  |  | Création du profil [DUIBundle](StructureDefinition-dui-bundle.html) |
 
 ### Acronymes
 

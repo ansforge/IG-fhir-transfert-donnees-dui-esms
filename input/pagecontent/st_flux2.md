@@ -4,7 +4,7 @@ Ce flux permet le transfert d'un lot de dossiers.
 
 ### Flux 2.1 TransfertLotDossiers
 
-Le transfert du dossier est assuré par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#transaction">transaction</a>. L'émetteur du dossier envoie une requête HTTP POST dont le corps contient une ressource de type Bundle conforme au profil <a href="">DUIBundle</a> : 
+Le transfert du dossier est assuré par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#transaction">transaction</a>. L'émetteur du dossier envoie une requête HTTP POST dont le corps contient une ressource de type Bundle conforme au profil [DUIBundle](StructureDefinition-dui-bundle.html) : 
 
 `POST [base]/Bundle`
 

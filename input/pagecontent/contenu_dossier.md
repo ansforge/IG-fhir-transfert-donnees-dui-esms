@@ -3,9 +3,9 @@
 - <a href="cadre_orientations.html">Spécifications fonctionnelles de contenu v0.4 du volet « Transfert de données DUI »</a>
 - [Etudes des normes et standards v0.1 du volet « Transfert de données DUI »]((NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf))
 - <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.12_0.pdf">Volet Structuration Minimale de Documents de Santé v1.13</a>
-- <a href="https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda">Volet Modèle de Contenu CDA v3.3</a>
-- <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe Transverse – Source des données métier pour les professionnels et les structures v1.5</a>
-- <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">Référentiel Identifiant national de santé v0.1</a>
+- <a href="https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda">Volet Modèle de Contenu CDA</a> v3.3
+- <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe Transverse – Source des données métier pour les professionnels et les structures</a> v1.5
+- <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">Référentiel Identifiant national de santé</a> v0.1
 - Le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=496">Clinical Document Architecture R2 (CDA) porté par HL7</a>
 
 ### Introduction 
@@ -29,12 +29,13 @@ Dans cette section, une mise en correspondance est faite entre :
 
 Des mises à jour seront proposées pour intégrer progressivement l’ensemble des données décrites dans les spécifications fonctionnelles.
 
-<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
-Les spécifications techniques sont complétées par :
-- Des **éléments sémantique**s (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;
-- Des **exemples d'implémentation en CDA R2 niveau 3** ;
-- Un **outil de vérification en local (testContenuCDA)** de la compatibilité des documents produits. Il est téléchargeable à partir de l'espace de publication du CI-SIS.
-</p>
+<div style="padding: 5px; border-radius: 5px; border: 2px solid black; width: 65%">
+  <ul>
+    <li>Des <b>éléments sémantiques</b> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
+    <li>Des <b>exemples d'implémentation en CDA R2 niveau 3</b> ;</li>
+    <li>Un <b>outil de vérification en local (testContenuCDA)</b> de la compatibilité des documents produits. Il est téléchargeable à partir de l'espace de publication du CI-SIS.</li>
+  </ul>
+</div>
 
 
 ### Standards utilisés
