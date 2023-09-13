@@ -28,7 +28,6 @@
   <caption>Caractéristique du processus collaboratif « Changer de logiciel métier »</caption>
 </table>
 
-
 #### Processus collaboratif « Changer d’ESSMS »
 
 <div>{%include processus2.svg%}</div>
@@ -58,7 +57,6 @@
   </tr>
   <caption>Caractéristique du processus collaboratif « Changer d’ESSMS »</caption>
 </table>
-
 
 #### Processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »
 
@@ -114,7 +112,6 @@ Le demandeur est l’acteur à l’origine du besoin. Il peut s’agir d’un é
   <caption>Description des demandeurs impliqués dans chaque processus collaboratif</caption>
 </table>
 
-
 #### Le producteur 
 
 Le producteur est l’acteur à l’origine de l’export des données. C’est un système. 
@@ -136,7 +133,6 @@ Le producteur est l’acteur à l’origine de l’export des données. C’est 
   </tr>
   <caption>Description des producteurs impliqués dans chaque processus collaboratif</caption>
 </table>
-
 
 #### Le consommateur
 

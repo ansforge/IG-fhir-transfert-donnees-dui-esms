@@ -82,11 +82,9 @@ Cette section présente le contenu du corps du document CDA. On y retrouve diff�
 
 [Lien vers le PDF spécifiant la structure des documents CDA](CISIS-TEC_SPECIFICATIONS_TECHNIQUES_Transfert_Donnees_DUI_v0.1.4.pdf)
 
-
 ### Annexes
 
 #### Glossaire
-
 
 <table style="width:100%">
   <tr>

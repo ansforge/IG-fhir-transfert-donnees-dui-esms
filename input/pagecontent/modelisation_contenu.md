@@ -2,16 +2,13 @@
 
 <div>{%include  representation_globale.svg%}</div>
 
-
 ### Données administratives
 
 <div>{%include donnees_admin.svg%}</div>
 
-
 #### Identification et coordonnées
 
 <div>{%include bloc_identification_coordonnees.svg%}</div>
-
 
 ##### Classe Usager 
 
@@ -138,7 +135,6 @@ Un usager est une personne physique bénéficiaire d’un service public.
   </tr>
 </table>
 
-
 ##### Classe Adresse
 
 Adresse géopostale. Un emplacement auquel l’usager peut être trouvée, d'après la norme NF Z 10-011.
@@ -207,7 +203,6 @@ Adresse géopostale. Un emplacement auquel l’usager peut être trouvée, d'apr
   </tr>
 </table>
 
-
 ##### Classe Telecommunication
 
 Adresse de télécommunication à laquelle l’usager peut être contactée (téléphone, fax, e-mail, URL, etc.).
@@ -231,7 +226,6 @@ Adresse de télécommunication à laquelle l’usager peut être contactée (té
     <td>Précise l'utilisation du canal de communication (par exemple à des fins professionnelles, privées, etc.).</td>
   </tr>
 </table>
-
 
 ##### Classe Courrier
 
@@ -262,7 +256,6 @@ Adresse de courrier de l’usager.
     <td>Nom et/ou service de l’organisme de domiciliation.</td>
   </tr>
 </table>
-
 
 #### Autorisations administratives
 
@@ -309,11 +302,9 @@ Droit temporel et exceptionnel conféré à une personne ou une organisation.
   </tr>
 </table>
 
-
 #### Droits sociaux et de santé 
 
 <div>{%include bloc_droits_sociaux_sante.svg%}</div>
-
 
 ##### Classe AssuranceMaladieObligatoire
 
@@ -372,7 +363,6 @@ Assurance maladie obligatoire de l’usager.
   </tr>
 </table>
 
-
 ##### Classe AssuranceMaladieComplementaire
 
 Assurance maladie complémentaire de l’usager.
@@ -424,7 +414,6 @@ Assurance maladie complémentaire de l’usager.
   </tr>
 </table>
 
-
 ##### Classe Decision
 
 La décision est une réponse à une demande de l'individu ou de son représentant légal. Elle est prise par la CDAPH.
@@ -471,7 +460,6 @@ La décision est une réponse à une demande de l'individu ou de son représenta
     <td>Commentaire relatif à la décision.</td>
   </tr>
 </table>
-
 
 ##### Classe DroitPrestation
 
@@ -545,7 +533,6 @@ Ensemble des droits et prestations prévus par le Code de l'Action Sociale et de
   </tr>
 </table>
 
-
 ##### Classe DetailPrestation
 
 Détails de la prestation.
@@ -601,7 +588,6 @@ Description des modalités d'accueil.
   </tr>
 </table>
 
-
 ##### Classe Quantification
 
 Quantification de la prise en charge.
@@ -627,7 +613,6 @@ Quantification de la prise en charge.
     Nomenclature(s) associée(s) : à définir</td>
   </tr>
 </table>
-
 
 #### Environnement et ressources
 
@@ -711,7 +696,6 @@ Personne physique qui agit comme point de contact auprès d'une autre personne o
   </tr>
 </table>
 
-
 ##### Classe  ContactPersonneMorale
 
 Personne morale qui agit comme point de contact auprès d'une autre personne ou d'un autre service.
@@ -760,7 +744,6 @@ Personne morale qui agit comme point de contact auprès d'une autre personne ou 
   </tr>
 </table>
 
-
 ##### Classe Ressource
 
 Ressource perçue par l’usager.
@@ -804,10 +787,7 @@ Ressource perçue par l’usager.
   </tr>
 </table>
 
-
 ##### Classe CompteBancaire
-
-
 
 <table style="width:100%">
   <tr>
@@ -866,7 +846,6 @@ Ressource perçue par l’usager.
   </tr>
 </table>
 
-
 ##### Classe RIB
 
 Relevé d'Identité Bancaire.
@@ -886,7 +865,6 @@ Relevé d'Identité Bancaire.
   </tr>
 </table>
 
-
 ##### Classe Transport
 
 Moyen de transport utilisé par l’usager.
@@ -905,7 +883,6 @@ Moyen de transport utilisé par l’usager.
     <td>Observation sur l’aménagement du moyen de transport.</td>
   </tr>
 </table>
-
 
 ##### Classe PermisConduire
 
@@ -933,7 +910,6 @@ Permis de conduire de l’usager.
     <td>Date limite de validité du permis de conduire.</td>
   </tr>
 </table>
-
 
 ##### Classe MesureProctection
 
@@ -979,12 +955,9 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
   </tr>
 </table>
 
-
-
 #### Sejours 
 
 <div>{%include bloc_sejours.svg%}</div>
-
 
 ##### Classe Sejour
 
@@ -1029,7 +1002,6 @@ Séjour d’un usager dans un ESSMS.
   </tr>
 </table>
 
-
 ##### Classe Contrat
 
 Contrant définissant une prestation proposée par l’ESSMS dont l’usager a bénéficié durant son séjour.
@@ -1063,7 +1035,6 @@ Contrant définissant une prestation proposée par l’ESSMS dont l’usager a b
   </tr>
 </table>
 
-
 ##### Classe Inventaire
 
 Inventaire des biens d’un usager à son arrivé dans l’ESSMS.
@@ -1078,7 +1049,6 @@ Inventaire des biens d’un usager à son arrivé dans l’ESSMS.
     <td>Liste des objets avec lesquels l’usager est pris en charge qui sont mis au coffre ou liste des objets qui sont transmis à l’arrivée.</td>
   </tr>
 </table>
-
 
 ##### Classe Solde
 
@@ -1115,7 +1085,6 @@ Solde utilisé pour la gestion de l’argent de l’usager durant son séjour.
   </tr>
 </table>
 
-
 ##### Classe Reservation
 
 Amission prévisionnelle d’un usager dans un ESSMS.
@@ -1143,7 +1112,6 @@ Amission prévisionnelle d’un usager dans un ESSMS.
     <td>Identifiant de l’ESSMS souhaité.</td>
   </tr>
 </table>
-
 
 ##### Classe ESSMS
 
@@ -1179,7 +1147,6 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 <div>{%include bloc_evaluation.svg%}</div>
 
-
 ##### Classe Evaluation
 
 Evaluation de la situation de l’usager dans un domaine défini.
@@ -1207,9 +1174,9 @@ Evaluation de la situation de l’usager dans un domaine défini.
   </tr>
 </table>
 
-
 ##### Classe GrilleEvaluation
 
+Grille permettant d’évaluer la situation de l’usager dans un domaine défini.
 
 <table style="width:100%">
   <tr>
