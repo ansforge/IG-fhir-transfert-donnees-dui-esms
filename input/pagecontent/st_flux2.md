@@ -10,7 +10,7 @@ Le transfert du dossier est assuré par l'interaction FHIR <a href="https://hl7.
 
 Où `[base]` est le point de contact FHIR.
 
-Le bundle contient plusieurs ressources DocumentReference conformes au profil "DUIDocumentReference" véhiculés via `Bundle.entry.ressource`.
+Le bundle contient plusieurs ressources DocumentReference conformes au profil "DUIDocumentReference" véhiculées via `Bundle.entry.ressource`, chacune contenant un dossier usager au format CDA.
 
 ### Flux 2.2 ResultatTranfertLotDossiers
 
