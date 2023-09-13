@@ -8,6 +8,9 @@ Les logiciels DUI doivent permettre, entre autres, de mieux construire et de sui
 
 Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet de la couche Métier « Transfert de données DUI ». L’objectif de ce volet est de définir la nature et le format des données à transmettre lors d’un export depuis un logiciel DUI afin d’assurer le transfert de données des usagers pour les cas d’usage définis dans la partie « Exemple de cas d’usage ». <!-- Lien -->
 
+Cet guide d'implémentation contient : 
+- [L'étude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
+
 
 ### Acronymes
 
