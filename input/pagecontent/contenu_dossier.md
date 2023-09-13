@@ -1,3 +1,42 @@
+
+**Documents de référence** : 
+- <a href="cadre_orientations.html">Spécifications fonctionnelles de contenu v0.4 du volet « Transfert de données DUI »</a>
+- [Etudes des normes et standards v0.1 du volet « Transfert de données DUI »]((NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf))
+- <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.12_0.pdf">Volet Structuration Minimale de Documents de Santé v1.13</a>
+- <a href="https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda">Volet Modèle de Contenu CDA v3.3</a>
+- <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe Transverse – Source des données métier pour les professionnels et les structures v1.5</a>
+- <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">Référentiel Identifiant national de santé v0.1</a>
+- Le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=496">Clinical Document Architecture R2 (CDA) porté par HL7</a>
+
+### Introduction 
+
+Cette section présente les spécifications techniques du volet « Transfert de données DUI ». Ces dernières spécifient le transfert de données sociales et médico-sociales de l’usager depuis un logiciel DUI entre les Etablissements et Services Médico-Sociaux (ESSMS) et un autre ESSMS ou vers les Systèmes d’Information tiers.
+La production de ce document est basée sur :
+- Les <a href="cadre_orientations.html">Spécifications Fonctionnelles de Contenu v0.4 du volet « Transfert de données DUI »</a>,
+- Le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=496">Clinical Document Architecture R2</a> (CDA) porté par HL7 pour représenter les données présentées dans les Spécifications Fonctionnelles de Contenu v0.4 du volet « Transfert de données DUI ».
+
+### Présentation du volet 
+
+Cette section présente les spécifications techniques de contenu du volet « Transfert de données DUI » (TDDUI). 
+
+Ce volet a pour objectif premier de décrire l’export de données d’usagers depuis des établissements ou services sociaux ou médico-sociaux (ESSMS). Les échanges d’informations se font entre le logiciel de Dossier Usager Informatisé (DUI) d’un ESSMS et un autre logiciel DUI, ou un système d’information tiers.
+
+Dans cette section, une mise en correspondance est faite entre : 
+- Les éléments XML proposés par CDA ;
+- Un échantillon de données structurées décrites dans les spécifications fonctionnelles du volet, parmi lesquelles :
+  - les données minimales d’identité (identifiant, nom, prénom, date de naissance, lieu de naissance, sexe, ordre de naissance) de la classe Usager ; 
+  - les données de la classe évaluation.
+
+Des mises à jour seront proposées pour intégrer progressivement l’ensemble des données décrites dans les spécifications fonctionnelles.
+
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
+Les spécifications techniques sont complétées par :
+- Des **éléments sémantique**s (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;
+- Des **exemples d'implémentation en CDA R2 niveau 3** ;
+- Un **outil de vérification en local (testContenuCDA)** de la compatibilité des documents produits. Il est téléchargeable à partir de l'espace de publication du CI-SIS.
+</p>
+
+
 ### Standards utilisés
 
 #### CI-SIS, HL7 CDA R2, IHE PCC
@@ -83,59 +122,6 @@ Cette section présente le contenu du corps du document CDA. On y retrouve diff�
 [Lien vers le PDF spécifiant la structure des documents CDA](CISIS-TEC_SPECIFICATIONS_TECHNIQUES_Transfert_Donnees_DUI_v0.1.4.pdf)
 
 ### Annexes
-
-#### Glossaire
-
-<table style="width:100%">
-  <tr>
-    <th>Sigle / Acronyme</th>
-    <th>Signification</th>
-  </tr>
-  <tr>
-    <td>ANS</td>
-    <td>L’Agence du Numérique en Santé</td>
-  </tr>
-  <tr>
-    <td>CDA</td>
-    <td>Clinical Document</td>
-  </tr>
-  <tr>
-    <td>CI-SIS</td>
-    <td>Cadre d’Interopérabilité des Systèmes d’Information de Santé</td>
-  </tr>
-  <tr>
-    <td>CNSA</td>
-    <td>Caisse Nationale de Solidarité pour l’Autonomie</td>
-  </tr>
-  <tr>
-    <td>ESSMS</td>
-    <td>Etablissement et Services sociaux ou Médico-Sociaux</td>
-  </tr>
-  <tr>
-    <td>HL7</td>
-    <td>Health Level 7</td>
-  </tr>
-  <tr>
-    <td>INS</td>
-    <td>Identité Nationale de Santé</td>
-  </tr>
-  <tr>
-    <td>NIA</td>
-    <td>Numéro d'Immatriculation d'Attente</td>
-  </tr>
-  <tr>
-    <td>NIR</td>
-    <td>Numéro d'Inscription au Répertoire</td>
-  </tr>
-  <tr>
-    <td>TRE</td>
-    <td>Terminologie de REférence</td>
-  </tr>
-  <tr>
-    <td>JDV</td>
-    <td>Jeu De Valeur</td>
-  </tr>
-</table>
 
 #### Nomenclatures
 

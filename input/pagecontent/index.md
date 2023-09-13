@@ -6,17 +6,19 @@ Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour
 
 Les logiciels DUI doivent permettre, entre autres, de mieux construire et de suivre le projet personnalisé de la personne accompagnée, d’éviter les ruptures de parcours en cas d’évolution des besoins, de changement d’établissement médico-social, de retour à domicile ou d’hospitalisation. 
 
-Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet de la couche Métier « Transfert de données DUI ». L’objectif de ce volet est de définir la nature et le format des données à transmettre lors d’un export depuis un logiciel DUI afin d’assurer le transfert de données des usagers pour les cas d’usage définis dans la partie « Exemple de cas d’usage ». <!-- Lien -->
+Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet de la couche Métier « Transfert de données DUI ». L’objectif de ce volet est de définir la nature et le format des données à transmettre lors d’un export depuis un logiciel DUI afin d’assurer le transfert de données des usagers pour les cas d’usage définis dans la partie [Exemples de cas d’usage](cadre_orientations.html#exemples-de-cas-dusage).
 
 Cet guide d'implémentation contient : 
-- [L'étude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
-
+- L'étude des normes et standards : [lien pdf](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
+- Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
+- La spécification technique de contenu : section <a href="contenu_dossier.html">Contenu du dossier</a>
+- La spécification technique de transport : sections <a href="construction_des_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
 
 ### Acronymes
 
 <table style="width:100%">
   <tr>
-    <th>Acronyme</th>
+    <th>Sigle / Acronyme</th>
     <th>Définition</th>
   </tr>
   <tr>
@@ -26,6 +28,10 @@ Cet guide d'implémentation contient :
   <tr>
     <td>ARS</td>
     <td>Agence Régionale de Santé</td>
+  </tr>
+  <tr>
+    <td>CDA</td>
+    <td>Clinical Document</td>
   </tr>
   <tr>
     <td>CI-SIS</td>
@@ -56,12 +62,28 @@ Cet guide d'implémentation contient :
     <td>Groupe Iso-Ressource</td>
   </tr>
   <tr>
+    <td>HL7</td>
+    <td>Health Level 7</td>
+  </tr>
+  <tr>
+    <td>INS</td>
+    <td>Identité Nationale de Santé</td>
+  </tr>
+  <tr>
     <td>IPS</td>
     <td>International Patient Summary</td>
   </tr>
   <tr>
     <td>MDPH</td>
     <td>Maison Départementale des Personnes Handicapées</td>
+  </tr>
+  <tr>
+    <td>NIA</td>
+    <td>Numéro d'Immatriculation d'Attente</td>
+  </tr>
+  <tr>
+    <td>NIR</td>
+    <td>Numéro d'Inscription au Répertoire</td>
   </tr>
   <tr>
     <td>RGPD</td>
@@ -74,5 +96,13 @@ Cet guide d'implémentation contient :
   <tr>
     <td>SIDOBA</td>
     <td>Système d’Information de l’Offre de la Branche Autonomie</td>
+  </tr>
+  <tr>
+    <td>TRE</td>
+    <td>Terminologie de REférence</td>
+  </tr>
+  <tr>
+    <td>JDV</td>
+    <td>Jeu De Valeur</td>
   </tr>
 </table>
