@@ -9,21 +9,21 @@ package "Identification et coordonnées" as id #PaleGreen {
     object Télécommunication #PaleGreen
 }
 
-Télécommunication - Usager
-Adresse - Usager
-Courrier - Usager
+Télécommunication "*" - "1    " Usager
+Adresse "*" - Usager
+Courrier "*" - Usager
 
 
-package "Autorisations administratives" as Auto #PeachPuff {
+package "Autorisations\nadministratives" as Auto #PeachPuff {
     object "Autorisation\nadministrative" as auto #PeachPuff
 }
 
-auto -- Usager
+auto " *   " -- "1" Usager
 
 
 package "Droits sociaux et de santé" as Droit #LightYellow {
     object "Assurance maladie\ncomplémentaire" as assC #LightYellow
-    object "Assurance maladie\nobligatoire" as assO #LightYellow
+    object "Assurance maladie obligatoire" as assO #LightYellow
     object Décision #LightYellow
     object "Droit\nprestation" as presta #LightYellow
     object "Détail\nprestation" as detail #LightYellow
@@ -31,16 +31,17 @@ package "Droits sociaux et de santé" as Droit #LightYellow {
     object Quantification #LightYellow
 }
 
-Usager -- assC
-Usager -- assO
-Usager -- Décision
-Décision - presta
-presta -- detail
-pc - detail
-Quantification - pc
+hide @unlinked
+
+Usager "1" -- " *  "  assC
+Usager "1" -- "0..1" assO
+Usager "1" -- " *  " Décision
+Décision "1" - " 0..1" presta
+presta "1" -- "0..1   " detail
+pc "*" - "1" detail
+Quantification "0..1" - " 1" pc
 
 assO -[hidden]- assC
-
 
 package Séjours #Thistle {
     object Séjour #Thistle
@@ -51,19 +52,19 @@ package Séjours #Thistle {
     object Contrat #Thistle
 }
 
-Usager - Séjour
-Solde - Séjour
-Inventaire -- Séjour
-ESSMS -- Séjour
-Contrat -- Séjour
-Réservation -- Usager
-Réservation -- presta
-Séjour -- presta
+Usager "1" - "  *  " Séjour
+Solde "*" - "1" Séjour
+Inventaire "0..1   "-- "1" Séjour
+ESSMS "1" -- "*" Séjour
+Contrat "*" -- "1  " Séjour
+Réservation "*" -- "1" Usager
+Réservation "*" -- "1   " presta
+Séjour "*" -- "1 " presta
 
 Séjour -[hidden]- Réservation
 
 
-package "Environnement et ressources" as Env #LightBlue {
+package "Environnement\net ressources" as Env #LightBlue {
     object "Contact personne\nmorale" as contactM #LightBlue
     object "Contact personne\nphysique" as contactP #LightBlue
     object "Permis conduire" as permis #LightBlue
@@ -73,17 +74,18 @@ package "Environnement et ressources" as Env #LightBlue {
     object "Mesure protection" as mp #LightBlue
 }
 
-Usager - contactM
-Usager - contactP 
-Usager - permis 
-Usager - Transport 
-Usager - cb
-Usager - Ressource
-Usager - mp
+Usager "1" - "*" contactM
+Usager - "*\n" contactP 
+Usager - "*" permis 
+Usager - "*" Transport 
+Usager "1" - " *" cb
+Usager - "*" Ressource
+Usager - "*" mp
 
-cb -[hidden]- contactP
-Ressource -[hidden]- contactM
+contactP -[hidden]- Ressource
+contactM -[hidden]- cb
 mp -[hidden]- Transport
+mp -[hidden]- permis
 
 
 id -[hidden]- Env

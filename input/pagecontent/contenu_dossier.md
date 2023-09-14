@@ -30,6 +30,7 @@ Dans cette section, une mise en correspondance est faite entre :
 Des mises à jour seront proposées pour intégrer progressivement l’ensemble des données décrites dans les spécifications fonctionnelles.
 
 <div style="padding: 5px; border-radius: 5px; border: 2px solid black; width: 65%">
+  Les spécifications techniques sont complétées par : 
   <ul>
     <li>Des <b>éléments sémantiques</b> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
     <li>Des <b>exemples d'implémentation en CDA R2 niveau 3</b> ;</li>
