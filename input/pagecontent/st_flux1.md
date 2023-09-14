@@ -7,7 +7,7 @@ Ce flux permet le transfert d'un dossier, notamment dans les cas suivants :
 
 ### Flux 1.1 TransfertDossier
 
-Le transfert du dossier est assuré par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#create">create</a>. L'émetteur du dossier envoie une requête HTTP POST dont le corps contient une ressource de type DocumentReference conforme au profil [DUIDocumentReference](StructureDefinition-dui-docuementreference.html) : 
+Le transfert du dossier est assuré par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#create">create</a>. L'émetteur du dossier envoie une requête HTTP POST dont le corps contient une ressource de type DocumentReference conforme au profil [DUIDocumentReference](StructureDefinition-dui-documentreference.html) : 
 
 `POST [base]/DocumentReference`
 

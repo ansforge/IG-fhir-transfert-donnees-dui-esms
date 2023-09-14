@@ -24,6 +24,8 @@ Cet guide d'implémentation contient :
 
 ### Flux
 
+Les flux décrits dans ce guide d'implémentation sont les suivants.
+
 | Flux | Emetteur | Récepteur |
 | ----- | ----- | ----- |
 | <a href="st_flux1.html">Flux 1 : Transfert d'un dossier</a> | Logiciel DUI | Logiciel DUI ou SIDOBA |
@@ -33,9 +35,11 @@ Pour en savoir davantage, rendez-vous sur la page <a href="construction_des_flux
 
 ### Ressources profilées
 
+Les ressources profilées dans le cadre de guide d'implémentation sont les suivantes : 
+
 | Ressource | Modifications apportées | Profil |
 | ----- | ----- | ----- |
-| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> |  | Création du profil [DUIDocumentReference](StructureDefinition-dui-docuementreference.html) |
+| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> |  | Création du profil [DUIDocumentReference](StructureDefinition-dui-documentreference.html) |
 | <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a>  |  | Création du profil [DUIBundle](StructureDefinition-dui-bundle.html) |
 
 ### Acronymes

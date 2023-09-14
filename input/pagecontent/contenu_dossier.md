@@ -1,7 +1,7 @@
 
 **Documents de référence** : 
 - <a href="cadre_orientations.html">Spécifications fonctionnelles de contenu v0.4 du volet « Transfert de données DUI »</a>
-- [Etudes des normes et standards v0.1 du volet « Transfert de données DUI »]((NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf))
+- [Etudes des normes et standards v0.1 du volet « Transfert de données DUI »](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
 - <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.12_0.pdf">Volet Structuration Minimale de Documents de Santé v1.13</a>
 - <a href="https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda">Volet Modèle de Contenu CDA</a> v3.3
 - <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe Transverse – Source des données métier pour les professionnels et les structures</a> v1.5
@@ -122,44 +122,3 @@ Cette section présente le contenu du corps du document CDA. On y retrouve diff�
 - FR-Documents-ajoutes.
 
 [Lien vers le PDF spécifiant la structure des documents CDA](CISIS-TEC_SPECIFICATIONS_TECHNIQUES_Transfert_Donnees_DUI_v0.1.4.pdf)
-
-### Annexes
-
-#### Nomenclatures
-
-<table style="width:100%">
-  <tr>
-    <th>Type de nomenclature</th>
-    <th>Format</th>
-    <th>Accès</th>
-  </tr>
-  <tr>
-    <td rowspan="2">Nomenclatures des Objets de Santé (NOS)</td>
-    <td>TRE_R*</td>
-    <td rowspan="2"><a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></td>
-  </tr>
-  <tr>
-    <td>JDV_J*</td>
-  </tr>
-  <tr>
-    <td >Nomenclature ANS</td>
-    <td>TA_ASIP</td>
-    <td><a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs</a></td>
-  </tr>
-</table> 
-
-#### Documents de référence 
-
-<table style="width:100%">
-  <tr>
-    <th>Documents de références</th>
-  </tr>
-  <tr>
-    <td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-  </tr>
-  <tr>
-    <td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
-  </tr>
-</table> 
-
-<a href=""></a>
