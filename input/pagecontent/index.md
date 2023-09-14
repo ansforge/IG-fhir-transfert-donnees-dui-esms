@@ -1,7 +1,7 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
-Context.
-The aim of this implementation guide is to define the specifications ...
+The Digital User File (DUI) centralizes all information concerning the person being cared for in social and medico-social facilities and services. 
+The aim of this implementation guide is to define the specifications for DUI data transfer.
 </p>
 
 ### Introduction
