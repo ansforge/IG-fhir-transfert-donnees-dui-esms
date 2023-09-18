@@ -4,7 +4,46 @@ Id: dui-documentreference
 Title: "DUI Document Reference"
 Description: "Profil générique créé dans le contexte du transfert de données DUI pour véhiculer le dossier au format CDA, inclus dans DocumentReference.attachment.data." 
 
-// PDSm
+/* MHD */
+
+* modifierExtension 0..0
+* masterIdentifier 1..1
+* identifier 0..0
+* status 1..1
+* status = http://hl7.org/fhir/document-reference-status#current
+* docStatus 0..0
+* type 0..1 MS
+* category 0..1 MS
+// * subject 1..1
+* subject only Reference(Patient)
+* date 0..1 MS
+* author 0..* MS
+* authenticator 0..1
+* relatesTo 0..* MS
+* description 0..1
+* securityLabel 0..* MS
+* content 1..1
+* content ^definition = "The document and format referenced."
+* content.attachment.contentType 1..1
+* content.attachment.language 0..1 MS
+* content.attachment.data 1..1
+// PDSm // * content.attachment.data ^short = "The document is contained in the .data element, base64 encoded"
+* content.attachment.url 0..0
+* content.attachment.size 0..1
+* content.attachment.hash 0..1
+* content.attachment.title 0..1
+* content.attachment.creation 0..1 MS
+* content.format 0..1 MS
+//* content.format from http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode (preferred)
+* context.event 0..*
+* context.period 0..1 MS
+* context.facilityType 0..1 MS
+* context.practiceSetting 0..1 MS
+* context.sourcePatientInfo 0..1 MS
+* context.related 0..*
+
+
+/* PDSm */
 
 * meta.versionId MS
 * meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
@@ -15,8 +54,8 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * identifier MS
 
 * status MS
-* status 1..1
-* status = http://hl7.org/fhir/document-reference-status#current
+// MHD // * status 1..1
+// MHD // * status = http://hl7.org/fhir/document-reference-status#current
 
 * type MS
 * type from $JDV-J07-XdsTypeCode-CISIS (preferred)
@@ -28,6 +67,7 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * category ^short = "Représente la classe du document (compte rendu, imagerie médicale, traitement, certificat,...)."
 * category obeys constr-bind-category
 
+// * subject 1..1
 * subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
 * subject only Reference(FrPatient) 
 
@@ -36,6 +76,7 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
+// * author 1..
 * author only Reference(AsPractitionerRoleProfile or AsPractitionerProfile or AsOrganizationProfile or Device or FrPatient or FrRelatedPerson) 
 
 
@@ -56,25 +97,25 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * content MS
 * content ^short = "Document contenu."
 
-* content.attachment.contentType 1..1
+// MHD // * content.attachment.contentType 1..1
 
-* content.attachment.language 0..1 MS
+// MHD // * content.attachment.language 0..1 MS
 * content.attachment.language ^short = "Pour tous les documents produits par les systèmes initiateurs français, le code est \"fr-FR'."
 
 
-* content.attachment.data 1..1
+// MHD // * content.attachment.data 1..1
 * content.attachment.data ^short = "Le document est contenu dans l'élément .data au format base64."
-* content.attachment.url 0..0
+// MHD // * content.attachment.url 0..0
 
 * content.attachment.size ^short = "Représente la taille du document."
 
 * content.attachment.hash ^short = "Représente le résultat de hachage du document (SHA 1)."
 * content.attachment.title 1..
 
-* content.attachment.creation 0..1 MS
+// MHD // * content.attachment.creation 0..1 MS
 * content.attachment.creation ^short = "Représente la date et l’heure de création du document."
 
-* content.format 0..1 MS
+// MHD // * content.format 0..1 MS
 * content.format from $JDV-J10-XdsFormatCode-CISIS (preferred)
 * content.format obeys constr-bind-format
 * content.format ^short = "Format technique détaillé du document."
@@ -87,14 +128,14 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * context.event obeys constr-bind-context-event
 * context.event ^short = "Représente les actes et les pathologies en rapport avec le document."
 
-* context.period 0..1 MS
+// * context.period 0..1 MS
 
-* context.facilityType MS
+// MHD // * context.facilityType MS
 * context.facilityType from $JDV-J02-XdsHealthcareFacilityTypeCode-CISIS (preferred)
 * context.facilityType obeys constr-bind-ProducteurDoc-simplified
 * context.facilityType ^short = "Secteur d'activité lié à la prise en charge de la personne, en lien avec le document produit."
 
-* context.practiceSetting 0..1 MS
+// MHD // * context.practiceSetting 0..1 MS
 * context.practiceSetting from $JDV-J04-XdsPracticeSettingCode-CISIS (preferred)
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
