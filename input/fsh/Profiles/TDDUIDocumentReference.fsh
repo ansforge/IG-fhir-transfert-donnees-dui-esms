@@ -1,7 +1,7 @@
-Profile: DUIDocumentReference
+Profile: TDDUIDocumentReference
 Parent: DocumentReference
-Id: dui-documentreference
-Title: "DUI Document Reference"
+Id: tddui-documentreference
+Title: "TDDUI Document Reference"
 Description: "Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA, inclus dans DocumentReference.attachment.data." 
 
 /* MHD */
