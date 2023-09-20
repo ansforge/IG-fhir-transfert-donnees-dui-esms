@@ -1,7 +1,4 @@
-Ce flux permet l'ajout d'un document, notamment dans les cas suivants : 
-- Changement de logiciel métier : transfert de données d'un usager d'un DUI à un autre au sein d'un même ESSMS
-- Changement d'ESSMS : transfert de données de l'usager depuis le DUI de l'ESSMS d'origine vers le DUI de l'ESSMS d'accueil (par exemple dans le cas d'un déménagement)
-- Transfert de données DUI vers SIDOBA : transfert de données à des fins de pilotages ou de financement, vers le système d'information de la CNSA, SIDOBA 
+Ce flux permet l'ajout d'un document.
 
 <div>{%include flux1.svg%}</div>
 
