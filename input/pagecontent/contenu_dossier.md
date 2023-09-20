@@ -100,6 +100,8 @@ Les éléments apparaissant en **<span style="color: #3498db">gras de couleur bl
 Les éléments apparaissant en <span style="color: #e74c3c">rouge</span> correspondent aux règles spécifiques à mettre en place.
 Les éléments en *\_italique soulignés\_* correspondent aux cardinalités de base de CDA contraintes pour ce volet.
 
+<!-- Les informations de mise en forme des tableaux sont issues de word et non impératives pour le bon fonctionnement des tableaux. -->
+
 #### Structure générale du document CDA
 
 Cette section présente la structure générale des données de l’usager organisées en entête et corps.
@@ -4722,4 +4724,40 @@ Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associ
             </td>
         </tr>
     </tbody>
+</table>
+
+### Annexes
+
+#### Nomenclatures
+
+<table style="width:100%">
+  <tr>
+    <th>Type de nomenclature</th>
+    <th>Format</th>
+    <th>Accès</th>
+  </tr>
+  <tr>
+    <td>Nomenclatures des Objets de Santé (NOS)</td>
+    <td>TRE_R* <br> JDV_J*</td>
+    <td><a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></td>
+  </tr>
+  <tr>
+    <td>Nomenclature ANS</td>
+    <td>TA_ASIP</td>
+    <td><a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs</a></td>
+  </tr>
+</table>
+
+#### Documents de référence 
+
+<table style="width:100%">
+  <tr>
+    <th>Documents de référence</th>
+  </tr>
+  <tr>
+    <td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
+  </tr>
+  <tr>
+    <td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
+  </tr>
 </table>
