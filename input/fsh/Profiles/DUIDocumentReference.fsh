@@ -2,7 +2,7 @@ Profile: DUIDocumentReference
 Parent: DocumentReference
 Id: dui-documentreference
 Title: "DUI Document Reference"
-Description: "Profil générique créé dans le contexte du transfert de données DUI pour véhiculer le dossier au format CDA, inclus dans DocumentReference.attachment.data." 
+Description: "Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA, inclus dans DocumentReference.attachment.data." 
 
 /* MHD */
 

@@ -2,7 +2,7 @@ Profile: DUIBundle
 Parent: Bundle
 Id: dui-bundle
 Title: "DUI Bundle"
-Description: "Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de dossiers au format CDA." 
+Description: "Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA." 
 
 // MHD 
 

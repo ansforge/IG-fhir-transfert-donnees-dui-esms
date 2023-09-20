@@ -1,6 +1,6 @@
 @startuml
 
-"Logiciel DUI" -> "Logiciel DUI ou SIDOBA" : Flux 2.1 **TransfertLotDossiers** \n HTTP POST [base] (+ ressource "Bundle")
-"Logiciel DUI" <-- "Logiciel DUI ou SIDOBA" : Flux 2.2 **ResultatTransfertLotDossiers** \n HTTP 200 OK (+ ressource "Bundle")
+"Logiciel DUI" -> "Logiciel DUI ou SIDOBA" : Flux 2.1 **AjoutLotDocuments** \n HTTP POST [base] (+ ressource "Bundle")
+"Logiciel DUI" <-- "Logiciel DUI ou SIDOBA" : Flux 2.2 **ResultatAjoutLotDocuments** \n HTTP 200 OK (+ ressource "Bundle")
 
 @enduml
