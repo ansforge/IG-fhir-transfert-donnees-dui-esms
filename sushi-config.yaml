@@ -15,7 +15,6 @@ releaseLabel: ci-build
 
 dependencies:
     hl7.fhir.fr.core: 1.1.0
-    ans.fhir.fr.annuaire: 1.0.0-ballot-2
 
 parameters:
     shownav: 'true'
