@@ -38,19 +38,27 @@ pages:
     contenu_dossier.md :
         title: Contenu du dossier
     specifications_techniques.md:
+        title: Spécifications techniques
         synthese_flux.md:
             title: Synthèse des flux
         st_flux1.md:
             title: Flux 1 - Ajout d'un document
         st_flux2.md:
             title: Flux 2 - Ajout d'un lot de documents
+    ressources_conformite.md:
+        title: Ressources de conformité
+        ressources_cda.md: 
+            title: Ressources CDA
+    annexes.md:
+        title: Annexes
+        acronymes.md:
+            title: Acronymes
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
-
     tests.md:
         title: Tests      
     about.md:
@@ -68,8 +76,13 @@ menu:
         Synthèse des flux: synthese_flux.html
         Flux 1 - Ajout d'un document: st_flux1.html
         Flux 2 - Ajout d'un lot de documents: st_flux2.html
-    Ressources de conformité: artifacts.html
-    Tests:   tests.html
+    Ressources de conformité:
+        Ressource FHIR: artifacts.html
+        Ressource CDA: ressources_cda.html
+    Annexes: 
+        Acronymes: acronymes.html
+        "Etude des normes et standards": new-tab NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf
+    Tests:  tests.html
     Autres ressources:
         Sécurité: securite.html
         Téléchargements et usage: downloads.html

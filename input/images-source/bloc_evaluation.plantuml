@@ -14,9 +14,8 @@ class Evaluation #LightGray {
 class GrilleEvaluation #LightGray {
     idGrilleEvaluation : Identifiant [0..1]
     type : Code [0..1]
-    theme : Code [0..1]
-    sousTheme : Code [0..1]
     contenu : Texte [0..1]
+    pieceJointe : ObjectBinaire [0..*]
     version : Texte [0..1]
 }
 
