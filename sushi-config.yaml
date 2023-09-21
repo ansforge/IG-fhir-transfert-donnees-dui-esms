@@ -45,6 +45,8 @@ pages:
             title: Flux 1 - Ajout d'un document
         st_flux2.md:
             title: Flux 2 - Ajout d'un lot de documents
+        st_flux3.md:
+            title: Flux 3 - Mise à jour d'un document
     ressources_conformite.md:
         title: Ressources de conformité
         ressources_cda.md: 
@@ -76,6 +78,7 @@ menu:
         Synthèse des flux: synthese_flux.html
         Flux 1 - Ajout d'un document: st_flux1.html
         Flux 2 - Ajout d'un lot de documents: st_flux2.html
+        Flux 3 - Mise à jour d'un document: st_flux3.html
     Ressources de conformité:
         Ressource FHIR: artifacts.html
         Ressource CDA: ressources_cda.html
