@@ -1,14 +1,14 @@
 ### Représentation globale du DUI
 
-<div>{%include  representation_globale.svg%}</div>
+<object data="representation_globale.svg"  style="width:100%" type="image/svg+xml"></object>
 
 ### Données administratives
 
-<div>{%include donnees_admin.svg%}</div>
+<object data="donnees_admin.svg" style="width:100%" type="image/svg+xml"></object>
 
 #### Identification et coordonnées
 
-<div>{%include bloc_identification_coordonnees.svg%}</div>
+<object data="bloc_identification_coordonnees.svg" type="image/svg+xml"></object>
 
 ##### Classe Usager 
 
@@ -259,7 +259,7 @@ Adresse de courrier de l’usager.
 
 #### Autorisations administratives
 
-<div>{%include bloc_autorisations_administratives.svg%}</div>
+<object data="bloc_autorisations_administratives.svg" type="image/svg+xml"></object>
 
 ##### Classe AutorisationAdministrative
 
@@ -304,7 +304,7 @@ Droit temporel et exceptionnel conféré à une personne ou une organisation.
 
 #### Droits sociaux et de santé 
 
-<div>{%include bloc_droits_sociaux_sante.svg%}</div>
+<object data="bloc_droits_sociaux_sante.svg" type="image/svg+xml"></object>
 
 ##### Classe AssuranceMaladieObligatoire
 
@@ -616,7 +616,7 @@ Quantification de la prise en charge.
 
 #### Environnement et ressources
 
-<div>{%include bloc_environnement_ressources.svg%}</div>
+<object data="bloc_environnement_ressources.svg" type="image/svg+xml"></object>
 
 ##### Classe ContactPersonnePhysique
 
@@ -957,7 +957,7 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 #### Sejours 
 
-<div>{%include bloc_sejours.svg%}</div>
+<object data="bloc_sejours" type="image/svg+xml"></object>
 
 ##### Classe Sejour
 
@@ -1145,7 +1145,7 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 #### Evaluation
 
-<div>{%include bloc_evaluation.svg%}</div>
+<object data="bloc_evaluation.svg" type="image/svg+xml"></object>
 
 ##### Classe Evaluation
 
