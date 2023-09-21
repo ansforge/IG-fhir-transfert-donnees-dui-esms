@@ -1,19 +1,19 @@
-Ce flux permet la mise à jour d'un document.
+Ce flux permet la mise à jour partielle d'un document.
 
 <div>{%include flux3.svg%}</div>
 
 ### Flux 3.1 MiseAJourDocument
 
-La mise à jour d'un document est assurée par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#update">update</a>. L'émetteur du document mis à jour envoie une requête HTTP PUT dont le corps contient une ressource de type DocumentReference conforme au profil [DUIDocumentReference](StructureDefinition-dui-documentreference.html) : 
+La mise à jour partielle d'un document est assurée par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#patch">patch</a>. La requête HTTP PATCH envoyée doit contenir l’identifiant technique de la ressource à modifier ainsi que la liste des mises à jour à effectuer. 
 
-`PUT [base]/DocumentReference/[id]`
+`PATCH [base]/DocumentReference/[id]`
 
 Où `[base]` est le point de contact FHIR et `[id]` l'identifiant technique de la ressource à mettre à jour.
 
-Si elle existe, une nouvelle version de la ressource est créée.
+Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments meta.versionId et meta.lastUpdated).
 
 ### Flux 3.2 ResultatMiseAJourDocument
 
-Si la mise à jour de la jour de la ressourceest correctement effectuée, le récepteur doit retourner un code HTTPS 200 « OK » ainsi que la ressource modifiée.
+Si la mise à jour partielle de la jour de la ressource est correctement effectuée, le récepteur doit retourner un code HTTPS 200 « OK » ainsi que la ressource modifiée.
 
 En cas d’échec, le récepteur doit répondre avec le code HTTPS approprié tel que défini par l’API REST FHIR [(Http - FHIR v4.0.1 (hl7.org))](http://hl7.org/fhir/R4/http.html). Une ressource OperationOutcome doit également y être associé pour véhiculer les messages d’erreurs détaillant la raison de l’erreur [(OperationOutcome - FHIR v4.0.1 (hl7.org))](http://hl7.org/fhir/R4/operationoutcome.html).

@@ -31,4 +31,15 @@
       Lien vers la description détaillée : <a href="st_flux2.html">flux 2</a>
     </td>
   </tr>
+  <tr>
+    <td></td>
+    <td>
+      <ul>
+      <li>Flux 3.1 - Mise à jour partielle d'un document : interaction « patch » de FHIR</li>
+      <li>Flux 3.2 - Resultat de la mise à jour d'un document : réponse à la requête HTTP PATCH</li>
+      </ul>
+      {%include flux3.svg%} <br>
+      Lien vers la description détaillée : <a href="st_flux3.html">flux 3</a>
+    </td>
+  </tr>
 </table>
