@@ -1,6 +1,6 @@
 @startuml
 
-"Logiciel DUI" -> "Logiciel DUI ou SIDOBA" : Flux 2.1 **MiseAJourDocument** \n HTTP PATCH [base]/DocumentReference/[id]
-"Logiciel DUI" <-- "Logiciel DUI ou SIDOBA" : Flux 2.2 **ResultatMiseAJourDocument** \n HTTP 200 OK (+ ressource "DocumentReference")
+"Logiciel DUI" -> "Logiciel DUI ou SI tiers" : Flux 2.1 **MiseAJourDocument** \n HTTP PATCH [base]/DocumentReference/[id]
+"Logiciel DUI" <-- "Logiciel DUI ou SI tiers" : Flux 2.2 **ResultatMiseAJourDocument** \n HTTP 200 OK (+ ressource "DocumentReference")
 
 @enduml

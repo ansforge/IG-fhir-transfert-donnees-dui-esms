@@ -6,9 +6,8 @@
   <tr>
     <td>
       <ul>
-      <li>Changement de logiciel métier</li>
-      <li>Changement d’ESSMS</li>
-      <li>Transfert de données DUI vers SIDOBA</li>
+      <li>Portabilité des données entre deux logiciels DUI</li>
+      <li>Transférer les données d’un logiciel DUI vers un SI tiers</li>
       </ul>
     </td>
     <td>
@@ -32,7 +31,13 @@
     </td>
   </tr>
   <tr>
-    <td></td>
+    <td>
+      <ul>
+      <li>Mettre à jour les données échangées entre 2 logiciels DUI</li>
+      <li>Mettre à jour les données de l’usager transférées depuis un
+logiciel DUI vers un SI tiers</li>
+      </ul>
+    </td>
     <td>
       <ul>
       <li>Flux 3.1 - Mise à jour partielle d'un document : interaction « patch » de FHIR</li>

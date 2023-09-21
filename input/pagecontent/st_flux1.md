@@ -9,7 +9,7 @@ L'ajout du document est assuré par l'interaction FHIR <a href="https://hl7.org/
 
 Où `[base]` est le point de contact FHIR.
 
-Le document au format CDA est véhiculé via `DocumentReference.attachment.data`.
+Le document au format CDA est véhiculé via `DocumentReference.content.attachment.data`.
 
 ### Flux 1.2 ResultatAjoutDocument
 
