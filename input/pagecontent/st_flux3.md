@@ -10,7 +10,7 @@ La mise à jour partielle d'un document est assurée par l'interaction FHIR <a h
 
 Où `[base]` est le point de contact FHIR et `[id]` l'identifiant technique de la ressource à mettre à jour.
 
-Au niveau applicatif, les mises à jour sont restreintes à l'élément content qui contient le document CDA.
+Au niveau applicatif, les mises à jour sont restreintes à l'élément `content` qui contient le document CDA.
 
 Les corrections à apporter à la ressource peuvent être communiquées de trois manières différentes :
 * [JSON patch](https://datatracker.ietf.org/doc/html/rfc6902) (status : Proposed standard),

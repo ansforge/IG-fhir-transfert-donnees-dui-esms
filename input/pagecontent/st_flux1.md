@@ -3,7 +3,7 @@ Ce flux permet l'ajout d'un document.
 <div>{%include flux1.svg%}</div>
 
 ### Flux 1.1 AjoutDocument
-L'ajout du document est assuré par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#create">create</a>. L'émetteur du document envoie une requête HTTP POST dont le corps contient une ressource de type DocumentReference conforme au profil [DUIDocumentReference](StructureDefinition-dui-documentreference.html) : 
+L'ajout du document est assuré par l'interaction FHIR <a href="https://hl7.org/fhir/R4/http.html#create">create</a>. L'émetteur du document envoie une requête HTTP POST dont le corps contient une ressource de type DocumentReference conforme au profil [DUIDocumentReference](StructureDefinition-tddui-documentreference.html) : 
 
 `POST [base]/DocumentReference`
 
