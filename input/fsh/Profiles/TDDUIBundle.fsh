@@ -9,5 +9,6 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * entry.request.method = #POST
 
 * entry 1..*
+* entry.resource 1..1
 * entry.resource only TDDUIDocumentReference
 
