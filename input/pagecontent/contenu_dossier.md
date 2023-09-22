@@ -3106,13 +3106,14 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
                 <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:center;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'><span style="font-size:12px;color:black;">Evaluation.GrilleEvaluation.type</span></p>
             </td>
             <td style="width:26.36%;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:72.5pt;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:left;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'>
                 <strong><span style="font-size:12px;color:black;">Type d&rsquo;&eacute;valuation</span></strong><br>
-                <span style="font-size:12px;color:#C00000;"><strong>S'il s'agit d'une grille d'évaluation GIR</strong></span><br>
+                <span style="font-size:12px;color:#C00000;"><strong>S'il s'agit d'une grille d'évaluation GIR :</strong></span><br>
                 <span style="font-size:12px;color:black;">&nbsp;@code=&nbsp;&laquo;&nbsp;MED-1270&nbsp;&raquo;</span><br>
                 <span style="font-size:12px;color:black;">&nbsp;@displayName =&nbsp;&laquo;&nbsp;Grille d'évaluation GIR&nbsp;&raquo;</span><br>
                 <span style="font-size:12px;color:black;">@codeSystem =&nbsp;&laquo;&nbsp;1.2.250.1.213.1.1.4.322&nbsp;&raquo;</span><br>
                 <span style="color:black;">&nbsp;@codeSystemName=&quot;TA_ASIP&quot;&nbsp;</span><br>
-                <span style="font-size:12px;color:#C00000;"><strong>Sinon</strong></span><br>
+                <span style="font-size:12px;color:#C00000;"><strong>Sinon :</strong></span><br>
                 <span style="font-size:12px;color:black;"><strong>A définir</strong></span></p>
             </td>
         </tr>
@@ -3215,10 +3216,10 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td style="width:26.36%;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:14.5pt;">
                 <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:left;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'>
                 <strong><span style="font-size:12px;color:black;">R&eacute;sultat (score) de l&apos;&eacute;valuation</span></strong><br>
-                <strong><span style="font-size:12px;color:#C00000;">S'il s'agit d'une grille d'évaluation GIR</span></strong><br>
+                <strong><span style="font-size:12px;color:#C00000;">S'il s'agit d'une grille d'évaluation GIR :</span></strong><br>
                 <span style="font-size:12px;color:black;">Valeur provenant du&nbsp;<a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">JDV_GIR-CISIS</a><strong>&nbsp;(1.2.250.1.213.1.1.5.53)</strong></span><br>
-                <strong><span style="font-size:12px;color:#C00000;">Sinon</span></strong><br>
-                <span style="font-size:12px;color:black;">A définir</strong></span></strong>
+                <strong><span style="font-size:12px;color:#C00000;">Sinon :</span></strong><br>
+                <strong><span style="font-size:12px;color:black;">A définir</span></strong>
                 </p>
             </td>
         </tr>
