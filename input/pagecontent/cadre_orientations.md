@@ -58,7 +58,6 @@ La présente version des spécifications ne couvre pas, à l’heure actuelle, l
 Les cas d’usages suivants sont hors périmètre de ce volet :
 * L’usager souhaite consulter / annoter son dossier médical
 * L’usager change d’unité au sein d’un même ESSMS
- 
 
 ### Définitions et cadre juridique
 
