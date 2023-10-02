@@ -6,6 +6,7 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 
 * type = #transaction
 
+* entry 1..*
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
