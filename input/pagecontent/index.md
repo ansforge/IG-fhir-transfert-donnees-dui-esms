@@ -41,3 +41,7 @@ Les ressources profilées dans le cadre de guide d'implémentation sont les suiv
 | ----- | ----- | ----- |
 | <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> |  | Création du profil [DUIDocumentReference](StructureDefinition-dui-documentreference.html) |
 | <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a>  |  | Création du profil [DUIBundle](StructureDefinition-dui-bundle.html) |
+
+### Dépendances
+
+{% include dependency-table.xhtml %}
