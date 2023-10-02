@@ -2,16 +2,19 @@
 
 id: ans.fhir.fr.tddui
 canonical: https://interop.esante.gouv.fr/ig/fhir/tddui # the last part of canonical and id must be the same
-name: ExampleIG
-title: ANS IG Example
+name: TransfertDonneesDUI
+title: Médicosocial - Transfert de données DUI
 publisher:
   name: ANS
   url: https://esante.gouv.fr
-status: draft
-version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+status: active
+version: 0.2.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
-copyrightYear: 2020+
-releaseLabel: ci-build
+copyrightYear: 2023+
+releaseLabel: STU1
+
+dependencies:
+    hl7.fhir.fr.core: 1.1.0
 
 parameters:
     shownav: 'true'
@@ -21,19 +24,42 @@ parameters:
 pages:
     index.md:
         title: Accueil
+    specifications_fonctionnelles.md:
+        title: Spécifications fonctionnelles
+        cadre_orientations.md:
+            title : Cadre juridique et orientations organisationnelles
+        contexte_metier.md:
+            title : Organisation du contexte métier
+        processus.md:
+            title : Définition des processus collaboratifs
+        modelisation_contenu.md :
+            title : Modélisation du contenu du DUI
+    contenu_dossier.md :
+        title: Contenu du dossier
     specifications_techniques.md:
-        construction_des_flux.md:
+        title: Spécifications techniques
+        synthese_flux.md:
+            title: Synthèse des flux
         st_flux1.md:
-            title: Flux 01
+            title: Flux 1 - Ajout d'un document
         st_flux2.md:
-            title: Flux 02
+            title: Flux 2 - Ajout d'un lot de documents
+        st_flux3.md:
+            title: Flux 3 - Mise à jour d'un document
+    ressources_conformite.md:
+        title: Ressources de conformité
+        ressources_cda.md: 
+            title: Ressources CDA
+    annexes.md:
+        title: Annexes
+        acronymes.md:
+            title: Acronymes
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
-
     tests.md:
         title: Tests      
     about.md:
@@ -41,12 +67,24 @@ pages:
 
 menu:
     Accueil: index.html
+    Spécifications fonctionnelles : 
+        Cadre juridique et orientations organisationnelles : cadre_orientations.html
+        Organisation du contexte métier : contexte_metier.html
+        Définition des processus collaboratifs : processus.html
+        Modélisation du contenu du DUI : modelisation_contenu.html
+    Contenu du dossier : contenu_dossier.html
     Description des flux:
-        Construction des flux: construction_des_flux.html
-        Flux 01: st_flux1.html
-        Flux 02: st_flux2.html
-    Ressources de conformité: artifacts.html
-    Tests:   tests.html
+        Synthèse des flux: synthese_flux.html
+        Flux 1 - Ajout d'un document: st_flux1.html
+        Flux 2 - Ajout d'un lot de documents: st_flux2.html
+        Flux 3 - Mise à jour d'un document: st_flux3.html
+    Ressources de conformité:
+        Ressource FHIR: artifacts.html
+        Ressource CDA: ressources_cda.html
+    Annexes: 
+        Acronymes: acronymes.html
+        "Etude des normes et standards": new-tab NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf
+    Tests:  tests.html
     Autres ressources:
         Sécurité: securite.html
         Téléchargements et usage: downloads.html

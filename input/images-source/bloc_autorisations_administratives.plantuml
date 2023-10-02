@@ -1,0 +1,19 @@
+@startuml
+
+hide empty methods
+
+class Usager #LightPink
+
+class AutorisationAdministrative #PeachPuff {
+    type : Code [0..1]
+    auteur : PersonnePhysique [0..*]
+    dateSignature : Date [0..1]
+    dateDebut : Date [0..1]
+    dateDebut : Date [0..1]
+    pieceJointe : ObjetBinaire [0..*]
+    commentaire : Texte [0..1]
+}
+
+Usager "1" - "*" AutorisationAdministrative
+
+@enduml
