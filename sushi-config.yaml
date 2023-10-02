@@ -55,15 +55,7 @@ pages:
         acronymes.md:
             title: Acronymes
     autres_ressources.md:
-        title: Autres Ressources
-        securite.md:
-            title: Sécurité
-        downloads.md:
-            title: Téléchargements et usages
-    tests.md:
-        title: Tests      
-    about.md:
-        title: A propos de ce guide
+        title: Autres Ressources  
 
 menu:
     Accueil: index.html
@@ -84,11 +76,7 @@ menu:
     Annexes: 
         Acronymes: acronymes.html
         "Etude des normes et standards": new-tab NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf
-    Tests:  tests.html
     Autres ressources:
-        Sécurité: securite.html
-        Téléchargements et usage: downloads.html
-        "Documentation sur les IG": new-tab https://interop.esante.gouv.fr/ig/documentation/
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    A propos de ce guide: about.html
+    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
