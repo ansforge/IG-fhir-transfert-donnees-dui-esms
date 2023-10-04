@@ -28,8 +28,9 @@ Les flux décrits dans ce guide d'implémentation sont les suivants.
 
 | Flux | Emetteur | Récepteur |
 | ----- | ----- | ----- |
-| <a href="st_flux1.html">Flux 1 : Transfert d'un dossier</a> | Logiciel DUI | Logiciel DUI ou SIDOBA |
-| <a href="st_flux2.html">Flux 2 : Transfert d'un lot de dossier</a> | Logiciel DUI | Logiciel DUI ou SIDOBA |
+| <a href="st_flux_ajout_doc.html">Flux 1 : Ajout d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+| <a href="st_flux_ajout_loc_doc.html">Flux 2 : Ajout d'un lot de documents</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+| <a href="st_flux_maj_doc.html">Flux 3 : Mise a jour d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
 
 Pour en savoir davantage, rendez-vous sur la page <a href="construction_des_flux.html">construction des flux</a>.
 

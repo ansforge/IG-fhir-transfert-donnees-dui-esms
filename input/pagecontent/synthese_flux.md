@@ -16,7 +16,7 @@
       <li>Flux 1.2 - Resultat de l'ajout d'un document : réponse à la requête HTTP POST</li>
       </ul>
       {%include flux1.svg%} <br>
-      Lien vers la description détaillée : <a href="st_flux1.html">flux 1</a>
+      Lien vers la description détaillée : <a href="st_flux_ajout_doc.html">flux 1</a>
     </td>
   </tr>
   <tr>
@@ -27,7 +27,7 @@
       <li>Flux 2.2 - Resultat de l'ajout d'un lots documents : réponse à la requête HTTP POST</li>
       </ul>
       {%include flux2.svg%} <br>
-      Lien vers la description détaillée : <a href="st_flux2.html">flux 2</a>
+      Lien vers la description détaillée : <a href="st_flux_ajout_lot_doc.html">flux 2</a>
     </td>
   </tr>
   <tr>
@@ -44,7 +44,7 @@ logiciel DUI vers un SI tiers</li>
       <li>Flux 3.2 - Resultat de la mise à jour d'un document : réponse à la requête HTTP PATCH</li>
       </ul>
       {%include flux3.svg%} <br>
-      Lien vers la description détaillée : <a href="st_flux3.html">flux 3</a>
+      Lien vers la description détaillée : <a href="st_flux_maj_doc.html">flux 3</a>
     </td>
   </tr>
 </table>
