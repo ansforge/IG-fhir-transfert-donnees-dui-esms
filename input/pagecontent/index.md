@@ -4,6 +4,14 @@ The Digital User File (DUI) centralizes all information concerning the person be
 The aim of this implementation guide is to define the specifications for DUI data transfer.
 </p>
 
+<blockquote class="stu-note">
+<p>
+  <b>Attention !</b>
+  <br>
+ Cet Implementation Guide est actuellement en concertation.
+</p>
+</blockquote>
+
 ### Introduction
 
 Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour l'Autonomie (CNSA), vise à généraliser l’utilisation du numérique dans les établissements et services sociaux et médico-sociaux (ESSMS). Il repose principalement sur le déploiement d’un Dossier Usager Informatisé (DUI) pour chaque personne accompagnée. Ce DUI centralise l’ensemble des informations qui concerne la personne accompagnée en structure et service sociale et médico-sociale, et son parcours de santé et de vie. Ce dossier unique comprend :
