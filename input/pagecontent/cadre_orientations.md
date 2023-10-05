@@ -69,7 +69,7 @@ Le volet "Transfert de données DUI" s'inscrit dans la continuité du programme 
 
 La notion de portabilité implique de respecter des conditions réglementaires. La Commission Nationale de l’Informatique et des Libertés (CNIL) est chargée de protéger les données personnelles, d’accompagner l'innovation et de préserver les libertés individuelles. Pour la protection des données personnelles, le RGPD encadre le traitement des données personnelles sur le territoire de l’Union européenne depuis le 25 mai 2018. L’<a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3">article 20</a> du RGPD définit le droit à la portabilité comme le droit d’une personne de récupérer les données à caractère personnel qui la concernent dans un format structuré, couramment utilisé et lisible par machine auprès d’un responsable de traitement à qui elle les a fournies. Ce droit inclue de pouvoir transmettre ces données à un autre responsable du traitement sans que le responsable initial puisse y faire obstacle. Le traitement de ce transfert est fondé sur le consentement ou sur un contrat, et doit être effectué à l’aide de procédés automatisés. 
 
-Le DSR contient intègre cette exigence de portabilité dans ses objectifs.
+Le DSR intègre cette exigence de portabilité dans ses objectifs.
 
 #### Principe relatif à la mise à disposition des données
 
