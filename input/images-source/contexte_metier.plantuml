@@ -12,12 +12,12 @@ package "<<GroupProcessus>>\nTransférer des données DUI" #FloralWhite {
 }
 
 package "<<GroupProcessus>>\nSuivi des décisions d'orientation" #FloralWhite {
-    package "<<GroupProcessus>>\nSI-ESMS" #FloralWhite
-    package "<<GroupProcessus>>\nSI-SdO" #FloralWhite
+    package "<<GroupProcessus>>\nSI-SdO - SI-ESMS" #FloralWhite
+    package "<<GroupProcessus>>\nSI-MDPH - SI-SdO" #FloralWhite
 }
 
 portabilite -[hidden]- transfertSI
-[<<GroupProcessus>>\nSI-SdO] -[hidden]- [<<GroupProcessus>>\nSI-ESMS]
+[<<GroupProcessus>>\nSI-MDPH - SI-SdO] -[hidden]- [<<GroupProcessus>>\nSI-SdO - SI-ESMS]
 
 
 @enduml

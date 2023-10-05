@@ -19,8 +19,8 @@ Le groupe de processus « Transférer des données DUI » comprend 2 sous-groupe
 
 ### Suivi des décisions d’orientation
 
-Le groupe de processus « Suivi des décisions d’orientations » contient 2 sous-groupes de processus relatifs au suivi du parcours des personnes en situation de handicap orientées par le SdO vers un ESSMS :
-* Le groupe de processus « SI-SdO ». Ce groupe de processus décrit le transfert d’informations de décision et d’évaluation depuis les MDPH vers le Système d’orientation (SdO).
-* Le groupe de processus « SI-ESSMS ». Ce groupe de processus couvre le transfert d’informations de données de décision et d’évaluation depuis le SI-SdO vers les ESSMS.
+Le groupe de processus « Suivi des décisions d’orientations » contient 2 sous-groupes de processus relatifs au suivi du parcours des personnes en situation de handicap orientées par le SdO (suivi des décisions d'orientation) vers un ESSMS :
+* Le groupe de processus « SI-MDPH - SI-SdO ». Ce groupe de processus décrit le transfert d’informations de décision et d’évaluation depuis les MDPH vers le Système d’orientation (SdO).
+* Le groupe de processus « SI-SdO - SI-ESMS ». Ce groupe de processus couvre le transfert d’informations de données de décision et d’évaluation depuis le SI-SdO vers les ESSMS.
 
-**Ces groupes de processus n’entrent pas dans le périmètre de cette étude. Ils ont fait l’objet de volets dédiés « SI-SdO » et « SI-ESSMS – Via Trajectoire module PH », respectivement publiés par la CNSA et l’ANS.**
+**Ces groupes de processus n’entrent pas dans le périmètre de cette étude. Ils ont fait l’objet de volets dédiés « SI-MDPH - SI-SdO » et « SI-ESSMS – Via Trajectoire module PH », respectivement publiés par la CNSA et l’ANS.**
