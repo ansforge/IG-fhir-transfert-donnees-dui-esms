@@ -16,4 +16,4 @@
 
 | Nom  | description |
 | --- | --- |
-| [Exemple](exemple_v0.4.xml) | Exemple de document CDA présentant l'identité de l'usager et la grille d'évaluation |
+| [Exemple](exemple_v0-4.zip) | Exemple de document CDA présentant l'identité de l'usager et la grille d'évaluation |
