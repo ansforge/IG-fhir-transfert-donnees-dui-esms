@@ -28,7 +28,7 @@ Cet guide d'implémentation contient :
 - L'étude des normes et standards : [lien pdf](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
 - Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
 - La spécification technique de contenu : section <a href="contenu_dossier.html">Contenu du dossier</a>
-- La spécification technique de transport : sections <a href="construction_des_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
+- La spécification technique de transport : sections <a href="synthese_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
 
 ### Flux
 
