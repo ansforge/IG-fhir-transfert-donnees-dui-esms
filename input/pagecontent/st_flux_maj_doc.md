@@ -23,6 +23,6 @@ Lorsque toutes les modifications sont traitées, le serveur traite la fiche du d
 
 ### Flux 3.2 ResultatMiseAJourDocument
 
-Si la mise à jour partielle de la jour de la ressource est correctement effectuée, le récepteur doit retourner un code HTTPS 200 « OK » ainsi que la ressource modifiée.
+Si la mise à jour partielle de la ressource est correctement effectuée, le récepteur doit retourner un code HTTPS 200 « OK » ainsi que la ressource modifiée.
 
 En cas d’échec, le récepteur doit répondre avec le code HTTPS approprié tel que défini par l’API REST FHIR [(Http - FHIR v4.0.1 (hl7.org))](http://hl7.org/fhir/R4/http.html). Une ressource OperationOutcome doit également y être associé pour véhiculer les messages d’erreurs détaillant la raison de l’erreur [(OperationOutcome - FHIR v4.0.1 (hl7.org))](http://hl7.org/fhir/R4/operationoutcome.html).

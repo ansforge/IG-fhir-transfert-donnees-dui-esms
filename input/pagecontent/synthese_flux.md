@@ -13,7 +13,7 @@
     <td>
       <ul>
       <li>Flux 1.1 - Ajout d'un document : interaction « create » de FHIR</li>
-      <li>Flux 1.2 - Resultat de l'ajout d'un document : réponse à la requête HTTP POST</li>
+      <li>Flux 1.2 - Résultat de l'ajout d'un document : réponse à la requête HTTP POST</li>
       </ul>
       {%include flux1.svg%} <br>
       Lien vers la description détaillée : <a href="st_flux_ajout_doc.html">flux 1</a>
@@ -24,7 +24,7 @@
     <td>
       <ul>
       <li>Flux 2.1 - Ajout d'un lot de documents : interaction « transaction » de FHIR</li>
-      <li>Flux 2.2 - Resultat de l'ajout d'un lots documents : réponse à la requête HTTP POST</li>
+      <li>Flux 2.2 - Résultat de l'ajout d'un lots documents : réponse à la requête HTTP POST</li>
       </ul>
       {%include flux2.svg%} <br>
       Lien vers la description détaillée : <a href="st_flux_ajout_lot_doc.html">flux 2</a>
@@ -41,7 +41,7 @@ logiciel DUI vers un SI tiers</li>
     <td>
       <ul>
       <li>Flux 3.1 - Mise à jour partielle d'un document : interaction « patch » de FHIR</li>
-      <li>Flux 3.2 - Resultat de la mise à jour d'un document : réponse à la requête HTTP PATCH</li>
+      <li>Flux 3.2 - Résultat de la mise à jour d'un document : réponse à la requête HTTP PATCH</li>
       </ul>
       {%include flux3.svg%} <br>
       Lien vers la description détaillée : <a href="st_flux_maj_doc.html">flux 3</a>

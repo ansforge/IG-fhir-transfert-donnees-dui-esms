@@ -24,7 +24,7 @@ Les logiciels DUI doivent permettre, entre autres, de mieux construire et de sui
 
 Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert de données DUI ». L’objectif de ce volet est de définir la nature, le format des données à transmettre ainsi que les modalités de transport lors d’un transfert de données des usagers issues d’un DUI pour les cas d’usage définis  dans la partie [Exemples de cas d’usage](cadre_orientations.html#exemples-de-cas-dusage).
 
-Cet guide d'implémentation contient : 
+Ce guide d'implémentation contient : 
 - L'étude des normes et standards : [lien pdf](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
 - Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
 - La spécification technique de contenu : section <a href="contenu_dossier.html">Contenu du dossier</a>
@@ -40,11 +40,11 @@ Les flux décrits dans ce guide d'implémentation sont les suivants.
 | <a href="st_flux_ajout_loc_doc.html">Flux 2 : Ajout d'un lot de documents</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
 | <a href="st_flux_maj_doc.html">Flux 3 : Mise a jour d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
 
-Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Sytnhèse des flux</a>.
+Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Synthèse des flux</a>.
 
 ### Ressources profilées
 
-Les ressources profilées dans le cadre de guide d'implémentation sont les suivantes : 
+Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes : 
 
 | Ressource | Modifications apportées | Profil |
 | ----- | ----- | ----- |
