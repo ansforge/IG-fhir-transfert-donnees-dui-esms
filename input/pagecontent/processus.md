@@ -25,7 +25,7 @@
     <th>Scénario nominal</th>
     <td>L’ESSMS change de logiciel métier et demande la migration des données des usagers depuis son ancien logiciel DUI vers son nouveau logiciel DUI.</td>
   </tr>
-  <caption>Caractéristique du processus collaboratif « Changer de logiciel métier »</caption>
+  <caption>Caractéristiques du processus collaboratif « Changer de logiciel métier »</caption>
 </table>
 
 #### Processus collaboratif « Changer d’ESSMS »
@@ -55,7 +55,7 @@
     L’usager peut également être amené à changer de structure car il ne remplit plus les conditions d’accès (exemple : l’usager grandit).
 </td>
   </tr>
-  <caption>Caractéristique du processus collaboratif « Changer d’ESSMS »</caption>
+  <caption>Caractéristiques du processus collaboratif « Changer d’ESSMS »</caption>
 </table>
 
 #### Processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »
@@ -83,7 +83,7 @@
     <th>Scénario nominal</th>
     <td>La CNSA demande à l’ESSMS de lui transférer des données à des fins de pilotage et de financement.</td>
   </tr>
-  <caption>Caractéristique du processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »</caption>
+  <caption>Caractéristiques du processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »</caption>
 </table>
 
 ### Liste des acteurs pour l’ensemble des processus

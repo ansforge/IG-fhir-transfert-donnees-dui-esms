@@ -25,10 +25,20 @@ Les logiciels DUI doivent permettre, entre autres, de mieux construire et de sui
 Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert de données DUI ». L’objectif de ce volet est de définir la nature, le format des données à transmettre ainsi que les modalités de transport lors d’un transfert de données des usagers issues d’un DUI pour les cas d’usage définis  dans la partie [Exemples de cas d’usage](cadre_orientations.html#exemples-de-cas-dusage).
 
 Ce guide d'implémentation contient : 
-- L'étude des normes et standards : [lien pdf](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
+- L'étude des normes et standards au format pdf : section [Etude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
 - Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
-- La spécification technique de contenu : section <a href="contenu_dossier.html">Contenu du dossier</a>
+- La spécification technique de contenu : sections <a href="contenu_dossier.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
 - La spécification technique de transport : sections <a href="synthese_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
+
+### Lectorat cible
+
+Ce document s'adresse aux développeurs des interfaces interopérables des systèmes implémentant le volet « Transfert de données DUI » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
+
+L’hypothèse est faite que le lecteur est familier du standard CDA R2 et FHIR R4.
+
+### Utilisation
+
+Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex.: cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité ...).
 
 ### Flux
 
@@ -42,14 +52,24 @@ Les flux décrits dans ce guide d'implémentation sont les suivants.
 
 Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Synthèse des flux</a>.
 
-### Ressources profilées
+### Standards utilisés
+
+Les données véhiculées dans ce volet sont spécifiées dans le format CDA R2 niveau 3.
+
+Les interactions entre les systèmes reposent quant à elles sur le standard HL7 FHIR Release 4. Elles font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP. Les syntaxes retenues sont la syntaxe XML et JSON.
+
+#### Document CDA créé
+
+Le document CDA créé dans le cadre de ce guide d'implémentation est le suivant : <a href="ressources_cda.html#schémas-xsd">Export du dossier usager informatisé</a>
+
+#### Ressources FHIR profilées
 
 Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes : 
 
-| Ressource | Modifications apportées | Profil |
+| Ressource | Profil | Description |
 | ----- | ----- | ----- |
-| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> |  | Création du profil [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) |
-| <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a>  |  | Création du profil [TDDUIBundle](StructureDefinition-tddui-bundle.html) |
+| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA |
+| <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a> | [TDDUIBundle](StructureDefinition-tddui-bundle.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA |
 
 ### Dépendances
 

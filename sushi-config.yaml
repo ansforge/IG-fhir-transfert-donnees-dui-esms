@@ -36,8 +36,8 @@ pages:
             title : Modélisation du contenu du DUI
     contenu_dossier.md :
         title: Contenu du dossier
-    specifications_techniques.md:
-        title: Spécifications techniques
+    description_flux.md:
+        title: Description des flux
         synthese_flux.md:
             title: Synthèse des flux
         st_flux_ajout_doc.md:
@@ -54,6 +54,8 @@ pages:
         title: Annexes
         acronymes.md:
             title: Acronymes
+        documents_reference.md:
+            tile: Documents de référence
     autres_ressources.md:
         title: Autres Ressources  
 
@@ -71,11 +73,11 @@ menu:
         Flux 2 - Ajout d'un lot de documents: st_flux_ajout_lot_doc.html
         Flux 3 - Mise à jour d'un document: st_flux_maj_doc.html
     Ressources de conformité:
-        Ressource FHIR: artifacts.html
-        Ressource CDA: ressources_cda.html
+        Ressources FHIR: artifacts.html
+        Ressources CDA: ressources_cda.html
     Annexes: 
         Acronymes: acronymes.html
-        "Etude des normes et standards": new-tab NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf
+        Documents de référence: documents_reference.html
     Autres ressources:
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/

@@ -1,13 +1,3 @@
-
-**Documents de référence** : 
-- <a href="cadre_orientations.html">Spécifications fonctionnelles de contenu v0.4 du volet « Transfert de données DUI »</a>
-- [Etudes des normes et standards v0.1 du volet « Transfert de données DUI »](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
-- <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.12_0.pdf">Volet Structuration Minimale de Documents de Santé v1.13</a>
-- <a href="https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda">Volet Modèle de Contenu CDA</a> v3.3
-- <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe Transverse – Source des données métier pour les professionnels et les structures</a> v1.5
-- <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">Référentiel Identifiant national de santé</a> v0.1
-- Le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=496">Clinical Document Architecture R2 (CDA) porté par HL7</a>
-
 ### Introduction 
 
 Cette section présente les spécifications techniques du volet « Transfert de données DUI ». Ces dernières spécifient le transfert de données sociales et médico-sociales de l’usager depuis un logiciel DUI entre les Etablissements et Services Médico-Sociaux (ESSMS) et un autre ESSMS ou vers les Systèmes d’Information tiers.
@@ -78,16 +68,6 @@ Cette spécification est organisée en entête, sections, entrées et nomenclatu
 *Voir <a href="https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda">Volet Modèles de contenus</a> CDA version v3.3 (paragraphe "Terminologies et jeux de valeurs").*
 
 Les terminologies et les jeux de valeurs spécifiques à ce document sont précisés dans les spécifications techniques du modèle de document CDA « Transfert de données DUI » décrit dans ce document.
-
-### Lectorat cible
-
-Ce document s'adresse aux développeurs des interfaces interopérables des systèmes implémentant le volet « Transfert de données DUI » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
-
-L’hypothèse est faite que le lecteur est familier du standard CDA R2.
-
-### Utilisation
-
-Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex.: cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité ...).
 
 ### Contenu du document CDA
 
