@@ -40,18 +40,6 @@ L’hypothèse est faite que le lecteur est familier du standard CDA R2 et FHIR 
 
 Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex.: cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité ...).
 
-### Flux
-
-Les flux décrits dans ce guide d'implémentation sont les suivants.
-
-| Flux | Emetteur | Récepteur |
-| ----- | ----- | ----- |
-| <a href="st_flux_ajout_doc.html">Flux 1 : Ajout d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
-| <a href="st_flux_ajout_loc_doc.html">Flux 2 : Ajout d'un lot de documents</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
-| <a href="st_flux_maj_doc.html">Flux 3 : Mise a jour d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
-
-Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Synthèse des flux</a>.
-
 ### Standards utilisés
 
 Les données véhiculées dans ce volet sont spécifiées dans le format CDA R2 niveau 3.
@@ -70,6 +58,18 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 | ----- | ----- | ----- |
 | <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA |
 | <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a> | [TDDUIBundle](StructureDefinition-tddui-bundle.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA |
+
+### Flux
+
+Les flux décrits dans ce guide d'implémentation sont les suivants.
+
+| Flux | Emetteur | Récepteur |
+| ----- | ----- | ----- |
+| <a href="st_flux_ajout_doc.html">Flux 1 : Ajout d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+| <a href="st_flux_ajout_loc_doc.html">Flux 2 : Ajout d'un lot de documents</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+| <a href="st_flux_maj_doc.html">Flux 3 : Mise a jour d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+
+Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Synthèse des flux</a>.
 
 ### Dépendances
 

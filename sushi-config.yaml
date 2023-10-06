@@ -36,6 +36,14 @@ pages:
             title : Modélisation du contenu du DUI
     contenu_dossier.md :
         title: Contenu du dossier
+        contexte_contenu_dossier.md:
+            title : Contexte
+        structure_cda.md:
+            title: Structure générale du document CDA
+        entete_cda.md:
+            title: Entête du document CDA
+        corps_cda.md: 
+            title: Corps du document CDA
     description_flux.md:
         title: Description des flux
         synthese_flux.md:
@@ -55,7 +63,7 @@ pages:
         acronymes.md:
             title: Acronymes
         documents_reference.md:
-            tile: Documents de référence
+            title: Documents de référence
     autres_ressources.md:
         title: Autres Ressources  
 
@@ -66,7 +74,11 @@ menu:
         Organisation du contexte métier : contexte_metier.html
         Définition des processus collaboratifs : processus.html
         Modélisation du contenu du DUI : modelisation_contenu.html
-    Contenu du dossier : contenu_dossier.html
+    Contenu du dossier :
+        Contexte: contexte_contenu_dossier.html
+        Structure générale du document CDA : structure_cda.html
+        Entête du document CDA : entete_cda.html
+        Corps du document CDA : corps_cda.html
     Description des flux:
         Synthèse des flux: synthese_flux.html
         Flux 1 - Ajout d'un document: st_flux_ajout_doc.html
