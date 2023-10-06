@@ -87,7 +87,4 @@ Les droits de l'usager sont définis par l'<a href="https://www.legifrance.gouv.
 
 Les catégories de professionnels susceptibles d’échanger ou partager des informations concernant un usager pris en charge dans un établissement ou service social et médico-social sont listées dans l'<a href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000043926322/2021-08-08">article R1110-2 du Code de la santé publique</a>. Les prestations offertes dans ces établissements et services sont réalisées par des équipes pluridisciplinaires qualifiées. La direction de ces établissements et services est assurée par des professionnels dont le niveau de qualification est déterminé par décret, après consultation de la branche professionnelle ou, à défaut, des fédérations ou organismes représentatifs des gestionnaires d'établissements et services sociaux et médico-sociaux concernés (<a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000006174436/#LEGISCTA000006174436">article L312-1 du code l’action sociale et des familles</a>).
 
-### Lectorat cible 
-
-Les lecteurs cibles sont principalement des chefs de projets, les maîtres d’ouvrage qui spécifient des projets avec des interfaces interopérables, tous porteurs de SI cherchant à transporter de manière interopérable des données usagers vers un autre SI ainsi que les éditeurs de logiciels DUI.
 
