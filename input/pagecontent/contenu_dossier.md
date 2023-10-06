@@ -5,10 +5,6 @@ La production de ce document est basée sur :
 - Les <a href="cadre_orientations.html">Spécifications Fonctionnelles de Contenu v0.4 du volet « Transfert de données DUI »</a>,
 - Le standard <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=496">Clinical Document Architecture R2</a> (CDA) porté par HL7 pour représenter les données présentées dans les Spécifications Fonctionnelles de Contenu v0.4 du volet « Transfert de données DUI ».
 
-### Présentation du volet 
-
-Cette section présente les spécifications techniques de contenu du volet « Transfert de données DUI » (TDDUI). 
-
 Ce volet a pour objectif premier de décrire l’export de données d’usagers depuis des établissements ou services sociaux ou médico-sociaux (ESSMS). Les échanges d’informations se font entre le logiciel de Dossier Usager Informatisé (DUI) d’un ESSMS et un autre logiciel DUI, ou un système d’information tiers.
 
 Dans cette section, une mise en correspondance est faite entre : 
@@ -22,12 +18,11 @@ Des mises à jour seront proposées pour intégrer progressivement l’ensemble 
 <div style="padding: 5px; border-radius: 5px; border: 2px solid black; width: 65%">
   Les spécifications techniques sont complétées par : 
   <ul>
-    <li>Des <b>éléments sémantiques</b> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
-    <li>Des <b>exemples d'implémentation en CDA R2 niveau 3</b> ;</li>
-    <li>Un <b>outil de vérification en local (testContenuCDA)</b> de la compatibilité des documents produits. Il est téléchargeable à partir de l'espace de publication du CI-SIS.</li>
+    <li>Des <b><a href="contenu_dossier.html#nomenclatures">éléments sémantiques</a></b> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
+    <li>Des <b><a href="ressources_cda.html#exemples">exemples d'implémentation en CDA R2 niveau 3</a></b> ;</li>
+    <li>Un <b><a href="ressources_cda.html#schématrons">outil de vérification en local (testContenuCDA)</a></b> de la compatibilité des documents produits. Il est téléchargeable à partir de l'espace de publication du CI-SIS.</li>
   </ul>
 </div>
-
 
 ### Standards utilisés
 

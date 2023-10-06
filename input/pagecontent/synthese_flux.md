@@ -4,7 +4,7 @@
     <th>Flux techniques</th>
   </tr>
   <tr>
-    <td>
+    <td rowspan="2">
       <ul>
       <li>Portabilité des données entre deux logiciels DUI</li>
       <li>Transférer les données d’un logiciel DUI vers un SI tiers</li>
@@ -20,7 +20,6 @@
     </td>
   </tr>
   <tr>
-    <td></td>
     <td>
       <ul>
       <li>Flux 2.1 - Ajout d'un lot de documents : interaction « transaction » de FHIR</li>
