@@ -25,7 +25,6 @@
     <th>Scénario nominal</th>
     <td>L’ESSMS change de logiciel métier et demande la migration des données des usagers depuis son ancien logiciel DUI vers son nouveau logiciel DUI.</td>
   </tr>
-  <caption>Caractéristiques du processus collaboratif « Changer de logiciel métier »</caption>
 </table>
 
 #### Processus collaboratif « Changer d’ESSMS »
@@ -55,7 +54,6 @@
     L’usager peut également être amené à changer de structure car il ne remplit plus les conditions d’accès (exemple : l’usager grandit).
 </td>
   </tr>
-  <caption>Caractéristiques du processus collaboratif « Changer d’ESSMS »</caption>
 </table>
 
 #### Processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »
@@ -83,7 +81,6 @@
     <th>Scénario nominal</th>
     <td>La CNSA demande à l’ESSMS de lui transférer des données à des fins de pilotage et de financement.</td>
   </tr>
-  <caption>Caractéristiques du processus collaboratif « Transférer les données d’un logiciel DUI ver le SI de la CNSA (SIDOBA) »</caption>
 </table>
 
 ### Liste des acteurs pour l’ensemble des processus
@@ -109,7 +106,6 @@ Le demandeur est l’acteur à l’origine du besoin. Il peut s’agir d’un é
     <td>Transférer des données DUI vers SIDOBA</td>
     <td><b>CNSA</b> : Elle demande l’accès à des données de l’usager, via son système d’information SIDOBA, à des fins de pilotage ou de financement</td>
   </tr>
-  <caption>Description des demandeurs impliqués dans chaque processus collaboratif</caption>
 </table>
 
 #### Le producteur 
@@ -131,7 +127,6 @@ Le producteur est l’acteur à l’origine de l’export des données. C’est 
   <tr>
     <td>Transférer des données DUI vers SIDOBA</td>
   </tr>
-  <caption>Description des producteurs impliqués dans chaque processus collaboratif</caption>
 </table>
 
 #### Le consommateur
@@ -155,5 +150,4 @@ Le consommateur est l’acteur qui reçoit les données. C’est un système.
     <td>Transférer des données DUI vers SIDOBA</td>
     <td><b>SIDOBA</b>: système d’information de la CNSA permettant le pilotage et le financement des ESSMS</td>
   </tr>
-  <caption>Description des consommateurs impliqués dans chaque processus collaboratif</caption>
 </table>
