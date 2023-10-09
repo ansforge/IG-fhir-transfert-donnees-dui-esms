@@ -1,25 +1,76 @@
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
+<b>Brief description of this Implementation Guide</b><br>
+The Digital User File (DUI) centralizes all information concerning the person being cared for in social and medico-social facilities and services. 
+The aim of this implementation guide is to define the specifications for DUI data transfer.
+</p>
+
+<blockquote class="stu-note">
+<p>
+  <b>Attention !</b>
+  <br>
+ Cet Implementation Guide est actuellement en concertation.
+</p>
+</blockquote>
+
 ### Introduction
 
-Définir ici de quoi parle l'IG (En termes non expert, compréhensible par un patient). Rajouter également les détails techniques sur le contexte et le besoin de cet IG
+Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour l'Autonomie (CNSA), vise à généraliser l’utilisation du numérique dans les établissements et services sociaux et médico-sociaux (ESSMS). Il repose principalement sur le déploiement d’un Dossier Usager Informatisé (DUI) pour chaque personne accompagnée. Ce DUI centralise l’ensemble des informations qui concerne la personne accompagnée en structure et service sociale et médico-sociale, et son parcours de santé et de vie. Ce dossier unique comprend :
+* Des données administratives ;
+* Des données liées à l’accompagnement de l’usager ;
+* Des données liées à la coordination des différents acteurs ;
+* Des données médicales.
 
-Les principales sections de l'IG  sont :
-* Le contexte de l'IG, quelle problématique il résout
-* Ce que les Implémenteurs doivent mettre en place
-* Un onglet "Ressources de conformité" pour s'assurer d'un schéma global entre tous les IGs
+Les logiciels DUI doivent permettre, entre autres, de mieux construire et de suivre le projet personnalisé de la personne accompagnée, d’éviter les ruptures de parcours en cas d’évolution des besoins, de changement d’établissement médico-social, de retour à domicile ou d’hospitalisation. 
 
-### Project scope
+Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert de données DUI ». L’objectif de ce volet est de définir la nature, le format des données à transmettre ainsi que les modalités de transport lors d’un transfert de données des usagers issues d’un DUI pour les cas d’usage définis  dans la partie [Exemples de cas d’usage](cadre_orientations.html#exemples-de-cas-dusage).
 
-Définir en quelques lignes en anglais quel est le périmètre du projet
+Ce guide d'implémentation contient : 
+- L'étude des normes et standards au format pdf : [Etude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
+- Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
+- La spécification technique de contenu : sections <a href="contenu_dossier.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
+- La spécification technique de transport : sections <a href="synthese_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
 
-Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globales entre tous les IGs
+### Lectorat cible
 
-### Project scope
+Ce document s'adresse aux chefs de projets qui spécifient des projets avec des interfaces interopérables et aux développeurs des interfaces interopérables des systèmes implémentant le volet « Transfert de données DUI ». Il s'adresse également à toute autre personne intervenant dans le processus de mise en place de ces interfaces et à tout porteur de SI cherchant à transporter de manière interopérable des données usagers vers un autre SI ainsi que les éditeurs de logiciels DUI.
 
-Définir en quelques lignes en anglais quel est le périmètre du projet
+L’hypothèse est faite que le lecteur est familier des standards CDA R2 et FHIR R4.
 
+### Utilisation
 
-### Auteurs et contributeurs
+Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex.: cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité ...).
 
-| Role  | Nom | Organisation | Contact |
-| --- | --- | --- | --- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
+### Standards utilisés
+
+Les données véhiculées dans ce volet sont spécifiées dans le format CDA R2 niveau 3.
+
+Les interactions entre les systèmes reposent quant à elles sur le standard HL7 FHIR Release 4. Elles font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP. Les syntaxes retenues sont la syntaxe XML et JSON.
+
+#### Template CI-SIS de document CDA créé
+
+Le tempalte CI-SIS de document CDA créé dans le cadre de ce guide d'implémentation est le suivant : <a href="ressources_cda.html#schémas-xsd">Export du dossier usager informatisé</a>
+
+#### Ressources FHIR profilées
+
+Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes : 
+
+| Ressource | Profil | Description |
+| ----- | ----- | ----- |
+| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA (inspiré du flux d'ajout simplifié d'un document défini dans le profil PDSm) |
+| <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a> | [TDDUIBundle](StructureDefinition-tddui-bundle.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA |
+
+### Flux
+
+Les flux décrits dans ce guide d'implémentation sont les suivants.
+
+| Flux | Emetteur | Récepteur |
+| ----- | ----- | ----- |
+| <a href="st_flux_ajout_doc.html">Flux 1 : Ajout d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+| <a href="st_flux_ajout_loc_doc.html">Flux 2 : Ajout d'un lot de documents</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+| <a href="st_flux_maj_doc.html">Flux 3 : Mise a jour d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
+
+Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Synthèse des flux</a>.
+
+### Dépendances
+
+{% include dependency-table.xhtml %}

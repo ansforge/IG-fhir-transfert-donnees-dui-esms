@@ -1,0 +1,85 @@
+@startuml
+
+hide empty methods
+
+class Usager #LightPink
+
+class AssuranceMaladieComplementaire #LightYellow {
+    numeroContrat : Identifiant [0..1]
+    ouvrantDroit : Identifiant [0..1]
+    nomOrganisme : Texte [0..1]
+    libelleOrganisme : Texte [0..1]
+    dateDebutDroit : Date [0..1]
+    dateFinDroit : Date [0..1]
+    aideComplementaireSante : Indicateur [0..1]
+    typeFinDroit : Code [0..1]
+
+}
+
+class AssuranceMaladieObligatoire #LightYellow {
+    ouvrantDroit : Identifiant [0..1]
+    nomOrganisme : Texte [0..1]
+    numeroCodeOrganisme : Identifiant [0..1]
+    adresseOrganisme : Adresse [0..1]
+    codeRisque : Code [0..1]
+    dateDebutDroit : Date [0..1]
+    dateFinDroit : Date [0..1]
+    ticketModerateur : Texte [0..1]
+    dateFinCentPourCent : Date [0..1]
+    dateFinDroitPUMa : Date [0..1]
+    droitPUMa : Indicateur [0..1]
+}
+
+class Decision #LightYellow {
+    idDecision : Identifiant [1..1]
+    numeroEnregistrement : Identifiant [0..1]
+    idDecisionMAJ : Identifiant [0..*]
+    idNat_Decision : Identifiant [0..*]
+    dateDecision : Date [0..1]
+    typeDecision : Code [0..1]
+    motivation : Code [0..*]
+    commentaire : Texte [0..1]
+}
+
+class DroitPrestation #LightYellow {
+    idDroitPrestation : Identifiant [1..1]
+    contactOrganisme : Contact [0..*]
+    numeroAllocataire : Identifiant [0..1]
+    typeDroitPrestation : Code [1..1]
+    natureDroit : Code [1..1]
+    dateOuverture : Date [1..1]
+    dateEcheance : Date [1..1]
+    existencePAG : Indicateur [1..1]
+    creton : Indicateur [0..1]
+    taux : Mesure [0..1] 
+    typeCompensation : Code [0..1]
+    commentaire : Texte [0..1]
+}
+
+class DetailPrestation #LightYellow {
+    montantAttribue : Montant [0..1]
+    frequence : Mesure [0..1]
+    temporaliteAccueil : Code [0..1]
+    qualification : Code [1..1]
+    precisionOrientation : Code [0..1]
+}
+
+class PriseCharge #LightYellow {
+    modePriseCharge : Code [0..1]
+}
+
+class Quantification #LightYellow {
+    quantificationNombre : Texte [0..1]
+    quantificationUnite : Texte [0..1]
+    quantificationPeriodicite : Code [0..1]
+}
+
+Usager "1" -- "*"  AssuranceMaladieComplementaire
+Usager "1" - "1" AssuranceMaladieObligatoire
+Decision "*" -- "1" Usager
+DroitPrestation  "0..1" - "1" Decision
+DroitPrestation "1" -- "0..1" DetailPrestation
+DetailPrestation "1" -- "*" PriseCharge
+PriseCharge "1" -- "0..1" Quantification
+
+@enduml

@@ -1,0 +1,14 @@
+{
+    "package-id" : "ans.fhir.fr.tddui",
+    "version" : "1.0.0-ballot",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/tddui/1.0.0-ballot",
+    "mode" : "milestone",
+    "status" : "release",
+    "sequence" : "STU1",
+    "title" : "Médicosocial - Transfert de données DUI",
+    "desc" : "Ce document présente les spécifications fonctionnelles et techniques du volet « Transfert de Données DUI » (TDDUI). Ces dernières spécifient le contenu et le transport des données DUI d'un logiciel DUI vers un autre logiciel DUI ou un SI tiers.",
+    "descmd" : "Release de l`Implementation Guide FHIR. \n - Ajout des spécifications pour la partie transport \n - Correctif au niveau du contenu CDA de la grille d'évaluation (section FR-Evaluation-du-statut-fonctionnel)",
+    "ci-build" : "https://ansforge.github.io/IG-fhir-medicosocial-transfert-donnees-dui/ig/main/",
+    "category" : "Clinical Documents",
+    "introduction" : "Documentation du Transfert de Données Dossier Usager Informatisé (TDDUI)"
+  }
