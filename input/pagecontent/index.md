@@ -56,8 +56,8 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 
 | Ressource | Profil | Description |
 | ----- | ----- | ----- |
-| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA |
-| <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a> | [TDDUIBundle](StructureDefinition-tddui-bundle.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA |
+| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA (inspiré du flux d'ajout simplifié d'un document défini dans le profil PDSm) |
+| <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a> | [TDDUIBundle](StructureDefinition-tddui-bundle.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA  (inspiré du flux d'ajout d'un lot de documents défini dans le profil PDSm) |
 
 ### Flux
 
