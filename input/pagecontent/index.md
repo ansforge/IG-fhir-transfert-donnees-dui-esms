@@ -25,7 +25,7 @@ Les logiciels DUI doivent permettre, entre autres, de mieux construire et de sui
 Dans la continuité des travaux menés dans le cadre du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert de données DUI ». L’objectif de ce volet est de définir la nature, le format des données à transmettre ainsi que les modalités de transport lors d’un transfert de données des usagers issues d’un DUI pour les cas d’usage définis  dans la partie [Exemples de cas d’usage](cadre_orientations.html#exemples-de-cas-dusage).
 
 Ce guide d'implémentation contient : 
-- L'étude des normes et standards au format pdf : section [Etude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
+- L'étude des normes et standards au format pdf : [Etude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
 - Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
 - La spécification technique de contenu : sections <a href="contenu_dossier.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
 - La spécification technique de transport : sections <a href="synthese_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
@@ -34,7 +34,7 @@ Ce guide d'implémentation contient :
 
 Ce document s'adresse aux chefs de projets qui spécifient des projets avec des interfaces interopérables et aux développeurs des interfaces interopérables des systèmes implémentant le volet « Transfert de données DUI ». Il s'adresse également à toute autre personne intervenant dans le processus de mise en place de ces interfaces et à tout porteur de SI cherchant à transporter de manière interopérable des données usagers vers un autre SI ainsi que les éditeurs de logiciels DUI.
 
-L’hypothèse est faite que le lecteur est familier du standard CDA R2 et FHIR R4.
+L’hypothèse est faite que le lecteur est familier des standards CDA R2 et FHIR R4.
 
 ### Utilisation
 
@@ -46,9 +46,9 @@ Les données véhiculées dans ce volet sont spécifiées dans le format CDA R2 
 
 Les interactions entre les systèmes reposent quant à elles sur le standard HL7 FHIR Release 4. Elles font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP. Les syntaxes retenues sont la syntaxe XML et JSON.
 
-#### Document CDA créé
+#### Template CI-SIS de document CDA créé
 
-Le document CDA créé dans le cadre de ce guide d'implémentation est le suivant : <a href="ressources_cda.html#schémas-xsd">Export du dossier usager informatisé</a>
+Le tempalte CI-SIS de document CDA créé dans le cadre de ce guide d'implémentation est le suivant : <a href="ressources_cda.html#schémas-xsd">Export du dossier usager informatisé</a>
 
 #### Ressources FHIR profilées
 
