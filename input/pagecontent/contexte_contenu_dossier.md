@@ -20,7 +20,6 @@ Des mises à jour seront proposées pour intégrer progressivement l’ensemble 
   <ul>
     <li>Des <b><a href="contenu_dossier.html#nomenclatures">éléments sémantiques</a></b> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
     <li>Des <b><a href="ressources_cda.html#exemples">exemples d'implémentation en CDA R2 niveau 3</a></b> ;</li>
-    <li>Un <b><a href="ressources_cda.html">outil de vérification en local (testContenuCDA)</a></b> de la compatibilité des documents produits. Il est téléchargeable à partir de l'espace de publication du CI-SIS.</li>
   </ul>
 </div>
 

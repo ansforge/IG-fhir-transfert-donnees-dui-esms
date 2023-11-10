@@ -240,7 +240,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
                 <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:left;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'><span style="font-size:12px;color:black;">&nbsp;3</span></p>
             </td>
             <td style="width:20.82%;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:14.5pt;">
-                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:left;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'><strong><span style="font-size:12px;color:#4472C4;">sdtcMultipleOrderNumber</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:left;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'><strong><span style="font-size:12px;color:#4472C4;">sdtc:MultipleOrderNumber</span></strong></p>
             </td>
             <td style="width:5.56%;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:14.5pt;">
                 <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;text-align:center;line-height:normal;font-size:13px;font-family:"Arial",sans-serif;'><strong><span style="font-size:12px;color:#4472C4;">&nbsp;INT_POS</span></strong></p>
