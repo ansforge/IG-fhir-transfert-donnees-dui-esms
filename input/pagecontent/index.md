@@ -26,9 +26,9 @@ Dans la continuité des travaux menés dans le cadre du programme ESMS numériqu
 
 Ce guide d'implémentation contient : 
 - L'étude des normes et standards au format pdf : [Etude des normes et standards](NormesStandards_TransfertDonneesDUI_V0.1-finale.pdf)
-- Les spécifications fonctionnelles : section <a href="cadre_orientations.html"> Spécifications fonctionnelles</a>
-- La spécification technique de contenu : sections <a href="contenu_dossier.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
-- La spécification technique de transport : sections <a href="synthese_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
+- Les spécifications fonctionnelles : section <a href="sfe_cadre_juridique.html"> Spécifications fonctionnelles</a>
+- La spécification technique de contenu : sections <a href="contenu_dossier_contexte.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
+- La spécification technique de transport : sections <a href="description_flux_synthese.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
 
 ### Lectorat cible
 
@@ -69,7 +69,7 @@ Les flux décrits dans ce guide d'implémentation sont les suivants.
 | <a href="st_flux_ajout_loc_doc.html">Flux 2 : Ajout d'un lot de documents</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
 | <a href="st_flux_maj_doc.html">Flux 3 : Mise a jour d'un document</a> | Logiciel DUI | Logiciel DUI ou SI tiers |
 
-Pour en savoir davantage, rendez-vous sur la page <a href="synthese_flux.html">Synthèse des flux</a>.
+Pour en savoir davantage, rendez-vous sur la page <a href="description_flux_synthese.html">Synthèse des flux</a>.
 
 ### Dépendances
 
