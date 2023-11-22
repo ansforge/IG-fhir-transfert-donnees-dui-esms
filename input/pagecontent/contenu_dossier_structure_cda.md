@@ -211,7 +211,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X<br>classe usager</td>
 			<td><strong>Information sur l'identité de l'usager concerné par le document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_Author">recordTarget</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#recordtarget">recordTarget</a></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -220,7 +220,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..*]</td>
 			<td>X</td>
 			<td><strong>Auteur du document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_Author_1">author</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#author">author</a></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -229,7 +229,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><strong>Structure conservant le document et garantissant son cycle de vie</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_Custodian">custodian</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#custodian">custodian</a></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -238,7 +238,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><strong>Professionnel ou patient/usager ou système responsable du document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_LegalAuthentificator_1">legalAuthenticator</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#legalauthentificator">legalAuthenticator</a></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -247,7 +247,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..*]</td>
 			<td>X</td>
 			<td><strong>Evènement documenté</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_DocumentationOf">documentationOf</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#documentationof">documentationOf</a></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -256,7 +256,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><strong>Association du document à une prise en charge</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_Toc143260347">componentOf</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#componentof">componentOf</a></td>
 		</tr>
 		<tr id="lvl1">
 			<td>1</td>
