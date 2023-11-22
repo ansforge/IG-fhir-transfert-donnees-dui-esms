@@ -1,15 +1,3 @@
-Les éléments apparaissant en **<span style="color: #4472C4">gras de couleur bleu</span>** correspondent à des extensions définies dans le cadre de cette spécification technique afin de couvrir le besoin.
-
-Les éléments apparaissant en <span style="color: #C00000">rouge</span> correspondent aux règles spécifiques à mettre en place.
-
-Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
-
-### RecordTarget
-
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.10">RecordTarget</a> imposé par le CDA permet de décrire les données de l’usager dans le cadre du volet. Les données véhiculées par cet élément sont décrites ci-dessous. 
-
-Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il existe. Dans le cas contraire, l’identifiant local produit par le système peut être transporté et dans ce cas le **nom**, le **sexe**, le **lieu de naissance**, la **date de naissance** et l'**ordre de naissance** sont requis.
-
 <style>
 
     <!-- Propriétés de style générales (taille, couleurs et police de texte, bordures) -->
@@ -64,6 +52,18 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 	}
 
 </style>
+
+Les éléments apparaissant en **<span style="color: #4472C4">gras de couleur bleu</span>** correspondent à des extensions définies dans le cadre de cette spécification technique afin de couvrir le besoin.
+
+Les éléments apparaissant en <span style="color: #C00000">rouge</span> correspondent aux règles spécifiques à mettre en place.
+
+Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
+
+### RecordTarget
+
+L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.10">RecordTarget</a> imposé par le CDA permet de décrire les données de l’usager dans le cadre du volet. Les données véhiculées par cet élément sont décrites ci-dessous. 
+
+Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il existe. Dans le cas contraire, l’identifiant local produit par le système peut être transporté et dans ce cas le **nom**, le **sexe**, le **lieu de naissance**, la **date de naissance** et l'**ordre de naissance** sont requis.
 
 <table id="cda">
     <thead>
@@ -172,7 +172,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 			<td><p><strong>Sexe de l'individu</strong></p>
             <p>@code = code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/JDV_J143-AdministrativeGender-CISIS.pdf display:block">JDV_J143-AdministrativeGender-CI-SIS</a> <strong>(1.2.250.1.213.1.1.5.590)</strong>
             <br>@displayName = libellé associé à ce code
-            <br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
+            <br>@codeSystem = « 2.16.840.1.113883.5.1 »</p></td>
 		</tr>
 		<tr>
 			<td>3</td>
@@ -745,9 +745,9 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br>- Si le responsable est un professionnel : Cadre d'exercice
 			<br>- Si le responsable est un SNR : Non renseigné
 			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf display:block">JDV_J04-XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong></p>
-			<p><red>@code = «ETABLISSEMENT»
-			<br>@displayName = «Etablissement de santé»
-			<br>@codeSystem = «1.2.250.1.213.1.1.4.9»</red></p></td>
+			<p><red>@code = « ETABLISSEMENT »
+			<br>@displayName = « Etablissement de santé »
+			<br>@codeSystem = « 1.2.250.1.213.1.1.4.9 »</red></p></td>
         </tr>
     </tbody>
 </table>
@@ -1121,11 +1121,11 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>Adresse.type</td>
 			<td><p><strong>Type d'adresse</strong></p>
 			<p>@use = 
-			<br>«H» pour domicile
-			<br>«HP» pour domicile principal
-			<br>«HV» pour domicile de vacances
-			<br>«WP» pour lieu de travail
-			<br>«TMP» pour adresse temporaire</p></td>
+			<br>« H » pour domicile
+			<br>« HP » pour domicile principal
+			<br>« HV » pour domicile de vacances
+			<br>« WP » pour lieu de travail
+			<br>« TMP » pour adresse temporaire</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
