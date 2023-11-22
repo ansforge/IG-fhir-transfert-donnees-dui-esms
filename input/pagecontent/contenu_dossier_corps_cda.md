@@ -355,7 +355,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td>Evaluation.resultatEvaluation</td>
             <td><p><strong>Résultat (score) de l'évaluation</strong></p>
             <p><red>S'il s'agit d'une grille d'évaluation GIR :</red>
-            <br>Valeur provenant du <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs display:block">JDV_GIR-CISIS</a><strong> (1.2.250.1.213.1.1.5.53)</strong></p>
+            <br>Valeur provenant du <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">JDV_GIR-CISIS</a><strong> (1.2.250.1.213.1.1.5.53)</strong></p>
             <p><red>Sinon :</red>
             <br>À définir</p></td>
         </tr>
@@ -385,7 +385,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td><p><strong>Identifiant</strong></p>
             <p>@root = 
             <br>• « 1.2.250.1.71.4.2.1 » pour les professionnels et les systèmes (ex: dispositifs, automates…)
-            <br>• Valeur prise dans la liste des OID des autorités d'affectation des INS dans <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf display:block">[1]</a> pour le patient/usager</p>
+            <br>• Valeur prise dans la liste des OID des autorités d'affectation des INS dans <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a> pour le patient/usager</p>
             <p>@extension = Valeur de l'identifiant
             <br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
             <br>• Pour un système (ex. dispositifs, automates…), concaténation de : 
@@ -530,11 +530,11 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td><p><strong>Cadre d'exercice du professionnel ou Démarche d'expression personnelle du patient/usager</strong></p>
             <p>@code = 
             <br><span style="padding:0 0 0 20px">- Pour un document professionnel : Cadre d'exercice du professionnel. Valeur issue d'une des tables de référence suivantes :</span>
-            <br><span style="padding:0 0 0 40px">• <a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf display:block">TRE_A00-ProducteurDocNonPS</a><strong> (1.2.250.1.213.1.1.4.6)</strong></span>
-            <br><span style="padding:0 0 0 40px">• <a href="https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/TRE_A01-CadreExercice.pdf display:block">TRE_A01-CadreExercice</a><strong> (1.2.250.1.213.1.1.4.9)</strong></span>
+            <br><span style="padding:0 0 0 40px">• <a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf">TRE_A00-ProducteurDocNonPS</a><strong> (1.2.250.1.213.1.1.4.6)</strong></span>
+            <br><span style="padding:0 0 0 40px">• <a href="https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/TRE_A01-CadreExercice.pdf">TRE_A01-CadreExercice</a><strong> (1.2.250.1.213.1.1.4.9)</strong></span>
             <br><span style="padding:0 0 0 20px">- Pour un document d'expression personnelle du patient/usager :</span>
-            <br><span style="padding:0 0 0 40px">• Code : "EXP_PATIENT" contenu dans la <a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf display:block">TRE_A00-ProducteurDocNonPS</a><strong> (1.2.250.1.213.1.1.4.6)</strong></span></p>
-            <p>Il est possible d'utiliser le <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf display:block">JDV_J04- XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong> qui regroupe les valeurs:
+            <br><span style="padding:0 0 0 40px">• Code : "EXP_PATIENT" contenu dans la <a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf">TRE_A00-ProducteurDocNonPS</a><strong> (1.2.250.1.213.1.1.4.6)</strong></span></p>
+            <p>Il est possible d'utiliser le <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf">JDV_J04- XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong> qui regroupe les valeurs:
             <br><red>@code = « ETABLISSEMENT »
             <br>@displayName = « Etablissement de santé »
             <br>@codeSystem = 1.2.250.1.213.1.1.4.9</red></p></td>

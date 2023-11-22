@@ -143,10 +143,10 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Type de document</strong></p>
-			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf  display:block">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPPAT_2 »
+			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPPAT_2 »
 			<br>@displayName = « Autre document du patient »
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</red></p></td>
-		</tr>
+		</tr>https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/
 		<tr>
 			<td>1</td>
 			<td>title</td>
@@ -281,7 +281,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[0..*]</td>
 			<td></td>
 			<td><strong>Informations sur les données relatives à l'évaluation de l'usager et à ses grilles d'évaluation</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_Section_FR-Evaluation-du-statut-fon">Section FR-Evaluation-du-statut-fonctionnel</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-evaluation-du-statut-fonctionnel">Section FR-Evaluation-du-statut-fonctionnel</a></td>
 		</tr>
 		<tr>
 			<td>4</td>
@@ -298,7 +298,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[0..*]</td>
 			<td></td>
 			<td><strong>Informations sur les pièces jointes ajoutées au document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="#_Section_FR-Document-ajoute">FR-Documents-ajoutes</a></td>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-documents-ajoutes">FR-Documents-ajoutes</a></td>
 		</tr>
 		<tr>
 			<td>4</td>

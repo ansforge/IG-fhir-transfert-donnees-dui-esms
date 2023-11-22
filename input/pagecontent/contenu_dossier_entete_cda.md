@@ -161,7 +161,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 			<td>[0..1]</td>
 			<td>usager.civilite</td>
 			<td><strong>Civilité de l'usager</strong>
-            <br>La valeur doit être issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf display:block">JDV_J245-CiviliteCISIS</a> <strong>(1.2.250.1.213.1.1.5.718)</strong></td>
+            <br>La valeur doit être issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">JDV_J245-CiviliteCISIS</a><strong>(1.2.250.1.213.1.1.5.718)</strong></td>
 		</tr>
 		<tr>
 			<td>3</td>
@@ -170,7 +170,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 			<td>[1..1]</td>
 			<td>usager.sexe</td>
 			<td><p><strong>Sexe de l'individu</strong></p>
-            <p>@code = code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/JDV_J143-AdministrativeGender-CISIS.pdf display:block">JDV_J143-AdministrativeGender-CI-SIS</a> <strong>(1.2.250.1.213.1.1.5.590)</strong>
+            <p>@code = code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/JDV_J143-AdministrativeGender-CISIS.pdf">JDV_J143-AdministrativeGender-CI-SIS</a> <strong>(1.2.250.1.213.1.1.5.590)</strong>
             <br>@displayName = libellé associé à ce code
             <br>@codeSystem = « 2.16.840.1.113883.5.1 »</p></td>
 		</tr>
@@ -387,7 +387,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[0..1]</td>
 			<td></td>
 			<td><strong>Civilité</strong>
-			<br>Valeur doit être issue de <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf display:block">la JDV_J245-CiviliteCISIS</a> <strong>(1.2.250.1.213.1.1.5.718)</strong></td>
+			<br>Valeur doit être issue de <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">la JDV_J245-CiviliteCISIS</a> <strong>(1.2.250.1.213.1.1.5.718)</strong></td>
 		</tr>
 		<tr id="lvl2">
 			<td>2</td>
@@ -583,7 +583,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root = OID de l'autorité d'affectation :
 			<br><red>• Pour un professionnel  et pour un système rattaché à une structure : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</red>
-			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS (voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf display:block">[1]</a>)
+			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS (voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>)
 			<br>• Pour un Service numérique référencé (SNR) : SIREN de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
 			<br>• Pour un professionnel : valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
@@ -601,7 +601,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td>[0..1] </td>
             <td></td>
             <td><p><strong>Profession ou rôle du responsable</strong></p>
-			<p>@code = Code de issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf display:block">JDV_J01-XdsAuthorSpecialtyCISIS</a><strong> (1.2.250.1.213.1.1.5.461)</strong>
+			<p>@code = Code de issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialtyCISIS</a><strong> (1.2.250.1.213.1.1.5.461)</strong>
 			<br>@displayName = libellé associé à ce code
 			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
         </tr>
@@ -667,7 +667,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td>[0..1] </td>
             <td></td>
             <td><strong>Civilité</strong>
-			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf display:block">JDV_J245-Civilite-CISIS</a><strong> (1.2.250.1.213.1.1.5.718)</strong></td>
+			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">JDV_J245-Civilite-CISIS</a><strong> (1.2.250.1.213.1.1.5.718)</strong></td>
         </tr>
         <tr>
             <td>4</td>
@@ -676,7 +676,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td>[0..1] </td>
             <td></td>
             <td><strong>Titre</strong>
-			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/JDV_J246-Titre-CISIS.pdf display:block">JDV_J246-Titre-CISIS</a><strong> (1.2.250.1.213.1.1.5.719)</strong></td>
+			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/JDV_J246-Titre-CISIS.pdf">JDV_J246-Titre-CISIS</a><strong> (1.2.250.1.213.1.1.5.719)</strong></td>
         </tr>
         <tr id="lvl2">
             <td>2</td>
@@ -744,7 +744,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td><p><strong>Cadre d'exercice</strong>
 			<br>- Si le responsable est un professionnel : Cadre d'exercice
 			<br>- Si le responsable est un SNR : Non renseigné
-			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf display:block">JDV_J04-XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong></p>
+			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf">JDV_J04-XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong></p>
 			<p><red>@code = « ETABLISSEMENT »
 			<br>@displayName = « Etablissement de santé »
 			<br>@codeSystem = « 1.2.250.1.213.1.1.4.9 »</red></p></td>
@@ -831,7 +831,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root =  OID de l'autorité d'affectation
 			<br>• Pour un professionnel et un système : "1.2.250.1.71.4.2.1"
-			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS(voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf display:block">[1]</a>)
+			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS(voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>)
 			<br>• Pour un Service numérique référencé (SNR) : OID de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
 			<br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
@@ -849,7 +849,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[0..1] </td>
 			<td></td>
 			<td><p><strong>Profession ou rôle de l'exécutant</strong></p>
-			<p>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf display:block">JDV_J01-XdsAuthorSpecialtyCISIS</a><strong> (1.2.250.1.213.1.1.5.461)</strong>
+			<p>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialtyCISIS</a><strong> (1.2.250.1.213.1.1.5.461)</strong>
 			<br>@displayName= libellé associé à ce code
 			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
 		</tr>
@@ -914,7 +914,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[0..1] </td>
 			<td></td>
 			<td><strong>Civilité</strong>
-			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf display:block">JDV_J245-Civilite-CISIS</a><strong> (1.2.250.1.213.1.1.5.718)</strong></td>
+			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">JDV_J245-Civilite-CISIS</a><strong> (1.2.250.1.213.1.1.5.718)</strong></td>
 		</tr>
 		<tr>
 			<td>6</td>
@@ -923,7 +923,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[0..1] </td>
 			<td></td>
 			<td><strong>Titre</strong>
-			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/JDV_J246-Titre-CISIS.pdf display:block">JDV_J246-Titre-CISIS</a><strong> (1.2.250.1.213.1.1.5.719)</strong></td>
+			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/JDV_J246-Titre-CISIS.pdf">JDV_J246-Titre-CISIS</a><strong> (1.2.250.1.213.1.1.5.719)</strong></td>
 		</tr>
 		<tr id="lvl2">
 			<td>4</td>
@@ -991,7 +991,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td></td>
 			<td><p><strong>Cadre d'exercice du professionnel ou Démarche d'expression personnelle du patient/usager</strong>
 			<br><red>Attribut nullFlavor interdit</red></p>
-			<p>@code =  Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf display:block">JDV_J04-XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong>
+			<p>@code =  Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf">JDV_J04-XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong>
 			<br>@displayName = libellé associé à ce code
 			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
 		</tr>
@@ -1082,7 +1082,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>X</td>
 			<td><p><strong>Modalité d'exercice de la structure</strong>
 			<br><red>Attribut nullFlavor interdit</red></p>
-			<p>@code = Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS.pdf display:block">JDV_J02-XdsHealthcareFacilityTypeCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.466)</strong> et fixée à "<red>SA41</red>"
+			<p>@code = Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS.pdf">JDV_J02-XdsHealthcareFacilityTypeCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.466)</strong> et fixée à "<red>SA41</red>"
 			<br>@displayName = "<red>Autre établissement du domaine social ou médico-social</red>"
 			<br>@codeSystem = <red>1.2.250.1.71.4.2.4</red></p></td>
 		</tr>
@@ -1183,7 +1183,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br>rue, avenue, boulevard, ...
 			<br>Attribut obsolète et non conforme à la norme postale en vigueur qui définit cette information comme faisant partie de l'attribut streetName. Il apparait dans la classe Adresse uniquement parce que des systèmes existants l'utilisent encore.
 			<br>Les valeurs historiquement utilisées provenaient de la table de référence suivante :
-			<br>•<a href="https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/TRE_R35-TypeVoie.pdf display:block">TRE_R35-TypeVoie</a><strong> (1.2.250.1.213.2.44)</strong></td>
+			<br>•<a href="https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/TRE_R35-TypeVoie.pdf">TRE_R35-TypeVoie</a><strong> (1.2.250.1.213.2.44)</strong></td>
 		</tr>
 		<tr>
 			<td>1</td>
