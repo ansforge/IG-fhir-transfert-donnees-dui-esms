@@ -25,36 +25,30 @@ parameters:
 pages:
     index.md:
         title: Accueil
-    sfe.md:
-        title: Spécifications fonctionnelles
-        sfe_cadre_juridique.md:
-            title : Cadre juridique et orientations organisationnelles
-        sfe_organisation_contexte_metier.md:
-            title : Organisation du contexte métier
-        sfe_definition_processus.md:
-            title : Définition des processus collaboratifs
-        sfe_modelisation_contenu.md :
-            title : Modélisation du contenu du DUI
-    contenu_dossier.md :
-        title: Contenu du dossier
-        contenu_dossier_contexte.md:
-            title : Contexte
-        contenu_dossier_structure_cda.md:
-            title: Structure générale du document CDA
-        contenu_dossier_entete_cda.md:
-            title: Entête du document CDA
-        contenu_dossier_corps_cda.md: 
-            title: Corps du document CDA
-    description_flux.md:
-        title: Description des flux
-        description_flux_synthese.md:
-            title: Synthèse des flux
-        description_flux_1_ajout_doc.md:
-            title: Flux 1 - Ajout d'un document
-        description_flux_2_ajout_lot_doc.md:
-            title: Flux 2 - Ajout d'un lot de documents
-        description_flux_3_maj_doc.md:
-            title: Flux 3 - Mise à jour d'un document
+    sfe_cadre_juridique.md:
+        title : Cadre juridique et orientations organisationnelles
+    sfe_organisation_contexte_metier.md:
+        title : Organisation du contexte métier
+    sfe_definition_processus.md:
+        title : Définition des processus collaboratifs
+    sfe_modelisation_contenu.md :
+        title : Modélisation du contenu du DUI
+    contenu_dossier_contexte.md:
+        title : Contexte
+    contenu_dossier_structure_cda.md:
+        title: Structure générale du document CDA
+    contenu_dossier_entete_cda.md:
+        title: Entête du document CDA
+    contenu_dossier_corps_cda.md: 
+        title: Corps du document CDA
+    description_flux_synthese.md:
+        title: Synthèse des flux
+    description_flux_1_ajout_doc.md:
+        title: Flux 1 - Ajout d'un document
+    description_flux_2_ajout_lot_doc.md:
+        title: Flux 2 - Ajout d'un lot de documents
+    description_flux_3_maj_doc.md:
+        title: Flux 3 - Mise à jour d'un document
     ressources_conformite.md:
         title: Ressources de conformité
         ressources_cda.md: 
