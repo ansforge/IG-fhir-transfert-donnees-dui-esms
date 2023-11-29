@@ -25,34 +25,42 @@ parameters:
 pages:
     index.md:
         title: Accueil
-    sfe_cadre_juridique.md:
-        title : Cadre juridique et orientations organisationnelles
-    sfe_organisation_contexte_metier.md:
-        title : Organisation du contexte métier
-    sfe_definition_processus.md:
-        title : Définition des processus collaboratifs
-    sfe_modelisation_contenu.md :
-        title : Modélisation du contenu du DUI
-    contenu_dossier_contexte.md:
-        title : Contexte
-    contenu_dossier_structure_cda.md:
-        title: Structure générale du document CDA
-    contenu_dossier_entete_cda.md:
-        title: Entête du document CDA
-    contenu_dossier_corps_cda.md: 
-        title: Corps du document CDA
-    description_flux_synthese.md:
-        title: Synthèse des flux
-    description_flux_1_ajout_doc.md:
-        title: Flux 1 - Ajout d'un document
-    description_flux_2_ajout_lot_doc.md:
-        title: Flux 2 - Ajout d'un lot de documents
-    description_flux_3_maj_doc.md:
-        title: Flux 3 - Mise à jour d'un document
+    sfe.md:
+        title : Spécifications fonctionnelles
+        sfe_cadre_juridique.md:
+            title : Cadre juridique et orientations organisationnelles
+        sfe_organisation_contexte_metier.md:
+            title : Organisation du contexte métier
+        sfe_definition_processus.md:
+            title : Définition des processus collaboratifs
+        sfe_modelisation_contenu.md :
+            title : Modélisation du contenu du DUI
+    contenu_dossier.md: 
+        title : Contenu du dossier
+        contenu_dossier_contexte.md:
+            title : Contexte
+        contenu_dossier_structure_cda.md:
+            title: Structure générale du document CDA
+        contenu_dossier_entete_cda.md:
+            title: Entête du document CDA
+        contenu_dossier_corps_cda.md: 
+            title: Corps du document CDA
+    description_flux.md:
+        title : Description des flux
+        description_flux_synthese.md:
+            title: Synthèse des flux
+        description_flux_1_ajout_doc.md:
+            title: Flux 1 - Ajout d'un document
+        description_flux_2_ajout_lot_doc.md:
+            title: Flux 2 - Ajout d'un lot de documents
+        description_flux_3_maj_doc.md:
+            title: Flux 3 - Mise à jour d'un document
     ressources_conformite.md:
-        title: Ressources de conformité
-        ressources_cda.md: 
+        title : Ressources de conformité
+        ressources_cda.md:
             title: Ressources CDA
+        artifacts.html:
+            title: Ressources FHIR
     annexes.md:
         title: Annexes
         acronymes.md:
@@ -64,7 +72,7 @@ pages:
 
 menu:
     Accueil: index.html
-    Spécifications fonctionnelles : 
+    Spécifications fonctionnelles :
         Cadre juridique et orientations organisationnelles : sfe_cadre_juridique.html
         Organisation du contexte métier : sfe_organisation_contexte_metier.html
         Définition des processus collaboratifs : sfe_definition_processus.html
@@ -80,12 +88,12 @@ menu:
         Flux 2 - Ajout d'un lot de documents: description_flux_2_ajout_lot_doc.html
         Flux 3 - Mise à jour d'un document: description_flux_3_maj_doc.html
     Ressources de conformité:
-        Ressources FHIR: artifacts.html
         Ressources CDA: ressources_cda.html
+        Ressources FHIR: artifacts.html
     Annexes: 
         Acronymes: acronymes.html
         Documents de référence: documents_reference.html
     Autres ressources:
-        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
+        Spécifications FHIR : new-tab {{site.data.fhir.path}}index.html
+        Site de l'ANS : new-tab https://esante.gouv.fr/
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/

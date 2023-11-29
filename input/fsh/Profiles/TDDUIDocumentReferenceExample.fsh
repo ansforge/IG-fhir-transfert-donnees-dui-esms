@@ -1,6 +1,3 @@
-Alias: $TRE-A04-Loinc = https://mos.esante.gouv.fr/NOS/TRE_A04-Loinc/FHIR/TRE-A04-Loinc
-Alias: $TRE-A03-ClasseDocument = https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument
-
 Instance: TDDUIDocumentReferenceExample
 InstanceOf: TDDUIDocumentReference
 Usage: #example
