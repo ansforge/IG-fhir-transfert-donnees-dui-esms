@@ -1,6 +1,3 @@
-Alias: $TRE-A04-Loinc = https://mos.esante.gouv.fr/NOS/TRE_A04-Loinc/FHIR/TRE-A04-Loinc
-Alias: $TRE-A03-ClasseDocument = https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument
-
 Instance: TDDUIDocumentReferenceExample
 InstanceOf: TDDUIDocumentReference
 Usage: #example
@@ -9,8 +6,8 @@ Usage: #example
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-documentreference"
 * masterIdentifier.value = "2569874526325"
 * status = #current
-* type = $TRE-A04-Loinc#28653-4 "Document du secteur social / médico-social"
-* category = $TRE-A03-ClasseDocument#95 "Document de gestion"
+* type = $TRE-A04-Loinc#28653-4
+* category = $TRE-A03-ClasseDocument#95
 * content.attachment.contentType = #text/plain
 * content.attachment.language = #fr
 * content.attachment.title = "DocumentReference TDDUI"
