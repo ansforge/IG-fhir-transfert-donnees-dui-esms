@@ -190,7 +190,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 		</tr>
 		<tr id="extension">
 			<td>3</td>
-			<td>sdtc:MultipleOrderNumber</td>
+			<td>sdtc:multipleBirthOrderNumber</td>
 			<td>INT_POS</td>
 			<td><i><u><red>[1..1]</red></u></i></td>
 			<td>usager.ordreNaissance</td>
