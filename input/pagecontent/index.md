@@ -30,6 +30,8 @@ Ce guide d'implémentation contient :
 - La spécification technique de contenu : sections <a href="contenu_dossier_contexte.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
 - La spécification technique de transport : sections <a href="description_flux_synthese.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
 
+<b>Remarque</b> : la version de la spécification technique de contenu repose sur le périmètre restreint de l’export du nom/prénom/INS ou NIR/traits d’identités ainsi que le GIR (groupe iso ressources i.e. un calcul du niveau d’autonomie d’un usager) à partir d'un DUI dans le but d’alimenter le SI de la CNSA (appelé SIDOBA).
+
 ### Lectorat cible
 
 Ce document s'adresse aux chefs de projets qui spécifient des projets avec des interfaces interopérables et aux développeurs des interfaces interopérables des systèmes implémentant le volet « Transfert de données DUI ». Il s'adresse également à toute autre personne intervenant dans le processus de mise en place de ces interfaces et à tout porteur de SI cherchant à transporter de manière interopérable des données usagers vers un autre SI ainsi que les éditeurs de logiciels DUI.
