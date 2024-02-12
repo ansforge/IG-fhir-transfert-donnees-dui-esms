@@ -1,0 +1,16 @@
+@startuml
+
+package "<<GroupProcessus>>\nTransférer des données d'un logiciel DUI" #FloralWhite {
+    
+        package "<<Processus>>\nExport des données d'un logiciel DUI" #LightBlue
+}
+
+package "<<GroupProcessus>>\nSuivi des décisions d'orientation" #FloralWhite {
+    package "<<GroupProcessus>>\nSI-SdO - SI-ESMS" #FloralWhite
+    package "<<GroupProcessus>>\nSI-MDPH - SI-SdO" #FloralWhite
+}
+
+[<<GroupProcessus>>\nSI-MDPH - SI-SdO] -[hidden]- [<<GroupProcessus>>\nSI-SdO - SI-ESMS]
+
+
+@enduml
