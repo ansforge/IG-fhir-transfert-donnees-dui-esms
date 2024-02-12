@@ -1,14 +1,17 @@
 ### Représentation globale du DUI
 
-<object data="representation_globale.svg"  style="width:100%" type="image/svg+xml"></object>
+<!-- object data="representation_globale.svg"  style="width:100%" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include representation_globale.svg%}</div>
 
 ### Données administratives
 
-<object data="donnees_admin.svg" style="width:100%" type="image/svg+xml"></object>
+<!-- object data="donnees_admin.svg" style="width:100%" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include donnees_admin.svg%}</div>
 
 #### Identification et coordonnées
 
-<object data="bloc_identification_coordonnees.svg" type="image/svg+xml"></object>
+<!-- object data="bloc_identification_coordonnees.svg" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include bloc_identification_coordonnees.svg%}</div>
 
 ##### Classe Usager 
 
@@ -259,7 +262,8 @@ Adresse de courrier de l’usager.
 
 #### Autorisations administratives
 
-<object data="bloc_autorisations_administratives.svg" type="image/svg+xml"></object>
+<!-- object data="bloc_autorisations_administratives.svg" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include bloc_autorisations_administratives.svg%}</div>
 
 ##### Classe AutorisationAdministrative
 
@@ -304,7 +308,8 @@ Droit temporel et exceptionnel conféré à une personne ou une organisation.
 
 #### Droits sociaux et de santé 
 
-<object data="bloc_droits_sociaux_sante.svg" type="image/svg+xml"></object>
+<!-- object data="bloc_droits_sociaux_sante.svg" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include bloc_droits_sociaux_sante.svg%}</div>
 
 ##### Classe AssuranceMaladieObligatoire
 
@@ -616,7 +621,9 @@ Quantification de la prise en charge.
 
 #### Environnement et ressources
 
-<object data="bloc_environnement_ressources.svg" type="image/svg+xml"></object>
+<!-- object data="bloc_environnement_ressources.svg" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include bloc_environnement_ressources.svg%}</div>
+
 
 ##### Classe ContactPersonnePhysique
 
@@ -957,7 +964,8 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 #### Sejours 
 
-<object data="bloc_sejours" type="image/svg+xml"></object>
+<!-- object data="bloc_sejours" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include bloc_sejours.svg%}</div>
 
 ##### Classe Sejour
 
@@ -1145,7 +1153,8 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 #### Evaluation
 
-<object data="bloc_evaluation.svg" type="image/svg+xml"></object>
+<!-- object data="bloc_evaluation.svg" type="image/svg+xml"></object -->
+<div style="text-align:center;">{%include bloc_evaluation.svg%}</div>
 
 ##### Classe Evaluation
 
