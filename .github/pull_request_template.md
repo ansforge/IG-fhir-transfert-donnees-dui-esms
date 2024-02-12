@@ -4,8 +4,7 @@
 * [changement 2]
 * ...
 
-## Preview
+## Preview [Non fonctionnel en repo privé]
 
 https://ansforge.github.io/IG-fhir-medicosocial-transfert-donnees-dui/ig/[ajouter_nom_de_la_branche] 
 
-## Impact API MES
