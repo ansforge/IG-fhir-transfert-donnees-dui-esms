@@ -4,7 +4,7 @@
 
 <!-- object style="text-align:center" data="processus3.svg" type="image/svg+xml"></object -->
 <!-- commande pour insérer un fichier plantuml dans un fichier .md -->
-<div style="text-align:center;">{%include processus3.svg%}</div>
+<div style="text-align:center;">{%include processus_export_dui.svg%}</div>
 
 <table style="width:100%">
   <tr>
