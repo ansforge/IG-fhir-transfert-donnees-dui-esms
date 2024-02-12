@@ -1,7 +1,10 @@
 Les groupes de processus « Transfert des données d'un logiciel DUI » et « Suivi des décisions d’orientation » comprennent les différents processus permettant à un logiciel DUI d’échanger de l’information pour suivre le parcours de vie d’un usager.
 
 
-<object data="contexte_metier.svg"  style="width:100%" type="image/svg+xml"></object>
+<!-- object data="contexte_metier.svg"  style="width:100%" type="image/svg+xml"></object -->
+<!-- commande pour insérer un fichier plantuml dans un fichier .md -->
+<div style="text-align:center;">{%include contexte_metier.svg%}</div>
+
 
 Le périmètre de l'étude englobe les processus en bleu sur le diagramme de paquetage. 
 
