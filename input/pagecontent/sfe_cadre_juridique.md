@@ -17,7 +17,7 @@ Les cas d’usage décrits ci-dessous correspondent à ceux pour lesquels le pé
 Pour illustration, les cas d’usage suivants ont été identifiés :
 * Transférer les données d’un DUI pour répondre aux besoins d’un usager (changement d’ESSMS par exemple).
 * Transférer les données d’un DUI pour répondre aux besoins de l’ESSMS :
-  - Permettre une reprise de données lors d‘un changement de logiciel DUI.
-  - Transférer des données aux tutelles (CNSA, CNAM, ARS, CD, etc.).
+   * Permettre une reprise de données lors d‘un changement de logiciel DUI.
+   * Transférer des données aux tutelles (CNSA, CNAM, ARS, CD, etc.).
 
 Les cas d’usage doivent s’appuyer sur une assise juridique afin de légitimer le transfert des données notamment si ce dernier comporte des données personnelles ou médicales. Cet aspect est de la responsabilité des acteurs qui utilisent cette spécification. Cette dernière n’a pas vocation à légitimer les traitements des données.
