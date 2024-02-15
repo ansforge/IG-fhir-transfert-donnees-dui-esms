@@ -1,3 +1,5 @@
+Lien vers l'intégration continue : https://ansforge.github.io/IG-fhir-medicosocial-transfert-donnees-dui/ig/main
+
 # Contexte
 
 ## Contexte métier du projet
