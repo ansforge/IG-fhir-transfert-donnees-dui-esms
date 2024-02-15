@@ -67,8 +67,6 @@ pages:
             title: Acronymes
         documents_reference.md:
             title: Documents de référence
-    autres_ressources.md:
-        title: Autres Ressources  
 
 menu:
     Accueil: index.html
@@ -93,7 +91,6 @@ menu:
     Annexes: 
         Acronymes: acronymes.html
         Documents de référence: documents_reference.html
-    Autres ressources:
         Spécifications FHIR : new-tab {{site.data.fhir.path}}index.html
         Site de l'ANS : new-tab https://esante.gouv.fr/
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
