@@ -1,7 +1,8 @@
 ### Représentation globale du DUI
 
 <!-- object data="representation_globale.svg"  style="width:100%" type="image/svg+xml"></object -->
-<div class="figure" style="width:100%;">
+<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
+<!-- Note : le svg est déformé car impossible de modifier le style du doc -->
   {%include representation_globale.svg%}
 </div>
 
