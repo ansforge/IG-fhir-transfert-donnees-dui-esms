@@ -32,7 +32,7 @@ package "Accompagnement" as Acc #LightYellow {
   object "Cahier de liaison" as cahier #LightYellow
   object "Evaluation" as eval #LightYellow
   object "Parcours" as parc #LightYellow
-  object "Projet presonnalisé" as projP #LightYellow
+  object "Projet personnalisé" as projP #LightYellow
 }
 
 cahier -[hidden]- eval
