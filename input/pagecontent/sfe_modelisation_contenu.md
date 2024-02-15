@@ -1,7 +1,9 @@
 ### Représentation globale du DUI
 
 <!-- object data="representation_globale.svg"  style="width:100%" type="image/svg+xml"></object -->
-<div style="text-align:center;">{%include representation_globale.svg%}</div>
+<div class="figure" style="width:100%;">
+  {%include representation_globale.svg%}
+</div>
 
 ### Données administratives
 
