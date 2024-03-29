@@ -3,7 +3,7 @@
     "version" : "1.0.1",
     "path" : "https://interop.esante.gouv.fr/ig/fhir/tddui/1.0.1",
     "mode" : "milestone",
-    "status" : "release",
+    "status" : "trial-use",
     "sequence" : "STU1",
     "title" : "Médicosocial - Transfert de données DUI",
     "first" : true,
