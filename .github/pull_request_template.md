@@ -6,5 +6,5 @@
 
 ## Preview
 
-https://ansforge.github.io/IG-fhir-medicosocial-transfert-donnees-dui/ig/[ajouter_nom_de_la_branche] 
+https://ansforge.github.io/IG-fhir-medicosocial-transfert-donnees-dui/[ajouter_nom_de_la_branche]/ig
 
