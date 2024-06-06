@@ -30,11 +30,15 @@ Dans la continuité des travaux menés dans le cadre du programme ESMS numériqu
 
 Ce guide d'implémentation contient : 
 - L'étude des normes et standards au format pdf : [Etude des normes et standards](NormesStandards_TransfertDonneesDUI_V1.0.pdf)
-- Les spécifications fonctionnelles : section <a href="sfe_cadre_juridique.html"> Spécifications fonctionnelles</a>
-- La spécification technique de contenu : sections <a href="contenu_dossier_contexte.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
-- La spécification technique de transport : sections <a href="description_flux_synthese.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
+- Les spécifications fonctionnelles : section <a href="sfe.html"> Spécifications fonctionnelles</a>
+- La spécification technique de contenu : sections <a href="contenu_dossier.html">Contenu du dossier</a> et <a href="ressources_cda.html">Ressources de conformité</a>
+- La spécification technique de transport : sections <a href="description_flux.html">Description des flux</a> et <a href="artifacts.html">Ressources de conformité</a>
 
-<b>Remarque</b> : la version de la spécification technique de contenu repose sur le périmètre restreint de l’export du nom/prénom/INS ou NIR/traits d’identités ainsi que le GIR (groupe iso ressources i.e. un calcul du niveau d’autonomie d’un usager) à partir d'un DUI dans le but d’alimenter le SI de la CNSA (appelé SIDOBA).
+<b>Remarque</b> : l'actuelle version de la spécification technique de contenu repose sur un périmètre restreint d'export des données:
+- nom/prénom/INS ou NIR/traits d’identités ;
+- grille d'évaluation structurée ou non structurée ;
+- évènements de l'agenda usager ;
+- informations sur le séjour et la réservation de.
 
 ### Lectorat cible
 
@@ -54,7 +58,7 @@ Les interactions entre les systèmes reposent quant à elles sur le standard HL7
 
 #### Template CI-SIS de document CDA créé
 
-Le tempalte CI-SIS de document CDA créé dans le cadre de ce guide d'implémentation est le suivant : <a href="ressources_cda.html#schémas-xsd">Export du dossier usager informatisé</a>
+Le template CI-SIS de document CDA créé dans le cadre de ce guide d'implémentation est le suivant : <a href="ressources_cda.html#schémas-xsd">Export du dossier usager informatisé</a>
 
 #### Ressources FHIR profilées
 
@@ -62,7 +66,7 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 
 | Ressource | Profil | Description |
 | ----- | ----- | ----- |
-| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA (inspiré du flux d'ajout simplifié d'un document défini dans le profil PDSm) |
+| <a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a> | [TDDUIDocumentReference](StructureDefinition-tddui-documentreference.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un document au format CDA (inspiré du flux <a href="https://interop.esante.gouv.fr/ig/fhir/pdsm/3.0.1/StructureDefinition-pdsm-simplified-publish.html">PDSm Simplified Publish</a>) |
 | <a href="https://hl7.org/fhir/R4/bundle.html">Bundle</a> | [TDDUIBundle](StructureDefinition-tddui-bundle.html) | Profil générique créé dans le contexte du transfert de données DUI pour véhiculer un lot de documents au format CDA |
 
 ### Flux
