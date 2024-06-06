@@ -1272,32 +1272,6 @@ L’élément Adresse imposé par le CDA dans la plupart des éléments d’ent�
 
 <span style="color: #4472C4"><i>Les éléments "author" (auteur du document) et "legalAuthenticator" (responsable légal du document) représentent une information identique, à savoir le <strong>Système</strong>. En revanche, l'élément "custodian" (détenteur du document) représente la <strong>Structure</strong> liée au dit <strong>Système</strong> et qui est chargée de la conservation du document.</i>
 
-### Annexes
-
-#### Nomenclatures
-
-<table style="width:100%">
-	<thead>
-		<tr>
-			<th>Type de nomenclature</th>
-			<th>Format</th>
-			<th>Accès</th>
-  		</tr>
-	</thead>
-	<tbody>
-  		<tr>
-			<td>Nomenclatures des Objets de Santé (NOS)</td>
-			<td>TRE_R* <br> JDV_J*</td>
-			<td><a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></td>
-  		</tr>
-  		<tr>
-    		<td>Nomenclature ANS</td>
-			<td>TA_ASIP</td>
-			<td><a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs</a></td>
-  		</tr>
-	</tbody>
-</table>
-
 #### Documents de référence 
 
 <table style="width:100%">
