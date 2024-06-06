@@ -171,7 +171,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Niveau de confidentialité du document.</strong>
-			<br>Code issu du <a href="https://o3sis.esante.gouv.fr/art-decor/decor-valuesets--CI-SIS-JDV-?id=2.16.840.1.113883.1.11.10228&amp;effectiveDate=2021-03-15T00:00:00&amp;language=fr-FR">JDV_HL7_Confidentiality-CISIS</a></p>
+			<br>Code issu du JDV_HL7_Confidentiality-CISIS</p>
 			<p><red>@code = Valeur fixée à : « N »
 			<br>@codeSystem = 2.16.840.1.113883.5.25 
 			<bR>@displayName = « Normal »</red></p></td>

@@ -61,7 +61,7 @@ Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalit
 
 ### RecordTarget
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.10">RecordTarget</a> imposé par le CDA permet de décrire les données de l’usager dans le cadre du volet. Les données véhiculées par cet élément sont décrites ci-dessous. 
+L’élément RecordTarget imposé par le CDA permet de décrire les données de l’usager dans le cadre du volet. Les données véhiculées par cet élément sont décrites ci-dessous. 
 
 Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il existe. Dans le cas contraire, l’identifiant local produit par le système peut être transporté et dans ce cas le **nom**, le **sexe**, le **lieu de naissance**, la **date de naissance** et l'**ordre de naissance** sont requis.
 
@@ -267,7 +267,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 
 ### Author
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?id=1.2.250.1.213.1.1.1.1.10.7">Author</a> imposé par le CDA représente la participation d’un auteur à l’élaboration du document « Transfert de données DUI » conformément au volet. L’auteur peut correspondre à une personne physique, morale ou un système. Dans notre contexte spécifique, il représente un **Système**.
+L’élément Author imposé par le CDA représente la participation d’un auteur à l’élaboration du document « Transfert de données DUI » conformément au volet. L’auteur peut correspondre à une personne physique, morale ou un système. Dans notre contexte spécifique, il représente un **Système**.
 
 <table id="cda">
 	<thead>
@@ -454,7 +454,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### Custodian
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.5">Custodian</a> imposé par le CDA représente la structure chargée de la conservation du document « Transfert de données DUI » du volet. Il s’agit ici dans le cadre de ce volet de l’**ESSMS**.
+L’élément Custodian imposé par le CDA représente la structure chargée de la conservation du document « Transfert de données DUI » du volet. Il s’agit ici dans le cadre de ce volet de l’**ESSMS**.
 
 <table id="cda">
     <thead>
@@ -522,7 +522,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### LegalAuthentificator
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.6">legalAuthentificator</a> imposé par le CDA représente le responsable du document. Il s’agit bien ici d’un **Système rattaché à une structure**.
+L’élément legalAuthentificator imposé par le CDA représente le responsable du document. Il s’agit bien ici d’un **Système rattaché à une structure**.
 
 <table id="cda">
     <thead>
@@ -754,7 +754,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### DocumentationOf
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.4">DocumentationOf</a> imposé par le CDA décrit les données de l'évènement principal documenté.
+L’élément DocumentationOf imposé par le CDA décrit les données de l'évènement principal documenté.
 
 <table id="cda">
 	<thead>
@@ -1063,7 +1063,7 @@ L'élément relatedDocument est facultatif car le document peut être initial. D
 
 ### ComponentOf
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.2">componentOf</a> imposé par le CI-SIS représente l’association du document « Transfert de données DUI » à une prise en charge.
+L’élément componentOf imposé par le CI-SIS représente l’association du document « Transfert de données DUI » à une prise en charge.
 
 <table id="cda">
 	<thead>
@@ -1154,7 +1154,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### Adresse
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.1">Adresse</a> imposé par le CDA dans la plupart des éléments d’entête CDA telle que le *recordTarget*, *author*, *custodian*, *legalAutenthificator*. 
+L’élément Adresse imposé par le CDA dans la plupart des éléments d’entête CDA telle que le *recordTarget*, *author*, *custodian*, *legalAutenthificator*. 
 
 <table id="cda">
 	<thead>
