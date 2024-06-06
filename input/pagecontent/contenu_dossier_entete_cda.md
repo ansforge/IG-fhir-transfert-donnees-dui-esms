@@ -322,7 +322,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 			<br>• « 1.2.250.1.71.4.2.1 » pour les professionnels et pour les systèmes (ex. dispositifs, automates)
 			<br>• OID prise dans la liste des OID des <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorités d'affectation des INS</a> pour le patient/usager</p>
 			<p>@extension = Valeur de l'identifiant
-			<br>• Pour le professionnel, valeur de PS_idNat, (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour le professionnel, valeur de PS_idNat, (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour les systèmes ex. dispositifs, automates…) concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
 			<br><span style="padding:0 0 0 20px">- Caractère « / »</span>
@@ -369,7 +369,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 			<td>[1..1]</td>
 			<td></td>
 			<td><strong>Nom de famille ou nom d'usage</strong>
-			<br>Pour les PS, valeur de PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS, valeur de PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>4</td>
@@ -378,7 +378,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 			<td>[0..1]</td>
 			<td></td>
 			<td><strong>Prénom</strong>
-			<br>Pour les PS, valeur de PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS, valeur de PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>4</td>
@@ -438,7 +438,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 			<br>• Pour un professionnel et un système rattaché à une structure: "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)
 			<br>• Pour un système via un SNR : "1.3.2" (OID SIRENE)</p>
 			<p>@extension =
-			<br>• Pour un professionnel et un système rattaché à une structure : Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour un professionnel et un système rattaché à une structure : Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour un système via un SNR : SIREN de l'éditeur</p></td>
 		</tr>
 		<tr>
@@ -504,7 +504,7 @@ L’élément Custodian imposé par le CDA représente la structure chargée de 
 			<br><red>• Pour une structure sanitaire ou médico-sociale : valeur fixée à "1.2.250.1.71.4.2.2"</red>
 			<br>• Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : valeur fixée à "1.2.250.1.213.4.1"</p>
 			<p>@extension =
-			<br><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</red>
+			<br><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red>
 			<br>• Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : Non renseigné</p></td>
         </tr>
         <tr>
@@ -514,7 +514,7 @@ L’élément Custodian imposé par le CDA représente la structure chargée de 
             <td>[0..1]</td>
             <td></td>
             <td><p><strong>Nom de la structure</strong></p>
-			<p><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</red>
+			<p><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red>
 			<br>• Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : valeur fixée à "DMP"</p></td>
         </tr>
     </tbody>
@@ -586,7 +586,7 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
 			<br>• Pour le patient/usager : OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation de l'INS</a>
 			<br>• Pour un Service numérique référencé (SNR) : SIREN de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
-			<br>• Pour un professionnel : valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour un professionnel : valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour le patient/usager : matricule de l'INS
 			<br><red>• Pour un système rattaché à une structure, concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
@@ -649,7 +649,7 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
             <td>[1..1] </td>
             <td></td>
             <td><strong>Nom</strong>
-			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>4</td>
@@ -658,7 +658,7 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
             <td>[0..1] </td>
             <td></td>
             <td><strong>Prénom</strong>
-			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>4</td>
@@ -695,10 +695,10 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
             <td><p><strong>Identifiant de la structure</strong>
 			<br>- Si le responsable est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel
 			<br>- Si le responsable est un SNR : SIREN de l'éditeur</p> <p>@root = OID de la structure
-			<br>• Si le responsable est un professionnel : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Si le responsable est un professionnel : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Si le responsable est un SNR : "1.3.2" (OID SIRENE)</p>
 			<p>@extension = valeur de l'identifiant
-			<br>• Si le responsable est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Si le responsable est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Si le responsable est un SNR : SIREN de l'éditeur</p></td>
         </tr>
         <tr>
@@ -834,7 +834,7 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			<br>• Pour le patient/usager : OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation de l'INS</a>
 			<br>• Pour un Service numérique référencé (SNR) : OID de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
-			<br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour un système (ex. dispositifs, automates…), concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
@@ -896,7 +896,7 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			<td>[1..1] </td>
 			<td></td>
 			<td><strong>Nom</strong>
-			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>6</td>
@@ -905,7 +905,7 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			<td>[0..1] </td>
 			<td></td>
 			<td><strong>Prénom</strong>
-			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>6</td>
@@ -943,10 +943,10 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			- Si l'exécutant est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel.
 			<br>- Si l'exécutant est un SNR : SIREN de l'éditeur</p>
 			<p>@root = OID de la structure
-			<br>•Si l'exécutant est un professionnel :  "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>•Si l'exécutant est un professionnel :  "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures, voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>•Si l'exécutant est un SNR : "1.3.2" (OID SIRENE)</p>
 			<p>@extension = valeur de l'identifiant
-			<br>•Si l'exécutant est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>•Si l'exécutant est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>•Si l'exécutant est un SNR : SIREN de l'éditeur</p></td>
 		</tr>
 		<tr>
@@ -1272,17 +1272,4 @@ L’élément Adresse imposé par le CDA dans la plupart des éléments d’ent�
 
 <span style="color: #4472C4"><i>Les éléments "author" (auteur du document) et "legalAuthenticator" (responsable légal du document) représentent une information identique, à savoir le <strong>Système</strong>. En revanche, l'élément "custodian" (détenteur du document) représente la <strong>Structure</strong> liée au dit <strong>Système</strong> et qui est chargée de la conservation du document.</i>
 
-#### Documents de référence 
 
-<table style="width:100%">
-	<thead>
-		<tr>
-    		<th>Documents de référence</th>
-  		</tr>
-	</thead>
-	<tbody>
-  		<tr>
-    		<td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
-  		</tr>
-	</tbody>
-</table>

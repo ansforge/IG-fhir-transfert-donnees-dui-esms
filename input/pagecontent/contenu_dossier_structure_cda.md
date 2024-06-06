@@ -318,18 +318,3 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 		</tr>
 	</tbody>
 </table>
-
-#### Documents de référence 
-
-<table style="width:100%">
-	<thead>
-  		<tr>
-    		<th>Documents de référence</th>
-  		</tr>
-	</thead>
-	<tbody>
-  		<tr>
-    		<td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
-  		</tr>
-	</tbody>
-</table>
