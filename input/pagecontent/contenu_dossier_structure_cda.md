@@ -1,15 +1,6 @@
-Cette section présente la structure générale des données de l’usager organisées en entête et corps.
-
-
-Les éléments apparaissant en <red>rouge</red> correspondent aux règles spécifiques à mettre en place.
-
-Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
-
-Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
-
 <style>
 
-	<!-- Propriétés de style générales (taille, couleurs et police de texte, bordures) -->
+	<!-- Propriétés de style générales (taille, couleurs et police de texte, bordures) du tableau -->
 	table {
 		width: 101%;
 		border-collapse: collapse;
@@ -27,7 +18,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 		color: #c00000
 	}
 
-	<!-- Propriétés spécifiques à des lignes ou des colonnes (fond de couleur, centrage) -->
+	<!-- Propriétés spécifiques à des lignes ou des colonnes de tableau (fond de couleur, centrage) -->
 	#cda td:nth-child(2),
 	#cda td:nth-child(3),
 	#cda td:nth-child(4),
@@ -56,6 +47,15 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 	}
 
 </style>
+
+Cette section présente la structure générale des données de l’usager organisées en entête et corps.
+
+
+Les éléments apparaissant en <red>rouge</red> correspondent aux règles spécifiques à mettre en place.
+
+Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
+
+Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
 
 <table id="cda">
 	<thead>
@@ -145,7 +145,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPPAT_2 »
 			<br>@displayName = « Autre document du patient »
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</red></p></td>
-		</tr>https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/
+		</tr>
 		<tr>
 			<td>1</td>
 			<td>title</td>
@@ -271,7 +271,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>component</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td></td>
+			<td>X</td>
 			<td>Représente le corps du document CDA</td>
 		</tr>
 		<tr>
