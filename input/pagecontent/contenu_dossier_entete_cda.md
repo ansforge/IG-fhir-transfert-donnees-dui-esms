@@ -106,10 +106,10 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
             <br><red>Attribut nullFlavor interdit</red></p>
             <p>- matricule INS (NIR ou NIA) si celui-ci est disponible. <br><red>Obligatoire pour échanger avec des systèmes de santé partagé.
             <br>@extension = matricule (Identifiant sur 13 caractères + clé sur 2 caractères)
-            <br>@root = OID de l'autorité d'affectation <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a></red></p>
+            <br>@root = OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation</a></red></p>
             <p>- identifiant local connu du système d'information du producteur 
 			<br><red>@extension = valeur de l'identifiant local 
-			<br>@root = OID de l'autorité d'affectation <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a></red></p>
+			<br>@root = OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation</a></red></p>
             <p>- identifiant de décision attribué par la MDPH ayant créé le dossier individu</p>
             <p><red>Si le matricule INS n'est pas renseigné alors les éléments nom, sexe et lieu/date/ordre de naissance deviennent obligatoires</red></p></td>
 		</tr>
@@ -320,7 +320,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 			<br>• Obligatoire pour un système</red></p>
 			<p>@root =
 			<br>• « 1.2.250.1.71.4.2.1 » pour les professionnels et pour les systèmes (ex. dispositifs, automates)
-			<br>• OID prise dans la liste des OID des autorités d'affectation des INS dans (voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>) pour le patient/usager</p>
+			<br>• OID prise dans la liste des OID des <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorités d'affectation des INS</a> pour le patient/usager</p>
 			<p>@extension = Valeur de l'identifiant
 			<br>• Pour le professionnel, valeur de PS_idNat, (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
 			<br>• Pour les systèmes ex. dispositifs, automates…) concaténation de :
@@ -583,7 +583,7 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
 			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root = OID de l'autorité d'affectation :
 			<br><red>• Pour un professionnel  et pour un système rattaché à une structure : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</red>
-			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS (voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>)
+			<br>• Pour le patient/usager : OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation de l'INS</a>
 			<br>• Pour un Service numérique référencé (SNR) : SIREN de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
 			<br>• Pour un professionnel : valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
@@ -831,7 +831,7 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root =  OID de l'autorité d'affectation
 			<br>• Pour un professionnel et un système : "1.2.250.1.71.4.2.1"
-			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS(voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>)
+			<br>• Pour le patient/usager : OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation de l'INS</a>
 			<br>• Pour un Service numérique référencé (SNR) : OID de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
 			<br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
@@ -1281,9 +1281,6 @@ L’élément Adresse imposé par le CDA dans la plupart des éléments d’ent�
   		</tr>
 	</thead>
 	<tbody>
-  		<tr>
-    		<td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-  		</tr>
   		<tr>
     		<td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
   		</tr>

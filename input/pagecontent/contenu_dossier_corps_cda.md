@@ -385,7 +385,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td><p><strong>Identifiant</strong></p>
             <p>@root = 
             <br>• « 1.2.250.1.71.4.2.1 » pour les professionnels et les systèmes (ex: dispositifs, automates…)
-            <br>• Valeur prise dans la liste des OID des autorités d'affectation des INS dans <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a> pour le patient/usager</p>
+            <br>• Valeur prise dans la liste des OID des  <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorités d'affectation des INS</a> pour le patient/usager</p>
             <p>@extension = Valeur de l'identifiant
             <br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
             <br>• Pour un système (ex. dispositifs, automates…), concaténation de : 
@@ -1092,9 +1092,6 @@ Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associ
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-        </tr>
         <tr>
             <td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
         </tr>

@@ -329,9 +329,6 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 	</thead>
 	<tbody>
   		<tr>
-    		<td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-  		</tr>
-  		<tr>
     		<td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
   		</tr>
 	</tbody>
