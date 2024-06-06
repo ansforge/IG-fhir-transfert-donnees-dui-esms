@@ -133,8 +133,8 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Identifiant unique du document</strong></p>
-			<p>@root = identifiant du document</p>
-			<p>Il est recommandé de générer une racine d'OID pour chaque ESMS, à partir du générateur <a style="color:#C00000" href="https://www.uuidgenerator.net/version1">https://www.uuidgenerator.net/version1</a><red>. Cet OID devra ensuite être décliné pour identifier de façon unique chaque instance et version des documents de l'émetteur</red></p></td>
+			<p>@root (obligatoire) = valeur de l'OID propre à l'émetteur</p>
+			<p><red>Il est recommandé de générer une racine d'OID pour chaque ESSMS, à partir d'un <a  href="https://www.uuidgenerator.net/version1">générateur d'OID</a>. Cet OID devra être converti en majuscule afin de se conformer aux spécifications HL7. Il pourra ensuite être décliné pour identifier de façon unique chaque instance et version des documents de l'émetteur</red></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
