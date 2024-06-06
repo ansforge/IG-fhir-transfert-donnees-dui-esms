@@ -1,12 +1,11 @@
 Cette section présente la structure générale des données de l’usager organisées en entête et corps.
 
-Les éléments apparaissant en **<span style="color: #3498db">gras de couleur bleu</span>** correspondent à des extensions définies dans le cadre de cette spécification technique afin de couvrir le besoin.
 
-Les éléments apparaissant en <span style="color: #C00000">rouge</span> correspondent aux règles spécifiques à mettre en place.
+Les éléments apparaissant en <red>rouge</red> correspondent aux règles spécifiques à mettre en place.
 
 Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
 
-Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
+Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
 
 <style>
 
@@ -248,6 +247,15 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>X</td>
 			<td><strong>Evènement documenté</strong>
 			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#documentationof">documentationOf</a></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>relatedDocument</td>
+			<td></td>
+			<td>[0..1]</td>
+			<td></td>
+			<td><strong>Document de référence à remplacer, transformer</strong>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#relateddocument">relatedDocument</a></td>
 		</tr>
 		<tr>
 			<td>1</td>

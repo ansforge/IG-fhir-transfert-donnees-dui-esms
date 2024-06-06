@@ -998,9 +998,72 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 	</tbody>
 </table>
 
+### relatedDocument
+
+L'élément relatedDocument est facultatif car le document peut être initial. Dans le cas où il s'agit d'une nouvelle version d'un document existant, le document à remplacer doit être identifier et l'élément relatedDocument devient obligatoire.
+
+<table id="cda">
+	<thead>
+		<tr>
+			<th>Niv.</th>
+			<th>Elément XML</th>
+			<th>Type</th>
+			<th>Card.</th>
+			<th>Elément de la SFC</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="line1">
+			<td>0</td>
+			<td>relatedDocument</td>
+			<td></td>
+			<td>[0..1]</td>
+			<td></td>
+			<td><strong>Document de référence</strong></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>@typeCode</td>
+			<td>cs</td>
+			<td>[1..1]</td>
+			<td></td>
+			<td><b>"RPLC" pour remplacement</b>
+			<br>Seul le remplacement au sens annulation et remplacement du document référencé par la version courante du document est autorisé.
+			<br><b>"XFRM" pour transformation</b>
+			<br>La relation est portée par le document CDA transformé (et pas par le document de référence).</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>parentDocument</td>
+			<td></td>
+			<td>[1..1]</td>
+			<td></td>
+			<td><strong>Document de référence</strong>
+			<br><red>Attribut nullFlavor interdit</red></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>id</td>
+			<td>II</td>
+			<td>[1..1]</td>
+			<td></td>
+			<td>Identifiant unique du document de référence</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>@root</td>
+			<td>uid</td>
+			<td>[1..1]</td>
+			<td></td>
+			<td>Valeur de l'OID du document de référence</td>
+		</tr>		
+	</tbody>
+</table>
+
 ### ComponentOf
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.2">componentOf</a> imposé par le CDA représente l’association du document « Transfert de données DUI » à une prise en charge.
+L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.2">componentOf</a> imposé par le CI-SIS représente l’association du document « Transfert de données DUI » à une prise en charge.
 
 <table id="cda">
 	<thead>
