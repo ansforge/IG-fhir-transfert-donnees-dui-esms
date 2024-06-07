@@ -38,7 +38,7 @@ Ce guide d'implémentation contient :
 - nom/prénom/INS ou NIR/traits d’identités ;
 - grille d'évaluation structurée ou non structurée ;
 - évènements de l'agenda usager ;
-- informations sur le séjour et la réservation de.
+- informations sur le séjour et la réservation de l'usager.
 
 ### Lectorat cible
 
