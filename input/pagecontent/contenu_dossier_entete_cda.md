@@ -61,7 +61,7 @@ Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalit
 
 ### RecordTarget
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.10">RecordTarget</a> imposé par le CDA permet de décrire les données de l’usager dans le cadre du volet. Les données véhiculées par cet élément sont décrites ci-dessous. 
+L’élément RecordTarget imposé par le CDA permet de décrire les données de l’usager dans le cadre du volet. Les données véhiculées par cet élément sont décrites ci-dessous. 
 
 Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il existe. Dans le cas contraire, l’identifiant local produit par le système peut être transporté et dans ce cas le **nom**, le **sexe**, le **lieu de naissance**, la **date de naissance** et l'**ordre de naissance** sont requis.
 
@@ -106,10 +106,10 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
             <br><red>Attribut nullFlavor interdit</red></p>
             <p>- matricule INS (NIR ou NIA) si celui-ci est disponible. <br><red>Obligatoire pour échanger avec des systèmes de santé partagé.
             <br>@extension = matricule (Identifiant sur 13 caractères + clé sur 2 caractères)
-            <br>@root = OID de l'autorité d'affectation <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a></red></p>
+            <br>@root = OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation</a></red></p>
             <p>- identifiant local connu du système d'information du producteur 
 			<br><red>@extension = valeur de l'identifiant local 
-			<br>@root = OID de l'autorité d'affectation <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a></red></p>
+			<br>@root = OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation</a></red></p>
             <p>- identifiant de décision attribué par la MDPH ayant créé le dossier individu</p>
             <p><red>Si le matricule INS n'est pas renseigné alors les éléments nom, sexe et lieu/date/ordre de naissance deviennent obligatoires</red></p></td>
 		</tr>
@@ -267,7 +267,7 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 
 ### Author
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?id=1.2.250.1.213.1.1.1.1.10.7">Author</a> imposé par le CDA représente la participation d’un auteur à l’élaboration du document « Transfert de données DUI » conformément au volet. L’auteur peut correspondre à une personne physique, morale ou un système. Dans notre contexte spécifique, il représente un **Système**.
+L’élément Author imposé par le CDA représente la participation d’un auteur à l’élaboration du document « Transfert de données DUI » conformément au volet. L’auteur peut correspondre à une personne physique, morale ou un système. Dans notre contexte spécifique, il représente un **Système**.
 
 <table id="cda">
 	<thead>
@@ -320,9 +320,9 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br>• Obligatoire pour un système</red></p>
 			<p>@root =
 			<br>• « 1.2.250.1.71.4.2.1 » pour les professionnels et pour les systèmes (ex. dispositifs, automates)
-			<br>• OID prise dans la liste des OID des autorités d'affectation des INS dans (voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>) pour le patient/usager</p>
+			<br>• OID prise dans la liste des OID des <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorités d'affectation des INS</a> pour le patient/usager</p>
 			<p>@extension = Valeur de l'identifiant
-			<br>• Pour le professionnel, valeur de PS_idNat, (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour le professionnel, valeur de PS_idNat, (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour les systèmes ex. dispositifs, automates…) concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
 			<br><span style="padding:0 0 0 20px">- Caractère « / »</span>
@@ -369,7 +369,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[1..1]</td>
 			<td></td>
 			<td><strong>Nom de famille ou nom d'usage</strong>
-			<br>Pour les PS, valeur de PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS, valeur de PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>4</td>
@@ -378,7 +378,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[0..1]</td>
 			<td></td>
 			<td><strong>Prénom</strong>
-			<br>Pour les PS, valeur de PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS, valeur de PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>4</td>
@@ -438,7 +438,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br>• Pour un professionnel et un système rattaché à une structure: "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)
 			<br>• Pour un système via un SNR : "1.3.2" (OID SIRENE)</p>
 			<p>@extension =
-			<br>• Pour un professionnel et un système rattaché à une structure : Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour un professionnel et un système rattaché à une structure : Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour un système via un SNR : SIREN de l'éditeur</p></td>
 		</tr>
 		<tr>
@@ -454,7 +454,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### Custodian
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.5">Custodian</a> imposé par le CDA représente la structure chargée de la conservation du document « Transfert de données DUI » du volet. Il s’agit ici dans le cadre de ce volet de l’**ESSMS**.
+L’élément Custodian imposé par le CDA représente la structure chargée de la conservation du document « Transfert de données DUI » du volet. Il s’agit ici dans le cadre de ce volet de l’**ESSMS**.
 
 <table id="cda">
     <thead>
@@ -504,7 +504,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br><red>• Pour une structure sanitaire ou médico-sociale : valeur fixée à "1.2.250.1.71.4.2.2"</red>
 			<br>• Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : valeur fixée à "1.2.250.1.213.4.1"</p>
 			<p>@extension =
-			<br><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</red>
+			<br><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red>
 			<br>• Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : Non renseigné</p></td>
         </tr>
         <tr>
@@ -514,7 +514,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td>[0..1]</td>
             <td></td>
             <td><p><strong>Nom de la structure</strong></p>
-			<p><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</red>
+			<p><red>• Pour une structure sanitaire ou médico-sociale : valeur de Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red>
 			<br>• Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : valeur fixée à "DMP"</p></td>
         </tr>
     </tbody>
@@ -522,7 +522,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### LegalAuthentificator
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.6">legalAuthentificator</a> imposé par le CDA représente le responsable du document. Il s’agit bien ici d’un **Système rattaché à une structure**.
+L’élément legalAuthentificator imposé par le CDA représente le responsable du document. Il s’agit bien ici d’un **Système rattaché à une structure**.
 
 <table id="cda">
     <thead>
@@ -583,10 +583,10 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root = OID de l'autorité d'affectation :
 			<br><red>• Pour un professionnel  et pour un système rattaché à une structure : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</red>
-			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS (voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>)
+			<br>• Pour le patient/usager : OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation de l'INS</a>
 			<br>• Pour un Service numérique référencé (SNR) : SIREN de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
-			<br>• Pour un professionnel : valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour un professionnel : valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour le patient/usager : matricule de l'INS
 			<br><red>• Pour un système rattaché à une structure, concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
@@ -649,7 +649,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td>[1..1] </td>
             <td></td>
             <td><strong>Nom</strong>
-			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>4</td>
@@ -658,7 +658,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td>[0..1] </td>
             <td></td>
             <td><strong>Prénom</strong>
-			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>4</td>
@@ -695,10 +695,10 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
             <td><p><strong>Identifiant de la structure</strong>
 			<br>- Si le responsable est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel
 			<br>- Si le responsable est un SNR : SIREN de l'éditeur</p> <p>@root = OID de la structure
-			<br>• Si le responsable est un professionnel : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Si le responsable est un professionnel : "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Si le responsable est un SNR : "1.3.2" (OID SIRENE)</p>
 			<p>@extension = valeur de l'identifiant
-			<br>• Si le responsable est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Si le responsable est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Si le responsable est un SNR : SIREN de l'éditeur</p></td>
         </tr>
         <tr>
@@ -754,7 +754,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### DocumentationOf
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.4">DocumentationOf</a> imposé par le CDA décrit les données de l'évènement principal documenté.
+L’élément DocumentationOf imposé par le CDA décrit les données de l'évènement principal documenté.
 
 <table id="cda">
 	<thead>
@@ -831,10 +831,10 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root =  OID de l'autorité d'affectation
 			<br>• Pour un professionnel et un système : "1.2.250.1.71.4.2.1"
-			<br>• Pour le patient/usager : OID de l'autorité d'affectation de l'INS(voir <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a>)
+			<br>• Pour le patient/usager : OID de l'<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorité d'affectation de l'INS</a>
 			<br>• Pour un Service numérique référencé (SNR) : OID de l'éditeur</p>
 			<p>@extension = Valeur de l'identifiant
-			<br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>• Pour un système (ex. dispositifs, automates…), concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
@@ -896,7 +896,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[1..1] </td>
 			<td></td>
 			<td><strong>Nom</strong>
-			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>6</td>
@@ -905,7 +905,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			<td>[0..1] </td>
 			<td></td>
 			<td><strong>Prénom</strong>
-			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+			<br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
 		</tr>
 		<tr>
 			<td>6</td>
@@ -943,10 +943,10 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 			- Si l'exécutant est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel.
 			<br>- Si l'exécutant est un SNR : SIREN de l'éditeur</p>
 			<p>@root = OID de la structure
-			<br>•Si l'exécutant est un professionnel :  "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>•Si l'exécutant est un professionnel :  "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures, voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>•Si l'exécutant est un SNR : "1.3.2" (OID SIRENE)</p>
 			<p>@extension = valeur de l'identifiant
-			<br>•Si l'exécutant est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+			<br>•Si l'exécutant est un professionnel :  Struct_idNat  (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
 			<br>•Si l'exécutant est un SNR : SIREN de l'éditeur</p></td>
 		</tr>
 		<tr>
@@ -998,9 +998,72 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 	</tbody>
 </table>
 
+### relatedDocument
+
+L'élément relatedDocument est facultatif car le document peut être initial. Dans le cas où il s'agit d'une nouvelle version d'un document existant, le document à remplacer doit être identifier et l'élément relatedDocument devient obligatoire.
+
+<table id="cda">
+	<thead>
+		<tr>
+			<th>Niv.</th>
+			<th>Elément XML</th>
+			<th>Type</th>
+			<th>Card.</th>
+			<th>Elément de la SFC</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="line1">
+			<td>0</td>
+			<td>relatedDocument</td>
+			<td></td>
+			<td>[0..1]</td>
+			<td></td>
+			<td><strong>Document de référence</strong></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>@typeCode</td>
+			<td>cs</td>
+			<td>[1..1]</td>
+			<td></td>
+			<td><b>"RPLC" pour remplacement</b>
+			<br>Seul le remplacement au sens annulation et remplacement du document référencé par la version courante du document est autorisé.
+			<br><b>"XFRM" pour transformation</b>
+			<br>La relation est portée par le document CDA transformé (et pas par le document de référence).</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>parentDocument</td>
+			<td></td>
+			<td>[1..1]</td>
+			<td></td>
+			<td><strong>Document de référence</strong>
+			<br><red>Attribut nullFlavor interdit</red></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>id</td>
+			<td>II</td>
+			<td>[1..1]</td>
+			<td></td>
+			<td>Identifiant unique du document de référence</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>@root</td>
+			<td>uid</td>
+			<td>[1..1]</td>
+			<td></td>
+			<td>Valeur de l'OID du document de référence</td>
+		</tr>		
+	</tbody>
+</table>
+
 ### ComponentOf
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.2">componentOf</a> imposé par le CDA représente l’association du document « Transfert de données DUI » à une prise en charge.
+L’élément componentOf imposé par le CI-SIS représente l’association du document « Transfert de données DUI » à une prise en charge.
 
 <table id="cda">
 	<thead>
@@ -1091,7 +1154,7 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 ### Adresse
 
-L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--ASIP-STRUCT-MIN-?section=templates&id=1.2.250.1.213.1.1.1.1.10.1">Adresse</a> imposé par le CDA dans la plupart des éléments d’entête CDA telle que le *recordTarget*, *author*, *custodian*, *legalAutenthificator*. 
+L’élément Adresse imposé par le CDA dans la plupart des éléments d’entête CDA telle que le *recordTarget*, *author*, *custodian*, *legalAutenthificator*. 
 
 <table id="cda">
 	<thead>
@@ -1209,46 +1272,4 @@ L’élément <a href="https://o3sis.esante.gouv.fr/art-decor/decor-templates--A
 
 <span style="color: #4472C4"><i>Les éléments "author" (auteur du document) et "legalAuthenticator" (responsable légal du document) représentent une information identique, à savoir le <strong>Système</strong>. En revanche, l'élément "custodian" (détenteur du document) représente la <strong>Structure</strong> liée au dit <strong>Système</strong> et qui est chargée de la conservation du document.</i>
 
-### Annexes
 
-#### Nomenclatures
-
-<table style="width:100%">
-	<thead>
-		<tr>
-			<th>Type de nomenclature</th>
-			<th>Format</th>
-			<th>Accès</th>
-  		</tr>
-	</thead>
-	<tbody>
-  		<tr>
-			<td>Nomenclatures des Objets de Santé (NOS)</td>
-			<td>TRE_R* <br> JDV_J*</td>
-			<td><a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></td>
-  		</tr>
-  		<tr>
-    		<td>Nomenclature ANS</td>
-			<td>TA_ASIP</td>
-			<td><a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs</a></td>
-  		</tr>
-	</tbody>
-</table>
-
-#### Documents de référence 
-
-<table style="width:100%">
-	<thead>
-		<tr>
-    		<th>Documents de référence</th>
-  		</tr>
-	</thead>
-	<tbody>
-  		<tr>
-    		<td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-  		</tr>
-  		<tr>
-    		<td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
-  		</tr>
-	</tbody>
-</table>

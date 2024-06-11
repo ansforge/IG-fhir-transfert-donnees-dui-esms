@@ -385,9 +385,9 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td><p><strong>Identifiant</strong></p>
             <p>@root = 
             <br>• « 1.2.250.1.71.4.2.1 » pour les professionnels et les systèmes (ex: dispositifs, automates…)
-            <br>• Valeur prise dans la liste des OID des autorités d'affectation des INS dans <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">[1]</a> pour le patient/usager</p>
+            <br>• Valeur prise dans la liste des OID des  <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">autorités d'affectation des INS</a> pour le patient/usager</p>
             <p>@extension = Valeur de l'identifiant
-            <br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)
+            <br>• Pour un professionnel de santé, valeur de PS_IdNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
             <br>• Pour un système (ex. dispositifs, automates…), concaténation de : 
             <br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
             <br><span style="padding:0 0 0 20px">- Caractère "/"</span>
@@ -446,7 +446,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td>[1..1]</td>
             <td></td>
             <td><strong>Nom</strong>
-            <br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+            <br>Pour les PS : PS_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>10</td>
@@ -455,7 +455,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td>[0..1]</td>
             <td></td>
             <td><strong>Prénom</strong>
-            <br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+            <br>Pour les PS : PS_Prénom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>10</td>
@@ -492,7 +492,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td>[0..1]</td>
             <td></td>
             <td><strong>Identifiant de l'organisation</strong>
-            <br>Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+            <br>Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>9</td>
@@ -501,7 +501,7 @@ La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’
             <td>[0..1]</td>
             <td></td>
             <td><strong>Nom de l'organisation</strong>
-            <br>Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">[2]</a>)</td>
+            <br>Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</td>
         </tr>
         <tr>
             <td>9</td>
@@ -1081,49 +1081,4 @@ Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associ
             <p>* Valeurs les plus utilisées : "image/gif" ou "image/jpeg" ou "image/png" ou "image/bm" ou "image/tiff" ou "text/rtf" ou "text/plain" ou "application/pdf" ou "application/xml".</p></td>
 		</tr>
 	</tbody>
-</table>
-
-### Annexes
-
-#### Nomenclatures
-
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th>Type de nomenclature</th>
-            <th>Format</th>
-            <th>Accès</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Nomenclatures des Objets de Santé (NOS)</td>
-            <td>TRE_R* 
-            <br>JDV_J*</td>
-            <td><a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></td>
-        </tr>
-        <tr>
-            <td>Nomenclature ANS</td>
-            <td>TA_ASIP</td>
-            <td><a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs</a></td>
-        </tr>
-    </tbody>
-</table>
-
-#### Documents de référence 
-
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th>Documents de référence</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-        </tr>
-        <tr>
-            <td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
-        </tr>
-    </tbody>
 </table>

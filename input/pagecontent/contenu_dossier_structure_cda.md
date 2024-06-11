@@ -1,16 +1,6 @@
-Cette section présente la structure générale des données de l’usager organisées en entête et corps.
-
-Les éléments apparaissant en **<span style="color: #3498db">gras de couleur bleu</span>** correspondent à des extensions définies dans le cadre de cette spécification technique afin de couvrir le besoin.
-
-Les éléments apparaissant en <span style="color: #C00000">rouge</span> correspondent aux règles spécifiques à mettre en place.
-
-Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
-
-Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
-
 <style>
 
-	<!-- Propriétés de style générales (taille, couleurs et police de texte, bordures) -->
+	<!-- Propriétés de style générales (taille, couleurs et police de texte, bordures) du tableau -->
 	table {
 		width: 101%;
 		border-collapse: collapse;
@@ -28,7 +18,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 		color: #c00000
 	}
 
-	<!-- Propriétés spécifiques à des lignes ou des colonnes (fond de couleur, centrage) -->
+	<!-- Propriétés spécifiques à des lignes ou des colonnes de tableau (fond de couleur, centrage) -->
 	#cda td:nth-child(2),
 	#cda td:nth-child(3),
 	#cda td:nth-child(4),
@@ -57,6 +47,15 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 	}
 
 </style>
+
+Cette section présente la structure générale des données de l’usager organisées en entête et corps.
+
+
+Les éléments apparaissant en <red>rouge</red> correspondent aux règles spécifiques à mettre en place.
+
+Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
+
+Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
 
 <table id="cda">
 	<thead>
@@ -133,8 +132,8 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Identifiant unique du document</strong></p>
-			<p>@root = identifiant du document</p>
-			<p>Il est recommandé de générer une racine d'OID pour chaque ESMS, à partir du générateur <a style="color:#C00000" href="https://www.uuidgenerator.net/version1">https://www.uuidgenerator.net/version1</a><red>. Cet OID devra ensuite être décliné pour identifier de façon unique chaque instance et version des documents de l'émetteur</red></p></td>
+			<p>@root (obligatoire) = valeur de l'OID propre à l'émetteur</p>
+			<p><red>Il est recommandé de générer une racine d'OID pour chaque ESSMS, à partir d'un <a  href="https://www.uuidgenerator.net/version1">générateur d'OID</a>. Cet OID devra être converti en majuscule afin de se conformer aux spécifications HL7. Il pourra ensuite être décliné pour identifier de façon unique chaque instance et version des documents de l'émetteur</red></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -146,7 +145,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPPAT_2 »
 			<br>@displayName = « Autre document du patient »
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</red></p></td>
-		</tr>https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/
+		</tr>
 		<tr>
 			<td>1</td>
 			<td>title</td>
@@ -172,7 +171,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Niveau de confidentialité du document.</strong>
-			<br>Code issu du <a href="https://o3sis.esante.gouv.fr/art-decor/decor-valuesets--CI-SIS-JDV-?id=2.16.840.1.113883.1.11.10228&amp;effectiveDate=2021-03-15T00:00:00&amp;language=fr-FR">JDV_HL7_Confidentiality-CISIS</a></p>
+			<br>Code issu du JDV_HL7_Confidentiality-CISIS</p>
 			<p><red>@code = Valeur fixée à : « N »
 			<br>@codeSystem = 2.16.840.1.113883.5.25 
 			<bR>@displayName = « Normal »</red></p></td>
@@ -251,6 +250,15 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 		</tr>
 		<tr>
 			<td>1</td>
+			<td>relatedDocument</td>
+			<td></td>
+			<td>[0..1]</td>
+			<td></td>
+			<td><strong>Document de référence à remplacer, transformer</strong>
+			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#relateddocument">relatedDocument</a></td>
+		</tr>
+		<tr>
+			<td>1</td>
 			<td>componentOf</td>
 			<td></td>
 			<td>[1..1]</td>
@@ -263,7 +271,7 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td>component</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td></td>
+			<td>X</td>
 			<td>Représente le corps du document CDA</td>
 		</tr>
 		<tr>
@@ -308,49 +316,5 @@ Les éléments imposés par CDA sont indiqués par « **X** » dans la colonne �
 			<td></td>
 			<td></td>
 		</tr>
-	</tbody>
-</table>
-
-### Annexes
-
-#### Nomenclatures
-
-<table style="width:100%">
-	<thead>
-		<tr>
-    		<th>Type de nomenclature</th>
-    		<th>Format</th>
-    		<th>Accès</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-    		<td>Nomenclatures des Objets de Santé (NOS)</td>
-    		<td>TRE_R* <br> JDV_J*</td>
-    		<td><a href="https://mos.esante.gouv.fr/NOS/">https://mos.esante.gouv.fr/NOS/</a></td>
-  		</tr>
-  		<tr>
-    		<td>Nomenclature ANS</td>
-    		<td>TA_ASIP</td>
-    		<td><a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs</a></td>
-  		</tr>
-	</tbody>
-</table>
-
-#### Documents de référence 
-
-<table style="width:100%">
-	<thead>
-  		<tr>
-    		<th>Documents de référence</th>
-  		</tr>
-	</thead>
-	<tbody>
-  		<tr>
-    		<td>[1] <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/asip_referentiel_identifiant_national_sante-liste-des-oid-des-autorites-d-affectation-des-ins_v0.1.pdf">ANS : INS – Liste des OID des autorités d’affectation des INS</a></td>
-  		</tr>
-  		<tr>
-    		<td>[2] <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">ANS : CI-SIS – Annexe – Source des données métier pour les professionnels de santé</a></td>
-  		</tr>
 	</tbody>
 </table>
