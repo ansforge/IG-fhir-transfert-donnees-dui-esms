@@ -16,12 +16,15 @@ class Reservation #Thistle {
 }
 
 class Sejour #Thistle {
-    dateSoldeFinal : Date [0..1]
-    soldeFinalDepense : Montant [0..1]
-    soldeFinalDepense : Montant [0..1]
-    dateSoldeJour : Date [0..1]
-    soldeFinalRecette : Montant [0..1]
-    soldeFinalRecette : Montant [0..1]
+    dateAdmission : Date [0..1]
+    dateEntree : Date [0..1]
+    libelleModeEntree : Texte [0..1]
+    dateSortiePrevisionnelle : Date [0..1]
+    dateSortie : Date [0..1]
+    libelleModeSortie : Texte [0..1]
+    numeroDossier : Identifiant [0..1]
+    commentaire : Texte [0..1]
+    
 }
 
 class ESSMS #Thistle {
