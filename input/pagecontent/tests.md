@@ -7,9 +7,9 @@ Liste des validateurs FHIR présents sur la plateforme de test [EVSClient](https
 | MS-R4-TDDUI Document Reference                      | [TDDUI Document Reference](StructureDefinition-tddui-documentreference.html)           | 1 et 3 |
 | MS-R4-TDDUI Bundle                                  | [TDDUI Bundle](StructureDefinition-tddui-bundle.html)           | 2 |
 
-### Validateurs CDA
+### Validateur CDA
 
-Liste des validateurs CDA présents sur la plateforme de test [EVSClient](https://interop.esante.gouv.fr/evs) :
+Validateur CDA présent sur la plateforme de test [EVSClient](https://interop.esante.gouv.fr/evs) :
 
 | Nom Validateur | Document testé | Flux associé |
 | --------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------- |
