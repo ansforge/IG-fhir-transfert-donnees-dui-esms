@@ -144,9 +144,9 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Type de document</strong></p>
-			<p>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPPAT_2 »
-			<br>@displayName = « Autre document du patient »
-			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</p></td>
+			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPORT_DUI »
+			<br>@displayName = « Export du Dossier Usager Informatisé »
+			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</red></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
