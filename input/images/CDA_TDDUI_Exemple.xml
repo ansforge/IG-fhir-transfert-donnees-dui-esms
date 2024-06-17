@@ -29,10 +29,10 @@
 	<!-- Déclaration de conformité aux spécifications du CI-SIS -->
 	<templateId root="1.2.250.1.213.1.1.1.1"/>
 	<!-- Déclaration de conformité aux spécifications du modèle de document Transfert de données DUI -->
-	<templateId root="1.2.250.1.213.1.1.1.4.11"
+	<templateId root="1.2.250.1.213.1.1.1.58"
 	            extension="version à renseigner"/>
 	<!-- Identifiant unique du document -->
-	<id root="E20C5584-4278-11EE-BE56-0242AC120002" extension="0001"/>
+	<id root="1.2.250.2345.3245.13.58130.1"/>
 	<!-- Type de document (valeurs temporaires en attente d'une nomenclature plus adaptée) -->
 	<code code="EXPPAT_2"
 	      displayName="Autre document du patient"
@@ -50,7 +50,7 @@
 	<!-- Langue du document -->
 	<languageCode code="fr-FR"/>
 	<!-- Identifiant commun à toutes les versions successives du document -->
-	<setId root="E20C5584-4278-11EE-BE56-0242AC120002"/>
+	<setId root="1.2.250.2345.3245.13.58130"/>
 	<!-- Numéro de la version du présent document (entier positif) -->
 	<versionNumber value="1"/>
 	<!-- Usager -->
