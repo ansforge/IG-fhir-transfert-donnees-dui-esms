@@ -743,7 +743,7 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
             <td></td>
             <td><p><strong>Cadre d'exercice</strong>
 			<br>- Si le responsable est un professionnel : Cadre d'exercice
-			<br>- Si le responsable est un SNR : Non renseigné
+			<br>- Si le responsable est un SNR : Non renseigné</p>
 			<p>@code = code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J254-CategorieEtablissementESSMSPH/JDV_J254-CategorieEtablissementESSMSPH.pdf">JDV_J254-CategorieEtablissementESSMSPH</a><strong> (1.2.250.1.213.3.4.218)</strong>
 			<br>@displayName = libellé associé à ce code
 			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
@@ -939,7 +939,7 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			<td>[0..1] </td>
 			<td></td>
 			<td><p><strong>Identifiant de la structure</strong>
-			- Si l'exécutant est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel.
+			<br>- Si l'exécutant est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel.
 			<br>- Si l'exécutant est un SNR : SIREN de l'éditeur</p>
 			<p>@root = OID de la structure
 			<br>•Si l'exécutant est un professionnel :  "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures, voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
