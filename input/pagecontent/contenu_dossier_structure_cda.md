@@ -123,7 +123,8 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Déclaration de conformité du document au modèle de document structuré MS-TD-DUI (Transfert de données DUI)</strong></p>
-			<p><red>@root = 1.2.250.1.213.1.1.1.4.11</red></p></td>
+			<p>@root = 1.2.250.1.213.1.1.1.58
+			<br>@extension (facultatif) = version du guide d'implémentation utilisé</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -131,9 +132,10 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>II</td>
 			<td>[1..1]</td>
 			<td>X</td>
-			<td><p><strong>Identifiant unique du document</strong></p>
-			<p>@root (obligatoire) = valeur de l'OID propre à l'émetteur</p>
-			<p><red>Il est recommandé de générer une racine d'OID pour chaque ESSMS, à partir d'un <a  href="https://www.uuidgenerator.net/version1">générateur d'OID</a>. Cet OID devra être converti en majuscule afin de se conformer aux spécifications HL7. Il pourra ensuite être décliné pour identifier de façon unique chaque instance et version des documents de l'émetteur</red></p></td>
+			<td><p><strong>Identifiant unique du document</strong>
+			<br><red>Attribut nullFlavor interdit</red></p>
+			<p>@root (obligatoire) = valeur d'un OID propre à l'émetteur, formé d'un OID complet identifiant l'instance du document.
+			</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -142,8 +144,8 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>[1..1]</td>
 			<td>X</td>
 			<td><p><strong>Type de document</strong></p>
-			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPPAT_2 »
-			<br>@displayName = « Autre document du patient »
+			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPORT_DUI »
+			<br>@displayName = « Export du Dossier Usager Informatisé »
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</red></p></td>
 		</tr>
 		<tr>
@@ -172,9 +174,9 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>X</td>
 			<td><p><strong>Niveau de confidentialité du document.</strong>
 			<br>Code issu du JDV_HL7_Confidentiality-CISIS</p>
-			<p><red>@code = Valeur fixée à : « N »
+			<p>@code = Valeur fixée à : « N »
 			<br>@codeSystem = 2.16.840.1.113883.5.25 
-			<bR>@displayName = « Normal »</red></p></td>
+			<bR>@displayName = « Normal »</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -191,8 +193,9 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>II</td>
 			<td>[0..1]</td>
 			<td></td>
-			<td><p><strong>Identification du lot de versions du même document</strong></p>
-			<p>@root = valeur de l'OID du lot de document propre à l'émetteur</p></td>
+			<td><p><strong>Identification du lot de versions du même document</strong>
+			<br><red>Attribut nullFlavor interdit</red></p>
+			<p>@root = valeur d'un OID propre à l'émetteur, formée d'un OID identifiant le lot de versions du document</p></td>
 		</tr>
 		<tr>
 			<td>1</td>

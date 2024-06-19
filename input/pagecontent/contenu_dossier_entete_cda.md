@@ -601,7 +601,7 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
             <td>[0..1] </td>
             <td></td>
             <td><p><strong>Profession ou rôle du responsable</strong></p>
-			<p>@code = Code de issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialtyCISIS</a><strong> (1.2.250.1.213.1.1.5.461)</strong>
+			<p>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialtyCISIS</a><strong> (1.2.250.1.213.1.1.5.461)</strong>
 			<br>@displayName = libellé associé à ce code
 			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
         </tr>
@@ -743,11 +743,10 @@ L’élément legalAuthentificator imposé par le CDA représente le responsable
             <td></td>
             <td><p><strong>Cadre d'exercice</strong>
 			<br>- Si le responsable est un professionnel : Cadre d'exercice
-			<br>- Si le responsable est un SNR : Non renseigné
-			<br>Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/JDV_J04-XdsPracticeSettingCode-CISIS.pdf">JDV_J04-XdsPracticeSettingCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.467)</strong></p>
-			<p><red>@code = « ETABLISSEMENT »
-			<br>@displayName = « Etablissement de santé »
-			<br>@codeSystem = « 1.2.250.1.213.1.1.4.9 »</red></p></td>
+			<br>- Si le responsable est un SNR : Non renseigné</p>
+			<p>@code = code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J254-CategorieEtablissementESSMSPH/JDV_J254-CategorieEtablissementESSMSPH.pdf">JDV_J254-CategorieEtablissementESSMSPH</a><strong> (1.2.250.1.213.3.4.218)</strong>
+			<br>@displayName = libellé associé à ce code
+			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
         </tr>
     </tbody>
 </table>
@@ -940,7 +939,7 @@ L’élément DocumentationOf imposé par le CDA décrit les données de l'évè
 			<td>[0..1] </td>
 			<td></td>
 			<td><p><strong>Identifiant de la structure</strong>
-			- Si l'exécutant est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel.
+			<br>- Si l'exécutant est un professionnel : Identifiant de la structure pour le compte de laquelle intervient le professionnel.
 			<br>- Si l'exécutant est un SNR : SIREN de l'éditeur</p>
 			<p>@root = OID de la structure
 			<br>•Si l'exécutant est un professionnel :  "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures, voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)
@@ -1145,9 +1144,9 @@ L’élément componentOf imposé par le CI-SIS représente l’association du d
 			<td>X</td>
 			<td><p><strong>Modalité d'exercice de la structure</strong>
 			<br><red>Attribut nullFlavor interdit</red></p>
-			<p>@code = Valeur issue du <a href="https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS.pdf">JDV_J02-XdsHealthcareFacilityTypeCode-CISIS</a><strong> (1.2.250.1.213.1.1.5.466)</strong> et fixée à "<red>SA41</red>"
-			<br>@displayName = "<red>Autre établissement du domaine social ou médico-social</red>"
-			<br>@codeSystem = <red>1.2.250.1.71.4.2.4</red></p></td>
+			<p>@code = code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J254-CategorieEtablissementESSMSPH/JDV_J254-CategorieEtablissementESSMSPH.pdf">JDV_J254-CategorieEtablissementESSMSPH</a><strong> (1.2.250.1.213.3.4.218)</strong>
+			<br>@displayName = libellé associé à ce code
+			<br>@codeSystem = identifiant de la terminologie d'origine de ce code</p></td>
 		</tr>
 	</tbody>
 </table>
