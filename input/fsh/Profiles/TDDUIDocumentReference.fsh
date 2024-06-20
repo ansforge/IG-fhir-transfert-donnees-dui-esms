@@ -14,7 +14,7 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * docStatus 0..0
 * type 0..1 MS
 * category 0..1 MS
-* subject only Reference(Patient)
+* subject only Reference(FRCorePatientProfile)
 * date 0..1 MS
 * author 0..* MS
 * authenticator 0..1
@@ -116,7 +116,7 @@ Description: "Profil générique créé dans le contexte du transfert de donnée
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 
-* context.sourcePatientInfo only Reference(FrPatient)
+* context.sourcePatientInfo only Reference(FRCorePatientProfile)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 
 
