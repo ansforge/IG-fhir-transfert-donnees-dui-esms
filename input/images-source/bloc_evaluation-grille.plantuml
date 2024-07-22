@@ -16,7 +16,7 @@ class Professionnel #LightGray {
     nom : Texte [0..1]
     prenom : Texte [0..1]
     fonction : Code [0..1]
-    etablissementDeRattachement : entiteJuridique [0..1]
+    etablissementDeRattachement : EntiteJuridique [0..1]
 }
 
 class Evaluation #LightGray {
