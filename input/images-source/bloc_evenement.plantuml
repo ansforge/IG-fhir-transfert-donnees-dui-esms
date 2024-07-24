@@ -20,6 +20,7 @@ class Professionnel #LightGray {
 class Transport #LightGray {
     idTrajet : Identifiant [1..1]
     typeTransport : Code [0..1]
+    typeMotorisation : Code [0..1]
     natureTransport : Code [0..1]
     transporteur : EntiteJuridique [0..1]
     adresseDepart : Adresse [0..1]
