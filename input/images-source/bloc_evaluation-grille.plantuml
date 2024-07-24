@@ -41,7 +41,7 @@ class DetailEvaluation #LightGray {
 }
 
 note right of DetailEvaluation::resultatChampsEvalue
-  Le type est dépendant du de la grille (Code, indicateur,...).
+  Le type est dépendant de la grille (Code, indicateur,...).
 end note
 
 Professionnel <|-- Evaluateur
