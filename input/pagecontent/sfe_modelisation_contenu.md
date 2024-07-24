@@ -1158,8 +1158,7 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 #### Evaluation
 
-<!-- object data="bloc_evaluation.svg" type="image/svg+xml"></object -->
-<div style="text-align:center;">{%include bloc_evaluation.svg%}</div>
+<div style="text-align:center;">{%include bloc_evaluation-grille.svg%}</div>
 
 ##### Classe Evaluation
 
@@ -1218,3 +1217,9 @@ Grille permettant d’évaluer la situation de l’usager dans un domaine défin
     <td>Version de la grille d’évaluation.</td>
   </tr>
 </table>
+
+### Partie Coordination des acteurs
+
+#### Evènement de l'agenda
+
+<div style="text-align:center;">{%include bloc_evenement.svg%}</div>
