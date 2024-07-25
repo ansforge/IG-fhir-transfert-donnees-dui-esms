@@ -982,6 +982,10 @@ Séjour d’un usager dans un ESSMS.
     <th>Nom</th>
     <th>Description</th>
   </tr>
+   <tr>
+    <td>ESSMS : [0..1] EntiteJuridique</td>
+    <td>Établissement ou service social ou médico-social.</td>
+  </tr>
   <tr>
     <td>dateAdmission : [0..1] Date</td>
     <td>Date d’admission du séjour.</td>
