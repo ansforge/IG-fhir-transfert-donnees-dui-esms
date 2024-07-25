@@ -9,7 +9,7 @@ class AutorisationAdministrative #PeachPuff {
     auteur : PersonnePhysique [0..*]
     dateSignature : Date [0..1]
     dateDebut : Date [0..1]
-    dateDebut : Date [0..1]
+    dateFin : Date [0..1]
     pieceJointe : ObjetBinaire [0..*]
     commentaire : Texte [0..1]
 }
