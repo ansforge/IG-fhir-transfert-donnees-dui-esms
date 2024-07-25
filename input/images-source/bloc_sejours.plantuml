@@ -16,6 +16,7 @@ class Reservation #Thistle {
 }
 
 class Sejour #Thistle {
+    ESSMS : EntiteJuridique [0..1]
     dateAdmission : Date [0..1]
     dateEntree : Date [0..1]
     libelleModeEntree : Texte [0..1]
@@ -23,12 +24,13 @@ class Sejour #Thistle {
     dateSortie : Date [0..1]
     libelleModeSortie : Texte [0..1]
     numeroDossier : Identifiant [0..1]
-    commentaire : Texte [0..1]
-    
+    commentaire : Texte [0..1] 
 }
 
-class ESSMS #Thistle {
+class EntiteJuridique #LightYellow {
     idNat_Struct : Identifiant [1..1]
+    raisonSociale : Texte [0..1]
+    statutJuridique : Code [0..1]
 }
 
 class Inventaire #Thistle { 
@@ -57,7 +59,6 @@ Decision "1" -- "0..1" DroitPrestation
 Reservation "*" - "1" DroitPrestation
 Reservation "1" - "*" Usager
 DroitPrestation "1" -- "*" Sejour
-ESSMS "1" - "*" Sejour 
 Sejour "1" -- "0..1" Inventaire
 Sejour "1" - "*" Solde
 Sejour "*" -- "*" Contrat

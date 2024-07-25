@@ -695,8 +695,9 @@ Personne physique qui agit comme point de contact auprès d'une autre personne o
     <a href="https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/TRE_R217-ProtectionJuridique.pdf">TRE_R217-ProtectionJuridique</a></td>
   </tr>
   <tr>
-    <td>fonction : [0..1] Texte</td>
-    <td>Un titre, une position ou une fonction de la personne assurant le contact au sein de son organisation (directeur, secrétaire, etc.).</td>
+    <td>fonction : [0..1] Code</td>
+    <td>Un titre, une position ou une fonction de la personne assurant le contact au sein de son organisation (directeur, secrétaire, etc.).
+    <a href="https://mos.esante.gouv.fr/NOS/TRE_R251-FonctionContact/TRE_R251-FonctionContact.pdf">TRE_R251-FonctionContact</a></td>
   </tr>
   <tr>
     <td>ordreAppel : [0..1] Numérique</td>
@@ -980,6 +981,10 @@ Séjour d’un usager dans un ESSMS.
   <tr>
     <th>Nom</th>
     <th>Description</th>
+  </tr>
+   <tr>
+    <td>ESSMS : [0..1] EntiteJuridique</td>
+    <td>Établissement ou service social ou médico-social.</td>
   </tr>
   <tr>
     <td>dateAdmission : [0..1] Date</td>
