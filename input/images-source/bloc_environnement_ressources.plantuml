@@ -17,7 +17,7 @@ class ContactPersonnePhysique #LightBlue {
     telecommunication : Telecommunication [0..*]
     role : Code [0..1]
     relation : Code [0..1]
-    fonction : Texte[0..1]
+    fonction : Code [0..1]
     ordreAppel : Numerique [0..1]
     commentaire : Texte [0..1]
 }
