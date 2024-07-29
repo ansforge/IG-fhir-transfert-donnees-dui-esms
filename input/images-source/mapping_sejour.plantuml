@@ -1,0 +1,23 @@
+@startuml
+
+
+map "Sejour : [[contenu_dossier_corps_cda.html Entrée FR-Sejour]]" as Sejour #back:LavenderBlush;header:Thistle{
+    dateAdmission => effectiveTime.low
+    dateEntree => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-entree]] effectiveTime
+    libelleModeEntree => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-entree]] text
+    dateSortiePrevisionnelle => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie avec @moodCode=INT]]  effectiveTime
+    dateSortie => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie avec @moodCode=EVN]]  effectiveTime
+    libelleModeSortie => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie]]  text
+    numeroDossier => id
+    commentaire => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
+}
+
+
+map "ESMSS: [[contenu_dossier_corps_cda.html Entrée FR-Sejour]]" as ESSMS #back:LavenderBlush;header:Thistle{
+    idNat_PS => participant[@typeCode=LOC].participantRole.id
+}
+
+Sejour "0..*" -- "0..1" ESSMS
+
+
+@enduml

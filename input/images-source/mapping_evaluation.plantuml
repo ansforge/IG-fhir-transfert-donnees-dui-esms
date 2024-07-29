@@ -1,0 +1,37 @@
+@startuml
+
+
+map "Evaluation : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Evaluation #back:GhostWhite;header:LightGray{
+    idEvaluation => id
+    type => code
+    date => effectiveTime
+    resultat => value
+    statut => [[contenu_dossier_corps_cda.html Entrée FR-Statut]] code
+    commentaire => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
+    pieceJointe => [[contenu_dossier_corps_cda.html Entrée FR-Reference-interne]]
+}
+
+
+map "DetailEvaluation : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation-composant]]" as DetailEvaluation #back:GhostWhite;header:LightGray{
+    champsEvalue => code
+    resultatChampsEvalue => value
+    interpretationResultatChampsEvalue => interpretationCode
+    commentaire => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
+}
+
+map "Evaluateur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Evaluateur#back:GhostWhite;header:LightGray{
+    idNat_PS => author.assignedAuthor.id
+   
+}
+
+map "Responsable : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Responsable#back:GhostWhite;header:LightGray{
+    idNat_PS => participant[@typeCode=RESP].participantRole.id
+   
+}
+
+'Liens entre éléments
+Evaluateur "0..1" -- "0..*" Evaluation
+Responsable "0..1" -- "0..*" Evaluation
+Evaluation "1" -- "0..*" DetailEvaluation
+
+@enduml
