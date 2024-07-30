@@ -18,7 +18,7 @@ map "Evenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as Eve
     motifNonRealisation => [[contenu_dossier_corps_cda.html Entrée FR-Statut]] value.qualifier 
     repas => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]]
     typeRessourceUtilisee => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]]
-    dateDerniereModification => [[contenu_dossier_corps_cda.html Entrée FR-Statut]]
+    dateDerniereModification => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]]
     dateValidation => [[contenu_dossier_corps_cda.html Entrée FR-Statut]] effectiveTime
 }
 map "Transport : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel/FR-Transport-du-patient]]" as Transport#back:ghostWhite;header:LightGray {
@@ -61,18 +61,17 @@ map "LieuEvenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as
    
 }
 
-map "Sejour : [[contenu_dossier_corps_cda.html Entrée FR-Sejour]]" as Sejour #back:LightYellow;header:LightYellow{
+map "Evaluation : [[contenu_dossier_corps_cda.html Entrée FR-Rerence-interne]] référençant une entrée FR-Evaluation" as Evaluation #back:LightYellow;header:LightYellow{
 }
 
-Lieu "0..1" -- "0..*" Evenement
+
+Evenement "0..1" -- "0..*" Lieu  
 Professionnel "0..*" -- "0..*" Evenement
 Transport <|-- TransportPro
 Transport <|-- TransportUsager
 TransportUsager "0..*" -- "1" Evenement
 TransportPro "0..*" -- "1" Professionnel
-Evenement "0..*" -- "0..1" Sejour
-
-
+Evenement "0..1" -- "0..1" Evaluation
 
 
 
