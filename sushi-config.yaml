@@ -70,6 +70,19 @@ pages:
             title: Nomenclatures de référence
         annexes_acronymes.md:
             title: Acronymes
+    autres_ressources.md:
+        title: Autres ressources
+        securite.md:
+            title: Sécurité
+        downloads.md:
+            title: Téléchargements et usages
+        specs_fhir.md:
+            title: Spécifications FHIR
+        site_ans.md:
+            title: Site de l'ANS
+        documentation.md:
+            title: Documentation
+
 
 menu:
     Accueil: index.html
@@ -95,6 +108,9 @@ menu:
         Documents de référence: annexes_documents_reference.html
         Nomenclatures de référence : annexes_nomenclatures.html
         Acronymes: annexes_acronymes.html
+    Autres ressources:
+        Sécurité: securite.html
+        Téléchargements et usage: downloads.html
         Spécifications FHIR : new-tab {{site.data.fhir.path}}index.html
         Site de l'ANS : new-tab https://esante.gouv.fr/
-    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
+        Documentation : new-tab https://interop.esante.gouv.fr/ig/documentation/
