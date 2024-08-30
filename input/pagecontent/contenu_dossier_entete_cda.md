@@ -143,10 +143,6 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 
 La structure de l'élément Author se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé. Seul le JDV J01-XdsAuthorSpecialty-CISIS, présent au niveau de l'élément assignedAuthor/code, a été enrichie avec le code <strong>LOGICIEL_DUI</strong>.
 
-Test iframe : 
-
-<iframe src="https://interop.esante.gouv.fr/publication/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.102-2005-09-07T000000.html" height="400" ></iframe>
-
 ### Custodian
 
 L’élément Custodian imposé par le CDA représente la structure chargée de la conservation du document « Transfert de données DUI » du volet. Il s’agit ici dans le cadre de ce volet de l’**ESSMS**.
