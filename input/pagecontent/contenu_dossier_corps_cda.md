@@ -4,7 +4,7 @@ Les éléments apparaissant en <span style="color: #e74c3c">rouge</span> corresp
 
 Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
 
-### Section FR-Evaluation-du-statut-fonctionnel
+### Section FR-Satut-fonctionnel
 
 La section FR-Evaluation-du-statut-fonctionnel décrit les informations sur l’évaluation de l’usager. Il s’agit dans le cadre du volet « Transfert de données DUI » des données de la spécification fonctionnelle de contenu v0.4 sur la Classe Evaluation, et notamment de la Grille d’évaluation.
 
