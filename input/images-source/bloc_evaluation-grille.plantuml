@@ -21,7 +21,7 @@ class Professionnel #LightGray {
 
 class Evaluation #LightGray {
     idEvaluation : Identifiant [1..1]
-    type : Code [0..1]
+    type : Code [1..1]
     date : Date [0..1]
     resultat : [0..1]
     statut : Code [0..1]
@@ -36,7 +36,6 @@ end note
 class DetailEvaluation #LightGray {
     champsEvalue: Code [1..1]
     resultatChampsEvalue : [1..1]
-    interpretationResultatChampsEvalue : Code [0..1]
     commentaire : Texte [0..1]
 }
 

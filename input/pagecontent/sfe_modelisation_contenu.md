@@ -1167,7 +1167,7 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 ##### Classe Evaluation
 
-Evaluation de la situation de l’usager dans un domaine défini.
+Evaluation du niveau de perte d'autonomie d'un usager.
 
 <table style="width:100%">
   <tr>
@@ -1175,26 +1175,38 @@ Evaluation de la situation de l’usager dans un domaine défini.
     <th>Description</th>
   </tr>
   <tr>
-    <td>idEvaluation : Identifiant [0..1]</td>
-    <td>Identifiant de l’évaluation.</td>
+    <td>idEvaluation : Identifiant [1..1]</td>
+    <td>Identifiant technique de l’évaluation.</td>
+  </tr>
+   <tr>
+    <td>type : [1..1] Code</td>
+    <td>Type de l’évaluation.</td>
   </tr>
     <tr>
-    <td>dateEvaluation : [0..1] Code</td>
+    <td>date : [0..1] Code</td>
     <td>Date de l’évaluation.</td>
   </tr>
-    <tr>
-    <td>evaluateur : [0..1] ContactPersonnePhysique </td>
-    <td>Personne qui réalise l’évaluation.</td>
+  <tr>
+    <td>resultat : [0..1] Le type est dépendant du type d'évaluation</td>
+    <td>Résultat global de l’évaluation.</td>
   </tr>
-    <tr>
-    <td>resultat : [0..1] Texte</td>
-    <td>Résultat de l’évaluation. </td>
+  <tr>
+    <td>statut : [0..1] Code</td>
+    <td>Statut de l’évaluation.</td>
+  </tr>
+   <tr>
+    <td>commentaire : [0..1] Texte</td>
+    <td>Commentaire libre sur l’évaluation.</td>
+  </tr>
+   <tr>
+    <td>pieceJointe : [0..1] Texte</td>
+    <td>Pièces jointes relatives à l’évaluation.</td>
   </tr>
 </table>
 
 ##### Classe GrilleEvaluation
 
-Grille permettant d’évaluer la situation de l’usager dans un domaine défini.
+Grille utilisée pour évaluer le niveau de perte d'autonomie d'une personne. Elle est associée à l'évaluation globale de la personne.
 
 <table style="width:100%">
   <tr>
@@ -1202,24 +1214,65 @@ Grille permettant d’évaluer la situation de l’usager dans un domaine défin
     <th>Description</th>
   </tr>
   <tr>
-    <td>idGrilleEvaluation : Identifiant [0..1]</td>
-    <td>Identifiant de la grille d’évaluation.</td>
-  </tr>
-    <tr>
-    <td>type : [0..1] Code</td>
-    <td>Type de grille d’évaluation.</td>
-  </tr>
-    <tr>
-    <td>contenu : [0..1] Texte</td>
-    <td>Contenu de la grille d’évaluation.</td>
+    <td>champsEvalue : [1..1] Code</td>
+    <td>Critère d'évaluation de la grille.</td>
   </tr>
   <tr>
-    <td>pieceJointe : [0..*] ObjetBinaire</td>
-    <td>Pièce jointe relative à l’évaluation.</td>
+    <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
+    <td>Résultat du critère d'évaluation de la grille.</td>
   </tr>
   <tr>
-    <td>version : [0..1] Texte</td>
-    <td>Version de la grille d’évaluation.</td>
+    <td>commentaire : [0..1] Texte</td>
+    <td>Commentaire libre.</td>
+  </tr>
+</table>
+
+##### Classe Evaluateur
+
+** Classe spécialisée, hérite de la classe Professionnel
+
+Cette classe regroupe les items pouvant caractériser l'évaluateur.
+
+##### Classe Responsable
+
+** Classe spécialisée, hérite de la classe Professionnel
+
+Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
+
+##### Classe Professionnel
+
+Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI).
+
+La classe EntiteJuridique est défini dans le MOS.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idNat_PS : [1..1] Identifiant</td>
+    <td>Identification nationale principale du professionnel initiée pour les besoins du SI-CPS (voir MOS).</td>
+  </tr>
+  <tr>
+    <td>civilite : [0..1] Code</td>
+    <td>Civilité de la personne physique.</td>
+  </tr>
+  <tr>
+    <td>nom : [0..1] Texte</td>
+    <td>Nom du professionnel.</td>
+  </tr>
+  <tr>
+    <td>prenom : [0..1] Texte</td>
+    <td>Prenom du professionnel.</td>
+  </tr>
+  <tr>
+    <td>fonction : [0..1] Code</td>
+    <td>Fonction du professionnel.</td>
+  </tr>
+  <tr>
+    <td>etablissementDeRattachement : [0..1] EntiteJuridique</td>
+    <td>Etablissement de rattachement du professionnel.</td>
   </tr>
 </table>
 
