@@ -16,21 +16,16 @@ class Reservation #Thistle {
 }
 
 class Sejour #Thistle {
-    ESSMS : EntiteJuridique [0..1]
-    dateAdmission : Date [0..1]
-    dateEntree : Date [0..1]
+    ESSMS : EntiteJuridique [1..1]
+    dateAdmission : DateHeure [0..1]
+    dateEntreePrevisionnelle : DateHeure [0..1]
+    dateEntree : DateHeure [0..1]
     libelleModeEntree : Texte [0..1]
-    dateSortiePrevisionnelle : Date [0..1]
-    dateSortie : Date [0..1]
+    dateSortiePrevisionnelle : DateHeure [0..1]
+    dateSortie : DateHeure [0..1]
     libelleModeSortie : Texte [0..1]
-    numeroDossier : Identifiant [0..1]
+    numeroDossier : Identifiant [1..1]
     commentaire : Texte [0..1] 
-}
-
-class EntiteJuridique #LightYellow {
-    idNat_Struct : Identifiant [1..1]
-    raisonSociale : Texte [0..1]
-    statutJuridique : Code [0..1]
 }
 
 class Inventaire #Thistle { 
