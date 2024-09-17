@@ -126,7 +126,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 
 La structure de l'élément Author se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé :
 
-<iframe src="../input/adram/pack-TDD-html-20240704T113145/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.102-2005-09-07T000000.html" height="400" id="Author" style="border: 1px solid black"></iframe>
+<iframe src="./cda/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.102-2005-09-07T000000.html" height="400" id="Author" style="border: 1px solid black"></iframe>
 
 <!-- <button class="fullscreen-btn" onclick="goFullScreen('Author')">Plein écran</button> -->
 
@@ -195,7 +195,7 @@ L’élément Custodian imposé par le CDA représente la structure chargée de 
 
 La structure de l'élément Custodian se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé :
 
-<iframe src="../input/adram/pack-TDD-html-20240704T113145/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.104-2005-09-07T000000.html" height="400" id="Custodian"></iframe>
+<iframe src="./cda/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.104-2005-09-07T000000.html" height="400" id="Custodian"></iframe>
 
 <!-- <button class="fullscreen-btn" onclick="goFullScreen('Custodian')">Plein écran</button> -->
 
