@@ -17,7 +17,7 @@ jobs:
               mkdir to_publish
               mkdir to_publish/ig
               path_spec="./igSource/input/cda"
-              cp -r ./igSource/input/cda  ../to_publish/ig/cda
+              cp -r ./igSource/input/cda  .to_publish/ig/cda
 
       - uses: ansforge/IG-workflows@v0.3.0
         with:      
