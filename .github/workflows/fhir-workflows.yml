@@ -12,14 +12,7 @@ jobs:
         with:      
           path: igSource
 
-      - name: Copy CDA folder
-        run: |
-              mkdir to_publish
-              mkdir to_publish/ig
-              path_spec="./igSource/input/cda"
-              cp -r ./igSource/input/cda  to_publish/ig/cda
-
-      - uses: ansforge/IG-workflows@v0.3.0
+      - uses: ansforge/IG-workflows@nr-test-cda
         with:      
           repo_ig: "./igSource"   
           github_page: "true"
@@ -28,5 +21,6 @@ jobs:
           validator_cli: "false"
           generate_testscript: "false"
           generate_plantuml : "true"
+          cda: "true"
 
 
