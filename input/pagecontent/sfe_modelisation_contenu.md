@@ -1196,10 +1196,6 @@ Evaluation du niveau de perte d'autonomie d'un usager.
     <td>resultat : [0..1] Le type est dépendant du type d'évaluation</td>
     <td>Résultat global de l’évaluation.</td>
   </tr>
-  <tr>
-    <td>statut : [0..1] Code</td>
-    <td>Statut de l’évaluation.</td>
-  </tr>
    <tr>
     <td>commentaire : [0..1] Texte</td>
     <td>Commentaire libre sur l’évaluation.</td>
@@ -1235,54 +1231,16 @@ Grille utilisée pour évaluer le niveau de perte d'autonomie d'une personne. El
 
 ##### Classe Evaluateur
 
-** Classe spécialisée, hérite de la classe Professionnel
+** Classe spécialisée, hérite de la classe Professionnel du MOS.
 
 Cette classe regroupe les items pouvant caractériser l'évaluateur.
 
 ##### Classe Responsable
 
-** Classe spécialisée, hérite de la classe Professionnel
+** Classe spécialisée, hérite de la classe Professionnel du MOS.
 
 Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
 
-##### Classe Professionnel
-
-Cette classe est extraite de la classe Professionnel du MOS.
-
-Elle représente les données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI).
-
-La classe EntiteJuridique est défini dans le MOS.
-
-<table style="width:100%">
-  <tr>
-    <th>Nom</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>idNat_PS : [1..1] Identifiant</td>
-    <td>Identification nationale principale du professionnel initiée pour les besoins du SI-CPS (voir MOS).</td>
-  </tr>
-  <tr>
-    <td>civilite : [0..1] Code</td>
-    <td>Civilité de la personne physique.</td>
-  </tr>
-  <tr>
-    <td>nom : [0..1] Texte</td>
-    <td>Nom du professionnel.</td>
-  </tr>
-  <tr>
-    <td>prenom : [0..1] Texte</td>
-    <td>Prenom du professionnel.</td>
-  </tr>
-  <tr>
-    <td>fonction : [0..1] Code</td>
-    <td>Fonction du professionnel.</td>
-  </tr>
-  <tr>
-    <td>etablissementDeRattachement : [0..1] EntiteJuridique</td>
-    <td>Etablissement de rattachement du professionnel.</td>
-  </tr>
-</table>
 
 ### Partie Coordination des acteurs
 
@@ -1294,7 +1252,7 @@ La classe EntiteJuridique est défini dans le MOS.
 
 Evènements liés à la prise en charge de l’usager dans une structure ESSMS.
 
-Les classes EntiteJuridique et Lieu sont définies dans le MOS.
+Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
 
 <table style="width:100%">
   <tr>
@@ -1332,10 +1290,6 @@ Les classes EntiteJuridique et Lieu sont définies dans le MOS.
    <tr>
     <td>lieuEvenement : [0..1] Lieu</td>
     <td>Localisation d’exécution de l’évènement.</td>
-  </tr>
-  <tr>
-    <td>statutEvenement : [0..1] Code</td>
-    <td>Statut de l'événement organisé par l’ESSMS dont l’usager en est l’acteur.</td>
   </tr>
 <tr>
     <td>structureEnCharge : [0..1] EntiteJuridique</td>
@@ -1471,5 +1425,29 @@ Cette classe regroupe les items pouvant caractériser le transport de l'usager l
     <td>asepsieRigoureuse : [0..1] Identifiant</td>
     <td>Lors du transport de l'usager l'asepsie est rigoureusement respectée ou n'est pas nécessaire.</td>
   </tr>
-  
+</table>
+
+### Partie Classes génériques
+
+##### Classe Statut
+
+Cette classe décrit le statut des ressources (Evenement, Evaluation).
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>statut : [0..1] Code</td>
+    <td>Statut de la ressource.</td>
+  </tr>
+  <tr>
+    <td>dateModificationStatut : [0..1] DateHeure</td>
+    <td>Date de dernière modification du statut.</td>
+  </tr>
+   <tr>
+    <td>auteur : [0..1] Professionnel</td>
+    <td></td>
+  </tr>
 </table>

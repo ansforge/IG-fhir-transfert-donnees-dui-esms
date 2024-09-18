@@ -8,6 +8,8 @@ class Decision #LightYellow
 
 class DroitPrestation #LightYellow
 
+class Evenement #LightYellow
+
 class Reservation #Thistle {
     type : Code [0..1]
     dateDepot : Date [0..1]
@@ -57,6 +59,7 @@ DroitPrestation "1" -- "*" Sejour
 Sejour "1" -- "0..1" Inventaire
 Sejour "1" - "*" Solde
 Sejour "*" -- "*" Contrat
-Usager - Sejour
+Usager "1" - "0..*" Sejour
+Evenement "0..*" -- "0..1" Sejour
 
 @enduml

@@ -4,8 +4,6 @@ hide empty methods
 
 class Usager #LightPink
 
-class Evenement #LightYellow
-
 class Evaluateur #LightGray
 
 class Responsable #LightGray
@@ -24,7 +22,6 @@ class Evaluation #LightGray {
     type : Code [1..1]
     date : Date [0..1]
     resultat : [0..1]
-    statut : Code [0..1]
     commentaire : Texte [0..1]
     pieceJointe : ObjetBinaire [0..*]
 }
@@ -40,13 +37,11 @@ class DetailEvaluation #LightGray {
 }
 
 note right of DetailEvaluation::resultatChampsEvalue
-  Le type est dépendant de la grille (Code, indicateur,...).
+  Le type est dépendant du champ évalué (Code, indicateur,...).
 end note
 
 Professionnel <|-- Evaluateur
 Professionnel <|-- Responsable
-Usager "1" -- "0..*" Evenement
-Evenement "0..1" -- "0..1" Evaluation
 Evaluateur "0..1" -- "0..*" Evaluation
 Responsable "0..1" -- "0..*" Evaluation
 Usager "1" - "0..*" Evaluation

@@ -4,18 +4,11 @@ hide empty methods
 
 class Usager #LightPink
 
-class Sejour #LightYellow
-
 class TransportProfessionnel #LightGray
 
-class Professionnel #LightGray {
-    idNat_PS : Identifiant [1..1]
-    civilite : Code [0..1]
-    nom : Texte [0..1]
-    prenom : Texte [0..1]
-    fonction : Code [0..1]
-    etablissementDeRattachement : EntiteJuridique [0..1]
-}
+class Evaluation #LightYellow
+
+class Professionnel #LightGray 
 
 class Transport #LightGray {
     idTrajet : Identifiant [1..1]
@@ -47,7 +40,6 @@ class Evenement #LightGray {
     compteRenduEvenement : Texte [0..1]
     pieceJointeEvenement : ObjetBinaire [0..*]
     lieuEvenement : Lieu [0..1]
-    statutEvenement : Code [0..1]
     structureEnCharge : EntiteJuridique [0..1]
     dateDebutEvenement : DateHeure [1..1]
     dateFinEvenement : DateHeure [1..1]
@@ -61,23 +53,13 @@ class Evenement #LightGray {
     dateValidation : DateHeure [0..1]
 }
 
-class Lieu #LightGray {
-    identifiant : Identifiant [0..*]
-    nom : Texte [0..1]
-    typeLieu : Code [0..1]
-    adresse : Adresse [0..1]
-    telecommunication : Telecommunication [0..1]
-}
-
-
 Usager "1..*" -- "0..*" Evenement
-Usager "1" -- "0..*" Sejour
-Evenement "0..*" -- "0..1" Sejour
 Professionnel "0..*" -- "0..*" Evenement
 Transport <|-- TransportProfessionnel
 Transport <|-- TransportUsager
 TransportUsager "0..*" -- "1" Evenement
 TransportProfessionnel "0..*" -- "1" Professionnel
+Evenement "0..1" -- "0..1" Evaluation
 
 
 @enduml

@@ -48,7 +48,6 @@ package Séjours #Thistle {
     object Solde #Thistle
     object Réservation #Thistle
     object Inventaire #Thistle
-    object ESSMS #Thistle
     object Contrat #Thistle
 }
 
