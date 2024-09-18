@@ -10,6 +10,8 @@ class Evaluation #LightYellow
 
 class Professionnel #LightGray 
 
+class Statut #LightGray 
+
 class Transport #LightGray {
     idTrajet : Identifiant [1..1]
     typeTransport : Code [0..1]
@@ -60,6 +62,7 @@ Transport <|-- TransportUsager
 TransportUsager "0..*" -- "1" Evenement
 TransportProfessionnel "0..*" -- "1" Professionnel
 Evenement "0..1" -- "0..1" Evaluation
+Evenement "1" -- "0..*" Statut
 
 
 @enduml

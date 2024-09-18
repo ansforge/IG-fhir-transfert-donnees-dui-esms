@@ -1440,14 +1440,14 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
   </tr>
   <tr>
     <td>statut : [0..1] Code</td>
-    <td>Statut de la ressource.</td>
+    <td>Statut de la ressource impactée.</td>
   </tr>
   <tr>
     <td>dateModificationStatut : [0..1] DateHeure</td>
-    <td>Date de dernière modification du statut.</td>
+    <td>Date de la dernière modification du statut de la ressource.</td>
   </tr>
    <tr>
     <td>auteur : [0..1] Professionnel</td>
-    <td></td>
+    <td>Le professionnel ayant effectué la dernière modification du statut de la ressource.</td>
   </tr>
 </table>
