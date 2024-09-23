@@ -22,7 +22,7 @@ class Evaluation #LightGray {
 }
 
 note right of Evaluation::resultat
-  Le type est dépendant du type d'évaluation.
+  Le type du résultat est dépendant du type d'évaluation.
 end note
 
 class DetailEvaluation #LightGray {
@@ -32,7 +32,7 @@ class DetailEvaluation #LightGray {
 }
 
 note right of DetailEvaluation::resultatChampsEvalue
-  Le type est dépendant du champ évalué (Code, indicateur,...).
+  Le type du résultat du champ évalué est dépendant du champ évalué (Code, indicateur,...).
 end note
 
 Professionnel <|-- Evaluateur

@@ -1137,34 +1137,6 @@ Admission prévisionnelle d’un usager dans un ESSMS.
   </tr>
 </table>
 
-##### Classe ESSMS
-
-Établissement ou service social ou médico-social  
-Les établissements et services sociaux et médico-sociaux sont structurés et spécialisés en plusieurs catégories pour s'adapter aux besoins des adultes et des enfants en situation de handicap.  
-Ils peuvent être catégorisés en 3 grands types de structures :  
-* Les structures de prévention, dépistage et accompagnement précoce ;
-* Les structures permettant un accompagnement en milieu ordinaire de vie ;
-* Les structures d’accompagnement en institution.
-
-Ces établissements sont soumis au code de l'action sociale et des familles (CASF).
-
-<table style="width:100%">
-  <tr>
-    <th>Nom</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>idNat_Struct : [0..*] Identifiant</td>
-    <td>Identifiant du ou des ESSMS désignés par la CDAPH comme étant susceptible d'accueillir l'individu en situation de handicap.<br>
-    Cet identifiant est obtenu par la concaténation du type d'identifiant national de structure (provenant de la nomenclature TRE_G07-TypeIdentifiantStructure) et de l'identifiant de la structure :
-    <ul>
-    <li>1 + N° FINESS (entité juridique et entité géographique indéterminées) ;</li>
-    <li>3 + N° SIRET.</li>
-    </ul>
-    </td>
-  </tr>
-</table>
-
 ### Partie Accompagnement
 
 #### Evaluation
@@ -1173,7 +1145,8 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 ##### Classe Evaluation
 
-Evaluation du niveau de perte d'autonomie d'un usager.
+Evaluation globale du niveau de la perte d'autonomie d'un usager.
+À l’issue de l’évaluation, la personne se voit attribuer un résultat caractérisant son niveau de perte d'autonomie.
 
 <table style="width:100%">
   <tr>
@@ -1208,7 +1181,8 @@ Evaluation du niveau de perte d'autonomie d'un usager.
 
 ##### Classe GrilleEvaluation
 
-Grille utilisée pour évaluer le niveau de perte d'autonomie d'une personne. Elle est associée à l'évaluation globale de la personne.
+Grille utilisée pour évaluer le niveau de la perte d'autonomie d'une personne. Elle est associée à l'évaluation globale de la personne.
+Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné à la personne.
 
 <table style="width:100%">
   <tr>
