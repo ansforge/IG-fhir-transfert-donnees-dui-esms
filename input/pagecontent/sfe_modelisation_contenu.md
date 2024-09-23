@@ -977,6 +977,8 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 Séjour d’un usager dans un ESSMS.
 
+La classe EntiteJuridique est définie dans le MOS.
+
 <table style="width:100%">
   <tr>
     <th>Nom</th>
@@ -987,23 +989,27 @@ Séjour d’un usager dans un ESSMS.
     <td>Établissement ou service social ou médico-social.</td>
   </tr>
   <tr>
-    <td>dateAdmission : [0..1] Date</td>
-    <td>Date d’admission du séjour.</td>
+    <td>dateAdmission : [0..1] DateHeure</td>
+    <td>Date d’admission dans la structure ESSMS.</td>
   </tr>
   <tr>
-    <td>dateEntree : [0..1] Date</td>
-    <td>Date d’entrée du séjour.</td>
+    <td>dateEntreePrevisionnelle : [0..1] DateHeure</td>
+    <td>Date d’entrée prévisionnelle dans le séjour.</td>
+  </tr>
+  <tr>
+    <td>dateEntree : [0..1] DateHeure</td>
+    <td>Date d’entrée dans le séjour.</td>
   </tr>
   <tr>
     <td>libelleModeEntree : [0..1] Texte</td>
     <td>Libellé du mode d’entée du séjour.</td>
   </tr>
   <tr>
-    <td>dateSortiePrevisionnelle : [0..1] Date</td>
+    <td>dateSortiePrevisionnelle : [0..1] DateHeure</td>
     <td>Date de sortie prévisionnelle du séjour.</td>
   </tr>
   <tr>
-    <td>dateSortie : [0..1] Date</td>
+    <td>dateSortie : [0..1] DateHeure</td>
     <td>Date de sortie du séjour.</td>
   </tr>
   <tr>
@@ -1011,7 +1017,7 @@ Séjour d’un usager dans un ESSMS.
     <td>Libellé du mode de sortie du séjour.</td>
   </tr>
   <tr>
-    <td>numeroDossier : [0..1] Identifiant</td>
+    <td>numeroDossier : [1..1] Identifiant</td>
     <td>Numéro de dossier administratif du séjour.</td>
   </tr>
   <tr>
@@ -1105,7 +1111,7 @@ Solde utilisé pour la gestion de l’argent de l’usager durant son séjour.
 
 ##### Classe Reservation
 
-Amission prévisionnelle d’un usager dans un ESSMS.
+Admission prévisionnelle d’un usager dans un ESSMS.
 
 <table style="width:100%">
   <tr>
@@ -1131,34 +1137,6 @@ Amission prévisionnelle d’un usager dans un ESSMS.
   </tr>
 </table>
 
-##### Classe ESSMS
-
-Établissement ou service social ou médico-social  
-Les établissements et services sociaux et médico-sociaux sont structurés et spécialisés en plusieurs catégories pour s'adapter aux besoins des adultes et des enfants en situation de handicap.  
-Ils peuvent être catégorisés en 3 grands types de structures :  
-* Les structures de prévention, dépistage et accompagnement précoce ;
-* Les structures permettant un accompagnement en milieu ordinaire de vie ;
-* Les structures d’accompagnement en institution.
-
-Ces établissements sont soumis au code de l'action sociale et des familles (CASF).
-
-<table style="width:100%">
-  <tr>
-    <th>Nom</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>idNat_Struct : [0..*] Identifiant</td>
-    <td>Identifiant du ou des ESSMS désignés par la CDAPH comme étant susceptible d'accueillir l'individu en situation de handicap.<br>
-    Cet identifiant est obtenu par la concaténation du type d'identifiant national de structure (provenant de la nomenclature TRE_G07-TypeIdentifiantStructure) et de l'identifiant de la structure :
-    <ul>
-    <li>1 + N° FINESS (entité juridique et entité géographique indéterminées) ;</li>
-    <li>3 + N° SIRET.</li>
-    </ul>
-    </td>
-  </tr>
-</table>
-
 ### Partie Accompagnement
 
 #### Evaluation
@@ -1167,7 +1145,8 @@ Ces établissements sont soumis au code de l'action sociale et des familles (CAS
 
 ##### Classe Evaluation
 
-Evaluation de la situation de l’usager dans un domaine défini.
+Evaluation globale du niveau de la perte d'autonomie d'un usager.
+À l’issue de l’évaluation, la personne se voit attribuer un résultat caractérisant son niveau de perte d'autonomie.
 
 <table style="width:100%">
   <tr>
@@ -1175,26 +1154,35 @@ Evaluation de la situation de l’usager dans un domaine défini.
     <th>Description</th>
   </tr>
   <tr>
-    <td>idEvaluation : Identifiant [0..1]</td>
-    <td>Identifiant de l’évaluation.</td>
+    <td>idEvaluation : Identifiant [1..1]</td>
+    <td>Identifiant technique de l’évaluation.</td>
+  </tr>
+   <tr>
+    <td>type : [1..1] Code</td>
+    <td>Type de l’évaluation.</td>
   </tr>
     <tr>
-    <td>dateEvaluation : [0..1] Code</td>
+    <td>date : [0..1] Code</td>
     <td>Date de l’évaluation.</td>
   </tr>
-    <tr>
-    <td>evaluateur : [0..1] ContactPersonnePhysique </td>
-    <td>Personne qui réalise l’évaluation.</td>
+  <tr>
+    <td>resultat : [0..1] Le type est dépendant du type d'évaluation</td>
+    <td>Résultat global de l’évaluation.</td>
   </tr>
-    <tr>
-    <td>resultat : [0..1] Texte</td>
-    <td>Résultat de l’évaluation. </td>
+   <tr>
+    <td>commentaire : [0..1] Texte</td>
+    <td>Commentaire libre sur l’évaluation.</td>
+  </tr>
+   <tr>
+    <td>pieceJointe : [0..1] Texte</td>
+    <td>Pièces jointes relatives à l’évaluation.</td>
   </tr>
 </table>
 
 ##### Classe GrilleEvaluation
 
-Grille permettant d’évaluer la situation de l’usager dans un domaine défini.
+Grille utilisée pour évaluer le niveau de la perte d'autonomie d'une personne. Elle est associée à l'évaluation globale de la personne.
+Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné à la personne.
 
 <table style="width:100%">
   <tr>
@@ -1202,29 +1190,238 @@ Grille permettant d’évaluer la situation de l’usager dans un domaine défin
     <th>Description</th>
   </tr>
   <tr>
-    <td>idGrilleEvaluation : Identifiant [0..1]</td>
-    <td>Identifiant de la grille d’évaluation.</td>
-  </tr>
-    <tr>
-    <td>type : [0..1] Code</td>
-    <td>Type de grille d’évaluation.</td>
-  </tr>
-    <tr>
-    <td>contenu : [0..1] Texte</td>
-    <td>Contenu de la grille d’évaluation.</td>
+    <td>champsEvalue : [1..1] Code</td>
+    <td>Critère d'évaluation de la grille.</td>
   </tr>
   <tr>
-    <td>pieceJointe : [0..*] ObjetBinaire</td>
-    <td>Pièce jointe relative à l’évaluation.</td>
+    <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
+    <td>Résultat du critère d'évaluation de la grille.</td>
   </tr>
   <tr>
-    <td>version : [0..1] Texte</td>
-    <td>Version de la grille d’évaluation.</td>
+    <td>commentaire : [0..1] Texte</td>
+    <td>Commentaire libre.</td>
   </tr>
 </table>
+
+##### Classe Evaluateur
+
+** Classe spécialisée, hérite de la classe Professionnel du MOS.
+
+Cette classe regroupe les items pouvant caractériser l'évaluateur.
+
+##### Classe Responsable
+
+** Classe spécialisée, hérite de la classe Professionnel du MOS.
+
+Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
+
 
 ### Partie Coordination des acteurs
 
 #### Evènement de l'agenda
 
 <div style="text-align:center;">{%include bloc_evenement.svg%}</div>
+
+##### Classe Evenement
+
+Evènements liés à la prise en charge de l’usager dans une structure ESSMS.
+
+Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idEvenement : Identifiant [1..1]</td>
+    <td>Identifiant technique de l’évènement obtenue par la concaténation de l'identifiant national de structure (idNat_Struct), du numéro de l’évènement dans le DUI (idFonctionnel) et de l'identifiant local de l’usager au sein de la structure (idUsager) : <br> idEvenement = idNat_Struct - idFonctionnel - idUsager </br> </td>
+  </tr>
+  <tr>
+    <td>categorieEvenement : [0..*] Code</td>
+    <td>Catégorie de l'évènement.</td>
+  </tr>
+   <tr>
+    <td>typeEvenement : [0..*] Code</td>
+    <td>Type de l’évènement.</td>
+  </tr>
+    <tr>
+    <td>libelleEvenement : [0..1] Texte</td>
+    <td>Titre donné à l’évènement par la structure.</td>
+  </tr>
+   <tr>
+    <td>commentaireEvenement : [0..1] Texte</td>
+    <td>Commentaire sur le déroulé de l'évènement.</td>
+  </tr>
+  <tr>
+    <td>compteRenduEvenement : [0..1] Texte</td>
+    <td>Zone de texte liée à l’événement pour compte rendu des actions réalisées.</td>
+  </tr>
+  <tr>
+    <td>pieceJointeEvenement : [0..*] ObjetBinaire</td>
+    <td>Pièces jointes liées à l’événement.</td>
+  </tr>
+   <tr>
+    <td>lieuEvenement : [0..1] Lieu</td>
+    <td>Localisation d’exécution de l’évènement.</td>
+  </tr>
+<tr>
+    <td>structureEnCharge : [0..1] EntiteJuridique</td>
+    <td>Structure de rattachement de l'usager en charge de l'évènement.</td>
+  </tr>
+<tr>
+    <td>dateDebutEvenement : [1..1] DateHeure</td>
+    <td>Date et heure de début de l'évènement.</td>
+  </tr>
+  <tr>
+    <td>dateFinEvenement : [1..1] DateHeure</td>
+    <td>Date et heure de fin de l'évènement.</td>
+  </tr>
+ <tr>
+    <td>evenementHorsPrestation : [0..1] Indicateur</td>
+    <td>Evénement hors prestation prévue dans le projet personnalisé de l’usager (ex : école).</td>
+  </tr>
+<tr>
+    <td>motifEvenement : [0..1] Texte</td>
+    <td>Contexte justifiant la réalisation de l’évènement (souvent décrit dans le projet personnalisé).</td>
+  </tr>
+<tr>
+    <td>usagerPresent : [0..1] Indicateur</td>
+    <td>Evènement nécessitant ou non la présence physique de l’usager.</td>
+  </tr>
+<tr>
+   <td>motifNonRealisation : [0..1] Code</td>
+    <td>Motif de non-réalisation de l’évènement.</td>
+  </tr>
+  <tr>
+   <td>repas : [0..1] Indicateur</td>
+    <td>Repas du professionnel prévu dans le cadre de l'événement.</td>
+  </tr>
+ <tr>
+   <td>typeRessourceUtilisee: [0..*] Code</td>
+    <td>Type de ressources utilisées dans le cadre de l’évènement (véhicule, matériel médical, salle spécialisée…).</td>
+  </tr>
+<tr>
+   <td>dateDerniereModification : [0..1] DateHeure</td>
+    <td>Date et heure de la dernière modification de l’évènement.</td>
+  </tr>
+<tr>
+   <td>dateValidation : [0..1] DateHeure</td>
+    <td>Date et heure de la validation de l’évènement.</td>
+  </tr>
+</table>
+
+##### Classe Transport
+
+Classe générique socle décrivant le transport d’une personne physique (professionnel, usger) lors d’un évènement.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idTrajet : [1..1] Identifiant</td>
+    <td>Identifiant technique du transport. </td>
+  </tr>
+  <tr>
+    <td>typeTransport : [0..1] Code</td>
+    <td>Type de transport.</td>
+  </tr>
+   <tr>
+    <td>typeMotorisation : [0..1] Code</td>
+    <td>Type de motorisation associée au véhicule utilisé lors du transport.</td>
+  </tr>
+  <tr>
+    <td>natureTransport : [0..1] Code</td>
+    <td>Nature du transport.</td>
+  </tr>
+  <tr>
+    <td>transporteur : [0..1] EntiteJuridique</td>
+    <td>Structure juridique définissant le transporteur.</td>
+  </tr>
+ <tr>
+    <td>adresseDepart : [0..1] Adresse</td>
+    <td>Adresse de départ du transport.</td>
+  </tr>
+  <tr>
+    <td>adresseDestination : [0..1] Adresse</td>
+    <td>Adresse de destination du transport.</td>
+  </tr>
+<tr>
+    <td>budgetPrevisionnel : [0..1] Montant</td>
+    <td>Budget prévisionnel pour assurer le transport de la personne physique.</td>
+  </tr>
+  <tr>
+    <td>budgetReel : [0..1] Montant</td>
+    <td>Budget réel pour assurer le transport de la personne physique.</td>
+  </tr>
+  <tr>
+    <td>distance : [0..1] Mesure</td>
+    <td>Distance du transport de la personne physique.</td>
+  </tr>
+  <tr>
+    <td>dureeTheorique : [0..1] Mesure</td>
+    <td>Durée théorique du transport de la personne physique.</td>
+  </tr>
+  <tr>
+    <td>dateDebutTransport : [1..1] DateHeure</td>
+    <td>Date de début du transport de la personne physique.</td>
+  </tr>
+  <tr>
+    <td>dateFinTransport : [1..1] DateHeure</td>
+    <td>Date de fin du transport de la personne physique.</td>
+  </tr>
+</table>
+
+##### Classe TransportProfessionnel
+
+** Classe spécialisée, hérite de la classe Transport
+
+Cette classe regroupe les items pouvant caractériser le transport du professionnel lors de l'évènement.
+
+##### Classe TransportUsager
+
+** Classe spécialisée, hérite de la classe Transport
+
+Cette classe regroupe les items pouvant caractériser le transport de l'usager lors de l'évènement.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>accompagnement : [0..1] Identifiant</td>
+    <td>Accompagnement nécessaire ou non de l'usager. </td>
+  </tr>
+  <tr>
+    <td>asepsieRigoureuse : [0..1] Identifiant</td>
+    <td>Lors du transport de l'usager l'asepsie est rigoureusement respectée ou n'est pas nécessaire.</td>
+  </tr>
+</table>
+
+### Partie Classes génériques
+
+##### Classe Statut
+
+Cette classe décrit le statut des ressources (Evenement, Evaluation).
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>statut : [0..1] Code</td>
+    <td>Statut de la ressource impactée.</td>
+  </tr>
+  <tr>
+    <td>dateModificationStatut : [0..1] DateHeure</td>
+    <td>Date de la dernière modification du statut de la ressource.</td>
+  </tr>
+   <tr>
+    <td>auteur : [0..1] Professionnel</td>
+    <td>Le professionnel ayant effectué la dernière modification du statut de la ressource.</td>
+  </tr>
+</table>
