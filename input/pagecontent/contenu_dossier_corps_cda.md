@@ -78,14 +78,14 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 	</tbody>
 </table>
 
-La valeur de l'évaluation dépend du type d'évaluation qui dépend du code de l'entrée FR-Groupe-de-questionnaires-d-evaluation:
+La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code de l'entrée FR-Groupe-de-questionnaires-d-evaluation:
 
 <table id="valeurEvaluation">
     <thead>
 		<tr>
 			<th>Code de l'entrée <br>FR-Groupe-de-questionnaires-d-evaluation</th>
-			<th>Type d'évaluation <br>(élément code)</th>
-			<th>Valeur de l'évaluation <br>(élément value)</th>
+			<th>Type d'évaluation <br>(FR-Evaluation élément code)</th>
+			<th>Valeur de l'évaluation <br>(FR-Evaluation élément value)</th>
 		</tr>
     </thead>
     <tbody>
