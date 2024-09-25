@@ -1,6 +1,6 @@
 Les données véhiculées à travers ces flux sont des données à caractère personnel contenant notamment des données médicales sensibles qu’il convient de protéger.
 
-Ce volet doit être conforme avec les recommendations de l’ANS qui garantissent la bonne sécurisation des données partagées entre les SI de santé. Il doit prendre en compte les éléments suivants :
+Ce volet doit être conforme avec les recommandations de l’ANS qui garantissent la bonne sécurisation des données partagées entre les SI de santé. Il doit prendre en compte les éléments suivants :
 
 - Les exigences de sécurité les plus élevées, en particulier celles qui concernent la protection des access token et des informations sensibles.
 - La conformité aux normes d’architecture technique et la conformité aux exigences de la Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S).
