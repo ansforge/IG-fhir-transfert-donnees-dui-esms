@@ -1,6 +1,6 @@
 ### Section FR-Satut-fonctionnel
 
-La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluation de l’usager. Il s’agit dans le cadre du volet « Transfert de données DUI » des données de la spécification fonctionnelle de contenu sur la Classe Evaluation.
+La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluation de l’usager (AGGIR, évaluation de la situation SSIAD, SERAFIN...).
 
 **Ajout template CI-SIS**
 
@@ -83,7 +83,7 @@ La valeur de l'évaluation dépend du type d'évaluation qui dépend du code de 
 <table id="valeurEvaluation">
     <thead>
 		<tr>
-			<th>code de l'entrée FR-Groupe-de-questionnaires-d-evaluation</th>
+			<th>Code de l'entrée <br>FR-Groupe-de-questionnaires-d-evaluation</th>
 			<th>Type d'évaluation <br>(élément code)</th>
 			<th>Valeur de l'évaluation <br>(élément value)</th>
 		</tr>
@@ -105,8 +105,8 @@ La valeur de l'évaluation dépend du type d'évaluation qui dépend du code de 
 			<td>nullFlavor='NA'</td>
 		</tr>
         <tr id="value">
-			<td>Evauation SERAPHIN</td>
-			<td>Evauation SERAPHIN</td>
+			<td>Evaluation SERAFIN</td>
+			<td>Evaluation SERAFIN</td>
 			<td>nullFlavor='NA'</td>
 		</tr>
 	</tbody>
@@ -116,7 +116,7 @@ La valeur de l'évaluation dépend du type d'évaluation qui dépend du code de 
 
 **Ajout template CI-SIS**
 
-**Contraintes spécifiques à l'entrée FR-Evaluation :**
+**Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
 
 Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation véhiculé dans l'entrée FR-Evaluation :
 
@@ -131,12 +131,12 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
     <tbody>
 		<tr id="code">
 			<td>Evaluation AGGIR PH SSIAD</td>
-			<td>Valeur issue du JDV_Evaluation_AGGIR_PH_CISIS (1.2.250.1.213.1.1.5.805)</td>
+			<td>Jeu de valeurs en cours d'élaboration</td>
 			<td>Type BL Boolean</td>
 		</tr>
         <tr id="value">
 			<td>Evaluation AGGIR PA SSIAD</td>
-			<td>Valeur issue du JDV_Evaluation_AGGIR_PA_CISIS (1.2.250.1.213.1.1.5.806)</td>
+			<td>Jeu de valeurs en cours d'élaboration</td>
 			<td>Type BL Boolean</td>
 		</tr>
         <tr id="value">
@@ -145,8 +145,8 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 			<td>Type BL Boolean</td>
 		</tr>
         <tr id="value">
-			<td>Evauation SERAPHIN</td>
-			<td>Valeur issue du ...</td>
+			<td>EvaLuation SERAFIN</td>
+			<td>Jeu de valeurs en cours d'élaboration</td>
 			<td>Type INT Integer</td>
 		</tr>
 	</tbody>
@@ -155,4 +155,4 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 ### Section FR-Documents-ajoutes
 
 La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques au volet.
-Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associées à l’évaluation de l’usager.
+Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associées à l’évaluation et à l'évènement de l’usager.
