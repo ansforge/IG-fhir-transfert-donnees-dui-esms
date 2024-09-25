@@ -5,4 +5,4 @@ Ce volet doit être conforme avec les recommendations de l’ANS qui garantissen
 - Les exigences de sécurité les plus élevées, en particulier celles qui concernent la protection des access token et des informations sensibles.
 - La conformité aux normes d’architecture technique et la conformité aux exigences de la Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S).
 - Les spécificités sectorielles de la e-santé en France, telles que les identifiants sectoriels, Pro Santé Connect ou encore IGC Santé.
-- Les standards techniques de sécurité actuels, tels que OAuth 2.0, OpenID Connect, l’API REST, etc.
+- Les standards techniques de sécurité actuels, tels que OAuth 2.0, OpenID Connect, etc.
