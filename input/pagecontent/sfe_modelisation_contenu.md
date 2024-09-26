@@ -1401,7 +1401,100 @@ Cette classe regroupe les items pouvant caractériser le transport de l'usager l
   </tr>
 </table>
 
-### Partie Classes génériques
+### Classes du MOS profilées pour ce volet
+
+##### Classe Profesionnel
+
+Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idNat_PS : [0..1] Identifiant</td>
+    <td>Identification nationale principale du professionne. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
+  </tr>
+   <tr>
+    <td>civilite : [0..1] Code</td>
+    <td>Civilité de la personne.</td>
+  </tr>
+   <tr>
+    <td>nom : [0..1] Texte</td>
+    <td>Nom d'usage de la personne.</td>
+  </tr>
+   <tr>
+    <td>prenom : [0..1] Texte</td>
+    <td>Prénom usuel de la personne.</td>
+  </tr>
+   <tr>
+    <td>specialite : [0..1] Code</td>
+    <td>Profession ou spécialité exercée par la personne.</td>
+  </tr>
+  <tr>
+    <td>etablissementDeRattachement : [0..1] EntiteJuridique</td>
+    <td>Structure juridique de rattachement du professionnel.</td>
+  </tr>
+</table>
+
+##### Classe Entité Juridique
+
+Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINESS.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idNat_Struct : [0..1] Identifiant</td>
+    <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature TRE_G07-TypeIdentifiantStructure) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
+  </tr>
+ <tr>
+    <td>raisonSociale : [0..1] Texte</td>
+    <td>La raison sociale est le nom de l'entité juridique. Elle figure obligatoirement dans les statuts de l'EJ. </td>
+  </tr>
+  <tr>
+    <td>statutJuridique : [0..1] Code</td>
+    <td>Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens.</td>
+  </tr>
+</table>
+
+
+##### Classe Lieu
+
+Portion déterminée de l'espace où se sont déroulés des événements.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>identifiant : [0..*] Identifiant</td>
+    <td>Identifiant(s) métier du lieu.</td>
+  </tr>
+  <tr>
+    <td>nom : [0..1] Texte</td>
+    <td>Nom, exprimé sous la forme de texte, du lieu.</td>
+  </tr>
+   <tr>
+    <td>typeLieu : [0..1] Code</td>
+    <td>Information catégorisant physiquement le lieu, par exemple un bâtiment, un véhicule, une chambre, une route, etc.</td>
+  </tr>
+  <tr>
+    <td>adresse : [0..1] Adresse</td>
+    <td>Adresse géopostale du lieu.</td>
+  </tr>
+  <tr>
+    <td>telecommunication : [0..1] Telecommunication</td>
+    <td>Adresse(s) de télécommunication du lieu (numéro de téléphone, adresse email, URL, etc.).</td>
+  </tr>
+</table>
+
+
+### Classes génériques
 
 ##### Classe Statut
 
