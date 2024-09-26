@@ -53,12 +53,6 @@
 
 </style>
 
-Les éléments apparaissant en **<span style="color: #4472C4">gras de couleur bleu</span>** correspondent à des extensions définies dans le cadre de cette spécification technique afin de couvrir le besoin.
-
-Les éléments apparaissant en <span style="color: #C00000">rouge</span> correspondent aux règles spécifiques à mettre en place.
-
-Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
-
 ### RecordTarget
 
 L’élément RecordTarget, imposé par le standard CDA, permet de décrire les informations essentielles concernant l'usager des services médico-sociaux. Il regroupe les données personnelles de la personne accompagnée, telles que son nom, prénom, sexe, date de naissance et éventuellement des informations supplémentaires comme son lieu de naissance ou son tuteur légal.
@@ -68,8 +62,6 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
 <iframe src="./cda/" height="400" name="RecordTarget" style="border: 1px solid black"></iframe>
 
 <br>
-
-Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il existe. Dans le cas contraire, l’identifiant local produit par le système peut être transporté et dans ce cas le **nom**, le **sexe**, le **lieu de naissance**, la **date de naissance** et l'**ordre de naissance** sont requis.
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
@@ -82,10 +74,45 @@ Il est demandé que l'INS de l’utilisateur soit transporté en priorité s'il 
 		</tr>
     </thead>
     <tbody>
-		<tr id="extension">
+        <tr id="id">
+            <td>patientRole/id</td>
+            <td>[1..*]</td>
+            <td>Il est demandé que le matricule INS de l’utilisateur soit transporté en priorité. Dans le cas contraire, l’identifiant local produit par le système peut être transporté.</td>
+        </tr>
+        <tr id="nom">
+            <td>patientRole/patient/name/family@qualifier="BR"</td>
+            <td>[1..1]</td>
+            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="prenoms">
+            <td>patientRole/patient/name/given (pas de qualifier)</td>
+            <td>[1..1]</td>
+            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="premierPrenom">
+            <td>patientRole/patient/name/given@qualifier="BR"</td>
+            <td>[1..1]</td>
+            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="sexe">
+            <td>patientRole/patient/administrativeGenderCode</td>
+            <td>[1..1]</td>
+            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="dateNaissance">
+            <td>patientRole/patient/birthTime</td>
+            <td>[1..1]</td>
+            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="lieuNaissance">
+			<td>patientRole/patient/birthplace/place/addr/county</td>
+			<td>[1..1]</td>
+			<td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+		</tr>
+		<tr id="multipleBirthOrderNumber">
 			<td>patientRole/patient/sdtc:multipleBirthOrderNumber</td>
-			<td><i><u><red>[1..1]</red></u></i></td>
-			<td>Ordre de naissance de l'usager</td>
+			<td>[0..1]</td>
+			<td>Si l'INS n'est pas véhiculé, l'ordre de naissance de l'usager est requis.</td>
 		</tr>
 	</tbody>
 </table>
@@ -111,50 +138,44 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
         </tr>
 	</thead>
 	<tbody>
-		<tr id="line1">
-            <td>author</td>
-            <td><i><u><red>[1..1]</red></u></i></td>
-            <td><p><strong>Auteur du document</strong>
-			<br><red>Attribut nullFlavor interdit</red></p></td>
-        </tr>
         <tr>
             <td>assignedAuthor/id</td>
             <td>[1..1]</td>
             <td><p><strong>Identifiant de l'auteur</strong>
-			<br><red>Attribut nullFlavor interdit</red></p>
-			<p>@root =<red> 1.2.250.1.71.4.2.1</red></p>
+			<br>Attribut nullFlavor interdit</p>
+			<p>@root = 1.2.250.1.71.4.2.1</p>
 			<p>@extension = Valeur de l'identifiant :
-			<br><red>Concaténation de :
+			<br>Concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
-			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></red></p></td>
+			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p></td>
         </tr>
         <tr>
             <td>assignedAuthor/code</td>
-            <td><i><u><red>[1..1]</red></u></i></td>
+            <td>[1..1]</td>
             <td><p><strong>Profession / savoir-faire ou rôle</strong></p>
-			<p>@code = <red>LOGICIEL_DUI</red>
-			<br>@displayName = <red>Logiciel de Dossier Usager Informatisé</red>
-			<br>@codeSystem = <red>1.2.250.1.213.1.1.4.6</red></p></td>
+			<p>@code = LOGICIEL_DUI
+			<br>@displayName = Logiciel de Dossier Usager Informatisé
+			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
         </tr>
         <tr>
             <td>assignedAuthor/assignedAuthoringDevice</td>
-            <td><i><u><red>[1..1]</red></u></i></td>
+            <td>[1..1]</td>
             <td><p><strong>Informations complémentaires</strong>
-			<br><red>• Obligatoire pour un système</red></p></td>
+			<br>• Obligatoire pour un système</p></td>
         </tr>
 		<tr>
             <td>assignedAuthor/representedOrganization</td>
-            <td><i><u><red>[1..1]</red></u></i></td>
+            <td>[1..1]</td>
             <td><p><strong>Structure correspondante</strong>
-			<br><red>• Obligatoire pour un système</red></p></td>
+			<br>• Obligatoire pour un système</p></td>
         </tr>
 		<tr>
             <td>assignedAuthor/representedOrganization/id</td>
             <td>[0..1]</td>
             <td><p><strong>Identifiant de la structure</strong></p>
-			<p>@root =<red> 1.2.250.1.71.4.2.2</red></p>
-			<p>@extension =<red> "Struct_idNat" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red></p></td>
+			<p>@root = 1.2.250.1.71.4.2.2</p>
+			<p>@extension = "Struct_idNat" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
 </table>
@@ -186,14 +207,14 @@ La structure de l'élément Custodian se conforme aux contraintes et définition
             <td>assignedCustodian/representedCustodianOrganization/id</td>
             <td>[1..1]</td>
             <td><p><strong>Identifiant de la structure ESSMS</strong></p>
-			<p>@root =<red> 1.2.250.1.71.4.2.2</red></p>
-			<p>@extension =<red> Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red></p></td>
+			<p>@root = 1.2.250.1.71.4.2.2</p>
+			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
         </tr>
         <tr>
             <td>assignedCustodian/representedCustodianOrganization/name</td>
             <td>[0..1]</td>
             <td><p><strong>Nom de la structure ESSMS</strong></p>
-			<p><red> Valeur fixée à "Struct_Nom" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</red></p></td>
+			<p>Valeur fixée à "Struct_Nom" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
 </table>
@@ -225,21 +246,21 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
             <td>assignedEntity/id</td>
             <td>[1..1] </td>
             <td><p><strong>Identifiant de la structure ESSMS</strong>
-			<br><red>Attribut nullFlavor interdit</red></p>
-			<p>@root = OID de l'autorité d'affectation :<red> valeur fixée à "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</red></p>
+			<br>Attribut nullFlavor interdit</p>
+			<p>@root = OID de l'autorité d'affectation : valeur fixée à "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</p>
 			<p>@extension = Valeur de l'identifiant :
-			<br><red>Concaténation de :
+			<br>Concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
-			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></red></p></td>
+			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p></td>
         </tr>
         <tr>
             <td>assignedEntity/code</td>
             <td>[0..1] </td>
             <td><p><strong>Profession ou rôle du responsable</strong></p>
-			<p>@code = <red>LOGICIEL_DUI</red>
-			<br>@displayName = <red>Logiciel de Dossier Usager Informatisé</red>
-			<br>@codeSystem = <red>1.2.250.1.213.1.1.4.6</red></p></td>
+			<p>@code = LOGICIEL_DUI
+			<br>@displayName = Logiciel de Dossier Usager Informatisé
+			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
         </tr>
     </tbody>
 </table>
