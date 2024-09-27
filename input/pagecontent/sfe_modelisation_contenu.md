@@ -1418,7 +1418,10 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
   </tr>
    <tr>
     <td>civilite : [0..1] Code</td>
-    <td>Civilité de la personne.</td>
+    <td>Civilité de la personne. <br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/TRE_R81-Civilite.pdf">TRE_R81-Civilite</a> <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">JDV_J245-Civilite-CISIS</a>
+    </td>
   </tr>
    <tr>
     <td>nom : [0..1] Texte</td>
@@ -1430,7 +1433,14 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
   </tr>
    <tr>
     <td>specialite : [0..1] Code</td>
-    <td>Profession ou spécialité exercée par la personne.</td>
+    <td>Profession ou spécialité exercée par la personne. <br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf">TRE_A00-ProducteurDocNonPS</a> <br>
+    <a href="https://mos.esante.gouv.fr/NOS/TRE_A02-ProfessionSavFaire-CISIS/TRE_A02-ProfessionSavFaire-CISIS.pdf">TRE_A02-ProfessionSavFaire-CISIS</a> <br>
+    <a href="https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/TRE_R85-RolePriseCharge.pdf">TRE_R85-RolePriseCharge</a> <br>
+    <a href="https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/TRE_R94-ProfessionSocial.pdf">TRE_R94-ProfessionSocial</a> <br>
+     <a href="https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/TRE_R95-UsagerTitre.pdf">TRE_R95-UsagerTitre</a> <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    </td>
   </tr>
   <tr>
     <td>etablissementDeRattachement : [0..1] EntiteJuridique</td>
@@ -1457,7 +1467,10 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
   </tr>
   <tr>
     <td>statutJuridique : [0..1] Code</td>
-    <td>Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens.</td>
+    <td>Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. <br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/TRE_R72-FinessStatutJuridique.pdf">TRE_R72-FinessStatutJuridique</a> <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J100-FinessStatutJuridique-RASS/JDV_J100-FinessStatutJuridique-RASS.pdf">JDV_J100-FinessStatutJuridique-RASS</a>
+    </td>
   </tr>
 </table>
 
@@ -1479,10 +1492,10 @@ Portion déterminée de l'espace où se sont déroulés des événements.
     <td>nom : [0..1] Texte</td>
     <td>Nom, exprimé sous la forme de texte, du lieu.</td>
   </tr>
-   <tr>
+   <!-- tr>
     <td>typeLieu : [0..1] Code</td>
     <td>Information catégorisant physiquement le lieu, par exemple un bâtiment, un véhicule, une chambre, une route, etc.</td>
-  </tr>
+  </tr -->
   <tr>
     <td>adresse : [0..1] Adresse</td>
     <td>Adresse géopostale du lieu.</td>
@@ -1507,7 +1520,10 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
   </tr>
   <tr>
     <td>statut : [0..1] Code</td>
-    <td>Statut de la ressource impactée.</td>
+    <td>Statut de la ressource impactée. <br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R368-StatutRessource.pdf">TRE_R368-StatutRessource</a> <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J281-StatutsRessourcesMS.pdf">JDV_J281-StatutsRessourcesMS</a>
+    </td>
   </tr>
   <tr>
     <td>dateModificationStatut : [0..1] DateHeure</td>
