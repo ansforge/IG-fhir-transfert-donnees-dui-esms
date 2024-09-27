@@ -1434,7 +1434,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
    <tr>
     <td>specialite : [0..1] Code</td>
     <td>Profession ou spécialité exercée par la personne. <br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf">TRE_A00-ProducteurDocNonPS</a> <br>
+    Nomenclature(s) associée(s) : <br><a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf">TRE_A00-ProducteurDocNonPS</a> <br>
     <a href="https://mos.esante.gouv.fr/NOS/TRE_A02-ProfessionSavFaire-CISIS/TRE_A02-ProfessionSavFaire-CISIS.pdf">TRE_A02-ProfessionSavFaire-CISIS</a> <br>
     <a href="https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/TRE_R85-RolePriseCharge.pdf">TRE_R85-RolePriseCharge</a> <br>
     <a href="https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/TRE_R94-ProfessionSocial.pdf">TRE_R94-ProfessionSocial</a> <br>
