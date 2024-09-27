@@ -87,7 +87,7 @@ L’élément RecordTarget imposé par le CDA permet de décrire les données de
 
 La structure de l'élément RecordTarget se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé :
 
-<iframe src="../input/cda/TDD-html-20240704T113145/tmp-1.2.250.1.213.1.1.1.4.11-2024-03-20T165256.html" height="400" id="recordTarget" sandbox></iframe>
+<iframe src="./cda/TDD-html-20240704T113145/tmp-1.2.250.1.213.1.1.1.4.11-2024-03-20T165256.html" height="400" id="recordTarget" sandbox></iframe>
 
 <br>
 
@@ -118,7 +118,7 @@ L’élément Author imposé par le CDA représente la participation d’un aute
 
 La structure de l'élément Author se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé :
 
-<iframe src="../input/cda/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.102-2005-09-07T000000.html" height="400" id="Author" style="border: 1px solid black" sandbox="allow-same-origin"></iframe>
+<iframe src="./cda/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.102-2005-09-07T000000.html" height="400" id="Author" style="border: 1px solid black" sandbox="allow-same-origin"></iframe>
 
 <!-- <button class="fullscreen-btn" onclick="goFullScreen('Author')">Plein écran</button> -->
 
@@ -187,7 +187,7 @@ L’élément Custodian imposé par le CDA représente la structure chargée de 
 
 La structure de l'élément Custodian se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé :
 
-<iframe src="../input/cda/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.104-2005-09-07T000000.html" height="400" id="Custodian" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe src="./cda/TDD-html-20240704T113145/tmp-2.16.840.1.113883.10.12.104-2005-09-07T000000.html" height="400" id="Custodian" sandbox="allow-same-origin allow-scripts"></iframe>
 
 <!-- <button class="fullscreen-btn" onclick="goFullScreen('Custodian')">Plein écran</button> -->
 
