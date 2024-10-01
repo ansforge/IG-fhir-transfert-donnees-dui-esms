@@ -59,12 +59,12 @@ Un usager est une personne physique bénéficiaire d’un service public.
   <tr>
     <td>sexe : [0..1] Code</td>
     <td>Sexe de la personne physique.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R249-Sexe/TRE_R249-Sexe.pdf">TRE_R249-Sexe</a></td>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a></td>
   </tr>
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de l’usager.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/TRE_R81-Civilite.pdf">TRE_R81-Civilite</a></td>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
   </tr>
   <tr>
     <td>situationFamiliale : [0..1] Code</td>
@@ -654,7 +654,7 @@ Personne physique qui agit comme point de contact auprès d'une autre personne o
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité du contact.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/TRE_R81-Civilite.pdf">TRE_R81-Civilite</a></td>
+    jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
   </tr>
   <tr>
     <td>paysNationalite : [0..*] Code</td>
@@ -1159,15 +1159,22 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
    <tr>
     <td>type : [1..1] Code</td>
-    <td>Type de l’évaluation.</td>
+    <td>Type de l’évaluation.<br>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.802.html">JDV_TypeEvaluation_CISIS</a>
+    </td>
   </tr>
     <tr>
-    <td>date : [0..1] Code</td>
+    <td>date : [0..1] DateHeure</td>
     <td>Date de l’évaluation.</td>
   </tr>
   <tr>
-    <td>resultat : [0..1] Le type est dépendant du type d'évaluation</td>
-    <td>Résultat global de l’évaluation.</td>
+    <td>resultat : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
+    <td>Résultat global de l’évaluation.<br>
+    - Evaluation AGGIR PH SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.53.html">JDV_GIR_CISIS</a><br>
+    - Evaluation AGGIR PA SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.53.html">JDV_GIR_CISIS</a><br>
+    - Evaluation de la situation SSIAD : pas de jeu de valeur <br>
+    - Evaluation Serafin : pas de jeu de valeur
+    </td>
   </tr>
    <tr>
     <td>commentaire : [0..1] Texte</td>
@@ -1191,7 +1198,14 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
   </tr>
   <tr>
     <td>champsEvalue : [1..1] Code</td>
-    <td>Critère d'évaluation de la grille.</td>
+    <td>Critère d'évaluation de la grille.<br>
+    Jeu(x) de valeur(s) associé(s) : un jeu de valeur par type d'évaluation <br>
+    - Evaluation AGGIR PH SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.805.html">JDV_Evaluation_AGGIR_PH_CISIS</a> <br>
+    - Evaluation AGGIR PA SSIAD : 
+    <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.806.html">JDV_Evaluation_AGGIR_PA_CISIS</a> <br>
+    - Evaluation de la situation SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.804.html">JDV_Evaluation_SSIAD_CISIS</a> <br>
+    - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    </td>
   </tr>
   <tr>
     <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
@@ -1205,7 +1219,7 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
 
 ##### Classe Evaluateur
 
-** Classe spécialisée, hérite de la classe Professionnel du MOS.
+** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
 
 Cette classe regroupe les items pouvant caractériser l'évaluateur.
 
@@ -1226,7 +1240,7 @@ Cette classe regroupe les items pouvant caractériser le responsable de l'évalu
 
 Evènements liés à la prise en charge de l’usager dans une structure ESSMS.
 
-Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
+Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profilées pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -1237,13 +1251,13 @@ Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
     <td>idEvenement : Identifiant [1..1]</td>
     <td>Identifiant technique de l’évènement obtenue par la concaténation de l'identifiant national de structure (idNat_Struct), du numéro de l’évènement dans le DUI (idFonctionnel) et de l'identifiant local de l’usager au sein de la structure (idUsager) : <br> idEvenement = idNat_Struct - idFonctionnel - idUsager </br> </td>
   </tr>
-  <tr>
-    <td>categorieEvenement : [0..*] Code</td>
-    <td>Catégorie de l'évènement.</td>
-  </tr>
    <tr>
     <td>typeEvenement : [0..*] Code</td>
-    <td>Type de l’évènement.</td>
+    <td>Type de l’évènement.<br>
+    Jeu(x) de valeur(s) associé(s) :<br>
+    - <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.811.html">JDV_TypeEvenementSSIAD_CISIS</a> <br>
+    - Jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    </td>
   </tr>
     <tr>
     <td>libelleEvenement : [0..1] Texte</td>
@@ -1291,7 +1305,9 @@ Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
   </tr>
 <tr>
    <td>motifNonRealisation : [0..1] Code</td>
-    <td>Motif de non-réalisation de l’évènement.</td>
+    <td>Motif de non-réalisation de l’évènement.<br>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.803.html">JDV_MotifNonRealisationEvenement_CISIS</a> 
+    </td>
   </tr>
   <tr>
    <td>repas : [0..1] Indicateur</td>
@@ -1326,15 +1342,23 @@ Classe générique socle décrivant le transport d’une personne physique (prof
   </tr>
   <tr>
     <td>typeTransport : [0..1] Code</td>
-    <td>Type de transport.</td>
+    <td>Type de transport.<br>
+    Jeu(x) de valeur(s) associé(s) : 
+    <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.140.html">JDV_ModeDeTransport_CISIS </a> 
+    </td>
   </tr>
    <tr>
     <td>typeMotorisation : [0..1] Code</td>
-    <td>Type de motorisation associée au véhicule utilisé lors du transport.</td>
+    <td>Type de motorisation associée au véhicule utilisé lors du transport.<br>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.801.html">JDV_TypeMotorisation_CISIS</a> 
+    </td>
   </tr>
   <tr>
     <td>natureTransport : [0..1] Code</td>
-    <td>Nature du transport.</td>
+    <td>Nature du transport.<br>
+    Jeu de valeur issue de la terminologie Serafin correspondant aux familles (3.2.4.1, 3.2.4.2, 3.2.4.3).<br>
+    Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    </td>
   </tr>
   <tr>
     <td>transporteur : [0..1] EntiteJuridique</td>
@@ -1419,8 +1443,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
    <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de la personne. <br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/TRE_R81-Civilite.pdf">TRE_R81-Civilite</a> <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">JDV_J245-Civilite-CISIS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a>
     </td>
   </tr>
    <tr>
@@ -1434,12 +1457,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
    <tr>
     <td>specialite : [0..1] Code</td>
     <td>Profession ou spécialité exercée par la personne. <br>
-    Nomenclature(s) associée(s) : <br><a href="https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/TRE_A00-ProducteurDocNonPS.pdf">TRE_A00-ProducteurDocNonPS</a> <br>
-    <a href="https://mos.esante.gouv.fr/NOS/TRE_A02-ProfessionSavFaire-CISIS/TRE_A02-ProfessionSavFaire-CISIS.pdf">TRE_A02-ProfessionSavFaire-CISIS</a> <br>
-    <a href="https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/TRE_R85-RolePriseCharge.pdf">TRE_R85-RolePriseCharge</a> <br>
-    <a href="https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/TRE_R94-ProfessionSocial.pdf">TRE_R94-ProfessionSocial</a> <br>
-     <a href="https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/TRE_R95-UsagerTitre.pdf">TRE_R95-UsagerTitre</a> <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
     </td>
   </tr>
   <tr>
@@ -1459,7 +1477,7 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
   </tr>
   <tr>
     <td>idNat_Struct : [0..1] Identifiant</td>
-    <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature TRE_G07-TypeIdentifiantStructure) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
+    <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/CodeSystem-TRE-G07-TypeIdentifiantStructure.html">TRE_G07-TypeIdentifiantStructure</a>) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
   </tr>
  <tr>
     <td>raisonSociale : [0..1] Texte</td>
@@ -1468,8 +1486,7 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
   <tr>
     <td>statutJuridique : [0..1] Code</td>
     <td>Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. <br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/TRE_R72-FinessStatutJuridique.pdf">TRE_R72-FinessStatutJuridique</a> <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J100-FinessStatutJuridique-RASS/JDV_J100-FinessStatutJuridique-RASS.pdf">JDV_J100-FinessStatutJuridique-RASS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J100-FinessStatutJuridique-RASS.html">JDV_J100-FinessStatutJuridique-RASS</a>
     </td>
   </tr>
 </table>
@@ -1521,8 +1538,7 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
   <tr>
     <td>statut : [0..1] Code</td>
     <td>Statut de la ressource impactée. <br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R368-StatutRessource.pdf">TRE_R368-StatutRessource</a> <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J281-StatutsRessourcesMS.pdf">JDV_J281-StatutsRessourcesMS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J281-StatutsRessourcesMS.html">JDV_J281-StatutsRessourcesMS</a>
     </td>
   </tr>
   <tr>
