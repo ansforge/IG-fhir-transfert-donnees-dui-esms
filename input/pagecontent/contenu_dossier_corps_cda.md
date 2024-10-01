@@ -1,4 +1,4 @@
-### Section FR-Satut-fonctionnel
+### Section FR-Statut-fonctionnel
 
 La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluation de l’usager (AGGIR, évaluation de la situation SSIAD, SERAFIN...).
 
@@ -18,7 +18,7 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 		<tr id="templateId">
 			<td>templateId</td>
             <td><i>[1..1]</i></td>
-			<td>@root=1.2.250.1.213.1.1.2.246</td>
+			<td><strong>Conformité FR-Statut-fonctionnel (CI-SIS)</strong><br> @root=1.2.250.1.213.1.1.2.246</td>
 		</tr>
 	</tbody>
 </table>
@@ -92,12 +92,12 @@ La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code d
 		<tr id="code">
 		    <td>Evaluation AGGIR PH SSIAD</td>
 			<td>Evaluation AGGIR PH SSIAD</td>
-			<td>Valeur issue du JDV_GIR_CISIS (1.2.250.1.213.1.1.4.322)</td>
+			<td>Valeur issue du JDV_GIR_CISIS (1.2.250.1.213.1.1.4.322)<br>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="value">
 		    <td>Evaluation AGGIR PA SSIAD</td>
 			<td>Evaluation AGGIR PA SSIAD</td>
-			<td>Valeur issue du JDV_GIR_CISIS (1.2.250.1.213.1.1.4.322)</td>
+			<td>Valeur issue du JDV_GIR_CISIS (1.2.250.1.213.1.1.4.322)<br>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="value">
 			<td>Evaluation de la situation SSIAD</td>
@@ -141,7 +141,7 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 		</tr>
         <tr id="value">
 			<td>Evaluation de la situation SSIAD</td>
-			<td>Valeur issue du JDV_Evaluation_SSIAD_CISIS (1.2.250.1.213.1.1.5.804)</td>
+			<td>Valeur issue du JDV_Evaluation_SSIAD_CISIS (1.2.250.1.213.1.1.5.804)<br>L'attribut nullFlavor est interdit.</td>
 			<td>Type BL Boolean</td>
 		</tr>
         <tr id="value">
