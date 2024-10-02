@@ -59,12 +59,12 @@ Un usager est une personne physique bénéficiaire d’un service public.
   <tr>
     <td>sexe : [0..1] Code</td>
     <td>Sexe de la personne physique.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R249-Sexe/TRE_R249-Sexe.pdf">TRE_R249-Sexe</a></td>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a></td>
   </tr>
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de l’usager.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/TRE_R81-Civilite.pdf">TRE_R81-Civilite</a></td>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
   </tr>
   <tr>
     <td>situationFamiliale : [0..1] Code</td>
@@ -654,7 +654,7 @@ Personne physique qui agit comme point de contact auprès d'une autre personne o
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité du contact.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/TRE_R81-Civilite.pdf">TRE_R81-Civilite</a></td>
+    jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
   </tr>
   <tr>
     <td>paysNationalite : [0..*] Code</td>
@@ -977,7 +977,7 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 Séjour d’un usager dans un ESSMS.
 
-La classe EntiteJuridique est définie dans le MOS.
+La classe EntiteJuridique est définie dans le MOS et profilée pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -1159,15 +1159,20 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
    <tr>
     <td>type : [1..1] Code</td>
-    <td>Type de l’évaluation.</td>
+    <td>Type de l’évaluation.<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_TypeEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.802 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
+    </td>
   </tr>
     <tr>
-    <td>date : [0..1] Code</td>
+    <td>date : [0..1] DateHeure</td>
     <td>Date de l’évaluation.</td>
   </tr>
   <tr>
-    <td>resultat : [0..1] Le type est dépendant du type d'évaluation</td>
-    <td>Résultat global de l’évaluation.</td>
+    <td>resultat : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
+    <td>Résultat global de l’évaluation. Le resultat est à renseigner uniquement lorsqu'il s'agit d'une Evaluation AGGIR PH SSIAD ou Evaluation AGGIR PA SSIAD<br>
+    - Evaluation AGGIR PH SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+    - Evaluation AGGIR PA SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
+    </td>
   </tr>
    <tr>
     <td>commentaire : [0..1] Texte</td>
@@ -1191,7 +1196,14 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
   </tr>
   <tr>
     <td>champsEvalue : [1..1] Code</td>
-    <td>Critère d'évaluation de la grille.</td>
+    <td>Critère d'évaluation de la grille.<br>
+    Jeu(x) de valeur(s) associé(s) : un jeu de valeur par type d'évaluation <br>
+    - Evaluation AGGIR PH SSIAD : jeu de valeur à définir.<br>
+    - Evaluation AGGIR PA SSIAD : jeu de valeur à définir.<br>
+    - Evaluation de la situation SSIAD : JDV_Evaluation_SSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+    - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    </td>
   </tr>
   <tr>
     <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
@@ -1205,7 +1217,7 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
 
 ##### Classe Evaluateur
 
-** Classe spécialisée, hérite de la classe Professionnel du MOS.
+** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
 
 Cette classe regroupe les items pouvant caractériser l'évaluateur.
 
@@ -1226,7 +1238,7 @@ Cette classe regroupe les items pouvant caractériser le responsable de l'évalu
 
 Evènements liés à la prise en charge de l’usager dans une structure ESSMS.
 
-Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
+Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profilées pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -1237,13 +1249,13 @@ Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
     <td>idEvenement : Identifiant [1..1]</td>
     <td>Identifiant technique de l’évènement obtenue par la concaténation de l'identifiant national de structure (idNat_Struct), du numéro de l’évènement dans le DUI (idFonctionnel) et de l'identifiant local de l’usager au sein de la structure (idUsager) : <br> idEvenement = idNat_Struct - idFonctionnel - idUsager </br> </td>
   </tr>
-  <tr>
-    <td>categorieEvenement : [0..*] Code</td>
-    <td>Catégorie de l'évènement.</td>
-  </tr>
    <tr>
     <td>typeEvenement : [0..*] Code</td>
-    <td>Type de l’évènement.</td>
+    <td>Type de l’évènement.<br>
+    Jeu(x) de valeur(s) associé(s) :<br>
+    - JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+    - Jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    </td>
   </tr>
     <tr>
     <td>libelleEvenement : [0..1] Texte</td>
@@ -1291,7 +1303,10 @@ Les classes EntiteJuridique, Lieu et Professionnel sont définies dans le MOS.
   </tr>
 <tr>
    <td>motifNonRealisation : [0..1] Code</td>
-    <td>Motif de non-réalisation de l’évènement.</td>
+    <td>Motif de non-réalisation de l’évènement.<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_MotifNonRealisationEvenement_CISIS avec l'OID 1.2.250.1.213.1.1.5.803
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
+    </td>
   </tr>
   <tr>
    <td>repas : [0..1] Indicateur</td>
@@ -1326,15 +1341,23 @@ Classe générique socle décrivant le transport d’une personne physique (prof
   </tr>
   <tr>
     <td>typeTransport : [0..1] Code</td>
-    <td>Type de transport.</td>
+    <td>Type de transport.<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_ModeDeTransport_CISIS avec l'OID 1.2.250.1.213.1.1.5.140 
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
+    </td>
   </tr>
    <tr>
     <td>typeMotorisation : [0..1] Code</td>
-    <td>Type de motorisation associée au véhicule utilisé lors du transport.</td>
+    <td>Type de motorisation associée au véhicule utilisé lors du transport.<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_TypeMotorisation_CISIS avec l'OID 1.2.250.1.213.1.1.5.801 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
+    </td>
   </tr>
   <tr>
     <td>natureTransport : [0..1] Code</td>
-    <td>Nature du transport.</td>
+    <td>Nature du transport.<br>
+    Jeu de valeur issue de la terminologie Serafin correspondant aux familles (3.2.4.1, 3.2.4.2, 3.2.4.3).<br>
+    Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    </td>
   </tr>
   <tr>
     <td>transporteur : [0..1] EntiteJuridique</td>
@@ -1401,7 +1424,106 @@ Cette classe regroupe les items pouvant caractériser le transport de l'usager l
   </tr>
 </table>
 
-### Partie Classes génériques
+### Classes du MOS profilées pour ce volet
+
+##### Classe Profesionnel
+
+Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idNat_PS : [0..1] Identifiant</td>
+    <td>Identification nationale principale du professionne. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
+  </tr>
+   <tr>
+    <td>civilite : [0..1] Code</td>
+    <td>Civilité de la personne. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a>
+    </td>
+  </tr>
+   <tr>
+    <td>nom : [0..1] Texte</td>
+    <td>Nom d'usage de la personne.</td>
+  </tr>
+   <tr>
+    <td>prenom : [0..1] Texte</td>
+    <td>Prénom usuel de la personne.</td>
+  </tr>
+   <tr>
+    <td>specialite : [0..1] Code</td>
+    <td>Profession ou spécialité exercée par la personne. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>etablissementDeRattachement : [0..1] EntiteJuridique</td>
+    <td>Structure juridique de rattachement du professionnel.</td>
+  </tr>
+</table>
+
+##### Classe Entité Juridique
+
+Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINESS.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>idNat_Struct : [0..1] Identifiant</td>
+    <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature <a href="https://interop.esante.gouv.fr/ig/nos/CodeSystem-TRE-G07-TypeIdentifiantStructure.html">TRE_G07-TypeIdentifiantStructure</a>) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
+  </tr>
+ <tr>
+    <td>raisonSociale : [0..1] Texte</td>
+    <td>La raison sociale est le nom de l'entité juridique. Elle figure obligatoirement dans les statuts de l'EJ. </td>
+  </tr>
+  <tr>
+    <td>statutJuridique : [0..1] Code</td>
+    <td>Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J100-FinessStatutJuridique-RASS.html">JDV_J100-FinessStatutJuridique-RASS</a>
+    </td>
+  </tr>
+</table>
+
+
+##### Classe Lieu
+
+Portion déterminée de l'espace où se sont déroulés des événements.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>identifiant : [0..*] Identifiant</td>
+    <td>Identifiant(s) métier du lieu.</td>
+  </tr>
+  <tr>
+    <td>nom : [0..1] Texte</td>
+    <td>Nom, exprimé sous la forme de texte, du lieu.</td>
+  </tr>
+   <!-- tr>
+    <td>typeLieu : [0..1] Code</td>
+    <td>Information catégorisant physiquement le lieu, par exemple un bâtiment, un véhicule, une chambre, une route, etc.</td>
+  </tr -->
+  <tr>
+    <td>adresse : [0..1] Adresse</td>
+    <td>Adresse géopostale du lieu.</td>
+  </tr>
+  <tr>
+    <td>telecommunication : [0..1] Telecommunication</td>
+    <td>Adresse(s) de télécommunication du lieu (numéro de téléphone, adresse email, URL, etc.).</td>
+  </tr>
+</table>
+
+
+### Classes génériques
 
 ##### Classe Statut
 
@@ -1414,7 +1536,9 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
   </tr>
   <tr>
     <td>statut : [0..1] Code</td>
-    <td>Statut de la ressource impactée.</td>
+    <td>Statut de la ressource impactée. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J281-StatutsRessourcesMS.html">JDV_J281-StatutsRessourcesMS</a>
+    </td>
   </tr>
   <tr>
     <td>dateModificationStatut : [0..1] DateHeure</td>
