@@ -59,12 +59,12 @@ Un usager est une personne physique bénéficiaire d’un service public.
   <tr>
     <td>sexe : [0..1] Code</td>
     <td>Sexe de la personne physique.<br>
-    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a></td>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a></td>
   </tr>
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de l’usager.<br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
   </tr>
   <tr>
     <td>situationFamiliale : [0..1] Code</td>
@@ -654,7 +654,7 @@ Personne physique qui agit comme point de contact auprès d'une autre personne o
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité du contact.<br>
-    jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
+    jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
   </tr>
   <tr>
     <td>paysNationalite : [0..*] Code</td>
@@ -977,7 +977,7 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 Séjour d’un usager dans un ESSMS.
 
-La classe EntiteJuridique est définie dans le MOS.
+La classe EntiteJuridique est définie dans le MOS et profilée pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -1160,7 +1160,7 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
    <tr>
     <td>type : [1..1] Code</td>
     <td>Type de l’évaluation.<br>
-    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.802.html">JDV_TypeEvaluation_CISIS</a>
+    Jeu(x) de valeur(s) associé(s) : JDV_TypeEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.802 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
     <tr>
@@ -1169,11 +1169,9 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
   <tr>
     <td>resultat : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
-    <td>Résultat global de l’évaluation.<br>
-    - Evaluation AGGIR PH SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.53.html">JDV_GIR_CISIS</a><br>
-    - Evaluation AGGIR PA SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.53.html">JDV_GIR_CISIS</a><br>
-    - Evaluation de la situation SSIAD : pas de jeu de valeur <br>
-    - Evaluation Serafin : pas de jeu de valeur
+    <td>Résultat global de l’évaluation. Le resultat est à renseigner uniquement lorsqu'il s'agit d'une Evaluation AGGIR PH SSIAD ou Evaluation AGGIR PA SSIAD<br>
+    - Evaluation AGGIR PH SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+    - Evaluation AGGIR PA SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
    <tr>
@@ -1200,10 +1198,10 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
     <td>champsEvalue : [1..1] Code</td>
     <td>Critère d'évaluation de la grille.<br>
     Jeu(x) de valeur(s) associé(s) : un jeu de valeur par type d'évaluation <br>
-    - Evaluation AGGIR PH SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.805.html">JDV_Evaluation_AGGIR_PH_CISIS</a> <br>
-    - Evaluation AGGIR PA SSIAD : 
-    <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.806.html">JDV_Evaluation_AGGIR_PA_CISIS</a> <br>
-    - Evaluation de la situation SSIAD : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.804.html">JDV_Evaluation_SSIAD_CISIS</a> <br>
+    - Evaluation AGGIR PH SSIAD : jeu de valeur à définir.<br>
+    - Evaluation AGGIR PA SSIAD : jeu de valeur à définir.<br>
+    - Evaluation de la situation SSIAD : JDV_Evaluation_SSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
     </td>
   </tr>
@@ -1255,7 +1253,7 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
     <td>typeEvenement : [0..*] Code</td>
     <td>Type de l’évènement.<br>
     Jeu(x) de valeur(s) associé(s) :<br>
-    - <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.811.html">JDV_TypeEvenementSSIAD_CISIS</a> <br>
+    - JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
     </td>
   </tr>
@@ -1306,7 +1304,8 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
 <tr>
    <td>motifNonRealisation : [0..1] Code</td>
     <td>Motif de non-réalisation de l’évènement.<br>
-    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.803.html">JDV_MotifNonRealisationEvenement_CISIS</a> 
+    Jeu(x) de valeur(s) associé(s) : JDV_MotifNonRealisationEvenement_CISIS avec l'OID 1.2.250.1.213.1.1.5.803
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
     </td>
   </tr>
   <tr>
@@ -1343,14 +1342,14 @@ Classe générique socle décrivant le transport d’une personne physique (prof
   <tr>
     <td>typeTransport : [0..1] Code</td>
     <td>Type de transport.<br>
-    Jeu(x) de valeur(s) associé(s) : 
-    <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.140.html">JDV_ModeDeTransport_CISIS </a> 
+    Jeu(x) de valeur(s) associé(s) : JDV_ModeDeTransport_CISIS avec l'OID 1.2.250.1.213.1.1.5.140 
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
    <tr>
     <td>typeMotorisation : [0..1] Code</td>
     <td>Type de motorisation associée au véhicule utilisé lors du transport.<br>
-    Jeu(x) de valeur(s) associé(s) : <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-1.2.250.1.213.1.1.5.801.html">JDV_TypeMotorisation_CISIS</a> 
+    Jeu(x) de valeur(s) associé(s) : JDV_TypeMotorisation_CISIS avec l'OID 1.2.250.1.213.1.1.5.801 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
     </td>
   </tr>
   <tr>
@@ -1443,7 +1442,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
    <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de la personne. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a>
     </td>
   </tr>
    <tr>
@@ -1457,7 +1456,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
    <tr>
     <td>specialite : [0..1] Code</td>
     <td>Profession ou spécialité exercée par la personne. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
     </td>
   </tr>
   <tr>
@@ -1477,7 +1476,7 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
   </tr>
   <tr>
     <td>idNat_Struct : [0..1] Identifiant</td>
-    <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/CodeSystem-TRE-G07-TypeIdentifiantStructure.html">TRE_G07-TypeIdentifiantStructure</a>) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
+    <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature <a href="https://interop.esante.gouv.fr/ig/nos/CodeSystem-TRE-G07-TypeIdentifiantStructure.html">TRE_G07-TypeIdentifiantStructure</a>) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
   </tr>
  <tr>
     <td>raisonSociale : [0..1] Texte</td>
@@ -1486,7 +1485,7 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
   <tr>
     <td>statutJuridique : [0..1] Code</td>
     <td>Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J100-FinessStatutJuridique-RASS.html">JDV_J100-FinessStatutJuridique-RASS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J100-FinessStatutJuridique-RASS.html">JDV_J100-FinessStatutJuridique-RASS</a>
     </td>
   </tr>
 </table>
@@ -1538,7 +1537,7 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
   <tr>
     <td>statut : [0..1] Code</td>
     <td>Statut de la ressource impactée. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J281-StatutsRessourcesMS.html">JDV_J281-StatutsRessourcesMS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J281-StatutsRessourcesMS.html">JDV_J281-StatutsRessourcesMS</a>
     </td>
   </tr>
   <tr>
