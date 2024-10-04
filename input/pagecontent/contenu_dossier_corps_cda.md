@@ -1,6 +1,6 @@
 ### Section FR-Evenements
 
-Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
+Cette section contient l'ensemble des évènements (passé ou à venir) d'un usager.
 
 **Ajout template CI-SIS**
 
@@ -9,7 +9,7 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 
 **Ajout template CI-SIS**
 
-**Contrainte spécifique à l'entrée FR-Evenement :**
+**Contraintes spécifiques à l'entrée FR-Evenement :**
 
 <table id="transportPatient">
     <thead>
@@ -33,7 +33,7 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
         <tr id="typeEvnName">
             <td>code/qualifier/name</td>
             <td>[0..1]</td>
-            <td>Valeur fixée à </td>
+            <td>Valeur fixée à : <br>@code = GEN-364 <br>@codeSystem = 1.2.250.1.213.1.1.4.322 <br>@displayName = Réforme SSIAD (optionnel)</td>
         </tr>
         <tr id="typeEvnValue">
             <td>code/qualifier/value</td>
@@ -63,8 +63,13 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
         <tr id="participant">
             <td>participant/participantRole[@classCode=RESP]/palyingEntity/name</td>
             <td>[0..1]</td>
-			<td><strong>Entité juridique responsable de l'évènement</strong>Si aucun séjour est renseigné, l'élément est requis.</td>
+			<td><strong>Entité juridique responsable de l'évènement</strong><br>Si aucun séjour est renseigné, l'élément est requis.</td>
         </tr>
+        <tr id="entry">
+			<td>entryRelationship/observation/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Simple-Observation (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.48</td>
+		</tr>
         <tr id="entryCode">
 			<td>entryRelationship/observation/code</td>
             <td>[1..1]</td>
@@ -88,8 +93,8 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
                 <li>Si @code = GEN-350 alors l'élément value est de type BL.</li>
                 <li>Si @code = GEN-349 alors l'élément value est de type CE.<br>Valeur issue du JDV_RessourceUtilisee_CISIS</li>
                 <ul>
-                    <li>Si l'élément value/@code = ORG-206 (Matériel spécialisé) alors la valeur de l'élément value/qualifier est issu du JDV_DetailMaterielSpecialise_CISIS.</li>
-                    <li>Si l'élément value/@code = ORG-207 (Ressource immobilière) alors la valeur de l'élément value/qualifier est issu du JDV_DetailRessourceImmobiliereUtilisee_CISIS.</li>
+                    <li>Si l'élément value/@code = ORG-206 (Matériel spécialisé) alors la valeur de l'élément value/qualifier est issue du JDV_DetailMaterielSpecialise_CISIS.</li>
+                    <li>Si l'élément value/@code = ORG-207 (Ressource immobilière) alors la valeur de l'élément value/qualifier est issue du JDV_DetailRessourceImmobiliereUtilisee_CISIS.</li>
                 </ul>
                 <li>Si @code = 38887-6 alors l'élément value est de type BL.</li>
                 <li>Si @code = 106177-9 alors l'élément value est de type TS.DATE.</li>
@@ -105,7 +110,7 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
 **Ajout template CI-SIS**
 
-**Contrainte spécifique à l'entrée FR-Transport-du-patient :**
+**Contraintes spécifiques à l'entrée FR-Transport-du-patient :**
 
 <table id="transportPatient">
     <thead>
@@ -157,7 +162,7 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             </td>
 		</tr>
         <tr id="entryValue">
-			<td>entryRelationship/observation/code</td>
+			<td>entryRelationship/observation/value</td>
             <td>[1..1]</td>
 			<td>Dans l'entrée FR-Transport-du-patient, le type de l'élément value de l'entrée FR-Simple-Observation dépend la valeur de l'élément code :
             <ul>
@@ -179,7 +184,7 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
 
 **Ajout template CI-SIS**
 
-**Contrainte spécifique à l'entrée FR-Transport-du-professionnel :**
+**Contraintes spécifiques à l'entrée FR-Transport-du-professionnel :**
 
 <table id="transportPro">
     <thead>
@@ -224,7 +229,7 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
             </td>
 		</tr>
         <tr id="entryValue">
-			<td>entryRelationship/observation/code</td>
+			<td>entryRelationship/observation/value</td>
             <td>[1..1]</td>
 			<td>Dans l'entrée FR-Transport-du-professionnel, le type de l'élément value de l'entrée FR-Simple-Observation dépend la valeur de l'élément code :
             <ul>
