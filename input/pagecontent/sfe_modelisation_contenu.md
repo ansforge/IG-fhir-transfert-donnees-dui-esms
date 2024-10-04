@@ -32,34 +32,39 @@ Un usager est une personne physique bénéficiaire d’un service public.
     <td>Numéro de l’individu attribué par la MDPH ayant créé le dossier Individu (= MDPH initiale).</td>
   </tr>
   <tr>
-    <td>INS : [1..1] INS</td>
+    <td>INS : [0..1] INS</td>
     <td>L'INS référence les données de santé et se compose des éléments suivants :
     <ul>
     <li> Un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP)</li>
     <li> Des traits d'identité de l'état civil : nom de famille (nom de naissance), prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance</li>
     <li> Des traits complémentaires provenant du Référentiel National d'IdentitoVigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé.</li>
     </ul>
+    Le matricule INS doit être véhiculé en priorité. Dans le cas où il est renseigné les traits INS sont obligatoires.
     </td>
   </tr>
   <tr>
-    <td>nomNaissance : [1..1] Texte</td>
-    <td>Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.</td>
+    <td>nomNaissance : [0..1] Texte</td>
+    <td>Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.<br>
+    Obligatoire s’il s’agit de l’identité INS.</td>
   </tr>
   <tr>
     <td>nomUsage : [0..1] Texte</td>
     <td>Un nom d'usage de la personne.<br>
     Rappel : Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.<br>
     Il est néanmoins possible d'utiliser, dans la vie quotidienne, un autre nom (par exemple le nom marital) appelé nom d'usage.<br>
-    Ce nom d'usage ne remplace en aucun cas le nom de famille qui reste le seul nom mentionné sur les actes d'état civil (acte de naissance ou de mariage, livret de famille, etc.).</td>
+    Ce nom d'usage ne remplace en aucun cas le nom de famille qui reste le seul nom mentionné sur les actes d'état civil (acte de naissance ou de mariage, livret de famille, etc.).<br>
+    Obligatoire s’il s’agit de l’identité INS.</td>
   </tr>
   <tr>
     <td>prenom : [0..*] Texte</td>
-    <td>Tous les prénoms de l'usager.</td>
+    <td>Tous les prénoms de l'usager.
+    Prénoms de l’acte de naissance, premier prénom de l’acte de naissance, prénom utilisé : ces éléments sont obligatoires s’il s’agit de l’identité INS.
+    </td>
   </tr>
   <tr>
-    <td>sexe : [1..1] Code</td>
+    <td>sexe : [0..1] Code</td>
     <td>Sexe de la personne physique.<br>
-    Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a></td>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a><br>Obligatoire s’il s’agit de l’identité INS.</td>
   </tr>
   <tr>
     <td>civilite : [0..1] Code</td>
@@ -87,20 +92,22 @@ Un usager est une personne physique bénéficiaire d’un service public.
     Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_G00-Langue/TRE_G00-Langue.pdf">TRE_G00-Langue</a></td>
   </tr>
   <tr>
-    <td>dateNaissance : [1..1] Date</td>
-    <td>Date de naissance de l’usager.</td>
+    <td>dateNaissance : [0..1] Date</td>
+    <td>Date de naissance de l’usager.
+    Obligatoire s’il s’agit de l’identité INS.</td>
   </tr>
   <tr>
     <td>ordreNaissance : [0..1] Numerique </td>
     <td>Ordre d’enregistrement de la naissance dans le registre d’état civil de la commune de naissance pour le mois de la naissance. Il compose les <a href="https://www.ameli.fr/llle-et-vilaine/assure/droits-demarches/principes/numero-securite-sociale">3 derniers chiffres du NIR avant </a> avant la clé de sécurité et permet de distinguer les personnes nées au même lieu et à la même période.</td>
   </tr>
   <tr>
-    <td>communeNaissance : [1..1] Code</td>
+    <td>communeNaissance : [0..1] Code</td>
     <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a></td>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a><br>Obligatoire s’il s’agit de l’identité INS.
+    </td>
   </tr>
   <tr>
-    <td>departementNaissance : [1..1] Code</td>
+    <td>departementNaissance : [0..1] Code</td>
     <td>Département de naissance de la personne. Code officiel géographique (COG) du département.<br>
     Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/TRE_G09-DepartementOM.pdf">TRE_G09-DepartementOM</a></td>
   </tr>
