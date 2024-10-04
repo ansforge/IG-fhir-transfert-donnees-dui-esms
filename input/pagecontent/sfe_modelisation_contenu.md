@@ -38,7 +38,7 @@ Un usager est une personne physique bénéficiaire d’un service public.
     <li> Un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP)</li>
     <li> Des traits d'identité de l'état civil : nom de famille (nom de naissance), prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance</li>
     <li> Des traits complémentaires provenant du Référentiel National d'IdentitoVigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé.</li>
-    </ul>
+    </ul><br>
     Le matricule INS doit être véhiculé en priorité. Dans le cas où il est renseigné les traits INS sont obligatoires.
     </td>
   </tr>
