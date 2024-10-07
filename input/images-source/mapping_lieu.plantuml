@@ -1,0 +1,10 @@
+@startuml
+
+map "Lieu : En-tête du document CDA" as Lieu #back:Ivory;header:LightYellow{
+    identifiant => participant/associatedEntity/id    
+    nom => participant/associatedEntity/scopingOrganization/name
+    adresse => participant/associatedEntity/addr
+    telecommunication => participant/associatedEntity/telecom 
+}
+
+@enduml

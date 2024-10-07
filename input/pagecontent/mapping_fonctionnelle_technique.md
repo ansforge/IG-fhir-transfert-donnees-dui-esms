@@ -22,3 +22,25 @@ Seules les données incluses dans les spécifications techniques font parties du
 
 <div>{%include mapping_evaluation.svg%}</div>
 <br>
+
+### Mapping classes génériques
+
+#### Professionnel
+
+<div>{%include mapping_professionnel.svg%}</div>
+<br>
+
+#### Entité juridique
+
+<div>{%include mapping_entiteJuridique.svg%}</div>
+<br>
+
+#### Lieu
+
+<div>{%include mapping_lieu.svg%}</div>
+<br>
+
+#### Statut
+
+<div>{%include mapping_statut.svg%}</div>
+<br>
