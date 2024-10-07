@@ -61,7 +61,7 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 			<td>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="participant">
-            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant/participantRole[@classCode=RESP]/palyingEntity/name</td>
+            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant/participantRole[@classCode=RESP]/id</td>
             <td>[0..1]</td>
 			<td><strong>Structure de rattachement de l'usager en charge de l'évènement</strong><br>Si aucun séjour est renseigné, l'élément est requis.</td>
         </tr>
@@ -89,15 +89,15 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
             <td>[1..1]</td>
 			<td>Dans l'entrée FR-Evenement, le type de l'élément value de l'entrée FR-Simple-Observation dépend de la valeur de l'élément code :
             <ul>
-                <li>Si @code = GEN-347 alors l'élément value est de type BL.</li>
-                <li>Si @code = GEN-350 alors l'élément value est de type BL.</li>
-                <li>Si @code = GEN-349 alors l'élément value est de type CE.<br>Valeur issue du JDV_RessourceUtilisee_CISIS</li>
+                <li>Si code/@code = GEN-347 alors l'élément value est de type BL.</li>
+                <li>Si code/@code = GEN-350 alors l'élément value est de type BL.</li>
+                <li>Si code/@code = GEN-349 alors l'élément value est de type CE.<br>Valeur issue du JDV_RessourceUtilisee_CISIS</li>
                 <ul>
                     <li>Si l'élément value/@code = ORG-206 (Matériel spécialisé) alors la valeur de l'élément value/qualifier est issue du JDV_DetailMaterielSpecialise_CISIS.</li>
                     <li>Si l'élément value/@code = ORG-207 (Ressource immobilière) alors la valeur de l'élément value/qualifier est issue du JDV_DetailRessourceImmobiliereUtilisee_CISIS.</li>
                 </ul>
-                <li>Si @code = 38887-6 alors l'élément value est de type BL.</li>
-                <li>Si @code = 106177-9 alors l'élément value est de type TS.DATE.</li>
+                <li>Si code/@code = 38887-6 alors l'élément value est de type BL.</li>
+                <li>Si code/@code = 106177-9 alors l'élément value est de type TS.DATE.</li>
             </ul>
             </td>
 		</tr>
@@ -136,9 +136,9 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             <td>[0..1]</td>
             <td>L'élément qualifier permettant de véhiculer le type de motorisation (l'attribut @code de l'élément name prend la valeur "GEN-346") ne doit pas être renseigné lorsque l'élément code de l'entrée FR-Transport-du-patient prend l'une des valeurs suivantes : 
             <ul>
-                <li>@code = ORG-204 (Transport en commun)</li>
-                <li>@code = ORG-205 (Modes doux)</li>
-                <li>@code = GEN-092.06.08 (Autre mode de transport)</li>
+                <li>code/@code = ORG-204 (Transport en commun)</li>
+                <li>code/@code = ORG-205 (Modes doux)</li>
+                <li>code/@code = GEN-092.06.08 (Autre mode de transport)</li>
             </ul>
             </td>
         </tr>
@@ -177,12 +177,12 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             <td>[1..1]</td>
 			<td>Dans l'entrée FR-Transport-du-patient, le type de l'élément value de l'entrée FR-Simple-Observation dépend la valeur de l'élément code :
             <ul>
-                <li>Si @code = MED-1124 alors l'élément value est de type BL.</li>
-                <li>Si @code = ORG-200 alors l'élément value est de type MO.</li>
-                <li>Si @code = ORG-201 alors l'élément value est de type MO.</li>
-                <li>Si @code = GEN-353 alors l'élément value est de type IVL_TS.</li>
-                <li>Si @code = 275827007 alors l'élément value est de type BL.</li>
-                <li>Si @code = 103208-5 alors l'élément value est de type PQ.</li>
+                <li>Si code/@code = MED-1124 alors l'élément value est de type BL.</li>
+                <li>Si code/@code = ORG-200 alors l'élément value est de type MO.</li>
+                <li>Si code/@code = ORG-201 alors l'élément value est de type MO.</li>
+                <li>Si code/@code = GEN-353 alors l'élément value est de type IVL_TS.</li>
+                <li>Si code/@code = 275827007 alors l'élément value est de type BL.</li>
+                <li>Si code/@code = 103208-5 alors l'élément value est de type PQ.</li>
             </ul>
             </td>
 		</tr>
@@ -255,10 +255,10 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
             <td>[1..1]</td>
 			<td>Dans l'entrée FR-Transport-du-professionnel, le type de l'élément value de l'entrée FR-Simple-Observation dépend la valeur de l'élément code :
             <ul>
-                <li>Si @code = ORG-200 alors l'élément value est de type MO.</li>
-                <li>Si @code = ORG-201 alors l'élément value est de type MO.</li>
-                <li>Si @code = GEN-353 alors l'élément value est de type IVL_TS.</li>
-                <li>Si @code = 103208-5 alors l'élément value est de type PQ.</li>
+                <li>Si code/@code = ORG-200 alors l'élément value est de type MO.</li>
+                <li>Si code/@code = ORG-201 alors l'élément value est de type MO.</li>
+                <li>Si code/@code = GEN-353 alors l'élément value est de type IVL_TS.</li>
+                <li>Si code/@code = 103208-5 alors l'élément value est de type PQ.</li>
             </ul>
             </td>
 		</tr>
