@@ -1,6 +1,6 @@
 @startuml
 
-map "Professionnel : En-tête du document CDA" as Professionnel #back:Ivory;header:LightYellow{
+map "Professionnel : [[contenu_dossier_entete_cda.html En-tête du document CDA]]"  as Professionnel #back:Ivory;header:LightYellow{
     idNat_PS => participant/associatedEntity/id
     civilite => participant/associatedEntity/associatedPerson/prefix
     nom => participant/associatedEntity/associatedPerson/family

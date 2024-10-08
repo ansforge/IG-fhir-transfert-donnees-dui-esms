@@ -1,6 +1,6 @@
 @startuml
 
-map "Lieu : En-tête du document CDA" as Lieu #back:Ivory;header:LightYellow{
+map "Lieu : [[contenu_dossier_entete_cda.html En-tête du document CDA]]" as Lieu #back:Ivory;header:LightYellow{
     identifiant => participant/associatedEntity/id    
     nom => participant/associatedEntity/scopingOrganization/name
     adresse => participant/associatedEntity/addr
