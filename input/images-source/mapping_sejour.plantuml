@@ -1,15 +1,15 @@
 @startuml
 
 
-map "Sejour : [[contenu_dossier_corps_cda.html Entrée FR-Sejour-Admission]]" as Sejour #back:LavenderBlush;header:Thistle{
-    dateAdmission => effectiveTime/low
+map "Sejour : [[contenu_dossier_corps_cda.html Section FR-Sejours]]" as Sejour #back:LavenderBlush;header:Thistle{
+    dateAdmission => [[contenu_dossier_corps_cda.html Entrée FR-Sejour-Admission]] effectiveTime/low
     dateEntreePrevisionnelle => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-entree avec @moodCode=INT]] effectiveTime
     dateEntree => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-entree avec @moodCode=EVN]] effectiveTime
     libelleModeEntree => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-entree]] text
     dateSortiePrevisionnelle => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie avec @moodCode=INT]]  effectiveTime
     dateSortie => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie avec @moodCode=EVN]]  effectiveTime
     libelleModeSortie => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie]]  text
-    numeroDossier => id
+    numeroDossier => [[contenu_dossier_corps_cda.html Entrée FR-Sejour-Admission]] id
     commentaire => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
 }
 

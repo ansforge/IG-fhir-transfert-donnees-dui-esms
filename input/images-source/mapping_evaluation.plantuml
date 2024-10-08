@@ -18,7 +18,7 @@ map "DetailEvaluation : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation-c
 }
 
 map "Evaluateur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Evaluateur#back:Ivory;header:LightYellow {
-    idNat_PS => author/assignedAuthor/id
+    idNat_PS => performer/assignedEntity/id
 }
 
 map "Responsable : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Responsable#back:Ivory;header:LightYellow {

@@ -1,5 +1,5 @@
 <p style="padding: 5px; border-radius: 4px; border: 2px solid red; background: #FF9B9B ; width: 65%">
-Seules les données incluses dans les spécifications techniques font parties du mapping.
+Ce mapping représente les données fonctionnelles trouvant leur équivalence dans l'actuelle version des spécifications techniques.
 </p>
 
 ### Mapping Usager
