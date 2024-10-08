@@ -31,12 +31,12 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 			<td>Valeur fixée à : <br>@code = GEN-367 <br>@codeSystem = 1.2.250.1.213.1.1.4.322 <br>@displayName = Agenda de l'usager (optionnel)</td>
 		</tr>
         <tr id="typeEvnName">
-            <td>code/qualifier/name</td>
+            <td><strong>Réforme SSIAD</strong><br>code/qualifier/name</td>
             <td>[0..1]</td>
             <td>Valeur fixée à : <br>@code = GEN-364 <br>@codeSystem = 1.2.250.1.213.1.1.4.322 <br>@displayName = Réforme SSIAD (optionnel)</td>
         </tr>
         <tr id="typeEvnValue">
-            <td>code/qualifier/value</td>
+            <td><strong>Réforme SSIAD</strong><br>code/qualifier[name/@code=GEN-364]/value</td>
             <td>[0..1]</td>
             <td>Valeur issue du JDV_TypeEvenementSSIAD_CISIS</td>
         </tr>
