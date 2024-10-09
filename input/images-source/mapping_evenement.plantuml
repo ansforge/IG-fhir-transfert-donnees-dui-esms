@@ -36,15 +36,28 @@ map "Transport : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-profes
 
 }
 map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as Professionnel #back:Ivory;header:LightYellow  {
-    idNat_PS => participant[@typeCode=RCV]/participantRole/id 
+    idNat_PS => participant[@typeCode=RCV]/participantRole/id
+    civilite => participant[@typeCode=RCV]/participantRole/playingEntity/name/prefix
+    nom => participant[@typeCode=RCV]/participantRole/playingEntity/name/family
+    prenom => participant[@typeCode=RCV]/participantRole/playingEntity/name/given
+    specialite => participant[@typeCode=RCV]/participantRole/playingEntity/code
+}
+
+map "Etablissement de rattachement : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as etablissementDeRattachement #back:Ivory;header:LightYellow {
+    idNat_Struct => participant[@typeCode=RCV]/participantRole/scopingEntity/id
+    statutJuridique => participant[@typeCode=RCV]/participantRole/scopingEntity/code
 }
 
 map "Transporteur [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as transporteur #back:Ivory;header:LightYellow  {
     idNat_Struct => performer/assignedEntity/representedOrganization/id
+    raisonSocial => performer/assignedEntity/representedOrganization/name
+    statutJuridique =>  performer/assignedEntity/representedOrganization/standardIndustryClassCode
 }
 
 map "StructureEnCharge [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as structureEnCharge #back:Ivory;header:LightYellow  {
     idNat_Struct => participant[@typeCode=RESP]/participantRole/id
+    raisonSocial => participant[@typeCode=RESP]/participantRole/playingEntity/name
+    statutJuridique => participant[@typeCode=RESP]/participantRole/playingEntity/code
 }
 
 
@@ -61,13 +74,18 @@ map "TransportUsager : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-
 
 map "LieuEvenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as Lieu #back:Ivory;header:LightYellow  {
     identifiant => participant[@typeCode=LOC]/participantRole/id    
- 
+    nom => participant[@typeCode=LOC]/participantRole/playingEntity/name
+    adresse => participant[@typeCode=LOC]/participantRole/addr
+    telecommunication => participant[@typeCode=LOC]/participantRole/telecom 
 }
 
 map "Evaluation : [[contenu_dossier_corps_cda.html Entrée FR-Rerence-interne]] référençant une entrée FR-Evaluation" as Evaluation #back:Ivory;header:LightYellow {
 }
 
-map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as statut #back:Ivory;header:LightYellow {
+map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
+    statut => code
+    dateModificationStatut => effectiveTime
+    auteur => author
 }
 
 
@@ -79,8 +97,10 @@ Transport <|-- TransportUsager
 TransportUsager "0..*" -- "1" Evenement
 TransportPro "0..*" -- "1" Professionnel
 Evenement "0..1" -- "0..1" Evaluation
-Evenement "1" -- "0..*" statut
+Evenement "1" -- "0..*" Statut
 transporteur "0..1" -- "0..*" Transport
+etablissementDeRattachement "0..1" -- "0..*" Professionnel
+
 
 
 @enduml

@@ -1,4 +1,4 @@
-<p style="padding: 5px; border-radius: 4px; border: 2px solid red; background: #FF9B9B ; width: 65%">
+<p style="padding: 5px; border-radius: 4px; border: 2px solid red; background: #11ffee00; width: 65%">
 Ce mapping représente les données fonctionnelles trouvant leur équivalence dans l'actuelle version des spécifications techniques.
 </p>
 
@@ -21,26 +21,4 @@ Ce mapping représente les données fonctionnelles trouvant leur équivalence da
 ### Mapping Evaluation
 
 <div>{%include mapping_evaluation.svg%}</div>
-<br>
-
-### Mapping classes génériques
-
-#### Professionnel
-
-<div>{%include mapping_professionnel.svg%}</div>
-<br>
-
-#### Entité juridique
-
-<div>{%include mapping_entiteJuridique.svg%}</div>
-<br>
-
-#### Lieu
-
-<div>{%include mapping_lieu.svg%}</div>
-<br>
-
-#### Statut
-
-<div>{%include mapping_statut.svg%}</div>
 <br>

@@ -1,9 +1,0 @@
-@startuml
-
-map "EntiteJuridique : [[contenu_dossier_entete_cda.html En-tête du document CDA]]" as EJ #back:Ivory;header:LightYellow {
-    idNat_Struct => participant/associatedEntity/id
-    raisonSocial => participant/associatedEntity/scopingOrganization/name
-    statutJuridique => participant/associatedEntity/scopingOrganization/standardIndustryClassCode
-}
-
-@enduml
