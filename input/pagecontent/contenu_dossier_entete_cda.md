@@ -77,42 +77,82 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
         <tr id="id">
             <td>patientRole/id</td>
             <td>[1..*]</td>
-            <td>Il est demandé que le matricule INS de l’utilisateur soit transporté en priorité. Dans le cas contraire, l’identifiant local produit par le système peut être transporté.</td>
+            <td>Il est demandé que le matricule INS de l'usager soit transporté en priorité. Dans le cas contraire, l’identifiant local produit par le système ou le NIR de l'ayant-droit peuvent être transportés.</td>
         </tr>
         <tr id="nom">
-            <td>patientRole/patient/name/family@qualifier="BR"</td>
-            <td>[1..1]</td>
-            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+            <td>patientRole/patient/name/family</td>
+            <td>[1..*]</td>
+            <td>Au moins un nom doit être transmis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="nomNaissance">
+            <td><strong>Nom de naissance</strong><br>patientRole/patient/name/family@qualifier="BR"</td>
+            <td>[0..1]</td>
+            <td>
+            <ul>
+                <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner le nom de naissance de l'usager. Cet élément est optionnel.</li>
+            </ul>
+            </td>
         </tr>
         <tr id="prenoms">
-            <td>patientRole/patient/name/given (pas de qualifier)</td>
-            <td>[1..1]</td>
-            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+            <td>patientRole/patient/name/given</td>
+            <td>[1..*]</td>
+            <td>Au moins un prénom doit être transmis. L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="prenomsListe">
+            <td><strong>Liste des prénoms de l'acte de naissance</strong><br>patientRole/patient/name/given (pas de qualifier)</td>
+            <td>[0..1]</td>
+            <td>
+            <ul>
+                <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner la liste des prénoms de l'acte de naissance de l'usager. Cet élément est optionnel.</li>
+            </ul>
+            </td>
         </tr>
         <tr id="premierPrenom">
-            <td>patientRole/patient/name/given@qualifier="BR"</td>
-            <td>[1..1]</td>
-            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+            <td><strong>Premier prénom</strong><br>patientRole/patient/name/given@qualifier="BR"</td>
+            <td>[0..1]</td>
+            <td>
+            <ul>
+                <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, cet élément est optionnel.</li>
+            </ul>
+            </td>
         </tr>
         <tr id="sexe">
             <td>patientRole/patient/administrativeGenderCode</td>
             <td>[1..1]</td>
-            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+            <td>
+            <ul>
+                <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner cet élément. Si le sexe de l'usager n'est pas connu de votre système, l'attribut nullFlavor peut être utilisé.</li>
+            </ul>
+            </td>
         </tr>
         <tr id="dateNaissance">
             <td>patientRole/patient/birthTime</td>
             <td>[1..1]</td>
-            <td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+            <td>
+            <ul>
+                <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner cet élément. Si la date et l'heure de naissance de l'usager n'est pas connue de votre système, l'attribut nullFlavor peut être utilisé.</li>
+            </ul>
+            </td>
         </tr>
         <tr id="lieuNaissance">
 			<td>patientRole/patient/birthplace/place/addr/county</td>
-			<td>[1..1]</td>
-			<td>Cet élément est requis. L'attribut nullFlavor est interdit.</td>
+			<td>[0..1]</td>
+			<td>
+            <ul>
+                <li>Si le matricule INS de l'usager est présent, le lieu de naissance de l'usager est obligatoire et l'attribut nullFlavor est interdit.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner le lieu de naissance de l'usager. cet élément est optionnel.</li>
+            </ul>
+            </td>
 		</tr>
 		<tr id="multipleBirthOrderNumber">
 			<td>patientRole/patient/sdtc:multipleBirthOrderNumber</td>
 			<td>[0..1]</td>
-			<td>Si l'INS n'est pas véhiculé, l'ordre de naissance de l'usager est requis.</td>
+			<td>Si le matricule INS de l'usager n'est pas présent, l'ordre de naissance de l'usager est requis.</td>
 		</tr>
 	</tbody>
 </table>
@@ -143,7 +183,7 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
             <td>[1..1]</td>
             <td><p><strong>Identifiant de l'auteur</strong>
 			<br>Attribut nullFlavor interdit</p>
-			<p>@root = 1.2.250.1.71.4.2.1</p>
+			<p>@root = 1.2.250.1.71.4.2.1 (OID autorité d'attribution des systèmes et des professionnels)</p>
 			<p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
@@ -174,7 +214,7 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
             <td>assignedAuthor/representedOrganization/id</td>
             <td>[0..1]</td>
             <td><p><strong>Identifiant de la structure</strong></p>
-			<p>@root = 1.2.250.1.71.4.2.2</p>
+			<p>@root = 1.2.250.1.71.4.2.2 (OID autorité d'attribution des identifiants des structures)</p>
 			<p>@extension = "Struct_idNat" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
@@ -207,7 +247,7 @@ La structure de l'élément Custodian se conforme aux contraintes et définition
             <td>assignedCustodian/representedCustodianOrganization/id</td>
             <td>[1..1]</td>
             <td><p><strong>Identifiant de la structure ESSMS</strong></p>
-			<p>@root = 1.2.250.1.71.4.2.2</p>
+			<p>@root = 1.2.250.1.71.4.2.2 (OID autorité d'attribution des identifiants des structures)</p>
 			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
         </tr>
         <tr>
@@ -245,9 +285,9 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
         <tr>
             <td>assignedEntity/id</td>
             <td>[1..1] </td>
-            <td><p><strong>Identifiant de la structure ESSMS</strong>
+            <td><p><strong>Identifiant du système responsable de la production du document</strong>
 			<br>Attribut nullFlavor interdit</p>
-			<p>@root = OID de l'autorité d'affectation : valeur fixée à "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</p>
+			<p>@root = 1.2.250.1.71.4.2.1 (OID autorité d'attribution des systèmes et des professionnels)</p>
 			<p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
 			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
@@ -261,6 +301,14 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
 			<p>@code = LOGICIEL_DUI
 			<br>@displayName = Logiciel de Dossier Usager Informatisé
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
+        </tr>
+         <tr>
+            <td>assignedEntity/representedOrganization/id</td>
+            <td>[0..*] </td>
+            <td><p><strong>Structure responsable du document</strong>
+			<br>Attribut nullFlavor interdit</p>
+			<p>@root = 1.2.250.1.71.4.2.2 (OID autorité d'attribution des identifiants des structures)</p>
+			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
 </table>
