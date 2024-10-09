@@ -90,7 +90,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner le nom de naissance de l'usager. Cet élément est optionnel.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le nom de naissance de l'usager. Cet élément est optionnel.</li>
             </ul>
             </td>
         </tr>
@@ -105,7 +105,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner la liste des prénoms de l'acte de naissance de l'usager. Cet élément est optionnel.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner la liste des prénoms de l'acte de naissance de l'usager. Cet élément est optionnel.</li>
             </ul>
             </td>
         </tr>
@@ -115,7 +115,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, cet élément est optionnel.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le premier prénom de l'usager. Cet élément est optionnel.</li>
             </ul>
             </td>
         </tr>
@@ -125,7 +125,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner cet élément. Si le sexe de l'usager n'est pas connu de votre système, l'attribut nullFlavor peut être utilisé.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner cet élément. Si le sexe de l'usager n'est pas connu de votre système, l'attribut nullFlavor peut être utilisé.</li>
             </ul>
             </td>
         </tr>
@@ -135,7 +135,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner cet élément. Si la date et l'heure de naissance de l'usager n'est pas connue de votre système, l'attribut nullFlavor peut être utilisé.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner cet élément. Si la date et l'heure de naissance de l'usager n'est pas connue de votre système, l'attribut nullFlavor peut être utilisé.</li>
             </ul>
             </td>
         </tr>
@@ -145,7 +145,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
 			<td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, le lieu de naissance de l'usager est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, il est recommandé de renseigner le lieu de naissance de l'usager. cet élément est optionnel.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le lieu de naissance de l'usager. cet élément est optionnel.</li>
             </ul>
             </td>
 		</tr>
