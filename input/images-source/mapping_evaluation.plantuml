@@ -25,7 +25,7 @@ map "Evaluateur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as E
     specialite => performer/assignedEntity/code
 }
 
-map "Etablissement de rattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementResp #back:Ivory;header:LightYellow {
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementEval #back:Ivory;header:LightYellow {
     idNat_Struct => performer/assignedEntity/representedOrganization/id
     raisonSocial => performer/assignedEntity/representedOrganization/name
     statutJuridique =>  performer/assignedEntity/representedOrganization/standardIndustryClassCode
@@ -39,8 +39,9 @@ map "Responsable : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as 
     specialite => participant[@typeCode=RESP]/participantRole/playingEntity/code
 }
 
-map "Etablissement de rattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementEval #back:Ivory;header:LightYellow {
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementResp #back:Ivory;header:LightYellow {
     idNat_Struct => participant[@typeCode=RESP]/participantRole/scopingEntity/id
+    raisonSocial => participant[@typeCode=RESP]/participantRole/scopingEntity/desc
     statutJuridique => participant[@typeCode=RESP]/participantRole/scopingEntity/code
 }
 

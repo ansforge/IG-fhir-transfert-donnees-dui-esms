@@ -43,8 +43,9 @@ map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-pr
     specialite => participant[@typeCode=RCV]/participantRole/playingEntity/code
 }
 
-map "Etablissement de rattachement : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as etablissementDeRattachement #back:Ivory;header:LightYellow {
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as etablissementDeRattachement #back:Ivory;header:LightYellow {
     idNat_Struct => participant[@typeCode=RCV]/participantRole/scopingEntity/id
+    raisonSocial => participant[@typeCode=RCV]/participantRole/scopingEntity/desc
     statutJuridique => participant[@typeCode=RCV]/participantRole/scopingEntity/code
 }
 
@@ -55,9 +56,9 @@ map "Transporteur [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as tr
 }
 
 map "StructureEnCharge [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as structureEnCharge #back:Ivory;header:LightYellow  {
-    idNat_Struct => participant[@typeCode=RESP]/participantRole/id
-    raisonSocial => participant[@typeCode=RESP]/participantRole/playingEntity/name
-    statutJuridique => participant[@typeCode=RESP]/participantRole/playingEntity/code
+    idNat_Struct => participant[@typeCode=RESP]/participantRole/scopingEntity/id
+    raisonSocial => participant[@typeCode=RESP]/participantRole/scopingEntity/desc
+    statutJuridique => participant[@typeCode=RESP]/participantRole/scopingEntity/code
 }
 
 
@@ -91,13 +92,13 @@ map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as Statut #b
 
 Evenement "0..*" -- "0..1" Lieu  
 Professionnel "0..*" -- "0..*" Evenement
-structureEnCharge "0..1" -- "0..*" Evenement
+structureEnCharge "0..1" -right- "0..*" Evenement
 Transport <|-- TransportPro
 Transport <|-- TransportUsager
 TransportUsager "0..*" -- "1" Evenement
 TransportPro "0..*" -- "1" Professionnel
 Evenement "0..1" -- "0..1" Evaluation
-Evenement "1" -- "0..*" Statut
+Evenement "1" -right- "0..*" Statut
 transporteur "0..1" -- "0..*" Transport
 etablissementDeRattachement "0..1" -- "0..*" Professionnel
 

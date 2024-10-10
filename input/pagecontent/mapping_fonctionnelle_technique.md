@@ -4,21 +4,25 @@ Ce mapping représente les données fonctionnelles trouvant leur équivalence da
 
 ### Mapping Usager
 
-<div>{%include mapping_usager.svg%}</div>
+<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
+{%include mapping_usager.svg%}</div>
 <br>
 
 ### Mapping Séjour
 
-<div>{%include mapping_sejour.svg%}</div>
+<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
+{%include mapping_sejour.svg%}</div>
 <br>
 
 ### Mapping Evènement de l'agenda
 
-<div>{%include mapping_evenement.svg%}</div>
+<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
+{%include mapping_evenement.svg%}</div>
 <br>
 
 
 ### Mapping Evaluation
 
-<div>{%include mapping_evaluation.svg%}</div>
+<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
+{%include mapping_evaluation.svg%}</div>
 <br>
