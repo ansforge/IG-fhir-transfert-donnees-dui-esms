@@ -145,7 +145,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
 			<td>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, le lieu de naissance de l'usager est obligatoire et l'attribut nullFlavor est interdit.</li>
-                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le lieu de naissance de l'usager. cet élément est optionnel.</li>
+                <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le lieu de naissance de l'usager. Cet élément est optionnel.</li>
             </ul>
             </td>
 		</tr>
@@ -195,7 +195,7 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
             <td>[1..1]</td>
             <td><p><strong>Profession / savoir-faire ou rôle</strong></p>
 			<p>@code = LOGICIEL_DUI
-			<br>@displayName = Logiciel de Dossier Usager Informatisé
+			<br>@displayName = Logiciel de Dossier Usager Informatisé (optionnel)
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
         </tr>
         <tr>
@@ -299,7 +299,7 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
             <td>[0..1] </td>
             <td><p><strong>Profession ou rôle du responsable</strong></p>
 			<p>@code = LOGICIEL_DUI
-			<br>@displayName = Logiciel de Dossier Usager Informatisé
+			<br>@displayName = Logiciel de Dossier Usager Informatisé (optionnel)
 			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
         </tr>
          <tr>
@@ -317,11 +317,65 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
 
 ### DocumentationOf
 
-L’élément DocumentationOf imposé par, le standard CDA, décrit les données de l'évènement principal documenté.Cet élément précise le contexte de l’intervention ou de l’action qui est à l’origine du document, qu’il s’agisse d’une prise en charge, d’un suivi médico-social ou d’un événement clé dans le parcours de l’usager.
+L’élément DocumentationOf imposé par, le standard CDA, documente le transfert de données.
 
 La structure de l'élément DocumentationOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="DocumentationOf"></iframe>
+
+**Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
+
+<table id="cda">
+    <thead>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
+	</thead>
+	<tbody>
+        <tr>
+            <td>serviceEvent/effectiveTime</td>
+            <td>[1..1] </td>
+            <td><p><strong>Date de création du document</strong>
+            <br>Attribut nullFlavor interdit</p></td>
+        </tr>
+        <tr>
+            <td>serviceEvent/performer</td>
+            <td>[1..1] </td>
+            <td><p><strong>Système ayant réalisé le transfert de données</strong>
+            <br>Attribut nullFlavor interdit</p></td>
+        </tr>
+        <tr>
+            <td>serviceEvent/performer/assignedEntity/id</td>
+            <td>[1..1] </td>
+            <td><strong>Identifiant du système responsable du transfert de données</strong>
+            <p>@root = 1.2.250.1.71.4.2.1 (OID autorité d'attribution des systèmes et des professionnels)</p>
+            <p>@extension = Valeur de l'identifiant :
+			<br>Concaténation de :
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
+			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td>serviceEvent/performer/assignedEntity/code</td>
+            <td>[0..1]</td>
+            <td><p><strong>Système utilisé</strong></p>
+			<p>@code = LOGICIEL_DUI
+			<br>@displayName = Logiciel de Dossier Usager Informatisé (optionnel)
+			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
+        </tr>
+        <tr>
+            <td>serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
+            <td>[1..1]</td>
+            <td><p><strong>Structure</strong></p>
+			<p>@code = ESSMS
+			<br>@displayName = Etablissement ou Service Social ou Médico-Social (optionnel)
+			<br>@codeSystem = 1.2.250.1.213.1.1.4.9</p></td>
+        </tr>
+    </tbody>
+</table>
 
 <br>
 
@@ -337,7 +391,7 @@ La structure de l'élément relatedDocument se conforme aux contraintes et défi
 
 ### ComponentOf
 
-L’élément componentOf permet de lier le document « Transfert de données DUI » à une prise en charge spécifique de l’usager. Cet élément situe le document dans le cadre global de l’accompagnement médico-social de la personne, en précisant à quelle prise en charge ou projet personnalisé il se rapporte. 
+L’élément componentOf permet de lier le document « Transfert de données DUI » à une prise en charge spécifique de l’usager. Cet élément situe le document dans le cadre global de l’accompagnement médico-social de la personne, en précisant à quelle prise en charge ou projet personnalisé il se rapporte.
 
 La structure de l'élément ComponentOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
@@ -345,11 +399,22 @@ La structure de l'élément ComponentOf se conforme aux contraintes et définiti
 
 <br>
 
-### Adresse
+### Description des éléments addr et telecom
+
+
+#### Adresse
 
 L’élément Adresse imposé par le CDA dans la plupart des éléments d’entête CDA telle que le *recordTarget*, *author*, *custodian*, *legalAutenthificator*.
 
-La structure de l'élément Adresse se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure de l'élément addr se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+
+<iframe src="./cda/" height="400" name="Adresse"></iframe>
+
+<br>
+
+#### Coordonnées télécom
+
+La structure de l'élément telecom se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="Adresse"></iframe>
 
