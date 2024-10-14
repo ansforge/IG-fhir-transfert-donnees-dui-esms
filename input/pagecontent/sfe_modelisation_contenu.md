@@ -1246,7 +1246,7 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
 
 ** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser l'évaluateur.
+Cette classe regroupe les items pouvant caractériser la personne qui a réalisé l'évaluation.
 
 ##### Classe Responsable
 
@@ -1335,13 +1335,6 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
 <tr>
     <td>usagerPresent : [0..1] Indicateur</td>
     <td>Evènement nécessitant ou non la présence physique de l’usager.</td>
-  </tr>
-<tr>
-   <td>motifNonRealisation : [0..1] Code</td>
-    <td>Motif de non-réalisation de l’évènement.<br>
-    Jeu(x) de valeur(s) associé(s) : JDV_MotifNonRealisationEvenement_CISIS avec l'OID 1.2.250.1.213.1.1.5.803
-    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
-    </td>
   </tr>
   <tr>
    <td>repas : [0..1] Indicateur</td>
@@ -1578,21 +1571,22 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
     </td>
   </tr>
   <tr>
-    <td>motif : [0..1] Code</td>
-    <td>Motif associé au statut de la ressource impactée. <br>
-    Jeu(x) de valeur(s) associé(s) :  à définir
+   <td>motifNonRealisation : [0..1] Code</td>
+    <td>Motif associé au statut de non-réalisation de l’évènement.<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_MotifNonRealisationEvenement_CISIS avec l'OID 1.2.250.1.213.1.1.5.803
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
     </td>
-  </tr>
-  <tr>
-    <td>dateValidationStatut : [0..1] DateHeure</td>
-    <td>Date et heure de la validation du statut de la ressource.</td>
   </tr>
   <tr>
     <td>dateModificationStatut : [0..1] DateHeure</td>
     <td>Date de la dernière modification du statut de la ressource.</td>
   </tr>
    <tr>
+    <td>dateValidation : [0..1] DateHeure</td>
+    <td>Date et heure de la validation de l'événement.</td>
+  </tr>
+   <tr>
     <td>auteur : [0..1] Professionnel</td>
-    <td>Le professionnel ayant effectué la dernière modification du statut de la ressource.</td>
+    <td>Le professionnel ayant effectué la dernière modification du statut associé à la ressource.</td>
   </tr>
 </table>
