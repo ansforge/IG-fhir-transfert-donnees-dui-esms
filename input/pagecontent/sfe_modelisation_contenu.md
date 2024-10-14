@@ -1185,28 +1185,28 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
     <td>Identifiant technique de l’évaluation.</td>
   </tr>
    <tr>
-    <td>type : [1..1] Code</td>
+    <td>typeEvaluation : [1..1] Code</td>
     <td>Type de l’évaluation.<br>
     Jeu(x) de valeur(s) associé(s) : JDV_TypeEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.802 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
     <tr>
-    <td>date : [0..1] Date</td>
+    <td>dateEvaluation : [0..1] Date</td>
     <td>Date de l’évaluation.</td>
   </tr>
   <tr>
-    <td>resultat : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
+    <td>resultatEvaluation : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
     <td>Résultat global de l’évaluation. Le resultat est à renseigner uniquement lorsqu'il s'agit d'une Evaluation AGGIR PH SSIAD ou Evaluation AGGIR PA SSIAD<br>
     - Evaluation AGGIR PH SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Evaluation AGGIR PA SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
    <tr>
-    <td>commentaire : [0..1] Texte</td>
+    <td>commentaireEvaluation : [0..1] Texte</td>
     <td>Commentaire libre sur l’évaluation.</td>
   </tr>
    <tr>
-    <td>pieceJointe : [0..*] ObjetBinaire</td>
+    <td>pieceJointeEvaluation : [0..*] ObjetBinaire</td>
     <td>Pièces jointes relatives à l’évaluation.</td>
   </tr>
 </table>
@@ -1254,6 +1254,11 @@ Cette classe regroupe les items pouvant caractériser l'évaluateur.
 
 Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
 
+##### Classe Auteur
+
+** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
+
+Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation.
 
 ### Partie Coordination des acteurs
 
@@ -1355,14 +1360,6 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
     - JDV_DetailMaterielSpecialise_CISIS avec l'OID 1.2.250.1.213.1.1.5.808 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - JDV_DetailRessourceImmobiliereUtilisee_CISIS avec l'OID 1.2.250.1.213.1.1.5.809 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
-  </tr>
-<tr>
-   <td>dateDerniereModification : [0..1] DateHeure</td>
-    <td>Date et heure de la dernière modification de l’évènement.</td>
-  </tr>
-<tr>
-   <td>dateValidation : [0..1] DateHeure</td>
-    <td>Date et heure de la validation de l’évènement.</td>
   </tr>
 </table>
 
@@ -1477,7 +1474,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
   </tr>
   <tr>
     <td>idNat_PS : [0..1] Identifiant</td>
-    <td>Identification nationale principale du professionne. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
+    <td>Identification nationale principale du professionnel. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
   </tr>
    <tr>
     <td>civilite : [0..1] Code</td>
@@ -1494,8 +1491,8 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
     <td>Prénom usuel de la personne.</td>
   </tr>
    <tr>
-    <td>specialite : [0..1] Code</td>
-    <td>Profession ou spécialité exercée par la personne. <br>
+    <td>fonction : [0..1] Code</td>
+    <td>Profession / savoir-faire ou rôle du professionnel. <br>
     Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
     </td>
   </tr>
@@ -1577,8 +1574,18 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
   <tr>
     <td>statut : [0..1] Code</td>
     <td>Statut de la ressource impactée. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J281-StatutsRessourcesMS.html">JDV_J281-StatutsRessourcesMS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J281-StatutsRessourcesMS/JDV_J281-StatutsRessourcesMS.pdf">JDV_J281-StatutsRessourcesMS</a>
     </td>
+  </tr>
+  <tr>
+    <td>motif : [0..1] Code</td>
+    <td>Motif associé au statut de la ressource impactée. <br>
+    Jeu(x) de valeur(s) associé(s) :  à définir
+    </td>
+  </tr>
+  <tr>
+    <td>dateValidationStatut : [0..1] DateHeure</td>
+    <td>Date et heure de la validation du statut de la ressource.</td>
   </tr>
   <tr>
     <td>dateModificationStatut : [0..1] DateHeure</td>

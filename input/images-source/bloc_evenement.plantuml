@@ -51,7 +51,6 @@ class Evenement #LightGray {
     repas : Indicateur [0..1]
     typeRessourceUtilisee : Code [0..*]
     detailTypeRessourceUtilisee : Code [0..*]
-    dateDerniereModification : DateHeure [0..1]
     dateValidation : DateHeure [0..1]
 }
 
