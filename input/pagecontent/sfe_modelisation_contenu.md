@@ -1004,7 +1004,7 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 Séjour d’un usager dans un ESSMS.
 
-La classe EntiteJuridique est définie dans le MOS et profilée pour ce volet.
+La classe EntiteJuridique est définie dans le MOS et est profilée pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -1244,19 +1244,19 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
 
 ##### Classe Evaluateur
 
-** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
+** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
 Cette classe regroupe les items pouvant caractériser la personne qui a réalisé l'évaluation.
 
 ##### Classe Responsable
 
-** Classe spécialisée, hérite de la classe Professionnel du MOS.
+** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
 Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
 
 ##### Classe Auteur
 
-** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
+** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
 Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation.
 
@@ -1270,7 +1270,7 @@ Cette classe regroupe les items pouvant caractériser la personne ayant rédigé
 
 Evènements liés à la prise en charge de l’usager dans une structure ESSMS.
 
-Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profilées pour ce volet.
+Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont profilées pour ce volet.
 
 <table style="width:100%">
   <tr>
