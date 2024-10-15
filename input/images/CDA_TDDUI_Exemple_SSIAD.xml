@@ -392,7 +392,11 @@
 							<code code="GEN-367"
 							      displayName="Agenda de l'usager"
 								  codeSystem="1.2.250.1.213.1.1.4.322" 
-								  codeSystemName="TA_ASIP"/>
+								  codeSystemName="TA_ASIP">
+								  <qualifier>
+									<value code="MED-1298" displayName="Intervention d'un infirmer salarié" codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TA_ASIP"/>
+								  </qualifier>
+								</code>
 							<text><reference value="#evenement-01" /></text>
 							<!-- Date de l'évènement -->
 							<effectiveTime>
