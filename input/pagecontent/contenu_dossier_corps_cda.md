@@ -51,5 +51,3 @@ La structure de l’entrée se conforme aux contraintes et définitions présent
 <iframe src="./cda/" height="400" name="RecordTarget"></iframe>
 
 <br>
-
-**Ajout template CI-SIS**
