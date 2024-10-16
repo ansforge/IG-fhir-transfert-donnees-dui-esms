@@ -1246,7 +1246,9 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
 
 ** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser la personne qui a réalisé l'évaluation.
+Cette classe regroupe les items pouvant caractériser la personne ayant réalisé l'évaluation.<br>
+
+Dans le cas d'une auto évaluation, l'évaluateur étant l'usager cet élément n'est pas requis.
 
 ##### Classe Responsable
 
@@ -1258,7 +1260,11 @@ Cette classe regroupe les items pouvant caractériser le responsable de l'évalu
 
 ** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation.
+Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation.<br>
+
+Dans le cas d'une auto évaluation, l'auteur étant l'usager cet élément n'est pas requis.<br>
+<br>
+<u>Remarque</u> : Au moins un des 3 éléments (Evaluateur, Responsable, Auteur) doit être renseigné.
 
 ### Partie Coordination des acteurs
 
