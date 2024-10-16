@@ -1254,7 +1254,9 @@ Dans le cas d'une auto évaluation, l'évaluateur étant l'usager cet élément 
 
 ** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
+Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.<br>
+
+Dans le cas d'une auto évaluation, le responsable étant l'usager cet élément n'est pas requis.
 
 ##### Classe Auteur
 
@@ -1264,7 +1266,7 @@ Cette classe regroupe les items pouvant caractériser la personne ayant rédigé
 
 Dans le cas d'une auto évaluation, l'auteur étant l'usager cet élément n'est pas requis.<br>
 <br>
-<u>Remarque</u> : Au moins un des 3 éléments (Evaluateur, Responsable, Auteur) doit être renseigné.
+<u>Remarque</u> : Hormis le cas de l'auto évaluation, au moins un des 3 éléments (Evaluateur, Responsable, Auteur) doit être renseigné.
 
 ### Partie Coordination des acteurs
 
