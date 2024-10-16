@@ -1191,8 +1191,8 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
     </td>
   </tr>
     <tr>
-    <td>dateEvaluation : [0..1] Date</td>
-    <td>Date de l’évaluation.</td>
+    <td>dateEvaluation : [0..1] DateHeure</td>
+    <td>Date et heure de l’évaluation.</td>
   </tr>
   <tr>
     <td>resultatEvaluation : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
