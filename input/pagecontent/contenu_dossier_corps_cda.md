@@ -2,16 +2,16 @@
 
 Cette section contient l'ensemble des évènements (passé ou à venir) d'un usager.
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Evenements"></iframe>
 
 #### Entrée FR-Evenement
 Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Evenement"></iframe>
 
 **Contraintes spécifiques à l'entrée FR-Evenement :**
 
-<table id="transportPatient">
+<table id="Evenement">
     <thead>
 		<tr>
 			<th>Elément XML</th>
@@ -23,7 +23,7 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
         <tr id="id">
 			<td>id</td>
             <td>[1..1]</td>
-			<td>Identifiant unique de l'évènement</td>
+			<td><strong>Identifiant unique de l'évènement</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-EVN-idEvenement</td>
 		</tr>
         <tr id="code">
 			<td>code</td>
@@ -61,10 +61,25 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 			<td>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="participant">
-            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant/participantRole[@classCode=RESP]/id</td>
+            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[0..1]</td>
 			<td><strong>Structure de rattachement de l'usager en charge de l'évènement</strong><br>Si aucun séjour est renseigné, l'élément est requis.</td>
         </tr>
+        <tr id="participantStatut">
+            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
+            <td>[0..1]</td>
+			<td><strong>Structure de rattachement de l'usager en charge de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
+        <tr id="entry2">
+			<td><strong>Commentaire</strong><br>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Commentaire-ER (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.32</td>
+		</tr>
+        <tr id="entry3">
+			<td><strong>Pièces jointes</strong><br>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Reference-interne (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.36</td>
+		</tr>
         <tr id="entry">
 			<td><strong>Caractéristique de l'évènement</strong><br>entryRelationship/observation/templateId</td>
             <td>[1..1]</td>
@@ -108,7 +123,7 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 
 Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Transport-du-patient"></iframe>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-patient :**
 
@@ -131,6 +146,11 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             <td>[1..1]</td>
 			<td><strong>Conformité FR-Transport-du-patient (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.24</td>
 		</tr>
+        <tr id="id">
+			<td>id</td>
+            <td>[1..1]</td>
+			<td><strong>Identifiant unique du transport</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-TPPat-idTransport</td>
+		</tr>
         <tr id="code">
             <td><strong>Type de motorisation</strong><br>code/qualifier[name/@code = GEN-346]</td>
             <td>[0..1]</td>
@@ -152,6 +172,11 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             <td>[1..1]</td>
 			<td>L'attribut nullFlavor est interdit.</td>
 		</tr>
+        <tr id="performer">
+            <td><strong>Transporteur</strong><br>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
+            <td>[0..1]</td>
+			<td><strong>Structure de rattachement de l'usager en charge de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
         <tr id="entry">
 			<td><strong>Caractéristique de l'évènement</strong><br>entryRelationship/observation/templateId </td>
             <td>[1..1]</td>
@@ -193,7 +218,7 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
 Cette entrée permet de décrire le transport d'un professionnel lors de l'évènement.
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Transport-du-professionnel"></iframe>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-professionnel :**
 
@@ -210,6 +235,11 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
 			<td>@moodCode</td>
             <td>[1..1]</td>
 			<td>Valeur fixée à EVN</td>
+		</tr>
+        <tr id="id">
+			<td>id</td>
+            <td>[1..1]</td>
+			<td><strong>Identifiant unique du transport</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-TPPro-idTransport</td>
 		</tr>
         <tr id="code">
             <td><strong>Type de motorisation</strong><br>code/qualifier</td>
@@ -232,6 +262,16 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
             <td>[1..1]</td>
 			<td>L'attribut nullFlavor est interdit.</td>
 		</tr>
+        <tr id="participantStatut">
+            <td><strong>Etablissement de rattachement du professionnel</strong><br>participant[@classCode=RCV]/participantRole/scopingEntity/code</td>
+            <td>[0..1]</td>
+			<td><strong>Structure de rattachement de l'usager en charge de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
+        <tr id="performer">
+            <td><strong>Transporteur</strong><br>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
+            <td>[0..1]</td>
+			<td><strong>Structure de rattachement de l'usager en charge de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
         <tr id="entry">
 			<td><strong>Caractéristique de l'évènement</strong><br>entryRelationship/observation/templateId</td>
             <td>[1..1]</td>
