@@ -1012,7 +1012,7 @@ La classe EntiteJuridique est définie dans le MOS et est profilée pour ce vole
     <th>Description</th>
   </tr>
    <tr>
-    <td>ESSMS : [0..1] EntiteJuridique</td>
+    <td>ESSMS : [1..1] EntiteJuridique</td>
     <td>Établissement ou service social ou médico-social.</td>
   </tr>
   <tr>
@@ -1474,7 +1474,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
     <th>Description</th>
   </tr>
   <tr>
-    <td>idNat_PS : [0..1] Identifiant</td>
+    <td>idNat_PS : [1..1] Identifiant</td>
     <td>Identification nationale principale du professionnel. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
   </tr>
    <tr>
@@ -1513,7 +1513,7 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
     <th>Description</th>
   </tr>
   <tr>
-    <td>idNat_Struct : [0..1] Identifiant</td>
+    <td>idNat_Struct : [1..1] Identifiant</td>
     <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature <a href="https://interop.esante.gouv.fr/ig/nos/CodeSystem-TRE-G07-TypeIdentifiantStructure.html">TRE_G07-TypeIdentifiantStructure</a>) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
   </tr>
  <tr>
