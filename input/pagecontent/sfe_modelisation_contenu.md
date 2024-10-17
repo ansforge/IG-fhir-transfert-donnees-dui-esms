@@ -1262,7 +1262,7 @@ Dans le cas d'une auto évaluation, le responsable étant l'usager cet élément
 
 ** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation.<br>
+Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation mais ne l'ayant pas réalisée.<br>
 
 Dans le cas d'une auto évaluation, l'auteur étant l'usager cet élément n'est pas requis.<br>
 <br>
