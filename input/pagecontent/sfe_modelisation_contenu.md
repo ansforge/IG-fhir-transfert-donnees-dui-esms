@@ -1573,7 +1573,7 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
     <th>Description</th>
   </tr>
   <tr>
-    <td>statut : [0..1] Code</td>
+    <td>statut : [1..1] Code</td>
     <td>Statut de la ressource impactée. <br>
     Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J281-StatutsRessourcesMS/JDV_J281-StatutsRessourcesMS.pdf">JDV_J281-StatutsRessourcesMS</a>
     </td>
