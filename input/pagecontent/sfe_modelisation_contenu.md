@@ -1590,8 +1590,8 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
     </td>
   </tr>
    <tr>
-    <td>dateValidation : [0..1] DateHeure</td>
-    <td>Date et heure de la validation du statut.</td>
+    <td>dateStatut : [0..1] DateHeure</td>
+    <td>Date et heure du renseignement du statut.</td>
   </tr>
    <tr>
     <td>auteur : [0..1] Professionnel</td>
