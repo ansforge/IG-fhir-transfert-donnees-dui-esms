@@ -1362,6 +1362,10 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont pr
     - JDV_DetailRessourceImmobiliereUtilisee_CISIS avec l'OID 1.2.250.1.213.1.1.5.809 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
+  <tr>
+    <td>dateModificationEvenement : [0..1] DateHeure</td>
+    <td>Date de la dernière modification de l'événement.</td>
+  </tr>
 </table>
 
 ##### Classe Transport
@@ -1585,13 +1589,9 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
     publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
     </td>
   </tr>
-  <tr>
-    <td>dateModificationStatut : [0..1] DateHeure</td>
-    <td>Date de la dernière modification du statut de la ressource.</td>
-  </tr>
    <tr>
     <td>dateValidation : [0..1] DateHeure</td>
-    <td>Date et heure de la validation de l'événement.</td>
+    <td>Date et heure de la validation du statut.</td>
   </tr>
    <tr>
     <td>auteur : [0..1] Professionnel</td>
