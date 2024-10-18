@@ -3,23 +3,20 @@
 
 map "Evenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as Evenement #back:ghostWhite;header:LightGray {
     idEvenement => id
-    typeEvenement => code
+    typeEvenement => code/qualifier \n code/originalText
     libelleEvenement => text
     commentaireEvenement => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
     compteRenduEvenement => [[contenu_dossier_corps_cda.html Entrée FR-Reference-interne]]
     pieceJointeEvenement => [[contenu_dossier_corps_cda.html Entrée FR-Reference-interne]]
-    statutEvenement => [[contenu_dossier_corps_cda.html Entrée FR-Statut]] code
     dateDebutEvenement => effectiveTime/low
     dateFinEvenement => effectiveTime/high
     evenementHorsPrestation => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
     motifEvenement => text
     usagerPresent => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
-    motifNonRealisation => [[contenu_dossier_corps_cda.html Entrée FR-Statut]] value/qualifier 
     repas => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
     typeRessourceUtilisee => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
     detailTypeRessourceUtilisee => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value/qualifier
     dateDerniereModification => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
-    dateValidation => [[contenu_dossier_corps_cda.html Entrée FR-Statut]] effectiveTime
 }
 map "Transport : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel/FR-Transport-du-patient]]" as Transport#back:ghostWhite;header:LightGray {
     idTrajet => id
@@ -40,7 +37,7 @@ map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-pr
     civilite => participant[@typeCode=RCV]/participantRole/playingEntity/name/prefix
     nom => participant[@typeCode=RCV]/participantRole/playingEntity/name/family
     prenom => participant[@typeCode=RCV]/participantRole/playingEntity/name/given
-    specialite => participant[@typeCode=RCV]/participantRole/playingEntity/code
+    fonction => participant[@typeCode=RCV]/participantRole/playingEntity/code
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as etablissementDeRattachement #back:Ivory;header:LightYellow {
@@ -74,8 +71,8 @@ map "TransportUsager : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-
 }
 
 map "LieuEvenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as Lieu #back:Ivory;header:LightYellow  {
-    identifiant => participant[@typeCode=LOC]/participantRole/id    
-    nom => participant[@typeCode=LOC]/participantRole/playingEntity/name
+    identifiant => participant[@typeCode=LOC]/participantRole/scopingEntity/id    
+    nom => participant[@typeCode=LOC]/participantRole/scopingEntity/desc
     adresse => participant[@typeCode=LOC]/participantRole/addr
     telecommunication => participant[@typeCode=LOC]/participantRole/telecom 
 }
@@ -84,7 +81,8 @@ map "Evaluation : [[contenu_dossier_corps_cda.html Entrée FR-Rerence-interne]] 
 }
 
 map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
-    statut => code
+    statut => value
+    motifNonRealisation => value/qualifier
     dateModificationStatut => effectiveTime
     auteur => author
 }

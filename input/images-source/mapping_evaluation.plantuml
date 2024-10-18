@@ -3,11 +3,11 @@
 
 map "Evaluation : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Evaluation #back:GhostWhite;header:LightGray{
     idEvaluation => id
-    type => code
-    date => effectiveTime
-    resultat => value
-    commentaire => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
-    pieceJointe => [[contenu_dossier_corps_cda.html Entrée FR-Reference-interne]]
+    typeEvaluation => code
+    dateEvaluation => effectiveTime
+    resultatEvaluation => value
+    commentaireEvaluation => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
+    pieceJointeEvaluation => [[contenu_dossier_corps_cda.html Entrée FR-Reference-interne]]
 }
 
 
@@ -22,7 +22,7 @@ map "Evaluateur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as E
     civilite => performer/assignedEntity/assignedPerson/name/prefix
     nom => performer/assignedEntity/assignedPerson/name/family
     prenom => performer/assignedEntity/assignedPerson/name/given
-    specialite => performer/assignedEntity/code
+    fonction => performer/assignedEntity/code
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementEval #back:Ivory;header:LightYellow {
@@ -36,7 +36,7 @@ map "Responsable : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as 
     civilite => participant[@typeCode=RESP]/participantRole/playingEntity/name/prefix
     nom => participant[@typeCode=RESP]/participantRole/playingEntity/name/family
     prenom => participant[@typeCode=RESP]/participantRole/playingEntity/name/given
-    specialite => participant[@typeCode=RESP]/participantRole/playingEntity/code
+    fonction => participant[@typeCode=RESP]/participantRole/playingEntity/code
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementResp #back:Ivory;header:LightYellow {
@@ -45,20 +45,36 @@ map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-E
     statutJuridique => participant[@typeCode=RESP]/participantRole/scopingEntity/code
 }
 
+map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Auteur#back:Ivory;header:LightYellow {
+    idNat_PS => author/assignedAuthor/id
+    civilite => author/assignedAuthor/assignedPerson/name/prefix
+    nom => author/assignedAuthor/assignedPerson/name/family
+    prenom => author/assignedAuthor/assignedPerson/name/given
+    fonction => author/assignedAuthor/code
+}
+
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementAuth #back:Ivory;header:LightYellow {
+    idNat_Struct => author/assignedAuthor/representedOrganization/id
+    raisonSocial => author/assignedAuthor/representedOrganization/name
+    statutJuridique => author/assignedAuthor/representedOrganization/standardIndustryClassCode
+}
+
 map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
-    statut => code
+    statut => value
+    motifNonRealisation => value/qualifier
     dateModificationStatut => effectiveTime
     auteur => author
-   
 }
 
 'Liens entre éléments
 Evaluateur "0..1" -- "0..*" Evaluation
 Responsable "0..1" -- "0..*" Evaluation
+Auteur "0..1" -- "0..*" Evaluation
 Evaluation "1" -- "0..*" DetailEvaluation
 Evaluation "1" -- "0..*" Statut
 etablissementDeRattachementResp "0..1" -- "0..*" Responsable
 etablissementDeRattachementEval "0..1" -- "0.*" Evaluateur
+etablissementDeRattachementAuth "0..1" -- "0..*" Auteur
 
 
 @enduml

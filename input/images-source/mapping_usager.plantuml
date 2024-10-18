@@ -3,14 +3,17 @@
 
 map "Usager : [[contenu_dossier_entete_cda.html En-tête recordTarget]]" as Usager #back:IMPLEMENTATION;header:LightPink {
     matriculeINS => id
+    nirAyantDroit => id
     numeroIndividu => id
     nomNaissance => name/family[@qualifier=BR]
     nomUsage => name/family[@qualifier=CL]
-    prenom => name/given \n@qualifier non utilisé pour la liste des prénoms de l'acte de naissance \n@qualifier=BR pour le premier prénom extrait de la liste des prénoms de l'acte de naissance \n@qualifier=CL pour le prénom utilisé
-    sexe=> administrativeGenderCode
+    prenom => name/given \n@qualifier non utilisé
+    premierPrenomActeNaissance  => name/given[@qualifier=BR]
+    prenomUtilise => name/given[@qualifier=CL]
+    sexe => administrativeGenderCode
     dateNaissance => birthTime
     ordreNaissance => multipleBirthOrderNumber
-    communeNaissance => brithPlace/place/addr/county
+    lieuNaissance => brithPlace/place/addr/county
     paysNaissance => brithPlace/place/addr/country
 }
 
