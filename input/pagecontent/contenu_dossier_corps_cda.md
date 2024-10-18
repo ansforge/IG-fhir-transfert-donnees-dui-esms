@@ -2,7 +2,9 @@
 
 La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluation de l’usager (AGGIR, évaluation de la situation SSIAD, SERAFIN...).
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Statut-fonctionnel"></iframe>
+
+<br>
 
 **Contraintes spécifiques à la section FR-Statut-fonctionnel :**
 
@@ -17,8 +19,8 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
     <tbody>
 		<tr id="templateId">
 			<td>templateId</td>
-            <td><i>[1..1]</i></td>
-			<td><strong>Conformité FR-Statut-fonctionnel (CI-SIS)</strong><br> @root=1.2.250.1.213.1.1.2.246</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Statut-fonctionnel (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.2.246</td>
 		</tr>
 	</tbody>
 </table>
@@ -27,7 +29,9 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 
 Cette entrée permet de regrouper les évaluations par type.
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Groupe-de-questionnaires-d-evaluation"></iframe>
+
+<br>
 
 **Contrainte spécifique à l'entrée FR-Groupe-de-questionnaires-d-evaluation :**
 
@@ -52,7 +56,9 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 
 ##### Entrée FR-Evaluation
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Evaluation"></iframe>
+
+<br>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation :**
 
@@ -68,12 +74,22 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
         <tr id="templateId">
 			<td>templateId</td>
             <td><i>[1..1]</i></td>
-			<td>@root=1.2.250.1.213.1.1.3.25</td>
+			<td><strong>Conformité FR-Evaluation (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.25</td>
 		</tr>
 		<tr id="code">
 			<td>code</td>
 			<td>[1..1]</td>
 			<td>Valeur issue du JDV_TypeEvaluation_CISIS (1.2.250.1.213.1.1.5.802)</td>
+		</tr>
+		<tr id="entry1">
+			<td><strong>Commentaire</strong><br>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Commentaire-ER (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.32</td>
+		</tr>
+        <tr id="entry2">
+			<td><strong>Pièces jointes</strong><br>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Reference-interne (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.36</td>
 		</tr>
 	</tbody>
 </table>
@@ -114,9 +130,28 @@ La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code d
 
 ##### Entrée FR-Evaluation-Composant
 
-**Ajout template CI-SIS**
+<iframe src="./cda/" height="400" name="FR-Evaluation-Composant"></iframe>
+
+<br>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
+
+<table id="evaluationComposant">
+    <thead>
+		<tr>
+			<th>Elément XML</th>
+			<th>Card.</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+    </thead>
+    <tbody>
+		<tr id="entry1">
+			<td><strong>Commentaire</strong><br>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Commentaire-ER (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.32</td>
+		</tr>
+	</tbody>
+</table>
 
 Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation véhiculé dans l'entrée FR-Evaluation :
 
