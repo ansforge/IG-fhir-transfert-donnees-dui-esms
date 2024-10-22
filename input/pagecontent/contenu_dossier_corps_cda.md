@@ -6,7 +6,7 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 
 <br>
 
-**Contraintes spécifiques à la section FR-Statut-fonctionnel :**
+**Contrainte spécifique à la section FR-Statut-fonctionnel :**
 
 <table id="sectionEvaluation">
     <thead>
@@ -24,6 +24,7 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 		</tr>
 	</tbody>
 </table>
+<br>
 
 #### Entrée FR-Groupe-de-questionnaires-d-evaluation
 
@@ -53,6 +54,7 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 		</tr>
 	</tbody>
 </table>
+<br>
 
 ##### Entrée FR-Evaluation
 
@@ -73,7 +75,7 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
     <tbody>
         <tr id="templateId">
 			<td>templateId</td>
-            <td><i>[1..1]</i></td>
+            <td>[1..1]</td>
 			<td><strong>Conformité FR-Evaluation (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.25</td>
 		</tr>
 		<tr id="code">
@@ -81,6 +83,51 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 			<td>[1..1]</td>
 			<td>Valeur issue du JDV_TypeEvaluation_CISIS (1.2.250.1.213.1.1.5.802)</td>
 		</tr>
+		<tr id="performerId">
+            <td><strong>Evaluateur</strong><br>performer/assignedEntity/id</td>
+            <td>[1..1]</td>
+			<td>Si l'évaluateur est renseigné, son identifiant est requis.</td>
+        </tr>
+		<tr id="performerEJid">
+            <td><strong>Etablissement de rattachement de l'évaluateur</strong><br>performer/assignedEntity/representedOrganization/id</td>
+            <td>[1..1]</td>
+			<td>Si l'établissement de rattachement de l'évaluateur est renseigné, son identifiant est requis.</td>
+        </tr>
+        <tr id="performer">
+            <td><strong>Etablissement de rattachement de l'évaluateur</strong><br>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
+            <td>[0..1]</td>
+			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
+		<tr id="auteurId">
+            <td><strong>Auteur de l'évaluation</strong><br>author/assignedAuthor/id</td>
+            <td>[1..1]</td>
+			<td>Si l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
+        </tr>
+		<tr id="auteurEJid">
+            <td><strong>Etablissement de rattachement de l'auteur de l'évaluation</strong><br>author/assignedAuthor/representedOrganization/id</td>
+            <td>[1..1]</td>
+			<td>Si l'établissement de rattachement de l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
+        </tr>
+        <tr id="auteurStatut">
+            <td><strong>Etablissement de rattachement de l'auteur de l'évaluation</strong><br>author/assignedAuthor/representedOrganization/standardIndustryClassCode</td>
+            <td>[0..1]</td>
+			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
+        <tr id="participantId">
+            <td><strong>Responsable de l'évaluation</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
+            <td>[1..1]</td>
+			<td>Si le responsable de l'évaluation est renseigné, son identifiant est requis.</td>
+        </tr>
+		<tr id="participantEJid">
+            <td><strong>Etablissement de rattachement du responsable de l'évaluation</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
+            <td>[1..1]</td>
+			<td>Si l'établissement de rattachement du responsable de l'évaluation est renseigné, son identifiant est requis.</td>
+        </tr>
+        <tr id="participantStatut">
+            <td><strong>Etablissement de rattachement du responsable de l'évaluation</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
+            <td>[0..1]</td>
+			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+        </tr>
 		<tr id="entry1">
 			<td><strong>Commentaire</strong><br>entryRelationship/act/templateId</td>
             <td>[1..1]</td>
@@ -94,7 +141,7 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 	</tbody>
 </table>
 
-La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code de l'entrée FR-Groupe-de-questionnaires-d-evaluation:
+La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code de l'entrée FR-Groupe-de-questionnaires-d-evaluation :
 
 <table id="valeurEvaluation">
     <thead>
@@ -127,6 +174,7 @@ La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code d
 		</tr>
 	</tbody>
 </table>
+<br>
 
 ##### Entrée FR-Evaluation-Composant
 
@@ -186,6 +234,7 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 		</tr>
 	</tbody>
 </table>
+<br>
 
 ### Section FR-Documents-ajoutes
 
