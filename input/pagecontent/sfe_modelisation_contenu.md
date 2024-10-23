@@ -1045,7 +1045,7 @@ La classe EntiteJuridique est définie dans le MOS et est profilée pour ce vole
   </tr>
   <tr>
     <td>idNumeroDossier : [1..1] Identifiant</td>
-    <td>Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de six caractères "SEJOUR" et numéro de dossier administratif du séjour dans le DUI (numeroDossier) : <br>idEvaluation = 3+FINESS/idUsagerInterne-SEJOUR-numeroDossier</td>
+    <td>Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de six caractères "SEJOUR" et numéro de dossier administratif du séjour dans le DUI (numeroDossier) : <br>idNumeroDossier = 3+FINESS/idUsagerInterne-SEJOUR-numeroDossier</td>
   </tr>
   <tr>
     <td>commentaire : [0..1] Texte</td>
