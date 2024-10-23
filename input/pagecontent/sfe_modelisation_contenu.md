@@ -1182,7 +1182,7 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
   <tr>
     <td>idEvaluation : Identifiant [1..1]</td>
-    <td>Identifiant technique de l’évaluation obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de quatre caractères "EVAL" et du numéro de l’évaluation dans le DUI (idEvaluation) : <br>idEvaluation = 3+FINESS/idUsagerInterne-EVAL-idEvaluation</br></td>
+    <td>Identifiant technique de l’évaluation obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de quatre caractères "EVAL" et du numéro de l’évaluation dans le DUI (numEvaluation) : <br>idEvaluation = 3+FINESS/idUsagerInterne-EVAL-numEvaluation</br></td>
   </tr>
    <tr>
     <td>typeEvaluation : [1..1] Code</td>
@@ -1287,7 +1287,7 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont pr
   </tr>
   <tr>
     <td>idEvenement : [1..1] Identifiant</td>
-    <td>Identifiant technique de l’évènement obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de trois caractères "EVN" et du numéro de l’évènement dans le DUI (idEvenement) :<br> idEvenement = 3+FINESS/idUsagerInterne-EVN-idEvenement</br> </td>
+    <td>Identifiant technique de l’évènement obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de trois caractères "EVN" et du numéro de l’évènement dans le DUI (numEvenement) :<br> idEvenement = 3+FINESS/idUsagerInterne-EVN-numEvenement</br> </td>
   </tr>
    <tr>
     <td>typeEvenement : [0..*] Code ou Texte</td>
@@ -1437,12 +1437,14 @@ Classe générique socle décrivant le transport d’une personne physique (prof
 ** Classe spécialisée, hérite de la classe Transport
 
 Cette classe regroupe les items pouvant caractériser le transport du professionnel lors de l'évènement.
+L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de cinq caractères "TPPro" et du numéro de transport dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/idUsagerInterne-TPPro-idTransport</br> 
 
 ##### Classe TransportUsager
 
 ** Classe spécialisée, hérite de la classe Transport
 
 Cette classe regroupe les items pouvant caractériser le transport de l'usager lors de l'évènement.
+L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de cinq caractères "TPPat" et du numéro de transport dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/idUsagerInterne-TPPat-idTransport</br>
 
 <table style="width:100%">
   <tr>
