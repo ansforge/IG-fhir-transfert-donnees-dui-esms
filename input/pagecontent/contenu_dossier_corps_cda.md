@@ -78,6 +78,11 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
             <td>[1..1]</td>
 			<td><strong>Conformité FR-Evaluation (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.25</td>
 		</tr>
+		<tr id="id">
+			<td>id</td>
+            <td>[1..1]</td>
+			<td><strong>Identifiant unique de l'évaluation</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-EVAL-idEvaluation</td>
+		</tr>
 		<tr id="code">
 			<td>code</td>
 			<td>[1..1]</td>
