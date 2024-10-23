@@ -1044,8 +1044,8 @@ La classe EntiteJuridique est définie dans le MOS et est profilée pour ce vole
     <td>Libellé du mode de sortie du séjour.</td>
   </tr>
   <tr>
-    <td>numeroDossier : [1..1] Identifiant</td>
-    <td>Numéro de dossier administratif du séjour.</td>
+    <td>idNumeroDossier : [1..1] Identifiant</td>
+    <td>Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de six caractères "SEJOUR" et numéro de dossier administratif du séjour dans le DUI (numeroDossier) : <br>idEvaluation = 3+FINESS/idUsagerInterne-SEJOUR-numeroDossier</br></td>
   </tr>
   <tr>
     <td>commentaire : [0..1] Texte</td>
@@ -1182,7 +1182,7 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
   <tr>
     <td>idEvaluation : Identifiant [1..1]</td>
-    <td>Identifiant technique de l’évaluation.</td>
+    <td>Identifiant technique de l’évaluation obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de quatre caractères "EVAL" et du numéro de l’évaluation dans le DUI (idEvaluation) : <br>idEvaluation = 3+FINESS/idUsagerInterne-EVAL-idEvaluation</br></td>
   </tr>
    <tr>
     <td>typeEvaluation : [1..1] Code</td>
@@ -1287,7 +1287,7 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont pr
   </tr>
   <tr>
     <td>idEvenement : [1..1] Identifiant</td>
-    <td>Identifiant technique de l’évènement obtenue par la concaténation de l'identifiant national de structure (idNat_Struct), du numéro de l’évènement dans le DUI (idFonctionnel) et de l'identifiant local de l’usager au sein de la structure (idUsager) : <br> idEvenement = idNat_Struct - idFonctionnel - idUsager </br> </td>
+    <td>Identifiant technique de l’évènement obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de trois caractères "EVN" et du numéro de l’évènement dans le DUI (idEvenement) :<br> idEvenement = 3+FINESS/idUsagerInterne-EVN-idEvenement</br> </td>
   </tr>
    <tr>
     <td>typeEvenement : [0..*] Code ou Texte</td>
