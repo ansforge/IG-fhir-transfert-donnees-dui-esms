@@ -396,28 +396,3 @@ L’élément componentOf permet de lier le document « Transfert de données DU
 La structure de l'élément ComponentOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="ComponentOf"></iframe>
-
-<br>
-
-### Description des éléments addr et telecom
-
-
-#### Adresse
-
-L’élément Adresse imposé par le CDA dans la plupart des éléments d’entête CDA telle que le *recordTarget*, *author*, *custodian*, *legalAutenthificator*.
-
-La structure de l'élément addr se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
-
-<iframe src="./cda/" height="400" name="Adresse"></iframe>
-
-<br>
-
-#### Coordonnées télécom
-
-La structure de l'élément telecom se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
-
-<iframe src="./cda/" height="400" name="Adresse"></iframe>
-
-<br>
-
-<span style="color: #4472C4"><i>Les éléments "author" (auteur du document) et "legalAuthenticator" (responsable légal du document) représentent une information identique, à savoir le <strong>Système</strong>. En revanche, l'élément "custodian" (détenteur du document) représente la <strong>Structure</strong> liée au dit <strong>Système</strong> et qui est chargée de la conservation du document.</i>
