@@ -10,6 +10,7 @@ Cette section contient l'ensemble des évènements (passé ou à venir) d'un usa
 Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 
 <iframe src="./cda/" height="400" name="FR-Evenement"></iframe>
+<br>
 
 **Contraintes spécifiques à l'entrée FR-Evenement :**
 
@@ -39,15 +40,20 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
         </tr>
         <tr id="typeEvnValue">
             <td><strong>Type évènement SSIAD</strong><br>code/qualifier[name/@code=GEN-364]/value</td>
-            <td>[0..1]</td>
+            <td>[1..1]</td>
             <td>Valeur issue du JDV_TypeEvenementSSIAD_CISIS</td>
         </tr>
         <tr id="typeEvnTexte">
-            <td><strong>Type évènement non structuré</strong><br>code/originalText/reference</td>
+            <td><strong>Type évènement non structuré</strong><br>code/originalText</td>
             <td>[0..1]</td>
-            <td>Référence le texte décrivant les types d'évènements non codés.</td>
+            <td>Référence le texte décrivant les types d'évènements au format texte.</td>
         </tr>
-         <tr id="effectiveTime">
+        <tr id="text">
+			<td>text</td>
+            <td>[0..1]</td>
+			<td>Référence le texte décrivant le libellé et/ou le motif de l'évènement</td>
+		</tr>
+        <tr id="effectiveTime">
 			<td>effectiveTime</td>
             <td>[1..1]</td>
 			<td>L'attribut nullFlavor est interdit.</td>
@@ -164,6 +170,7 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
 <iframe src="./cda/" height="400" name="FR-Transport-du-patient"></iframe>
+<br>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-patient :**
 
@@ -294,6 +301,7 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 Cette entrée permet de décrire le transport d'un professionnel lors de l'évènement.
 
 <iframe src="./cda/" height="400" name="FR-Transport-du-professionnel"></iframe>
+<br>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-professionnel :**
 
