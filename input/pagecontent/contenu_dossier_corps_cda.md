@@ -1,6 +1,6 @@
 ### Section FR-Sejours
 
-Cette section contient les informations relatives au séjour d'un usager dans une structure ESSMS.
+Cette section contient les informations relatives au(x) séjour(s) d'un usager dans une structure ESSMS.
 
 La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
@@ -17,6 +17,25 @@ La structure de l’entrée se conforme aux contraintes et définitions présent
 <iframe src="./cda/" height="400" name="FR-Sejour"></iframe>
 
 <br>
+
+**Contraintes spécifiques à l'entrée FR-Sejour :**
+
+<table id="sejourAdmission">
+    <thead>
+		<tr>
+			<th>Elément XML</th>
+			<th>Card.</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+    </thead>
+    <tbody>
+        <tr id="entryRef">
+			<td>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Reference-interne (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.36</td>
+		</tr>
+    </tbody>
+</table>
 
 #### Entrée FR-Sejour-Admission
 
@@ -59,6 +78,11 @@ La structure de l’entrée se conforme aux contraintes et définitions présent
             <td>[0..1]</td>
 			<td><strong>Entité juridique responsable de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
+		<tr id="entryCom">
+			<td>entryRelationship/act/templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Commentaire-ER (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.32</td>
+		</tr>
     </tbody>
 </table>
 
