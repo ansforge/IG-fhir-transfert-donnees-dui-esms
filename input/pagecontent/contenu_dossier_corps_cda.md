@@ -34,19 +34,19 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 			<td>Valeur fixée à : <br>@code = GEN-367 <br>@codeSystem = 1.2.250.1.213.1.1.4.322 <br>@displayName = Agenda de l'usager (optionnel)</td>
 		</tr>
         <tr id="typeEvnName">
-            <td><strong>Type évènement SSIAD</strong><br>code/qualifier/name</td>
+            <td>code/qualifier/name</td>
             <td>[0..1]</td>
-            <td>Valeur fixée à : <br>@code = GEN-364 <br>@codeSystem = 1.2.250.1.213.1.1.4.322 <br>@displayName = Réforme SSIAD (optionnel)</td>
+            <td><strong>Type évènement SSIAD</strong><br>Valeur fixée à : <br>@code = GEN-364 <br>@codeSystem = 1.2.250.1.213.1.1.4.322 <br>@displayName = Réforme SSIAD (optionnel)</td>
         </tr>
         <tr id="typeEvnValue">
-            <td><strong>Type évènement SSIAD</strong><br>code/qualifier[name/@code=GEN-364]/value</td>
+            <td>code/qualifier[name/@code=GEN-364]/value</td>
             <td>[1..1]</td>
-            <td>Valeur issue du JDV_TypeEvenementSSIAD_CISIS</td>
+            <td><strong>Type évènement SSIAD</strong><br>Valeur issue du JDV_TypeEvenementSSIAD_CISIS</td>
         </tr>
         <tr id="typeEvnTexte">
-            <td><strong>Type évènement non structuré</strong><br>code/originalText</td>
+            <td>code/originalText</td>
             <td>[0..1]</td>
-            <td>Référence le texte décrivant les types d'évènements au format texte.</td>
+            <td><strong>Type évènement non structuré</strong><br>Référence le texte décrivant les types d'évènements au format texte.</td>
         </tr>
         <tr id="text">
 			<td>text</td>
@@ -74,39 +74,39 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 			<td>L'évènement peut être attaché à deux participants : le lieu d'exécution et l'entité juridique responsable de l'évènement.</td>
         </tr>
         <tr id="participant">
-            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity</td>
+            <td>participant[@classCode=RESP]/participantRole/scopingEntity</td>
             <td>[0..1]</td>
-			<td>Si aucun séjour est renseigné, l'entité juridique responsable de l'évènement est requis.</td>
+			<td><strong>Entité juridique responsable de l'évènement</strong><br>Si aucun séjour est renseigné, l'entité juridique responsable de l'évènement est requis.</td>
         </tr>
         <tr id="participantId">
-            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
+            <td>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
-			<td>Si l'entité juridique responsable de l'évènement est renseignée, son identifiant est requis.</td>
+			<td><strong>Identifiant de l'entité juridique responsable de l'évènement</strong><br>Si l'entité juridique responsable de l'évènement est renseignée, son identifiant est requis.</td>
         </tr>
         <tr id="participantStatut">
-            <td><strong>Entité juridique responsable de l'évènement</strong><br>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
+            <td>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
-			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+			<td><strong>Statut juridique de l'entité juridique responsable de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="entry2">
-			<td><strong>Commentaire</strong><br>entryRelationship/act/templateId</td>
+			<td>entryRelationship/act/templateId</td>
             <td>[1..1]</td>
-			<td><strong>Conformité FR-Commentaire-ER (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.32</td>
+			<td><strong>Commentaire</strong><br>Conformité FR-Commentaire-ER (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.32</td>
 		</tr>
         <tr id="entry3">
-			<td><strong>Pièces jointes</strong><br>entryRelationship/act/templateId</td>
+			<td>entryRelationship/act/templateId</td>
             <td>[1..1]</td>
-			<td><strong>Conformité FR-Reference-interne (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.36</td>
+			<td><strong>Pièces jointes</strong><br>Conformité FR-Reference-interne (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.36</td>
 		</tr>
         <tr id="entry">
-			<td><strong>Caractéristique de l'évènement</strong><br>entryRelationship/observation/templateId</td>
+			<td>entryRelationship/observation/templateId</td>
             <td>[1..1]</td>
-			<td><strong>Conformité FR-Simple-Observation (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.48</td>
+			<td><strong>Caractéristique de l'évènement</strong><br>Conformité FR-Simple-Observation (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.48</td>
 		</tr>
         <tr id="entryCode">
-			<td><strong>Caractéristique de l'évènement</strong><br>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code </td>
+			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code </td>
             <td>[1..1]</td>
-			<td>Dans l'entrée FR-Evenement, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
+			<td><strong>Caractéristique de l'évènement</strong><br>Dans l'entrée FR-Evenement, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
             <ul>
                 <li>@code = GEN-347 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Evènement hors prestation)</li>
                 <li>@code = GEN-349 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Type de ressource utilisée)</li>
@@ -118,9 +118,9 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
             </td>
 		</tr>
         <tr id="entryValue">
-			<td><strong>Caractéristique de l'évènement</strong><br>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/value</td>
+			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/value</td>
             <td>[1..1]</td>
-			<td>Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
+			<td><strong>Caractéristique de l'évènement</strong><br>Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
 		</tr>
     </tbody>
 </table>
@@ -199,9 +199,9 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 			<td><strong>Identifiant unique du transport</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-TPPat-idTransport</td>
 		</tr>
         <tr id="code">
-            <td><strong>Type de motorisation</strong><br>code/qualifier[name/@code = GEN-346]</td>
+            <td>code/qualifier[name/@code = GEN-346]</td>
             <td>[0..1]</td>
-            <td>L'élément qualifier permettant de véhiculer le type de motorisation (l'attribut @code de l'élément name prend la valeur "GEN-346") ne doit pas être renseigné lorsque l'élément code de l'entrée FR-Transport-du-patient prend l'une des valeurs suivantes :
+            <td><strong>Type de motorisation</strong><br>L'élément qualifier permettant de véhiculer le type de motorisation (l'attribut @code de l'élément name prend la valeur "GEN-346") ne doit pas être renseigné lorsque l'élément code de l'entrée FR-Transport-du-patient prend l'une des valeurs suivantes :
             <ul>
                 <li>code/@code = ORG-204 (Transport en commun)</li>
                 <li>code/@code = ORG-205 (Modes doux)</li>
@@ -220,24 +220,24 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 			<td>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="performerId">
-            <td><strong>Transporteur</strong><br>performer/assignedEntity/representedOrganization/id</td>
+            <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
-			<td>Si le transporteur est renseigné, son identifiant est requis.</td>
+			<td><strong>Identifiant du transporteur</strong><br>Si le transporteur est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="performer">
-            <td><strong>Transporteur</strong><br>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
+            <td>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
             <td>[0..1]</td>
-			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+			<td><strong>Statut juridique du transporteur</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="entry">
-			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>entryRelationship/observation/templateId </td>
+			<td>entryRelationship/observation/templateId </td>
             <td>[1..1]</td>
-			<td><strong>Conformité FR-Simple-Observation (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.48</td>
+			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>Conformité FR-Simple-Observation (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.48</td>
 		</tr>
         <tr id="entryCode">
-			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code</td>
+			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code</td>
             <td>[1..1]</td>
-			<td>Dans l'entrée FR-Transport-du-patient, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
+			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>Dans l'entrée FR-Transport-du-patient, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
             <ul>
                 <li>@code = MED-1124 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Patient nécessitant un accompagnement par un tiers)</li>
                 <li>@code = ORG-200 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Budget réel)</li>
@@ -250,9 +250,9 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             </td>
 		</tr>
         <tr id="entryValue">
-			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/value</td>
+			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/value</td>
             <td>[1..1]</td>
-			<td>Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
+			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
 		</tr>
 	</tbody>
 </table>
@@ -325,9 +325,9 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
 			<td><strong>Identifiant unique du transport</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-TPPro-idTransport</td>
 		</tr>
         <tr id="code">
-            <td><strong>Type de motorisation</strong><br>code/qualifier</td>
+            <td>code/qualifier</td>
             <td>[0..1]</td>
-            <td>L'élément qualifier ne doit pas être renseigné lorsque l'élément code de l'entrée FR-Transport-du-professionnel prend l'une des valeurs suivantes : 
+            <td><strong>Type de motorisation</strong><br>L'élément qualifier ne doit pas être renseigné lorsque l'élément code de l'entrée FR-Transport-du-professionnel prend l'une des valeurs suivantes : 
             <ul>
                 <li>@code = ORG-204 (Transport en commun)</li>
                 <li>@code = ORG-205 (Modes doux)</li>
@@ -346,39 +346,39 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
 			<td>L'attribut nullFlavor est interdit.</td>
         </tr>
         <tr id="participantId">
-            <td><strong>Professionnel</strong><br>participant[@classCode=RCV]/participantRole/id</td>
+            <td>participant[@classCode=RCV]/participantRole/id</td>
             <td>[1..1]</td>
-			<td>L'identifiant du professionnel est requis.</td>
+			<td><strong>Identifiant du professionnel</strong><br>L'identifiant du professionnel est requis.</td>
         </tr>
 		<tr id="participantEJId">
-            <td><strong>Etablissement de rattachement du professionnel</strong><br>participant[@classCode=RCV]/participantRole/scopingEntity/id</td>
+            <td>participant[@classCode=RCV]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
-			<td>Si l'établissement de rattachement du professionnel est renseigné, son identifiant est requis.</td>
+			<td><strong>Identifiant de l'établissement de rattachement du professionnel</strong><br>Si l'établissement de rattachement du professionnel est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="participantCode">
-            <td><strong>Etablissement de rattachement du professionnel</strong><br>participant[@classCode=RCV]/participantRole/scopingEntity/code</td>
+            <td>participant[@classCode=RCV]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
-			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+			<td><strong>Statut juridique de l'établissement de rattachement du professionnel</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="performerId">
-            <td><strong>Transporteur</strong><br>performer/assignedEntity/representedOrganization/id</td>
+            <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
-			<td>Si le transporteur est renseigné, son identifiant est requis.</td>
+			<td><strong>Identifiant du transporteur</strong><br>Si le transporteur est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="performer">
-            <td><strong>Transporteur</strong><br>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
+            <td>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
             <td>[0..1]</td>
-			<td>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+			<td><strong>Statut juridique du transporteur</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="entry">
-			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>entryRelationship/observation/templateId</td>
+			<td>entryRelationship/observation/templateId</td>
             <td>[1..1]</td>
-			<td><strong>Conformité FR-Simple-Observation (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.48</td>
+			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>Conformité FR-Simple-Observation (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.48</td>
 		</tr>
         <tr id="entryCode">
-			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code</td>
+			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code</td>
             <td>[1..1]</td>
-			<td>Dans l'entrée FR-Transport-du-professionnel, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
+			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>Dans l'entrée FR-Transport-du-professionnel, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
             <ul>
                 <li>@code = ORG-200 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Budget réel)</li>
                 <li>@code = ORG-201 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Budget prévisionnel)</li>
@@ -389,9 +389,9 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
             </td>
 		</tr>
         <tr id="entryValue">
-			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/value</td>
+			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/value</td>
             <td>[1..1]</td>
-			<td>Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
+			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
 		</tr>
 	</tbody>
 </table>
