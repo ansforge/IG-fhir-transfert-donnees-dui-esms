@@ -18,6 +18,7 @@
 		21/10/2024 :	Entrée Evenement : type modifié pour la value de l'entrée Simple-Observation représentant la date de dernière mise à jour : IVL-TS -> TS
 						Entrée FR-Sejour : ajout des typeCodes obligatoires sur tous les component
 						Entrée FR-Groupe-de-questionnaires-d-evaluation : ajout du typeCode obligatoire sur le component
+						Traduction du displayname distance, status, date and time of last update data
 	**********************************************************************************************************
 -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -480,7 +481,7 @@
 									<!-- Conformité FR-Simple-Observation (CI-SIS) -->
 									<templateId root="1.2.250.1.213.1.1.3.48"/>
 									<id root="A67475FC-CFEA-4875-8F57-C7BF1399B56B" />
-									<code code="106177-9" displayName="Date and time of last update of data" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<code code="106177-9" displayName=" Date de dernière mise à jour" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 									<text><reference value="#DateDerniereMiseAJour" /></text>
 									<statusCode code="completed" />
 									<value xsi:type="TS" value="20230414111500+0200"/>
@@ -521,7 +522,7 @@
 											<!-- Conformité FR-Simple-Observation (CI-SIS) -->
 											<templateId root="1.2.250.1.213.1.1.3.48"/>
 											<id root="A67475FC-CFEA-4875-8F57-C7BF1399B57D" />
-											<code code="103208-5" displayName="Distance traveled" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+											<code code="103208-5" displayName="Distance parcourue" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 											<text><reference value="#transport-pro-distance" /></text>
 											<statusCode code="completed" />
 											<effectiveTime nullFlavor="NA" />
@@ -610,7 +611,7 @@
 									<templateId root="1.2.250.1.213.1.1.3.217"/>
 									<id root="FC21DC59-43D5-4BB0-ACC7-3601784BFBC5"></id>
 									<code code="106199-3"
-										  displayName="Status"
+										  displayName="Statut"
 										  codeSystem="2.16.840.1.113883.6.1"
 										  codeSystemName="LOINC"/>
 									<text>
@@ -917,7 +918,7 @@
 												<!-- Identifiant de l'observation -->
 												<id root="22CE1BCA-D54F-484B-9DDA-8115FD795A78"/>
 												<code code="106199-3"
-													displayName="Status"
+													displayName="Statut"
 													codeSystem="2.16.840.1.113883.6.1"
 													codeSystemName="LOINC"/>
 												<text>
