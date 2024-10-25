@@ -248,6 +248,43 @@ Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associ
 
 ### Eléments transversaux
 
+#### Entrée FR-Statut
+
+L’entrée FR-Statut est un élément qui permet décrire le statut métier d'une évaluation ou d'un évènement.
+
+<iframe src="./cda/" height="400" name="FR-Statut"></iframe>
+
+<br>
+
+#### Entrée FR-Simple-Observation
+
+L’entrée FR-Simple-Observation est un élément générique permettant de décrire les caractéristiques d'un évènement ou d'un transport.
+
+<iframe src="./cda/" height="400" name="FR-Simple-Observation"></iframe>
+
+<br>
+
+**Contrainte spécifique à l'entrée FR-Simple-Observation :**
+
+<table id="obs">
+    <thead>
+		<tr>
+			<th>Elément XML</th>
+			<th>Card.</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+    </thead>
+    <tbody>
+		<tr id="templateId">
+			<td>templateId</td>
+            <td>[1..1]</td>
+			<td><strong>Conformité FR-Simple-Observation (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.48</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+
+
 #### Entrée FR-Commentaire-ER
 
 L’entrée FR-Commentaire-ER est un élément qui permet de joindre un commentaire à une entrée ou à une section.
