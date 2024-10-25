@@ -111,8 +111,8 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
                 <li>@code = GEN-347 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Evènement hors prestation)</li>
                 <li>@code = GEN-349 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Type de ressource utilisée)</li>
                 <li>@code = GEN-350 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Repas inclus)</li>
-                <li>@code = 38887-6 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Person present --at time of event)</li>
-                <li>@code = 106177-9 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Date and time of last update of data)</li>
+                <li>@code = 38887-6 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Personne présente au moment de l'évènement)</li>
+                <li>@code = 106177-9 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Date de dernière mise à jour)</li>
             </ul>
             <p>L'attribut displayName est optionnel.</p>
             </td>
@@ -153,11 +153,11 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
             <td>BL</td>
 		</tr>
         <tr id="4">
-			<td>38887-6 (Person present --at time of event)</td>
+			<td>38887-6 (Personne présente au moment de l'évènement)</td>
             <td>BL</td>
 		</tr>
         <tr id="5">
-			<td>106177-9 (Date and time of last update of data)</td>
+			<td>106177-9 (Date de dernière mise à jour)</td>
             <td>TS</td>
 		</tr>
     </tbody>
@@ -244,7 +244,7 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
                 <li>@code = ORG-201 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Budget prévisionnel)</li>
                 <li>@code = GEN-353 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Durée de transport théorique)</li>
                 <li>@code = 275827007 et @codeSystem = 2.16.840.1.113883.6.96 (@displayName = maintien de l'asepsie)</li>
-                <li>@code = 103208-5 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Distance traveled)</li>
+                <li>@code = 103208-5 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Distance parcourue)</li>
             </ul>
             <p>L'attribut displayName est optionnel.</p>
             </td>
@@ -288,7 +288,7 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
             <td>BL</td>
 		</tr>
         <tr id="6">
-			<td>103208-5 (Distance traveled)</td>
+			<td>103208-5 (Distance parcourue)</td>
             <td>PQ</td>
 		</tr>
     </tbody>
@@ -383,7 +383,7 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
                 <li>@code = ORG-200 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Budget réel)</li>
                 <li>@code = ORG-201 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Budget prévisionnel)</li>
                 <li>@code = GEN-353 et @codeSystem = 1.2.250.1.213.1.1.4.322 (@displayName = Durée de transport théorique)</li>
-                <li>@code = 103208-5 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Distance traveled)</li>
+                <li>@code = 103208-5 et @codeSystem = 2.16.840.1.113883.6.1 (@displayName = Distance parcourue)</li>
             </ul>
             <p>L'attribut displayName est optionnel.</p>
             </td>
@@ -419,7 +419,7 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
             <td>IVL_TS</td>
 		</tr>
         <tr id="4">
-			<td>103208-5 (Distance traveled)</td>
+			<td>103208-5 (Distance parcourue)</td>
             <td>PQ</td>
 		</tr>
     </tbody>
