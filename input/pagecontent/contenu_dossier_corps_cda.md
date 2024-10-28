@@ -119,17 +119,17 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 			<td><strong>Statut juridique de l'établissement de rattachement de l'auteur de l'évaluation</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="participantId">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
+            <td>participant[@typeCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant du responsable de l'évaluation</strong><br>Si le responsable de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
 		<tr id="participantEJid">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
+            <td>participant[@typeCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant de l'établissement de rattachement du responsable de l'évaluation</strong><br>Si l'établissement de rattachement du responsable de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="participantStatut">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
+            <td>participant[@typeCode=RESP]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
 			<td><strong>Statut juridique de l'établissement de rattachement du responsable de l'évaluation</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
