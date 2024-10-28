@@ -74,17 +74,17 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
 			<td>L'évènement peut être attaché à deux participants : le lieu d'exécution et l'entité juridique responsable de l'évènement.</td>
         </tr>
         <tr id="participant">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity</td>
+            <td>participant[@typeCode=RESP]/participantRole/scopingEntity</td>
             <td>[0..1]</td>
 			<td><strong>Entité juridique responsable de l'évènement</strong><br>Si aucun séjour est renseigné, l'entité juridique responsable de l'évènement est requis.</td>
         </tr>
         <tr id="participantId">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
+            <td>participant[@typeCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant de l'entité juridique responsable de l'évènement</strong><br>Si l'entité juridique responsable de l'évènement est renseignée, son identifiant est requis.</td>
         </tr>
         <tr id="participantStatut">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
+            <td>participant[@typeCode=RESP]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
 			<td><strong>Statut juridique de l'entité juridique responsable de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
@@ -346,17 +346,17 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
 			<td>L'attribut nullFlavor est interdit.</td>
         </tr>
         <tr id="participantId">
-            <td>participant[@classCode=RCV]/participantRole/id</td>
+            <td>participant[@typeCode=RCV]/participantRole/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant du professionnel</strong><br>L'identifiant du professionnel est requis.</td>
         </tr>
 		<tr id="participantEJId">
-            <td>participant[@classCode=RCV]/participantRole/scopingEntity/id</td>
+            <td>participant[@typeCode=RCV]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant de l'établissement de rattachement du professionnel</strong><br>Si l'établissement de rattachement du professionnel est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="participantCode">
-            <td>participant[@classCode=RCV]/participantRole/scopingEntity/code</td>
+            <td>participant[@typeCode=RCV]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
 			<td><strong>Statut juridique de l'établissement de rattachement du professionnel</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
