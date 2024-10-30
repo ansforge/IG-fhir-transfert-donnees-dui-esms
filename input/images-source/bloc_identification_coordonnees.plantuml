@@ -4,7 +4,6 @@ hide empty methods
 
 class Usager #LightPink {
     matriculeINS : Identifiant [0..1]
-    nirAyantDroit : Identifiant [0..1]
     numeroIndividu : Identifiant [0..1]
     nomNaissance : Texte [0..1]
     nomUsage : Texte [0..1]

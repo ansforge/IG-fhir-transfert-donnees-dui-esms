@@ -30,12 +30,8 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
   <tr>
     <td>matriculeINS : [0..1] Identifiant</td>
     <td>Le matricule INS est le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP).<br>
-    Si le matricule INS de l'usager existe, il doit être véhiculé en priorité. Dans le cas où le matricule INS est renseigné, les traits INS (traits d'identité et traits complémentaires issus du RNIV) doivent être transmis conformément à l'<a href="https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis">annexe prise en charge de l'ins dans les volets du ci-sis</a>.
+    Si le matricule INS de l'usager existe, il doit être véhiculé en priorité. Dans le cas où le matricule INS est renseigné, les traits INS (traits d'identité et traits complémentaires issus du RNIV) doivent être transmis conformément à l'<a href="https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis">annexe prise en charge de l'INS dans les volets du ci-sis</a>.
     </td>
-  </tr>
-   <tr>
-    <td>nirAyantDroit : [0..1] Identifiant</td>
-    <td>NIR de l'ayant droit.</td>
   </tr>
    <tr>
     <td>numeroIndividu : [0..1] Identifiant</td>
@@ -44,8 +40,8 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
   <tr>
     <td>nomNaissance : [0..1] Texte</td>
     <td>Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.<br>
-    Obligatoire s’il s’agit de l’identité qualifiée INS. Il fait partie des traits INS.<br>
-    Préconisé si seul le NIR de l'ayant droit est véhiculé.</td>
+   Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.</td>
   </tr>
   <tr>
     <td>nomUsage : [0..1] Texte</td>
@@ -58,15 +54,15 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
   <tr>
     <td>prenom : [0..*] Texte</td>
     <td>Liste des prénoms de naissance de l'usager.<br>
-    Ces éléments sont obligatoires s’il s’agit de l’identité qualifiée INS. la liste des prénoms de naissance fait partie des traits INS.<br>
-    Ils sont préconisés si seul le NIR de l'ayant droit est véhiculé.
+    La liste des prénoms de naissance fait partie des traits INS. Elle est obligatoire si l’identité INS est qualifiée.<br>
+    Ils sont préconisés si le NIR est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
 <tr>
     <td>premierPrenomActeNaissance : [0..1] Texte</td>
     <td>Premier prénom dans la liste des prénoms de naissance de l'usager<br>
     Cet élément est obligatoire s’il s’agit de l’identité qualifiée INS. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).<br>
-    Il est préconisé si seul le NIR de l'ayant droit est véhiculé.
+    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
   <tr>
@@ -79,8 +75,8 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
     <td>sexe : [0..1] Code</td>
     <td>Sexe de la personne physique.<br>
     Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a><br>
-    Obligatoire s’il s’agit de l’identité qualifiée INS. Il fait partie des traits INS.<br>
-    Préconisé si seul le NIR de l'ayant droit est véhiculé.
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
   <tr>
@@ -91,15 +87,15 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
   <tr>
     <td>dateNaissance : [0..1] Date</td>
     <td>Date de naissance de l’usager.
-    Obligatoire s’il s’agit de l’identité qualifiée INS. Cet élément fait partie des traits INS.<br>
-    Préconisé si seul le NIR de l'ayant droit est véhiculé.</td>
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.</td>
   </tr>
   <tr>
     <td>lieuNaissance : [0..1] Code</td>
     <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
     Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a><br>
-    Obligatoire s’il s’agit de l’identité qualifiée INS. Il fait partie des traits INS.<br>
-    Préconisé si seul le NIR de l'ayant droit est véhiculé.
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
   <tr>
@@ -1474,7 +1470,7 @@ L'identifiant technique du transport est obtenu dans ce contexte par par la conc
 
 ##### Classe Profesionnel
 
-Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.
+Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.
 
 <table style="width:100%">
   <tr>
