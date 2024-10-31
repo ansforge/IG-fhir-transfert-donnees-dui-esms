@@ -56,14 +56,27 @@ map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Auteu
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementAuth #back:Ivory;header:LightYellow {
     idNat_Struct => author/assignedAuthor/representedOrganization/id
     raisonSocial => author/assignedAuthor/representedOrganization/name
-    statutJuridique => author/assignedAuthor/representedOrganization/standardIndustryClassCode
+    statutJuridique => Non applicable
 }
 
 map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
     statut => value
     motifNonRealisation => value/qualifier
     dateModificationStatut => effectiveTime
-    auteur => author
+}
+
+map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as AuteurStatut #back:Ivory;header:LightYellow {
+    idNat_PS => author/assignedAuthor/id
+    civilite => author/assignedAuthor/assignedPerson/name/prefix
+    nom => author/assignedAuthor/assignedPerson/name/family
+    prenom => author/assignedAuthor/assignedPerson/name/given
+    fonction => author/assignedAuthor/code
+}
+
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementAuthStatut #back:Ivory;header:LightYellow {
+    idNat_Struct => author/assignedAuthor/representedOrganization/id
+    raisonSocial => author/assignedAuthor/representedOrganization/name
+    statutJuridique => Non applicable
 }
 
 'Liens entre éléments
@@ -75,6 +88,8 @@ Evaluation "1" -- "0..*" Statut
 etablissementDeRattachementResp "0..1" -- "0..*" Responsable
 etablissementDeRattachementEval "0..1" -- "0.*" Evaluateur
 etablissementDeRattachementAuth "0..1" -- "0..*" Auteur
+Statut "0..*" -- "0..1" AuteurStatut
+AuteurStatut "0..*" -- "0..1" etablissementDeRattachementAuthStatut
 
 
 @enduml

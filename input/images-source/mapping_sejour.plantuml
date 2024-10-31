@@ -9,7 +9,7 @@ map "Sejour : [[contenu_dossier_corps_cda.html Entrée FR-Sejour]]" as Sejour #b
     dateSortiePrevisionnelle => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie avec @moodCode=INT]]  effectiveTime
     dateSortie => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie avec @moodCode=EVN]]  effectiveTime
     libelleModeSortie => [[contenu_dossier_corps_cda.html Entrée FR-Modalite-sortie]]  text
-    numeroDossier => [[contenu_dossier_corps_cda.html Entrée FR-Sejour-Admission]] id
+    idSejour => [[contenu_dossier_corps_cda.html Entrée FR-Sejour-Admission]] id
     commentaire => [[contenu_dossier_corps_cda.html Entrée FR-CommentaireER]]
 }
 

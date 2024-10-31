@@ -16,7 +16,7 @@ map "Evenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as Eve
     repas => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
     typeRessourceUtilisee => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
     detailTypeRessourceUtilisee => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value/qualifier
-    dateDerniereModification => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
+    dateModificationEvenement => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
 }
 map "Transport : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel/FR-Transport-du-patient]]" as Transport#back:ghostWhite;header:LightGray {
     idTrajet => id
@@ -32,7 +32,7 @@ map "Transport : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-profes
     dateFinTransport => effectiveTime/high
 
 }
-map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as Professionnel #back:Ivory;header:LightYellow  {
+map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-professionnel]]" as ProfessionnelTransport #back:Ivory;header:LightYellow  {
     idNat_PS => participant[@typeCode=RCV]/participantRole/id
     civilite => participant[@typeCode=RCV]/participantRole/playingEntity/name/prefix
     nom => participant[@typeCode=RCV]/participantRole/playingEntity/name/family
@@ -84,21 +84,44 @@ map "Statut : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as Statut #b
     statut => value
     motifNonRealisation => value/qualifier
     dateModificationStatut => effectiveTime
-    auteur => author
+}
+
+map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as ProfessionnelEvn #back:Ivory;header:LightYellow{
+    idNat_PS => performer/assignedEntity/id
+}
+
+map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as AuteurStatut #back:Ivory;header:LightYellow {
+    idNat_PS => author/assignedAuthor/id
+    civilite => author/assignedAuthor/assignedPerson/name/prefix
+    nom => author/assignedAuthor/assignedPerson/name/family
+    prenom => author/assignedAuthor/assignedPerson/name/given
+    fonction => author/assignedAuthor/code
+}
+
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementAuthStatut #back:Ivory;header:LightYellow {
+    idNat_Struct => author/assignedAuthor/representedOrganization/id
+    raisonSocial => author/assignedAuthor/representedOrganization/name
+    statutJuridique => Non applicable
 }
 
 
-Evenement "0..*" -- "0..1" Lieu  
-Professionnel "0..*" -- "0..*" Evenement
+
+
+Evenement "1" -- "0..*" Statut
+Evenement "0..*" -right- "0..1" Lieu  
+ProfessionnelEvn "0..*" -- "0..*" Evenement
 structureEnCharge "0..1" -right- "0..*" Evenement
+Evenement "1" -up- "0..*" TransportPro 
+TransportPro "0..*" -right- "1" ProfessionnelTransport
+etablissementDeRattachement "0..1" -- "0..*" ProfessionnelTransport
 Transport <|-- TransportPro
 Transport <|-- TransportUsager
 TransportUsager "0..*" -- "1" Evenement
-TransportPro "0..*" -- "1" Professionnel
 Evenement "0..1" -- "0..1" Evaluation
-Evenement "1" -right- "0..*" Statut
 transporteur "0..1" -- "0..*" Transport
-etablissementDeRattachement "0..1" -- "0..*" Professionnel
+Statut "0..*" -- "0..1" AuteurStatut
+AuteurStatut "0..*" -- "0..1" etablissementDeRattachementAuthStatut
+
 
 
 

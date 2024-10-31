@@ -3,7 +3,6 @@
 
 map "Usager : [[contenu_dossier_entete_cda.html En-tête recordTarget]]" as Usager #back:IMPLEMENTATION;header:LightPink {
     matriculeINS => id
-    nirAyantDroit => id
     numeroIndividu => id
     nomNaissance => name/family[@qualifier=BR]
     nomUsage => name/family[@qualifier=CL]

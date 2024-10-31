@@ -2,25 +2,38 @@
 Ce mapping représente les données fonctionnelles trouvant leur équivalence dans l'actuelle version des spécifications techniques.
 </p>
 
-### Mapping Usager
+## Données administratives
+
+#### Mapping Usager
 
 <div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
 {%include mapping_usager.svg%}</div>
 <br>
 
-### Mapping Séjour
+#### Mapping Assurance maladie
+
+<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
+{%include mapping_assuranceMaladie.svg%}</div>
+<br>
+
+
+#### Mapping Séjour
 
 <div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
 {%include mapping_sejour.svg%}</div>
 <br>
 
-### Mapping Evaluation
+### Partie Accompagnement
+
+#### Mapping Evaluation
 
 <div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
 {%include mapping_evaluation.svg%}</div>
 <br>
 
-### Mapping Evènement de l'agenda
+### Partie Coordination des acteurs
+
+#### Mapping Evènement de l'agenda
 
 <div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
 {%include mapping_evenement.svg%}</div>
