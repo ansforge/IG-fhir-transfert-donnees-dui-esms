@@ -6,26 +6,6 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 
 <br>
 
-**Contrainte spécifique à la section FR-Statut-fonctionnel :**
-
-<table id="sectionEvaluation">
-    <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
-    </thead>
-    <tbody>
-		<tr id="templateId">
-			<td>templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Conformité FR-Statut-fonctionnel (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.2.246</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-
 #### Entrée FR-Groupe-de-questionnaires-d-evaluation
 
 Cette entrée permet de regrouper les évaluations par type.
@@ -73,11 +53,6 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 		</tr>
     </thead>
     <tbody>
-        <tr id="templateId">
-			<td>templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Conformité FR-Evaluation (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.25</td>
-		</tr>
 		<tr id="id">
 			<td>id</td>
             <td>[1..1]</td>
@@ -91,7 +66,7 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 		<tr id="performerId">
             <td>performer/assignedEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Identfiant de l'évaluateur</strong><br>Si l'évaluateur est renseigné, son identifiant est requis.</td>
+			<td><strong>Identifiant de l'évaluateur</strong><br>Si l'évaluateur est renseigné, son identifiant est requis.</td>
         </tr>
 		<tr id="performerEJid">
             <td>performer/assignedEntity/representedOrganization/id</td>
@@ -113,11 +88,6 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
             <td>[1..1]</td>
 			<td><strong>Identifiant de l'établissement de rattachement de l'auteur de l'évaluation</strong><br>Si l'établissement de rattachement de l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
-        <tr id="auteurStatut">
-            <td>author/assignedAuthor/representedOrganization/standardIndustryClassCode</td>
-            <td>[0..1]</td>
-			<td><strong>Statut juridique de l'établissement de rattachement de l'auteur de l'évaluation</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
-        </tr>
         <tr id="participantId">
             <td>participant[@typeCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
@@ -133,16 +103,6 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
             <td>[0..1]</td>
 			<td><strong>Statut juridique de l'établissement de rattachement du responsable de l'évaluation</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
-		<tr id="entry1">
-			<td>entryRelationship/act/templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Commentaire</strong><br>Conformité FR-Commentaire-ER (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.32</td>
-		</tr>
-        <tr id="entry2">
-			<td>entryRelationship/act/templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Pièces jointes</strong><br>Conformité FR-Reference-interne (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.36</td>
-		</tr>
 	</tbody>
 </table>
 
@@ -189,23 +149,6 @@ La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code d
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
 
-<table id="evaluationComposant">
-    <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
-    </thead>
-    <tbody>
-		<tr id="entry1">
-			<td>entryRelationship/act/templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Commentaire</strong><br>Conformité FR-Commentaire-ER (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.32</td>
-		</tr>
-	</tbody>
-</table>
-
 Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation véhiculé dans l'entrée FR-Evaluation :
 
 <table id="valeurEvaluation">
@@ -229,7 +172,7 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 		</tr>
         <tr id="value">
 			<td>Evaluation de la situation SSIAD</td>
-			<td>Valeur issue du JDV_Evaluation_SSIAD_CISIS (1.2.250.1.213.1.1.5.804)<br>L'attribut nullFlavor est interdit.</td>
+			<td>Valeur issue du JDV_EvaluationSSIAD_CISIS (1.2.250.1.213.1.1.5.804)<br>L'attribut nullFlavor est interdit.</td>
 			<td>Type BL Boolean</td>
 		</tr>
         <tr id="value">
@@ -245,6 +188,10 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 
 La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques au volet.
 Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associées à l’évaluation et à l'évènement de l’usager.
+
+<iframe src="./cda/" height="400" name="FR-Documents-ajoutes"></iframe>
+
+<br>
 
 ### Eléments transversaux
 
@@ -264,26 +211,6 @@ L’entrée FR-Simple-Observation est un élément générique permettant de dé
 
 <br>
 
-**Contrainte spécifique à l'entrée FR-Simple-Observation :**
-
-<table id="obs">
-    <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
-    </thead>
-    <tbody>
-		<tr id="templateId">
-			<td>templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Conformité FR-Simple-Observation (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.48</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-
 
 #### Entrée FR-Commentaire-ER
 
@@ -293,25 +220,6 @@ L’entrée FR-Commentaire-ER est un élément qui permet de joindre un commenta
 
 <br>
 
-**Contrainte spécifique à l'entrée FR-Commentaire-ER :**
-
-<table id="commentaire">
-    <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
-    </thead>
-    <tbody>
-		<tr id="templateId">
-			<td>templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Conformité FR-Commentaire-ER (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.32</td>
-		</tr>
-	</tbody>
-</table>
-<br>
 
 #### Entrée FR-Reference-interne
 
@@ -319,24 +227,4 @@ L’entrée FR-Reference-interne permet de relier un élément à un autre élé
 
 <iframe src="./cda/" height="400" name="FR-Commentaire-ER"></iframe>
 
-<br>
-
-**Contrainte spécifique à l'entrée FR-Reference-interne :**
-
-<table id="commentaire">
-    <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
-    </thead>
-    <tbody>
-		<tr id="templateId">
-			<td>templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Conformité FR-Reference-interne (CI-SIS)</strong><br>@root=1.2.250.1.213.1.1.3.36</td>
-		</tr>
-	</tbody>
-</table>
 <br>
