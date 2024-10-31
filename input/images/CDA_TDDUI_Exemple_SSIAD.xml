@@ -211,9 +211,9 @@
 			<location>
 				<healthCareFacility>
 				<!-- Modalité d'exercice de la structure effectuant le transfert (Valeur issue du JDV_J02_XdsHealthcareFacilityTypeCode_CISIS) -->
-					<code code="354"
-					      codeSystem="1.2.250.1.213.1.6.1.8"
-					      displayName="Service de Soins Infirmiers A Domicile (S.S.I.A.D)"/>
+					<code code="SA41"
+					codeSystem="1.2.250.1.71.4.2.4"
+					displayName="Autre établissement du domaine social ou médico-social"/>
 				</healthCareFacility>
 			</location>
 		</encompassingEncounter>
