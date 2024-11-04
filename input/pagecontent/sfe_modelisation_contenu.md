@@ -1223,9 +1223,9 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
     Jeu(x) de valeur(s) associé(s) : un jeu de valeur par type d'évaluation <br>
     - Evaluation AGGIR PH SSIAD : jeu de valeur à définir.<br>
     - Evaluation AGGIR PA SSIAD : jeu de valeur à définir.<br>
-    - Evaluation de la situation SSIAD : JDV_Evaluation_SSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
+    - Evaluation de la situation SSIAD : JDV_EvaluationSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
     publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
-    - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J285-Besoins_SERAFIN/JDV_J285-Besoins_SERAFIN.pdf">JDV_J285-Besoins_SERAFIN</a>
     </td>
   </tr>
   <tr>
@@ -1291,7 +1291,7 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont pr
     - Cas d’usage SSIAD : le type de l'évènement est issu d'un code issu du jeu de valeur associé : JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Autre cas d'usage : le type de l'évènement est issu<br>
     <ul>
-      - du jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : à définir dans NOS. <br>
+      - du jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J284-PrestationsDirects_SERAFIN/JDV_J284-PrestationsDirects_SERAFIN.pdf">JDV_J284-PrestationsDirects_SERAFIN</a>, <a href="https://mos.esante.gouv.fr/NOS/JDV_J283-PrestationsIndirects_SERAFIN/JDV_J283-PrestationsIndirects_SERAFIN.pdf">JDV_J283-PrestationsIndirects_SERAFIN</a><br>
       - et/ou d’un texte non structuré véhiculant les autres types d’évènements.
       </ul>
     </td>
@@ -1461,7 +1461,7 @@ L'identifiant technique du transport est obtenu dans ce contexte par par la conc
     <td>natureTransport : [0..1] Code</td>
     <td>Nature du transport de l'usager.<br>
     Jeu de valeur issue de la terminologie Serafin correspondant aux familles (3.2.4.1, 3.2.4.2, 3.2.4.3).<br>
-    Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN/JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN.pdf">JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN</a>
     </td>
   </tr>
 </table>
@@ -1550,10 +1550,6 @@ Portion déterminée de l'espace où se sont déroulés des événements.
     <td>nom : [0..1] Texte</td>
     <td>Nom, exprimé sous la forme de texte, du lieu.</td>
   </tr>
-   <!-- tr>
-    <td>typeLieu : [0..1] Code</td>
-    <td>Information catégorisant physiquement le lieu, par exemple un bâtiment, un véhicule, une chambre, une route, etc.</td>
-  </tr -->
   <tr>
     <td>adresse : [0..1] Adresse</td>
     <td>Adresse géopostale du lieu.</td>
