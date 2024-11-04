@@ -88,21 +88,11 @@ Cette entrée permet de décrire l'évènement d'un usager passé ou à venir.
             <td>[0..1]</td>
 			<td><strong>Statut juridique de l'entité juridique responsable de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
-        <tr id="entry2">
-			<td>entryRelationship/act/templateId</td>
+        <tr id="performer">
+            <td>performer/assignedEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Commentaire</strong><br>Conformité FR-Commentaire-ER (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.32</td>
-		</tr>
-        <tr id="entry3">
-			<td>entryRelationship/act/templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Pièces jointes</strong><br>Conformité FR-Reference-interne (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.36</td>
-		</tr>
-        <tr id="entry">
-			<td>entryRelationship/observation/templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Caractéristique de l'évènement</strong><br>Conformité FR-Simple-Observation (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.48</td>
-		</tr>
+			<td>Si le professionnel est renseigné, son identifiant est requis</td>
+        </tr>
         <tr id="entryCode">
 			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code </td>
             <td>[1..1]</td>
@@ -188,11 +178,6 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             <td>[1..1]</td>
 			<td>Valeur fixée à EVN</td>
 		</tr>
-		<tr id="templateId">
-			<td>templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Conformité FR-Transport-du-patient (CI-SIS)</strong><br>@root = 1.2.250.1.213.1.1.3.24</td>
-		</tr>
         <tr id="id">
 			<td>id</td>
             <td>[1..1]</td>
@@ -229,11 +214,6 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
             <td>[0..1]</td>
 			<td><strong>Statut juridique du transporteur</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
-        <tr id="entry">
-			<td>entryRelationship/observation/templateId </td>
-            <td>[1..1]</td>
-			<td><strong>Précision sur le trajet ou le transport du patient</strong><br>Conformité FR-Simple-Observation (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.48</td>
-		</tr>
         <tr id="entryCode">
 			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code</td>
             <td>[1..1]</td>
@@ -370,11 +350,6 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
             <td>[0..1]</td>
 			<td><strong>Statut juridique du transporteur</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
-        <tr id="entry">
-			<td>entryRelationship/observation/templateId</td>
-            <td>[1..1]</td>
-			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br>Conformité FR-Simple-Observation (CI-SIS)<br>@root = 1.2.250.1.213.1.1.3.48</td>
-		</tr>
         <tr id="entryCode">
 			<td>entryRelationship/observation[templateId/@root = 1.2.250.1.213.1.1.3.48]/code</td>
             <td>[1..1]</td>
