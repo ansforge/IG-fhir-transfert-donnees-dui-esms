@@ -77,7 +77,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
         <tr id="id">
             <td>patientRole/id</td>
             <td>[1..*]</td>
-            <td>Il est demandé que le matricule INS de l'usager soit transporté en priorité. Dans le cas contraire, l’identifiant local produit par le système ou le NIR de l'ayant-droit peuvent être transportés.</td>
+            <td><strong>Identifiant</strong><br>Il est demandé que le matricule INS de l'usager soit transporté en priorité. Dans le cas contraire, l’identifiant local produit par le système peut être transporté.</td>
         </tr>
         <tr id="nom">
             <td>patientRole/patient/name/family</td>
@@ -85,9 +85,9 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>Au moins un nom doit être transmis. L'attribut nullFlavor est interdit.</td>
         </tr>
         <tr id="nomNaissance">
-            <td><strong>Nom de naissance</strong><br>patientRole/patient/name/family@qualifier="BR"</td>
+            <td>patientRole/patient/name/family@qualifier="BR"</td>
             <td>[0..1]</td>
-            <td>
+            <td><strong>Nom de naissance</strong><br>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
                 <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le nom de naissance de l'usager. Cet élément est optionnel.</li>
@@ -100,9 +100,9 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             <td>Au moins un prénom doit être transmis. L'attribut nullFlavor est interdit.</td>
         </tr>
         <tr id="prenomsListe">
-            <td><strong>Liste des prénoms de l'acte de naissance</strong><br>patientRole/patient/name/given (pas de qualifier)</td>
+            <td>patientRole/patient/name/given (pas de qualifier)</td>
             <td>[0..1]</td>
-            <td>
+            <td><strong>Liste des prénoms de l'acte de naissance</strong><br>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
                 <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner la liste des prénoms de l'acte de naissance de l'usager. Cet élément est optionnel.</li>
@@ -110,9 +110,9 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
             </td>
         </tr>
         <tr id="premierPrenom">
-            <td><strong>Premier prénom</strong><br>patientRole/patient/name/given@qualifier="BR"</td>
+            <td>patientRole/patient/name/given@qualifier="BR"</td>
             <td>[0..1]</td>
-            <td>
+            <td><strong>Premier prénom</strong><br>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
                 <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le premier prénom de l'usager. Cet élément est optionnel.</li>
@@ -122,7 +122,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
         <tr id="sexe">
             <td>patientRole/patient/administrativeGenderCode</td>
             <td>[1..1]</td>
-            <td>
+            <td><strong>Sexe</strong><br>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
                 <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner cet élément. Si le sexe de l'usager n'est pas connu de votre système, l'attribut nullFlavor peut être utilisé.</li>
@@ -132,7 +132,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
         <tr id="dateNaissance">
             <td>patientRole/patient/birthTime</td>
             <td>[1..1]</td>
-            <td>
+            <td><strong>Date de naissance</strong><br>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, cet élément est obligatoire et l'attribut nullFlavor est interdit.</li>
                 <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner cet élément. Si la date et l'heure de naissance de l'usager n'est pas connue de votre système, l'attribut nullFlavor peut être utilisé.</li>
@@ -142,7 +142,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
         <tr id="lieuNaissance">
 			<td>patientRole/patient/birthplace/place/addr/county</td>
 			<td>[0..1]</td>
-			<td>
+			<td><strong>Lieu de naissance</strong><br>
             <ul>
                 <li>Si le matricule INS de l'usager est présent, le lieu de naissance de l'usager est obligatoire et l'attribut nullFlavor est interdit.</li>
                 <li>Si le matricule INS de l'usager n'est pas présent, il est préconisé de renseigner le lieu de naissance de l'usager. Cet élément est optionnel.</li>
@@ -152,7 +152,7 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
 		<tr id="multipleBirthOrderNumber">
 			<td>patientRole/patient/sdtc:multipleBirthOrderNumber</td>
 			<td>[0..1]</td>
-			<td>Si le matricule INS de l'usager n'est pas présent, l'ordre de naissance de l'usager est requis.</td>
+			<td><strong>Ordre de naissance</strong><br>Si le matricule INS de l'usager n'est pas présent, l'ordre de naissance de l'usager est requis.</td>
 		</tr>
 	</tbody>
 </table>
@@ -396,3 +396,37 @@ L’élément componentOf permet de lier le document « Transfert de données DU
 La structure de l'élément ComponentOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="ComponentOf"></iframe>
+<br>
+
+**Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
+
+<table id="componentOf">
+    <thead>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
+	</thead>
+	<tbody>
+        <tr>
+            <td>componentOf/encompassingEncounter/location/healthCareFacility/code</td>
+            <td>[1..1]</td>
+            <td>Le code issu du JDV_J02_XdsHealthcareFacilityTypeCode_CISIS prend l'une des valeurs suivantes :
+            <ul>
+                <li>@code = SA16 et @codeSystem = 1.2.250.1.71.4.2.4 (@displayName =  Etablissement pour personnes handicapées)</li>
+                <li>@code = SA18 et @codeSystem = 1.2.250.1.71.4.2.4 (@displayName =  Etablissement aide à la famille)</li>
+                <li>@code = SA41 et @codeSystem = 1.2.250.1.71.4.2.4 (@displayName =  Autre établissement du domaine social ou médico-social)</li>
+            </ul>
+            <p>L'attribut displayName est optionnel.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>componentOf/encompassingEncounter/location/healthCareFacility/code/translation</td>
+            <td>[1..1]</td>
+            <td>La catégorie de l'établissement est issue du JDV_J254_CategorieEtablissementESSMSPH.<p>(voir <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/Tableau_secteurs_activite_RPPS.pdf">Table de correspondance entre secteur d'activité et catégorie d'établissement</a>)</p></td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
