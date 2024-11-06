@@ -35,11 +35,11 @@ L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le 
     </td>
   </tr>
   <tr>
-    <td>identifiantLocalESSMS : Identifiant [0..1]</td>
+    <td>identifiantLocalUsagerESSMS : Identifiant [0..1]</td>
     <td>Identifiant local de l’usager au sein de la structure.</td>
   </tr>
    <tr>
-    <td>numeroIndividu : [0..1] Identifiant</td>
+    <td>numeroIndividuInitial : [0..1] Identifiant</td>
     <td>Numéro de l’individu attribué par la MDPH ayant créé le dossier Individu (= MDPH initiale).</td>
   </tr>
   <tr>
@@ -1050,7 +1050,7 @@ La classe EntiteJuridique est définie dans le MOS et est profilée pour ce vole
   </tr>
   <tr>
     <td>idSejour : [1..1] Identifiant</td>
-    <td>Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalESSMS), de six caractères "SEJOUR" et numéro de dossier administratif du séjour dans le DUI (numeroDossier) : <br>idSejour = 3+FINESS/identifiantLocalESSMS-SEJOUR-numeroDossier</td>
+    <td>Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de six caractères "SEJOUR" et numéro de dossier administratif du séjour dans le DUI (numeroDossier) : <br>idSejour = 3+FINESS/identifiantLocalUsagerESSMS-SEJOUR-numeroDossier</td>
   </tr>
   <tr>
     <td>commentaire : [0..1] Texte</td>
@@ -1187,7 +1187,7 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
   <tr>
     <td>idEvaluation : Identifiant [1..1]</td>
-    <td>Identifiant technique de l’évaluation obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalESSMS), de quatre caractères "EVAL" et du numéro de l’évaluation dans le DUI (numEvaluation) : <br>idEvaluation = 3+FINESS/identifiantLocalESSMS-EVAL-numEvaluation</td>
+    <td>Identifiant technique de l’évaluation obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de quatre caractères "EVAL" et du numéro de l’évaluation dans le DUI (numEvaluation) : <br>idEvaluation = 3+FINESS/identifiantLocalUsagerESSMS-EVAL-numEvaluation</td>
   </tr>
    <tr>
     <td>typeEvaluation : [1..1] Code</td>
@@ -1292,7 +1292,7 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont pr
   </tr>
   <tr>
     <td>idEvenement : [1..1] Identifiant</td>
-    <td>Identifiant technique de l’évènement obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalESSMS), de trois caractères "EVN" et du numéro de l’évènement dans le DUI (numEvenement) :<br> idEvenement = 3+FINESS/identifiantLocalESSMS-EVN-numEvenement</td>
+    <td>Identifiant technique de l’évènement obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de trois caractères "EVN" et du numéro de l’évènement dans le DUI (numEvenement) :<br> idEvenement = 3+FINESS/identifiantLocalUsagerESSMS-EVN-numEvenement</td>
   </tr>
    <tr>
     <td>typeEvenement : [0..*] Code ou Texte</td>
@@ -1448,7 +1448,7 @@ Classe générique socle décrivant le transport d’une personne physique (prof
 
 Cette classe regroupe les items pouvant caractériser le transport du professionnel lors de l'évènement.
 
-L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalESSMS), de cinq caractères "TPPro" et du numéro de transport du professionnel dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/identifiantLocalESSMS-TPPro-idTransport
+L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de cinq caractères "TPPro" et du numéro de transport du professionnel dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/identifiantLocalUsagerESSMS-TPPro-idTransport
 
 ##### Classe TransportUsager
 
@@ -1456,7 +1456,7 @@ L'identifiant technique du transport est obtenu dans ce contexte par par la conc
 
 Cette classe regroupe les items pouvant caractériser le transport de l'usager lors de l'évènement.
 
-L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (idUsagerInterne), de cinq caractères "TPPat" et du numéro de transport de l'usager dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/idUsagerInterne-TPPat-idTransport
+L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de cinq caractères "TPPat" et du numéro de transport de l'usager dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/identifiantLocalUsagerESSMS-TPPat-idTransport
 
 <table style="width:100%">
   <tr>
