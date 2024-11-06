@@ -104,7 +104,7 @@ L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le 
   <tr>
     <td>CommuneNaissance : [0..1] Code</td>
     <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a><br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J120-CommuneHistorisee/JDV_J120-CommuneHistorisee.pdf">JDV_J120-CommuneHistorisee</a><br>
     Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
     Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
     </td>
@@ -112,12 +112,12 @@ L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le 
    <tr>
     <td>departementNaissance : [0..1] Code</td>
     <td>Département de naissance de la personne. Code officiel géographique (COG) du département.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/TRE_G09-DepartementOM.pdf">TRE_G09-DepartementOM</a></td>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J84-DepartementOM-RASS/JDV_J84-DepartementOM-RASS.pdf">TRE_G09-DepartementOM</a></td>
   </tr>
   <tr>
     <td>paysNaissance : [0..1] Code</td>
     <td>Pays de naissance de la personne. Code officiel géographique (COG) du pays.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/TRE_R20-Pays.pdf">TRE_R20-Pays</a>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J74-Pays-RASS/JDV_J74-Pays-RASS.pdf">TRE_R20-Pays</a>
     Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
     Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.</td>
   </tr>
