@@ -47,10 +47,10 @@ class Evenement #LightGray {
     evenementHorsPrestation : Indicateur [0..1]
     motifEvenement : Texte [0..1]
     usagerPresent : Indicateur [0..1]
-    motifNonRealisation : Code [0..1]
     repas : Indicateur [0..1]
     typeRessourceUtilisee : Code [0..*]
     detailTypeRessourceUtilisee : Code [0..*]
+    dateModificationEvenement : DateHeure [0..1]
 }
 
 Usager "1" -- "0..*" Evenement

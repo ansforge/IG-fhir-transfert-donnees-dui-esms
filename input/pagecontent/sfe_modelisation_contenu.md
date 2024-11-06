@@ -20,7 +20,8 @@
 
 ##### Classe Usager 
 
-Terme générique "usager" permet de désigner un individu ou un bénéficiaire (personne physique) qui bénéficie d'un droit ou d'une prestation. 
+Terme générique "usager" permet de désigner une personne qui bénéficie d'une prestation ou d'un service lié à la prise en charge de son handicap ou de sa perte d'autonomie, que ce soit à domicile ou en établissement.
+L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le cadre d'une politique publique visant à soutenir les personnes âgées en perte d'autonomie ou les personnes en situation de handicap. Le terme inclut aussi bien les bénéficiaires directs de ces prestations que leurs familles, lorsqu'elles sont impliquées dans l'organisation de la prise en charge.
 
 <table style="width:100%">
   <tr>
@@ -32,6 +33,10 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
     <td>Le matricule INS est le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP).<br>
     Si le matricule INS de l'usager existe, il doit être véhiculé en priorité. Dans le cas où le matricule INS est renseigné, les traits INS (traits d'identité et traits complémentaires issus du RNIV) doivent être transmis conformément à l'<a href="https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis">annexe prise en charge de l'INS dans les volets du ci-sis</a>.
     </td>
+  </tr>
+  <tr>
+    <td>idUsagerInterne : [0..1] Identifiant</td>
+    <td>Identifiant local de l’usager au sein de la structure.</td>
   </tr>
    <tr>
     <td>numeroIndividu : [0..1] Identifiant</td>
@@ -55,14 +60,14 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
     <td>prenom : [0..*] Texte</td>
     <td>Liste des prénoms de naissance de l'usager.<br>
     La liste des prénoms de naissance fait partie des traits INS. Elle est obligatoire si l’identité INS est qualifiée.<br>
-    Ils sont préconisés si le NIR est véhiculé et que l'identité n'est pas qualifiée.
+    Ils sont préconisés si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
 <tr>
     <td>premierPrenomActeNaissance : [0..1] Texte</td>
     <td>Premier prénom dans la liste des prénoms de naissance de l'usager<br>
     Cet élément est obligatoire s’il s’agit de l’identité qualifiée INS. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).<br>
-    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
   <tr>
@@ -76,7 +81,7 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
     <td>Sexe de la personne physique.<br>
     Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a><br>
     Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
-    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
     </td>
   </tr>
   <tr>
@@ -88,19 +93,21 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
     <td>dateNaissance : [0..1] Date</td>
     <td>Date de naissance de l’usager.
     Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
-    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.</td>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.</td>
   </tr>
-  <tr>
-    <td>lieuNaissance : [0..1] Code</td>
-    <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a><br>
-    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
-    Il est préconisé si le NIR est véhiculé et que l'identité n'est pas qualifiée.
+   <tr>
+    <td>ordreNaissance : [0..1] Numerique </td>
+    <td>Ordre d’enregistrement de la naissance dans le registre d’état civil de la commune de naissance pour le mois de la naissance. Il compose les <a href="https://www.ameli.fr/llle-et-vilaine/assure/droits-demarches/principes/numero-securite-sociale">3 derniers chiffres du NIR de l'usager avant </a> la clé de sécurité et permet de distinguer les personnes nées au même lieu et à la même période.<br>
+    Il est obligatoire si le NIR n'est pas transmis.
     </td>
   </tr>
   <tr>
-    <td>ordreNaissance : [0..1] Numerique </td>
-    <td>Ordre d’enregistrement de la naissance dans le registre d’état civil de la commune de naissance pour le mois de la naissance. Il compose les <a href="https://www.ameli.fr/llle-et-vilaine/assure/droits-demarches/principes/numero-securite-sociale">3 derniers chiffres du NIR de l'usager avant </a> la clé de sécurité et permet de distinguer les personnes nées au même lieu et à la même période.</td>
+    <td>CommuneNaissance : [0..1] Code</td>
+    <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a><br>
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
+    </td>
   </tr>
    <tr>
     <td>departementNaissance : [0..1] Code</td>
@@ -110,7 +117,9 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
   <tr>
     <td>paysNaissance : [0..1] Code</td>
     <td>Pays de naissance de la personne. Code officiel géographique (COG) du pays.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/TRE_R20-Pays.pdf">TRE_R20-Pays</a></td>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/TRE_R20-Pays.pdf">TRE_R20-Pays</a>
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.</td>
   </tr>
   <tr>
     <td>situationFamiliale : [0..1] Code</td>
@@ -130,11 +139,11 @@ Terme générique "usager" permet de désigner un individu ou un bénéficiaire 
   <tr>
     <td>langueParlee : [0..*] Code</td>
     <td>Langue parlée par l’usager. <br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_G00-Langue/TRE_G00-Langue.pdf">TRE_G00-Langue</a></td>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J115-Langue-ENREG/JDV_J115-Langue-ENREG.pdf">JDV_J115-Langue-ENREG</a></td>
   </tr>
     <tr>
-    <td>dateDeces : [0..1] Date</td>
-    <td>Date de décès de l’usager.</td>
+    <td>dateDeces : [0..1] DateHeure</td>
+    <td>Date et heure de décès de l’usager.</td>
   </tr>
   <tr>
     <td>causeMortalite : [0..*] Code</td>
@@ -1250,7 +1259,7 @@ Dans le cas d'une auto évaluation, l'évaluateur étant l'usager cet élément 
 
 ** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.<br>
+Cette classe regroupe les items pouvant caractériser le professionnel prenant la responsabilité de l'évaluation, par exemple dans le cas où l'évaluation aurait été rédigée par une secrétaire médicale<br>
 
 Dans le cas d'une auto évaluation, le responsable étant l'usager cet élément n'est pas requis.
 
@@ -1258,7 +1267,7 @@ Dans le cas d'une auto évaluation, le responsable étant l'usager cet élément
 
 ** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation mais ne l'ayant pas réalisée.<br>
+Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation mais ne l'ayant pas réalisée et ne pouvant pas en assumer la responsabilité (ex : secrétaire médical).<br>
 
 Dans le cas d'une auto évaluation, l'auteur étant l'usager cet élément n'est pas requis.<br>
 <br>
@@ -1288,8 +1297,13 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont pr
    <tr>
     <td>typeEvenement : [0..*] Code ou Texte</td>
     <td>Type de l’évènement.<br>
-    - Cas d’usage SSIAD : le type de l'évènement est issu d'un code issu du jeu de valeur associé : JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
-    - Autre cas d'usage : le type de l'évènement est issu<br>
+    Cas d’usage SSIAD : le type de l'évènement est issu <br>
+    <ul>
+        - d'un code issu du jeu de valeur associé : JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+        - peut contenir un code issu de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte.  Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J284-PrestationsDirects_SERAFIN/JDV_J284-PrestationsDirects_SERAFIN.pdf">JDV_J284-PrestationsDirects_SERAFIN</a>, <a href="https://mos.esante.gouv.fr/NOS/JDV_J283-PrestationsIndirects_SERAFIN/JDV_J283-PrestationsIndirects_SERAFIN.pdf">JDV_J283-PrestationsIndirects_SERAFIN</a><br>
+        - peut contenir un texte non structuré véhiculant les autres types d’évènements.<br>
+        </ul>
+    Autre cas d'usage : le type de l'évènement est issu<br>
     <ul>
       - du jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J284-PrestationsDirects_SERAFIN/JDV_J284-PrestationsDirects_SERAFIN.pdf">JDV_J284-PrestationsDirects_SERAFIN</a>, <a href="https://mos.esante.gouv.fr/NOS/JDV_J283-PrestationsIndirects_SERAFIN/JDV_J283-PrestationsIndirects_SERAFIN.pdf">JDV_J283-PrestationsIndirects_SERAFIN</a><br>
       - et/ou d’un texte non structuré véhiculant les autres types d’évènements.
