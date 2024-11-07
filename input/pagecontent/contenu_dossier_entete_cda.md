@@ -88,6 +88,7 @@ L’élément RecordTarget imposé par le CDA permet de décrire les données de
 La structure de l'élément RecordTarget se conforme aux contraintes et définitions présentées dans le Volet Structuration minimale des documents de santé :
 {% include ../cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html %}
 
+<div w3-include-html="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html"></div>
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" height="400" id="recordTarget" sandbox="allow-same-origin allow-scripts"></iframe>
 
