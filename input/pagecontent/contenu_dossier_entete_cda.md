@@ -91,6 +91,8 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
 <object data="cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" ></object>
 <div w3-include-html="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" width="100%" height="500px"></div>
 
+[RecordTarget](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html)
+
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" height="400" id="recordTarget" sandbox="allow-same-origin allow-scripts"></iframe>
 
 <br>
