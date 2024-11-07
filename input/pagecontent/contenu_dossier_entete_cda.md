@@ -55,9 +55,11 @@
 
 ### RecordTarget
 
-L’élément RecordTarget, imposé par le standard CDA, permet de décrire les informations essentielles concernant l'usager des services médico-sociaux. Il regroupe les données personnelles de la personne accompagnée, telles que son nom, prénom, sexe, date de naissance et éventuellement des informations supplémentaires comme son lieu de naissance ou son tuteur légal.
+Le RecordTarget reprend l'identité de l'usager concerné par l'accompagnement détaillé dans le document CDA ainsi que, le cas échéant, l'identité de son représentant légal.
 
-La structure de l'élément RecordTarget se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure du RecordTarget se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé**. 
+Dans la mesure du possible, le RecordTarget doit également se conformer à l'annexe CI-SIS de [Prise en charge de l’identité nationale de santé (INS) dans
+les standards d’interopérabilité et les volets du CI-SIS](https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis).
 
 <iframe src="./cda/" height="400" name="RecordTarget" style="border: 1px solid black"></iframe>
 
@@ -77,7 +79,13 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
         <tr id="id">
             <td>patientRole/id</td>
             <td>[1..*]</td>
-            <td><strong>Identifiant</strong><br>Il est demandé que le matricule INS de l'usager soit transporté en priorité. Dans le cas contraire, l’identifiant local produit par le système peut être transporté.</td>
+            <td><strong>Identifiants</strong><br>
+                <ul>
+                    <li>Matricule INS de l'usager (à véhiculer s'il est disponible)</li>
+                    <li>Identifiant local de l'usager au sein de l'ESMS ; l'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS</li>
+                    <li>Identifiant initial attribué par la MDPH</li>
+                </ul> 
+            </td>
         </tr>
         <tr id="nom">
             <td>patientRole/patient/name/family</td>
@@ -159,9 +167,9 @@ La structure de l'élément RecordTarget se conforme aux contraintes et définit
 
 ### Author
 
-L’élément Author, imposé par le standard CDA, représente la participation d’un auteur à l’élaboration du document. Dans ce contexte, l’author ne fait pas référence à une personne physique, mais à un système informatique, spécifiquement un **logiciel DUI** (Dossier Usager Informatisé). Ce logiciel est responsable de la création ou de la gestion du document, et son rôle est de générer les données et de les structurer selon les besoins du suivi médico-social. Cet élément garantit la traçabilité des informations générées par le système tout au long du parcours de l’usager.
+L’Author permet d'enregistrer un auteur du document. Dans le contexte de ce volet, l’Author fait référence à un **logiciel DUI** (Dossier Usager Informatisé). Ce logiciel est responsable de la création du document.
 
-La structure de l'élément Author se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure de l'Author se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="Author" style="border: 1px solid black"></iframe>
 
@@ -183,10 +191,10 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
             <td>[1..1]</td>
             <td><p><strong>Identifiant de l'auteur</strong>
 			<br>Attribut nullFlavor interdit</p>
-			<p>@root = 1.2.250.1.71.4.2.1 (OID autorité d'attribution des systèmes et des professionnels)</p>
+			<p>@root = "1.2.250.1.71.4.2.1" (OID autorité d'attribution des systèmes et des professionnels)</p>
 			<p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
-			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structure</a> au paragraphe PS_IdNat)</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
 			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p></td>
         </tr>
@@ -194,9 +202,9 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
             <td>assignedAuthor/code</td>
             <td>[1..1]</td>
             <td><p><strong>Profession / savoir-faire ou rôle</strong></p>
-			<p>@code = LOGICIEL_DUI
-			<br>@displayName = Logiciel de Dossier Usager Informatisé (optionnel)
-			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
+			<p>@code = "LOGICIEL_DUI"
+			<br>@displayName = "Logiciel de Dossier Usager Informatisé"
+			<br>@codeSystem = "1.2.250.1.213.1.1.4.6"</p></td>
         </tr>
         <tr>
             <td>assignedAuthor/assignedAuthoringDevice</td>
@@ -214,8 +222,8 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
             <td>assignedAuthor/representedOrganization/id</td>
             <td>[0..1]</td>
             <td><p><strong>Identifiant de la structure</strong></p>
-			<p>@root = 1.2.250.1.71.4.2.2 (OID autorité d'attribution des identifiants des structures)</p>
-			<p>@extension = "Struct_idNat" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
+			<p>@root = "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</p>
+			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - Sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
 </table>
@@ -224,9 +232,9 @@ La structure de l'élément Author se conforme aux contraintes et définitions p
 
 ### Custodian
 
-L’élément Custodian, imposé par le standard CDA, représente la structure chargée de la conservation du document. Il s’agit ici dans le cadre de ce volet de l’**ESSMS** (Établissement ou Service Social et Médico-Social) qui est responsable de la garde et de la sécurité du document. En tant qu’entité juridique, l’ESSMS est le dépositaire du dossier de l’usager et garantit la confidentialité, l’intégrité et la sécurité des données. Il peut s'agir d'une maison de retraite, d’un établissement pour personnes handicapées ou d’un autre service médico-social.
+Le Custodian représente la structure chargée de la conservation du document. Il s’agit dans le cadre de ce volet de l’**ESSMS** (Établissement ou Service Social et Médico-Social) qui est responsable de la garde et de la sécurité du document. En tant qu’entité juridique, l’ESSMS est le dépositaire du dossier de l’usager et garantit la confidentialité, l’intégrité et la sécurité des données. Il peut s'agir d'une maison de retraite, d’un établissement pour personnes handicapées ou d’un autre service médico-social.
 
-La structure de l'élément Custodian se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure du Custodian se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="Custodian"></iframe>
 
@@ -247,14 +255,14 @@ La structure de l'élément Custodian se conforme aux contraintes et définition
             <td>assignedCustodian/representedCustodianOrganization/id</td>
             <td>[1..1]</td>
             <td><p><strong>Identifiant de la structure ESSMS</strong></p>
-			<p>@root = 1.2.250.1.71.4.2.2 (OID autorité d'attribution des identifiants des structures)</p>
-			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
+			<p>@root = "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</p>
+			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - Sources des données personnes et structures</a>)</p></td>
         </tr>
         <tr>
             <td>assignedCustodian/representedCustodianOrganization/name</td>
             <td>[0..1]</td>
             <td><p><strong>Nom de la structure ESSMS</strong></p>
-			<p>Valeur fixée à "Struct_Nom" (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
+			<p>Valeur fixée à Struct_Nom (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - Sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
 </table>
@@ -263,9 +271,9 @@ La structure de l'élément Custodian se conforme aux contraintes et définition
 
 ### LegalAuthentificator
 
-L’élément legalAuthentificator, imposé par le standard CDA, représente le responsable du document. Le rôle du legalAuthenticator est rempli par un **système informatique rattaché à une structure ESSMS**, qui valide officiellement le document en lui conférant une valeur légale et authentique. Il peut s'agir du système qui certifie que les informations présentes dans le document ont été vérifiées et approuvées par l’établissement.
+Le LegalAuthentificator représente le responsable du document. Dans le cadre de ce volet, le rôle du legalAuthenticator est rempli par le **logiciel DUI** qui valide officiellement le document en lui conférant une valeur légale et authentique. 
 
-La structure de l'élément LegalAuthentificator se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** : 
+La structure du LegalAuthentificator se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** : 
 
 <iframe src="./cda/" height="400" name="LegalAuthentificator"></iframe>
 
@@ -287,10 +295,10 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
             <td>[1..1] </td>
             <td><p><strong>Identifiant du système responsable de la production du document</strong>
 			<br>Attribut nullFlavor interdit</p>
-			<p>@root = 1.2.250.1.71.4.2.1 (OID autorité d'attribution des systèmes et des professionnels)</p>
+			<p>@root = "1.2.250.1.71.4.2.1" (OID autorité d'attribution des systèmes et des professionnels)</p>
 			<p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
-			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structure</a> au paragraphe PS_IdNat)</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
 			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p></td>
         </tr>
@@ -298,17 +306,17 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
             <td>assignedEntity/code</td>
             <td>[0..1] </td>
             <td><p><strong>Profession ou rôle du responsable</strong></p>
-			<p>@code = LOGICIEL_DUI
-			<br>@displayName = Logiciel de Dossier Usager Informatisé (optionnel)
-			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
+			<p>@code = "LOGICIEL_DUI"
+			<br>@displayName = "Logiciel de Dossier Usager Informatisé"
+			<br>@codeSystem = "1.2.250.1.213.1.1.4.6"</p></td>
         </tr>
          <tr>
             <td>assignedEntity/representedOrganization/id</td>
             <td>[0..*] </td>
             <td><p><strong>Structure responsable du document</strong>
 			<br>Attribut nullFlavor interdit</p>
-			<p>@root = 1.2.250.1.71.4.2.2 (OID autorité d'attribution des identifiants des structures)</p>
-			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - sources des données personnes et structures</a>)</p></td>
+			<p>@root = "1.2.250.1.71.4.2.2" (OID autorité d'attribution des identifiants des structures)</p>
+			<p>@extension = Struct_idNat (voir <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Annexe - Sources des données personnes et structures</a>)</p></td>
         </tr>
     </tbody>
 </table>
@@ -317,9 +325,9 @@ La structure de l'élément LegalAuthentificator se conforme aux contraintes et 
 
 ### DocumentationOf
 
-L’élément DocumentationOf imposé par, le standard CDA, documente le transfert de données.
+Le DocumentationOf documente le transfert de données depuis un logiciel DUI.
 
-La structure de l'élément DocumentationOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure du DocumentationOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="DocumentationOf"></iframe>
 
@@ -350,10 +358,10 @@ La structure de l'élément DocumentationOf se conforme aux contraintes et défi
             <td>serviceEvent/performer/assignedEntity/id</td>
             <td>[1..1] </td>
             <td><strong>Identifiant du système responsable du transfert de données</strong>
-            <p>@root = 1.2.250.1.71.4.2.1 (OID autorité d'attribution des systèmes et des professionnels)</p>
+            <p>@root = "1.2.250.1.71.4.2.1" (OID autorité d'attribution des systèmes et des professionnels)</p>
             <p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
-			<br><span style="padding:0 0 0 20px">- Identifiant de la structure</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structure</a> au paragraphe PS_IdNat)</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
 			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p>
             </td>
@@ -362,28 +370,28 @@ La structure de l'élément DocumentationOf se conforme aux contraintes et défi
             <td>serviceEvent/performer/assignedEntity/code</td>
             <td>[0..1]</td>
             <td><p><strong>Système utilisé</strong></p>
-			<p>@code = LOGICIEL_DUI
-			<br>@displayName = Logiciel de Dossier Usager Informatisé (optionnel)
-			<br>@codeSystem = 1.2.250.1.213.1.1.4.6</p></td>
+			<p>@code = "LOGICIEL_DUI"
+			<br>@displayName = "Logiciel de Dossier Usager Informatisé"
+			<br>@codeSystem = "1.2.250.1.213.1.1.4.6"</p></td>
         </tr>
         <tr>
             <td>serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
             <td>[1..1]</td>
             <td><p><strong>Structure</strong></p>
-			<p>@code = ESSMS
-			<br>@displayName = Etablissement ou Service Social ou Médico-Social (optionnel)
-			<br>@codeSystem = 1.2.250.1.213.1.1.4.9</p></td>
+			<p>@code = "ESSMS"
+			<br>@displayName = "Etablissement ou Service Social ou Médico-Social"
+			<br>@codeSystem = "1.2.250.1.213.1.1.4.9"</p></td>
         </tr>
     </tbody>
 </table>
 
 <br>
 
-### relatedDocument
+### RelatedDocument
 
-L'élément relatedDocument est facultatif dans le cas où le document actuel est initial, c’est-à-dire qu'il n'y a pas de document préexistant à remplacer. Cependant, lorsque le document est une nouvelle version d’un document déjà existant, cet élément devient obligatoire. Il permet alors de référencer précisément le document précédent qui est mis à jour ou remplacé. Cela garantit une continuité dans la gestion des informations, en identifiant clairement la relation entre les versions successives d’un même document. Le système doit inclure un identifiant unique du document précédent afin d'assurer la traçabilité et l'intégrité des données dans le parcours médico-social de l'usager.
+L'élément RelatedDocument est facultatif dans le cas où le document actuel est initial, c’est-à-dire qu'il n'y a pas de document préexistant à remplacer. Cependant, lorsque le document est une nouvelle version d’un document déjà existant, cet élément devient obligatoire. Il permet alors de référencer précisément le document précédent qui est mis à jour ou remplacé. Cela garantit une continuité dans la gestion des informations, en identifiant clairement la relation entre les versions successives d’un même document. Le système doit inclure un identifiant unique du document précédent afin d'assurer la traçabilité et l'intégrité des données dans le parcours médico-social de l'usager.
 
-La structure de l'élément relatedDocument se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure du RelatedDocument se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="relatedDocument"></iframe>
 
@@ -391,9 +399,9 @@ La structure de l'élément relatedDocument se conforme aux contraintes et défi
 
 ### ComponentOf
 
-L’élément componentOf permet de lier le document « Transfert de données DUI » à une prise en charge spécifique de l’usager. Cet élément situe le document dans le cadre global de l’accompagnement médico-social de la personne, en précisant à quelle prise en charge ou projet personnalisé il se rapporte.
+Le ComponentOf permet de lier le document à un transfert de données DUI.
 
-La structure de l'élément ComponentOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
+La structure du ComponentOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/" height="400" name="ComponentOf"></iframe>
 <br>
@@ -414,17 +422,17 @@ La structure de l'élément ComponentOf se conforme aux contraintes et définiti
             <td>[1..1]</td>
             <td>Le code issu du JDV_J02_XdsHealthcareFacilityTypeCode_CISIS prend l'une des valeurs suivantes :
             <ul>
-                <li>@code = SA16 et @codeSystem = 1.2.250.1.71.4.2.4 (@displayName =  Etablissement pour personnes handicapées)</li>
-                <li>@code = SA18 et @codeSystem = 1.2.250.1.71.4.2.4 (@displayName =  Etablissement aide à la famille)</li>
-                <li>@code = SA41 et @codeSystem = 1.2.250.1.71.4.2.4 (@displayName =  Autre établissement du domaine social ou médico-social)</li>
+                <li>@code = "SA16" et @codeSystem = "1.2.250.1.71.4.2.4" @displayName =  "Etablissement pour personnes handicapées"</li>
+                <li>@code = "SA18" et @codeSystem = "1.2.250.1.71.4.2.4" @displayName =  "Etablissement aide à la famille"</li>
+                <li>@code = "SA41" et @codeSystem = "1.2.250.1.71.4.2.4" @displayName =  "Autre établissement du domaine social ou médico-social"</li>
             </ul>
-            <p>L'attribut displayName est optionnel.</p>
+            <p>(voir <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/Tableau_secteurs_activite_RPPS.pdf">Table de correspondance entre secteur d'activité et catégorie d'établissement</a>)</p>
             </td>
         </tr>
         <tr>
             <td>componentOf/encompassingEncounter/location/healthCareFacility/code/translation</td>
             <td>[1..1]</td>
-            <td>La catégorie de l'établissement est issue du JDV_J254_CategorieEtablissementESSMSPH.<p>(voir <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/Tableau_secteurs_activite_RPPS.pdf">Table de correspondance entre secteur d'activité et catégorie d'établissement</a>)</p></td>
+            <td>La catégorie de l'établissement est issue du JDV_J254_CategorieEtablissementESSMSPH.</td>
         </tr>
     </tbody>
 </table>
