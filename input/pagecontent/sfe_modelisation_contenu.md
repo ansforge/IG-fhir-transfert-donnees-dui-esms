@@ -36,7 +36,8 @@ L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le 
   </tr>
   <tr>
     <td>identifiantLocalUsagerESSMS : Identifiant [0..1]</td>
-    <td>Identifiant local de l’usager au sein de la structure.</td>
+    <td>Identifiant local de l’usager au sein de la structure.<br>
+    Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS) : 3+FINESS/identifiantLocalUsagerESSMS</td>
   </tr>
    <tr>
     <td>numeroIndividuInitial : [0..1] Identifiant</td>
