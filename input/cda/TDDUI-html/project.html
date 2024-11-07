@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Project Information: TDDUI- DECOR Summary (Data Elements, Codes, OIDs and Rules)</title>
+      <link href="https://art-decor.org/ADAR/rv/assets/decor.css" rel="stylesheet" type="text/css" />
+      <link href="https://art-decor.org/ADAR/rv/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" /><script src="https://art-decor.org/ADAR/rv/assets/motoggle.js" type="text/javascript"></script><script src="https://art-decor.org/ADAR/rv/assets/mootools-core.js" type="text/javascript"></script><script src="https://art-decor.org/ADAR/rv/assets/mootools-more.js" type="text/javascript"></script><script src="https://art-decor.org/ADAR/rv/assets/mootools-TabSwapper.js" type="text/javascript"></script></head>
+   <body>
+      <table class="title">
+         <tr>
+            <td style="text-align: left;">
+               <h1>DECOR Information for Project: TDDUI_2024.06 (TDDUI-)</h1>
+            </td>
+         </tr>
+      </table>
+      <ul id="TabbedPanel">
+         <li class="TabbedPanelsTabNotSelected"><a href="index.html">Front Page</a></li>
+         <li class="TabbedPanelsTabSelected">Project Information</li>
+         <li class="TabbedPanelsTabNotSelected"><a href="dataset.html">Data Set</a></li>
+         <li class="TabbedPanelsTabNotSelected"><a href="scenarios.html">Scenarios</a></li>
+         <li class="TabbedPanelsTabNotSelected"><a href="identifiers.html">Identifiers</a></li>
+         <li class="TabbedPanelsTabNotSelected"><a href="terminology.html">Terminology</a></li>
+         <li class="TabbedPanelsTabNotSelected"><a href="rules.html">Templates</a></li>
+         <li class="TabbedPanelsTabNotSelected"><a href="compiletime.html">Compile Time</a></li>
+         <li class="TabbedPanelsTabNotSelected"><a href="legal.html">Legal</a></li>
+      </ul>
+      <div class="TabbedPanelsContent">
+         <h2><a name="labelProject"></a>Project Information
+         </h2>
+         <p><strong>Contexte métier du projet</strong></p>
+         <p>Le Programme ESMS numérique, porté par la Caisse Nationale de Solidarité pour l'Autonomie
+            (CNSA), vise à généraliser l’utilisation du numérique dans les Établissements et Services
+            Sociaux et Médico-Sociaux (ESSMS). Il repose principalement sur le déploiement d’un
+            Dossier Usager Informatisé (DUI) pour chaque personne accompagnée. Ce DUI centralise
+            l’ensemble des informations qui concerne la personne accompagnée en structure et service
+            sociale et médico-sociale, et son parcours de santé et de vie. Ce dossier unique comprend
+            :
+         </p>
+         <ul>
+            <li>
+               <p>Des données administratives ;</p>
+            </li>
+            <li>
+               <p>Des données liées à l’accompagnement de l’usager ;</p>
+            </li>
+            <li>
+               <p>Des données liées à la coordination des différents acteurs ;</p>
+            </li>
+            <li>
+               <p>Des données médicales.</p>
+            </li>
+         </ul>
+         <p>Les logiciels DUI doivent permettre, entre autres, de mieux construire et de suivre
+            le projet personnalisé de la personne accompagnée, d’éviter les ruptures de parcours
+            en cas d’évolution des besoins, de changement d’établissement médico-social, de retour
+            à domicile ou d’hospitalisation. Dans la continuité des travaux menés dans le cadre
+            du programme ESMS numérique, la CNSA et l’ANS créent un nouveau volet « Transfert
+            de données DUI ». L’objectif de ce volet est de définir la nature et le format des
+            données à transmettre lors d’un export depuis un logiciel DUI, afin d'assurer le transfert
+            de données des usagers.
+         </p>
+         <p><strong>Contexte technique du projet</strong></p>
+         <p>Les données du DUI seront transportées dans un document CDA. Le transport de ce document
+            CDA s'effectuera par échange d'une ressource FHIR DocumentReference entre 2 acteurs.
+            Il n'existe pas à l'heure actuelle d'architecture qui permettrait de stocker ces données
+            médico-sociales, et donc de s'orienter vers une gestion telle que celle décrite dans
+            le volet PDSm.
+         </p>
+         <p><strong>Lectorat cible</strong> 
+         </p>
+         <p>Ce document s’adresse aux chefs de projets qui spécifient des projets avec des interfaces
+            interopérables et aux développeurs des interfaces interopérables des systèmes implémentant
+            le volet « Transfert de données DUI ». Il s’adresse également à toute autre personne
+            intervenant dans le processus de mise en place de ces interfaces et à tout porteur
+            de SI cherchant à transporter de manière interopérable des données usagers vers un
+            autre SI ainsi que les éditeurs de logiciels DUI.
+         </p>
+         <p>L’hypothèse est faite que le lecteur est familier des standards CDA R2.</p>
+         <p><strong>Utilisation</strong></p>
+         <p>Les spécifications d’interopérabilité présentées dans ce volet ne présagent pas des
+            conditions de leur mise en œuvre dans le cadre d’un système d’information partagé.
+            Il appartient à tout responsable de traitement de s’assurer que les services utilisant
+            ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre
+            de service (ex.: cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité
+            …).
+         </p>
+         <p></p>
+         <h3>Additional project information</h3>
+         <table style="border: 0;">
+            <tr>
+               <td class="tabtab">
+                  <table width="100%" border="0" cellspacing="3" cellpadding="2">
+                     <tr class="headinglabel">
+                        <th style="text-align: left;" colspan="2">Properties</th>
+                     </tr>
+                     <tr>
+                        <td colspan="2"><span style="margin-right: 20px">Prefix: TDDUI-</span><span style="margin-right: 20px">Default language: fr-FR</span></td>
+                     </tr>
+                     <tr class="headinglabel">
+                        <th style="text-align: left; width: 50%;">Publication location</th>
+                        <th style="text-align: left; width: 50%;">Project overview</th>
+                     </tr>
+                     <tr>
+                        <td><a href="https://interop.esante.gouv.fr/publication/">https://interop.esante.gouv.fr/publication/</a></td>
+                        <td><a href="https://o3sis.esante.gouv.fr/decor/services/ProjectIndex?prefix=TDDUI-&amp;language=fr-FR&amp;version=2024-10-31T16%3A22%3A09">Project index</a></td>
+                     </tr>
+                     <tr class="headinglabel">
+                        <th style="text-align: left;" colspan="2">Disclaimer</th>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left;" colspan="2">The content of this publication has been carefully prepared and reviewed. However,
+                           ANS does not guarantee the accuracy, completeness or quality of the information
+                           provided, or that it is up-to-date. Liability claims against ANS in respect of material
+                           or immaterial damage caused by the use or non-use of the information offered or by
+                           inaccurate or
+                           incomplete information are in principle ruled out provided that there is no provable
+                           culpable intent or gross negligence on the institute’s part.
+                        </td>
+                     </tr>
+                     <tr class="headinglabel">
+                        <th style="text-align: left;" colspan="2">List of Authors</th>
+                     </tr>
+                     <tr>
+                        <td style="text-align: left;" colspan="2">
+                           <ul>
+                              <li>Cyprien MERCIER</li>
+                              <li>Jeanne GUIHOT</li>
+                              <li>Morane LHOIR</li>
+                              <li>Alain PERIE</li>
+                              <li>Nidal MAHRAZ</li>
+                              <li>Administrator</li>
+                              <li>Eliott Paillard</li>
+                              <li>Souad BEN MUSTAPHA</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+         <h3>Version Info</h3>
+         <table width="100%" border="0">
+            <tr>
+               <td class="tabtab">
+                  <table width="100%" border="0" cellspacing="3" cellpadding="2">
+                     <tr class="headinglabel">
+                        <th style="text-align: left;">Date</th>
+                        <th style="text-align: left;">By</th>
+                        <th style="text-align: left;">Description</th>
+                     </tr>
+                     <tr id="_current">
+                        <th style="vertical-align: top;" id="_20241031162209"><a href="#_20241031162209" title="Direct link to this item. You may copy this link for reference">2024‑10‑31 16:22:09</a></th>
+                        <th style="vertical-align: top;">Administrator</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20241031_TDDUI_V1.1.0-ballot</b><br /><p>Création du projet TDDUI</p>
+                           <p>Base : guide d'implémentation Transfert de données DUI V1.1.0-ballot</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20241031160713"><a href="#_20241031160713" title="Direct link to this item. You may copy this link for reference">2024‑10‑31 16:07:13</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20241031_TDDUI_V1.1.0-ballot</b><br /><p>Création du projet TDDUI</p> 
+                           <p>Base : guide d'implémentation Transfert de données DUI V1.1.0-ballot</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20241002113132"><a href="#_20241002113132" title="Direct link to this item. You may copy this link for reference">2024‑10‑02 11:31:32</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20241002-1</b><br /><p>Test</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20240930175018"><a href="#_20240930175018" title="Direct link to this item. You may copy this link for reference">2024‑09‑30 17:50:18</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20240930-5</b><br /><p>Test</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20240930173511"><a href="#_20240930173511" title="Direct link to this item. You may copy this link for reference">2024‑09‑30 17:35:11</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20240930-4</b><br /><p>Test</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20240930171847"><a href="#_20240930171847" title="Direct link to this item. You may copy this link for reference">2024‑09‑30 17:18:47</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20240930-3</b><br /><p>Test</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20240930170302"><a href="#_20240930170302" title="Direct link to this item. You may copy this link for reference">2024‑09‑30 17:03:02</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20240930-2</b><br /><p>Test</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th style="vertical-align: top;" id="_20240930165436"><a href="#_20240930165436" title="Direct link to this item. You may copy this link for reference">2024‑09‑30 16:54:36</a></th>
+                        <th style="vertical-align: top;">Jeanne GUIHOT</th>
+                        <td style="vertical-align: top;"><b>Official Release: 20240930</b><br /><p>Test</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="vertical-align: top;">2024‑06‑26 17:25:30</td>
+                        <td style="vertical-align: top;">cmr</td>
+                        <td style="vertical-align: top;">Projet créé</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <p>Data sets, codes, OIDs and Rules: this information is used for rendering and validation
+         purposes.
+      </p><script type="text/javascript">
+                function RefreshAccordion (theAccId) {
+                    new Fx.Accordion($(theAccId), '#' + theAccId + ' .AccordionPanelTab', '#' + theAccId + ' .AccordionPanelContent', {
+                        display: -1,
+                        alwaysHide: true
+                    });
+                };
+                window.addEvent('domready', function(){
+                    // init accordions
+                    /* Accordionds Accordionsi Accordionsc Accordionvs Accordionid Accordionrl Accordionis Accordionce */
+                    
+                    RefreshAccordion('Accordionds');
+                    RefreshAccordion('Accordionsi');
+                    RefreshAccordion('Accordionsc');
+                    RefreshAccordion('Accordionvs');
+                    RefreshAccordion('Accordionid');
+                    RefreshAccordion('Accordionrl');
+                    RefreshAccordion('Accordionis');
+                    RefreshAccordion('Accordionce');
+                    //2DO: schematron zip met xhr HEAD
+                });
+                </script><script type="text/javascript">
+                /* init all tooltips */
+                //store titles and text
+                $$('a.tipz').each(function(element,index) {
+                    var content = element.get('title').split('::');
+                    element.store('tip:title', content[0]);
+                    element.store('tip:text', content[1]);
+                });
+                
+                //create the tooltips
+                var tipz = new Tips('.tipz',{
+                    className: 'tip',
+                    fixed: true,
+                    hideDelay: 50,
+                    showDelay: 50
+                });
+                </script></body>
+</html>

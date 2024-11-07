@@ -61,7 +61,7 @@ La structure du RecordTarget se conforme aux contraintes et définitions présen
 Dans la mesure du possible, le RecordTarget doit également se conformer à l'annexe CI-SIS de [Prise en charge de l’identité nationale de santé (INS) dans
 les standards d’interopérabilité et les volets du CI-SIS](https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis).
 
-<iframe src="./cda/" height="400" name="RecordTarget" style="border: 1px solid black"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" height="400" id="RecordTarget" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 
 <br>
 
