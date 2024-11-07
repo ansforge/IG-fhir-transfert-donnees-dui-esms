@@ -194,7 +194,7 @@ La structure de l'Author se conforme aux contraintes et définitions présentée
 			<p>@root = "1.2.250.1.71.4.2.1" (OID autorité d'attribution des systèmes et des professionnels)</p>
 			<p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
-			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structure</a> au paragraphe PS_IdNat)</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structures</a> au paragraphe PS_IdNat)</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
 			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p></td>
         </tr>
@@ -298,7 +298,7 @@ La structure du LegalAuthentificator se conforme aux contraintes et définitions
 			<p>@root = "1.2.250.1.71.4.2.1" (OID autorité d'attribution des systèmes et des professionnels)</p>
 			<p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
-			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structure</a> au paragraphe PS_IdNat)</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structures</a> au paragraphe PS_IdNat)</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
 			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p></td>
         </tr>
@@ -331,6 +331,8 @@ La structure du DocumentationOf se conforme aux contraintes et définitions pré
 
 <iframe src="./cda/" height="400" name="DocumentationOf"></iframe>
 
+<br>
+
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
 <table id="cda">
@@ -361,7 +363,7 @@ La structure du DocumentationOf se conforme aux contraintes et définitions pré
             <p>@root = "1.2.250.1.71.4.2.1" (OID autorité d'attribution des systèmes et des professionnels)</p>
             <p>@extension = Valeur de l'identifiant :
 			<br>Concaténation de :
-			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structure</a> au paragraphe PS_IdNat)</span>
+			<br><span style="padding:0 0 0 20px">- Identifiant de la structure (avec le préfixe indiqué dans l'annexe <a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures">Sources des données personnes et structures</a> au paragraphe PS_IdNat)</span>
 			<br><span style="padding:0 0 0 20px">- Caractère "/"</span>
 			<br><span style="padding:0 0 0 20px">- Identifiant interne du système dans la structure</span></p>
             </td>
