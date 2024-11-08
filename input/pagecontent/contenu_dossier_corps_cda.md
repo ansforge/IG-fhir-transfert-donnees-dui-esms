@@ -12,9 +12,7 @@ Lien vers le template : [FR-Statut-fonctionnel](./cda/TDDUI-html/tmp-1.2.250.1.2
 L'entrée FR-Groupe-de-questionnaires-d-evaluation permet de regrouper les évaluations par type.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" height="400" id="FR-Groupe-de-questionnaires-d-evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Groupe-de-questionnaires-d-evaluation](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html)
-
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" target="_blank">FR-Groupe-de-questionnaires-d-evaluation</a>
 
 **Contrainte spécifique à l'entrée FR-Groupe-de-questionnaires-d-evaluation :**
 
@@ -43,9 +41,7 @@ Une entrée FR-Groupe-de-questionnaires-d-evaluation doit être créer par type 
 L'entrée FR-Evaluation permet de véhiculer le résultat d'une évaluation de l'usager. Le détail de l'évaluation peut être transmis à travers des sous-entrées FR-Evaluation-Composant.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" height="400" id="FR-Evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Evaluation](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html)
-
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" target="_blank">FR-Evaluation</a>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation :**
 
@@ -146,9 +142,7 @@ Dans l'entrée FR-Evaluation, le résultat de l'évaluation (value) dépend du t
 L'entrée FR-Evaluation-Composant permet de porter le résultat d'un critère d'évaluation.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" height="400" id="FR-Evaluation-Composant" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Evaluation-Composant](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html)
-
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" target="_blank">FR-Evaluation-Composant</a>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
 
@@ -192,7 +186,7 @@ Le champ évalué (code) et le type de résultat de ce champs évalué (value) d
 La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques à ce volet.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.37-DYNAMIC.html" height="400" id="FR-Documents-ajoutes" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Documents-ajoutes](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.37-DYNAMIC.html)
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.37-DYNAMIC.html" target="_blank">FR-Documents-ajoutes</a>
 
 <br>
 
@@ -203,9 +197,7 @@ Lien vers le template : [FR-Documents-ajoutes](./cda/TDDUI-html/tmp-1.2.250.1.21
 L’entrée FR-Statut permet de décrire et de suivre le statut métier d'un objet.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.217-DYNAMIC.html" height="400" id="FR-Statut" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Statut](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.217-DYNAMIC.html)
-
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.217-DYNAMIC.html" target="_blank">FR-Statut</a>
 
 **Contraintes spécifiques à l'entrée FR-Statut :**
 
@@ -230,32 +222,31 @@ Lien vers le template : [FR-Statut](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.217
 		</tr>
 	</tbody>
 </table>
+<br>
 
 #### Entrée FR-Simple-Observation
 
 L’entrée FR-Simple-Observation est un élément générique permettant de décrire les caractéristiques d'un objet.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48-DYNAMIC.html" height="400" id="FR-Simple-Observation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Simple-Observation](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48-DYNAMIC.html)
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48-DYNAMIC.html" target="_blank">FR-Simple-Observation</a>
 
 <br>
-
 
 #### Entrée FR-Commentaire-ER
 
 L’entrée FR-Commentaire-ER est un élément qui permet de joindre un commentaire à une entrée ou à une section.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.32-DYNAMIC.html" height="400" id="FR-Commentaire-ER" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Commentaire-ER](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.32-DYNAMIC.html)
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.32-DYNAMIC.html" target="_blank">FR-Commentaire-ER</a>
 
 <br>
-
 
 #### Entrée FR-Reference-interne
 
 L’entrée FR-Reference-interne permet de relier un élément à un autre élément du même document par l’intermédiaire son identifiant.
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html" height="400" id="FR-Reference-interne" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Reference-interne](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html)
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html" target="_blank">FR-Reference-interne</a>
 
 <br>
