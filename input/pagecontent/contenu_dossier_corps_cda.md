@@ -8,7 +8,7 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 
 #### Entrée FR-Groupe-de-questionnaires-d-evaluation
 
-Cette entrée permet de regrouper les évaluations par type.
+L'entrée FR-Groupe-de-questionnaires-d-evaluation permet de regrouper les évaluations par type.
 
 <iframe src="./cda/" height="400" name="FR-Groupe-de-questionnaires-d-evaluation"></iframe>
 
@@ -16,7 +16,7 @@ Cette entrée permet de regrouper les évaluations par type.
 
 **Contrainte spécifique à l'entrée FR-Groupe-de-questionnaires-d-evaluation :**
 
-Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-questionnaires-d-evaluation doit être créer par type d'évaluation véhiculé.
+Une entrée FR-Groupe-de-questionnaires-d-evaluation doit être créer par type d'évaluation véhiculé.
 
 <table id="organizer">
     <thead>
@@ -30,13 +30,15 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 		<tr id="code">
 			<td>code</td>
             <td>[1..1]</td>
-			<td>Valeur issue du JDV_TypeEvaluation_CISIS (1.2.250.1.213.1.1.5.802)</td>
+			<td>Valeur issue du JDV_TypeEvaluation_CISIS</td>
 		</tr>
 	</tbody>
 </table>
 <br>
 
 ##### Entrée FR-Evaluation
+
+L'entrée FR-Evaluation permet de véhiculer le résultat d'une évaluation de l'usager. Le détail de l'évaluation peut être transmis à travers des sous-entrées FR-Evaluation-Composant.
 
 <iframe src="./cda/" height="400" name="FR-Evaluation"></iframe>
 
@@ -56,12 +58,12 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 		<tr id="id">
 			<td>id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant unique de l'évaluation</strong><br>L'identifiant se forme en concaténant : 3+FINESS/idUsagerInterne-EVAL-idEvaluation</td>
+			<td><strong>Identifiant unique de l'évaluation</strong><br>L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-EVAL-numEvaluation</td>
 		</tr>
 		<tr id="code">
 			<td>code</td>
 			<td>[1..1]</td>
-			<td><strong>Type d'évaluation</strong><br>Valeur issue du JDV_TypeEvaluation_CISIS (1.2.250.1.213.1.1.5.802)</td>
+			<td><strong>Type d'évaluation</strong><br>Valeur issue du JDV_TypeEvaluation_CISIS</td>
 		</tr>
 		<tr id="performerId">
             <td>performer/assignedEntity/id</td>
@@ -72,11 +74,6 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
             <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant de l'établissement de rattachement de l'évaluateur</strong><br>Si l'établissement de rattachement de l'évaluateur est renseigné, son identifiant est requis.</td>
-        </tr>
-        <tr id="performer">
-            <td>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
-            <td>[0..1]</td>
-			<td><strong>Statut juridique de l'établissement de rattachement de l'évaluateur</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
 		<tr id="auteurId">
             <td>author/assignedAuthor/id</td>
@@ -106,26 +103,26 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 	</tbody>
 </table>
 
-La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code de l'entrée FR-Groupe-de-questionnaires-d-evaluation :
+Dans l'entrée FR-Evaluation, le résultat de l'évaluation (value) dépend du type de l'évaluation (code). Le type de l'évaluation doit quant à lui être identique au type du groupe d'évaluation (code) de l'entrée FR-Groupe-de-questionnaires-d-evaluation :
 
 <table id="valeurEvaluation">
     <thead>
 		<tr>
-			<th>Code de l'entrée <br>FR-Groupe-de-questionnaires-d-evaluation</th>
+			<th>Code du groupe d'évaluation <br>(FR-Groupe-de-questionnaires-d-evaluation élément code)</th>
 			<th>Type d'évaluation <br>(FR-Evaluation élément code)</th>
-			<th>Valeur de l'évaluation <br>(FR-Evaluation élément value)</th>
+			<th>Résultat de l'évaluation <br>(FR-Evaluation élément value)</th>
 		</tr>
     </thead>
     <tbody>
 		<tr id="code">
 		    <td>Evaluation AGGIR PH SSIAD</td>
 			<td>Evaluation AGGIR PH SSIAD</td>
-			<td>Valeur issue du JDV_GIR_CISIS (1.2.250.1.213.1.1.4.322)<br>L'attribut nullFlavor est interdit.</td>
+			<td>Valeur issue du JDV_GIR_CISIS<br>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="value">
 		    <td>Evaluation AGGIR PA SSIAD</td>
 			<td>Evaluation AGGIR PA SSIAD</td>
-			<td>Valeur issue du JDV_GIR_CISIS (1.2.250.1.213.1.1.4.322)<br>L'attribut nullFlavor est interdit.</td>
+			<td>Valeur issue du JDV_GIR_CISIS<br>L'attribut nullFlavor est interdit.</td>
 		</tr>
         <tr id="value">
 			<td>Evaluation de la situation SSIAD</td>
@@ -143,42 +140,44 @@ La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code d
 
 ##### Entrée FR-Evaluation-Composant
 
+L'entrée FR-Evaluation-Composant permet de porter le résultat d'un critère d'évaluation.
+
 <iframe src="./cda/" height="400" name="FR-Evaluation-Composant"></iframe>
 
 <br>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
 
-Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation véhiculé dans l'entrée FR-Evaluation :
+Le champ évalué (code) et le type de résultat de ce champs évalué (value) dépendent du type d'évaluation (code) véhiculé dans l'entrée FR-Evaluation :
 
 <table id="valeurEvaluation">
     <thead>
 		<tr>
 			<th>Type d'évaluation <br>(FR-Evaluation élément code)</th>
-			<th>Code de l'évaluation <br>(FR-Evaluation-Composant élément code)</th>
-			<th>Résultat de l'évaluation <br>(FR-Evaluation-Composant élément value)</th>
+			<th>Champs évalué <br>(FR-Evaluation-Composant élément code)</th>
+			<th>Type de résultat du champs évalué <br>(FR-Evaluation-Composant élément value)</th>
 		</tr>
     </thead>
     <tbody>
 		<tr id="code">
 			<td>Evaluation AGGIR PH SSIAD</td>
 			<td>Jeu de valeurs en cours d'élaboration</td>
-			<td>Type BL Boolean</td>
+			<td>BL</td>
 		</tr>
         <tr id="value">
 			<td>Evaluation AGGIR PA SSIAD</td>
 			<td>Jeu de valeurs en cours d'élaboration</td>
-			<td>Type BL Boolean</td>
+			<td>BL</td>
 		</tr>
         <tr id="value">
 			<td>Evaluation de la situation SSIAD</td>
-			<td>Valeur issue du JDV_EvaluationSSIAD_CISIS (1.2.250.1.213.1.1.5.804)<br>L'attribut nullFlavor est interdit.</td>
-			<td>Type BL Boolean</td>
+			<td>Valeur issue du JDV_EvaluationSSIAD_CISIS<br>L'attribut nullFlavor est interdit.</td>
+			<td>BL</td>
 		</tr>
         <tr id="value">
 			<td>EvaLuation SERAFIN</td>
 			<td>Jeu de valeurs en cours d'élaboration</td>
-			<td>Type INT Integer</td>
+			<td>INT</td>
 		</tr>
 	</tbody>
 </table>
@@ -186,8 +185,7 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 
 ### Section FR-Documents-ajoutes
 
-La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques au volet.
-Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associées à l’évaluation et à l'évènement de l’usager.
+La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques à ce volet.
 
 <iframe src="./cda/" height="400" name="FR-Documents-ajoutes"></iframe>
 
@@ -197,15 +195,39 @@ Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associ
 
 #### Entrée FR-Statut
 
-L’entrée FR-Statut est un élément qui permet décrire le statut métier d'une évaluation ou d'un évènement.
+L’entrée FR-Statut permet de décrire et de suivre le statut métier d'un objet.
 
 <iframe src="./cda/" height="400" name="FR-Statut"></iframe>
 
 <br>
 
+**Contraintes spécifiques à l'entrée FR-Statut :**
+
+<table id="statut">
+    <thead>
+		<tr>
+			<th>Elément XML</th>
+			<th>Card.</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+    </thead>
+    <tbody>
+		<tr id="value">
+			<td>value</td>
+			<td>[1..1]</td>
+			<td><strong>Statut métier</strong><br>Valeur issue du JDV_J281-StatutsRessourcesMS</td>
+		</tr>
+		<tr id="value">
+			<td>value[@code="ANNULE"]/qualifier/value</td>
+			<td>[1..1]</td>
+			<td><strong>Motif associé au statut de non-réalisation de l’évènement</strong><br>Lorsque le statut est à "Annulé", le motif est issu du JDV_MotifNonRealisationEvenement_CISIS.</td>
+		</tr>
+	</tbody>
+</table>
+
 #### Entrée FR-Simple-Observation
 
-L’entrée FR-Simple-Observation est un élément générique permettant de décrire les caractéristiques d'un évènement ou d'un transport.
+L’entrée FR-Simple-Observation est un élément générique permettant de décrire les caractéristiques d'un objet.
 
 <iframe src="./cda/" height="400" name="FR-Simple-Observation"></iframe>
 
