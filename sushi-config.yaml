@@ -46,6 +46,8 @@ pages:
             title: Entête du document CDA
         contenu_dossier_corps_cda.md: 
             title: Corps du document CDA
+        terminology_cda.md:
+            title : Jeux de Valeurs CDA
     description_flux.md:
         title : Description des flux
         description_flux_synthese.md:
@@ -96,6 +98,7 @@ menu:
         Structure générale du document CDA : contenu_dossier_structure_cda.html
         Entête du document CDA : contenu_dossier_entete_cda.html
         Corps du document CDA : contenu_dossier_corps_cda.html
+        Jeux de valeurs CDA : terminology_cda.html
     Description des flux:
         Synthèse des flux: description_flux_synthese.html
         Flux 1 - Ajout d'un document: description_flux_1_ajout_doc.html
