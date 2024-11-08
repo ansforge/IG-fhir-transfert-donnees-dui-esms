@@ -63,6 +63,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.218-DY
         </tr>
     </tbody>
 </table>
+<br>
 
 #### Entrée FR-Modalite-entree
 
@@ -96,6 +97,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.6-D
 		</tr>
     </tbody>
 </table>
+<br>
 
 #### Entrée FR-Modalite-sortie
 
@@ -129,3 +131,4 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.7-D
 		</tr>
     </tbody>
 </table>
+<br>
