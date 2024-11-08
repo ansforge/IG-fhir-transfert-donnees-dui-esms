@@ -2,7 +2,8 @@
 
 La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluation de l’usager (AGGIR, évaluation de la situation SSIAD, SERAFIN...).
 
-<iframe src="./cda/" height="400" name="FR-Statut-fonctionnel"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.246-DYNAMIC.html" height="400" id="FR-Statut-fonctionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Statut-fonctionnel](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.246-DYNAMIC.html)
 
 <br>
 
@@ -10,7 +11,8 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 
 Cette entrée permet de regrouper les évaluations par type.
 
-<iframe src="./cda/" height="400" name="FR-Groupe-de-questionnaires-d-evaluation"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" height="400" id="FR-Groupe-de-questionnaires-d-evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Groupe-de-questionnaires-d-evaluation](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html)
 
 <br>
 
@@ -38,7 +40,8 @@ Dans ce volet, la liste des évaluations est fixée. Une entrée FR-Groupe-de-qu
 
 ##### Entrée FR-Evaluation
 
-<iframe src="./cda/" height="400" name="FR-Evaluation"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" height="400" id="FR-Evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Evaluation](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html)
 
 <br>
 
@@ -143,7 +146,8 @@ La valeur de l'évaluation dépend du type d'évaluation qui équivaut au code d
 
 ##### Entrée FR-Evaluation-Composant
 
-<iframe src="./cda/" height="400" name="FR-Evaluation-Composant"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" height="400" id="FR-Evaluation-Composant" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Evaluation-Composant](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html)
 
 <br>
 
@@ -189,7 +193,8 @@ Le code ainsi que le résultat de l'évaluation dépendent du type d'évaluation
 La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques au volet.
 Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associées à l’évaluation et à l'évènement de l’usager.
 
-<iframe src="./cda/" height="400" name="FR-Documents-ajoutes"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.37-DYNAMIC.html" height="400" id="FR-Documents-ajoutes" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Documents-ajoutes](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.37-DYNAMIC.html)
 
 <br>
 
@@ -199,7 +204,8 @@ Dans le cadre de notre volet, il permet de véhiculer les pièces jointes associ
 
 L’entrée FR-Statut est un élément qui permet décrire le statut métier d'une évaluation ou d'un évènement.
 
-<iframe src="./cda/" height="400" name="FR-Statut"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.217-DYNAMIC.html" height="400" id="FR-Statut" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Statut](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.217-DYNAMIC.html)
 
 <br>
 
@@ -207,7 +213,8 @@ L’entrée FR-Statut est un élément qui permet décrire le statut métier d'u
 
 L’entrée FR-Simple-Observation est un élément générique permettant de décrire les caractéristiques d'un évènement ou d'un transport.
 
-<iframe src="./cda/" height="400" name="FR-Simple-Observation"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48-DYNAMIC.html" height="400" id="FR-Simple-Observation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Simple-Observation](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48-DYNAMIC.html)
 
 <br>
 
@@ -216,7 +223,8 @@ L’entrée FR-Simple-Observation est un élément générique permettant de dé
 
 L’entrée FR-Commentaire-ER est un élément qui permet de joindre un commentaire à une entrée ou à une section.
 
-<iframe src="./cda/" height="400" name="FR-Commentaire-ER"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.32-DYNAMIC.html" height="400" id="FR-Commentaire-ER" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Commentaire-ER](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.32-DYNAMIC.html)
 
 <br>
 
@@ -225,6 +233,7 @@ L’entrée FR-Commentaire-ER est un élément qui permet de joindre un commenta
 
 L’entrée FR-Reference-interne permet de relier un élément à un autre élément du même document par l’intermédiaire son identifiant.
 
-<iframe src="./cda/" height="400" name="FR-Commentaire-ER"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html" height="400" id="FR-Reference-interne" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Reference-interne](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html)
 
 <br>
