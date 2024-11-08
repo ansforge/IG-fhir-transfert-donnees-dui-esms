@@ -14,8 +14,8 @@
 		color: black
 	}
 
-	red { 
-		color: #c00000
+	blue { 
+		color: #00BFFF
 	}
 
 	<!-- Propriétés spécifiques à des lignes ou des colonnes de tableau (fond de couleur, centrage) -->
@@ -46,14 +46,13 @@
 
 </style>
 
-Cette section présente la structure générale des données de l’usager organisées en entête et corps.
+Cette section présente la structure générale du document CDA transporté dans le cadre du volet Transfert de données DUI.
 
+La structure de ce document se conforme aux contraintes et définitions présentées dans :
+- le [Volet Structuration minimale des documents de santé](https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante) pour l'entête du document ;
+- les [Modèles de contenus CDA](https://esante.gouv.fr/volet-de-reference-modeles-de-contenus-cda) pour le corps du document
 
-Les éléments apparaissant en <red>rouge</red> correspondent aux règles spécifiques à mettre en place.
-
-Les éléments en <i><u>italique soulignés</u></i> correspondent aux cardinalités de base de CDA contraintes pour ce volet.
-
-Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « **X** » dans la colonne « **Elément de la spécification Fonctionnelle de Contenu** (SFC) ».
+Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spécifiques à ce volet.
 
 <table id="cda">
 	<thead>
@@ -113,8 +112,8 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>templateID</td>
 			<td>II</td>
 			<td>[1..1]</td>
-			<td><p><strong>Déclaration de conformité du document au modèle de document structuré EXPORT_DUI (Export de données d'un logiciel DUI)</strong></p>
-			<p>@root = 1.2.250.1.213.1.1.1.58
+			<td><p><strong><blue>Déclaration de conformité du document au modèle de document structuré EXPORT_DUI (Export de données d'un logiciel DUI)</blue></strong></p>
+			<p><blue>@root = 1.2.250.1.213.1.1.1.58</blue>
 			<br>@extension (facultatif) = version du guide d'implémentation utilisé</p></td>
 		</tr>
 		<tr>
@@ -123,7 +122,6 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>II</td>
 			<td>[1..1]</td>
 			<td><p><strong>Identifiant unique du document</strong>
-			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root (obligatoire) = valeur d'un OID propre à l'émetteur, formé d'un OID complet identifiant l'instance du document.
 			</p></td>
 		</tr>
@@ -132,10 +130,11 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>code</td>
 			<td>CE</td>
 			<td>[1..1]</td>
-			<td><p><strong>Type de document</strong></p>
-			<p><red>@code = Code issu du <a href="https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/JDV_J07-XdsTypeCode-CISIS.pdf">JDV_J07-XdsTypeCode-CISIS</a> fixé à « EXPORT_DUI »
-			<br>@displayName = « Export du Dossier Usager Informatisé »
-			<br>@codeSystem = 1.2.250.1.213.1.1.4.12</red></p></td>
+			<td><p><strong>Type de document</strong></p>			
+			<p><blue>@code = « EXPORT_DUI »
+			<br>@displayName = « Export du Dossier Usager Informatisé »</blue>
+			<br>@codeSystem = 1.2.250.1.213.1.1.4.12
+			<br>@codeSystemName = JDV_J07-XdsTypeCode-CISIS</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -143,7 +142,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>ST</td>
 			<td>[1..1]</td>
 			<td><strong>Titre du document</strong>
-			<br><red>Le titre provient soit de la saisie directe par le PS ou du patient/usager, soit d'une valeur par défaut générée par le LPS à partir d'autres éléments (comme le type et la date du document par exemple) et modifiable par le PS ou le patient/usager.</red></td>
+			<br>Le titre provient soit de la saisie directe par le PS, soit d'une valeur par défaut générée par le logiciel à partir d'autres éléments (comme le type et la date du document par exemple) et modifiable par le PS.</td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -159,10 +158,12 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>CE</td>
 			<td>[1..1]</td>
 			<td><p><strong>Niveau de confidentialité du document.</strong>
-			<br>Code issu du JDV_HL7_Confidentiality-CISIS</p>
-			<p>@code = Valeur fixée à : « N »
+			<br>Ni le standard CDA, ni le CI-SIS ne précisent la manière dont chaque niveau doit être interprété. Ces règles d'usage sont à préciser par le système d'information qui donne les accès aux documents.
+			Le niveau de confidentialité peut-être sélectionné par le LPS ou choisi par l'auteur ou encore configuré par défaut à la valeur "N" (normal).</p>
+			<p>@code = à définir
 			<br>@codeSystem = 2.16.840.1.113883.5.25 
-			<bR>@displayName = « Normal »</p></td>
+			<bR>@displayName = à définir
+			<br>@codeSystemName = Confidentiality</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -170,7 +171,8 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>CS</td>
 			<td>[1..1]</td>
 			<td><p><strong>Langue principale du document</strong></p>
-			<p>@code = « fr-FR » (respect de la casse)</p></td>
+			<td><p>"fr-FR" pour français métropolitain (la casse des caractères doit être respectée)
+			<bR>@code = « fr-FR »</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -178,7 +180,6 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>II</td>
 			<td>[1..1]</td>
 			<td><p><strong>Identification du lot de versions du même document</strong>
-			<br><red>Attribut nullFlavor interdit</red></p>
 			<p>@root = valeur d'un OID propre à l'émetteur, formée d'un OID identifiant le lot de versions du document</p></td>
 		</tr>
 		<tr>
@@ -218,7 +219,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>legalAuthenticator</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td><strong>Professionnel ou patient/usager ou système responsable du document</strong>
+			<td><strong>Responsable légal du document</strong>
 			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#legalauthentificator">legalAuthenticator</a></td>
 		</tr>
 		<tr>
@@ -242,7 +243,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>componentOf</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td><strong>Association du document à une prise en charge</strong>
+			<td><strong>Association du document à un transfert de données DUI</strong>
 			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#componentof">componentOf</a></td>
 		</tr>
 		<tr id="lvl1">
@@ -318,22 +319,7 @@ Les éléments imposés par le standard CDA ou le CI-SIS sont indiqués par « *
 			<td>[0..1]</td>
 			<td><strong>Cette section permet de décrire des résultats d'évaluation du statut fonctionnel du patient.</strong>
 			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-statut-fonctionnel">Section FR-Statut-fonctionnel</a></td>
-		</tr>
-		<tr id="lvl2">
-			<td>3</td>
-			<td>component</td>
-			<td></td>
-			<td>[0..1]</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>section FR-Statut-fonctionnel</td>
-			<td></td>
-			<td>[0..1]</td>
-			<td><strong>Cette section permet de décrire des résultats d'évaluation du statut fonctionnel du patient.</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-statut-fonctionnel">Section FR-Statut-fonctionnel</a></td>
-		</tr>
+		</tr>		
 		<tr id="lvl2">
 			<td>3</td>
 			<td>component</td>
