@@ -52,6 +52,41 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYN
 **Contraintes spécifiques à l'entrée FR-Evaluation :**
 
 <table id="evaluation">
+=======
+### Section FR-Sejours
+
+Cette section contient les informations relatives au(x) séjour(s) d'un usager dans une structure ESSMS.
+
+La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.249-DYNAMIC.html" height="400" name="FR-Sejours" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.249-DYNAMIC.html" target="_blank">FR-Sejours</a>
+
+<br>
+
+#### Entrée FR-Sejour
+
+Cette entrée est un élément de type organizer permettant de décrire le séjour d’un usager.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.219-DYNAMIC.html" height="400" name="FR-Sejour" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.219-DYNAMIC.html" target="_blank">FR-Sejour</a>
+
+<br>
+
+##### Entrée FR-Sejour-Admission
+
+Cette entrée permet de décrire les données relatives à l'admission de l'usager au sein d'une structure.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.218-DYNAMIC.html" height="400" name="FR-Sejour-Admission" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.218-DYNAMIC.html" target="_blank">FR-Sejour-Admission</a>
+
+**Contraintes spécifiques à l'entrée FR-Sejour-Admission :**
+
+<table id="sejourAdmission">
     <thead>
 		<tr>
 			<th>Elément XML</th>
@@ -107,6 +142,9 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYN
         </tr>
 	</tbody>
 </table>
+<br>
+
+##### Entrée FR-Modalite-entree
 
 Dans l'entrée FR-Evaluation, le résultat de l'évaluation (value) dépend du type de l'évaluation (code). Le type de l'évaluation doit quant à lui être identique au type du groupe d'évaluation (code) de l'entrée FR-Groupe-de-questionnaires-d-evaluation :
 
@@ -266,5 +304,101 @@ La structure de l'entrée se conforme aux contraintes et définitions présenté
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html" height="400" id="FR-Reference-interne" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html" target="_blank">FR-Reference-interne</a>
+=======
+Cette entrée permet d'indiquer la modalité d'entrée d'un usager dans un établissement.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.6-DYNAMIC.html" height="400" name="FR-Modalite-entree" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.6-DYNAMIC.html" target="_blank">FR-Modalite-entree</a>
+
+**Contraintes spécifiques à l'entrée FR-Modalite-entree :**
+
+<table id="modaliteE">
+    <thead>
+		<tr>
+			<th>Elément XML</th>
+			<th>Card.</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+    </thead>
+    <tbody>
+		<tr id="text">
+			<td>text/reference</td>
+            <td>[0..1]</td>
+			<td>Référence le texte décrivant le libellé du mode d'entrée du séjour.</td>
+		</tr>
+		<tr id="value">
+			<td>value</td>
+            <td>[1..1]</td>
+			<td>nullFlavor='NA'</td>
+		</tr>
+    </tbody>
+</table>
+<br>
+
+##### Entrée FR-Modalite-sortie
+
+Cette entrée permet d'indiquer la modalité de sortie d'un usager dans un établissement.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.7-DYNAMIC.html" height="400" name="FR-Modalite-sortie" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.7-DYNAMIC.html" target="_blank">FR-Modalite-sortie</a>
+
+**Contraintes spécifiques à l'entrée FR-Modalite-sortie :**
+
+<table id="modaliteS">
+    <thead>
+		<tr>
+			<th>Elément XML</th>
+			<th>Card.</th>
+			<th>Contenu de l'élément CDA</th>
+		</tr>
+    </thead>
+    <tbody>
+		<tr id="text">
+			<td>text/reference</td>
+            <td>[0..1]</td>
+			<td>Référence le texte décrivant le libellé du mode de sortie du séjour.</td>
+		</tr>
+		<tr id="value">
+			<td>value</td>
+            <td>[1..1]</td>
+			<td>nullFlavor='NA'</td>
+		</tr>
+    </tbody>
+</table>
+
+### Section FR-Couvertures-sociales
+
+Cette section contient les informations relatives à la couverture sociale du patient.
+
+La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.79-DYNAMIC.html" height="400" id="FR-Couvertures-sociales" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.79-DYNAMIC.html" target="_blank">FR-Couvertures-sociales</a>
+
+<br>
+
+#### Entrée FR-Couverture-sociale
+
+Cette entrée de type act permet de lister les organismes d’assurance maladie du patient.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.61-DYNAMIC.html" height="400" id="FR-Couverture-sociale" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.61-DYNAMIC.html" target="_blank">FR-Couverture-sociale</a>
+
+<br>
+
+#### Entrée FR-Organisme-assurance-maladie
+
+Cette entrée de type act permet de décrire un organisme d’assurance maladie.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.94-DYNAMIC.html" height="400" id="FR-Organisme-assurance-maladie" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.94-DYNAMIC.html" target="_blank">FR-Organisme-assurance-maladie</a>
 
 <br>
