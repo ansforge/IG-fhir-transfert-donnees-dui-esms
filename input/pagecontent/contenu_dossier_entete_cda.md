@@ -173,7 +173,8 @@ L’Author permet d'enregistrer un auteur du document. Dans le contexte de ce vo
 La structure de l'Author se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html" height="400" id="Author" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [Author](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html)
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html" target="_blank">RecordTarget</a>
+
 
 <br>
 
