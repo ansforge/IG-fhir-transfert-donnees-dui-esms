@@ -234,7 +234,7 @@ Lien vers le template : [Author](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.7
 
 ### Custodian
 
-Le Custodian représente la structure chargée de la conservation du document. Il s’agit dans le cadre de ce volet de l’**ESSMS** (Établissement ou Service Social et Médico-Social) qui est responsable de la garde et de la sécurité du document. En tant qu’entité juridique, l’ESSMS est le dépositaire du dossier de l’usager et garantit la confidentialité, l’intégrité et la sécurité des données. Il peut s'agir d'une maison de retraite, d’un établissement pour personnes handicapées ou d’un autre service médico-social.
+Le Custodian représente la structure chargée de la conservation du document. Il s’agit dans le cadre de ce volet de l’**ESSMS** (Établissement ou Service Social et Médico-Social) qui est responsable de la garde et de la sécurité du document. En tant qu’entité juridique, l’ESSMS est le dépositaire du dossier de l’usager et garantit la confidentialité, l’intégrité et la sécurité des données.
 
 La structure du Custodian se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
