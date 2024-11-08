@@ -82,6 +82,8 @@ pages:
             title: Téléchargements et usages
         specs_fhir.md:
             title: Spécifications FHIR
+        specs_cda.md:
+            title : Spécifications CDA
         site_ans.md:
             title: Site de l'ANS
         documentation.md:
@@ -118,5 +120,6 @@ menu:
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         Spécifications FHIR : new-tab {{site.data.fhir.path}}index.html
+        Spécifications CDA : new-tab https://hl7.org/cda/stds/core/
         Site de l'ANS : new-tab https://esante.gouv.fr/
         Documentation : new-tab https://interop.esante.gouv.fr/ig/documentation/
