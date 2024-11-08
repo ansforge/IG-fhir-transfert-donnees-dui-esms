@@ -20,7 +20,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.219-DY
 
 <br>
 
-#### Entrée FR-Sejour-Admission
+##### Entrée FR-Sejour-Admission
 
 Cette entrée permet de décrire les données relatives à l'admission de l'usager au sein d'une structure.
 
@@ -65,7 +65,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.218-DY
 </table>
 <br>
 
-#### Entrée FR-Modalite-entree
+##### Entrée FR-Modalite-entree
 
 Cette entrée permet d'indiquer la modalité d'entrée d'un usager dans un établissement.
 
@@ -99,7 +99,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.6-D
 </table>
 <br>
 
-#### Entrée FR-Modalite-sortie
+##### Entrée FR-Modalite-sortie
 
 Cette entrée permet d'indiquer la modalité de sortie d'un usager dans un établissement.
 
