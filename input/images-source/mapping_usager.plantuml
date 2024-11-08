@@ -1,7 +1,7 @@
 @startuml
 
 
-map "Usager : [[contenu_dossier_entete_cda.html En-tête recordTarget]]" as Usager #back:IMPLEMENTATION;header:LightPink {
+map "Usager : [[contenu_dossier_entete_cda.html#recordtarget En-tête recordTarget]]" as Usager #back:IMPLEMENTATION;header:LightPink {
     matriculeINS => id
     identifiantLocalUsagerESSMS => id
     numeroIndividuInitial => id
