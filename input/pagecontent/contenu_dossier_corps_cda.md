@@ -2,17 +2,21 @@
 
 Cette section contient l'ensemble des évènements (passés ou à venir) d'un usager.
 
+La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" height="400" id="FR-Evenements" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Evenements](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html)
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" target="_blank">FR-Evenements</a>
 
 <br>
 
 #### Entrée FR-Evenement
+
 Cette entrée permet de décrire un évènement de l'usager passé ou à venir.
 
+La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" height="400" id="FR-Evenement" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Evenement](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html)
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" target="_blank">FR-Evenement</a>
 
 **Contraintes spécifiques à l'entrée FR-Evenement :**
 
@@ -160,9 +164,10 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 
 Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
+La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" height="400" id="FR-Transport-du-patient" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Transport-du-patient](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html)
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" target="_blank">FR-Transport-du-patient</a>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-patient :**
 
@@ -294,9 +299,10 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 
 Cette entrée permet de décrire le transport d'un professionnel lors de l'évènement.
 
+La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
 <iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" height="400" id="FR-Transport-du-professionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : [FR-Transport-du-professionnel](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html)
-<br>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" target="_blank">FR-Transport-du-professionnel</a>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-professionnel :**
 
@@ -421,3 +427,36 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 		</tr>
     </tbody>
 </table>
+=======
+### Section FR-Couvertures-sociales
+
+Cette section contient les informations relatives à la couverture sociale du patient.
+
+La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.79-DYNAMIC.html" height="400" id="FR-Couvertures-sociales" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.79-DYNAMIC.html" target="_blank">FR-Couvertures-sociales</a>
+
+<br>
+
+#### Entrée FR-Couverture-sociale
+
+Cette entrée de type act permet de lister les organismes d’assurance maladie du patient.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.61-DYNAMIC.html" height="400" id="FR-Couverture-sociale" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.61-DYNAMIC.html" target="_blank">FR-Couverture-sociale</a>
+
+<br>
+
+#### Entrée FR-Organisme-assurance-maladie
+
+Cette entrée de type act permet de décrire un organisme d’assurance maladie.
+
+La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.94-DYNAMIC.html" height="400" id="FR-Organisme-assurance-maladie" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.94-DYNAMIC.html" target="_blank">FR-Organisme-assurance-maladie</a>
+
+<br>
