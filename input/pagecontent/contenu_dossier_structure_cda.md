@@ -15,7 +15,7 @@
 	}
 
 	blue { 
-		color: #00BFFF
+		color: #007FFF
 	}
 
 	<!-- Propriétés spécifiques à des lignes ou des colonnes de tableau (fond de couleur, centrage) -->
@@ -171,7 +171,7 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>CS</td>
 			<td>[1..1]</td>
 			<td><p><strong>Langue principale du document</strong></p>
-			<td><p>"fr-FR" pour français métropolitain (la casse des caractères doit être respectée)
+			<bR>"fr-FR" pour français métropolitain (la casse des caractères doit être respectée)
 			<bR>@code = « fr-FR »</p></td>
 		</tr>
 		<tr>
