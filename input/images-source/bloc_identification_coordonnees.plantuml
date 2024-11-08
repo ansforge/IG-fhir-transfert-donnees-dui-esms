@@ -14,7 +14,7 @@ class Usager #LightPink {
     paysNationalite : Code [0..*]
     langueParlee : Code [0..*]
     dateNaissance : Date [0..1]
-    ordreNaissance : Numerique [0..1]
+    rangTotal : Numerique [0..1]
     communeNaissance : Code [0..1]
     departementNaissance : Code [0..1]
     paysNaissance : Code [0..1]
