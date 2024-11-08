@@ -2,14 +2,16 @@
 
 Cette section contient l'ensemble des évènements (passés ou à venir) d'un usager.
 
-<iframe src="./cda/" height="400" name="FR-Evenements"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" height="400" id="FR-Evenements" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Evenements](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html)
 
 <br>
 
 #### Entrée FR-Evenement
 Cette entrée permet de décrire un évènement de l'usager passé ou à venir.
 
-<iframe src="./cda/" height="400" name="FR-Evenement"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" height="400" id="FR-Evenement" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Evenement](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html)
 <br>
 
 **Contraintes spécifiques à l'entrée FR-Evenement :**
@@ -158,7 +160,8 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 
 Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
-<iframe src="./cda/" height="400" name="FR-Transport-du-patient"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" height="400" id="FR-Transport-du-patient" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Transport-du-patient](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html)
 <br>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-patient :**
@@ -291,7 +294,8 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 
 Cette entrée permet de décrire le transport d'un professionnel lors de l'évènement.
 
-<iframe src="./cda/" height="400" name="FR-Transport-du-professionnel"></iframe>
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" height="400" id="FR-Transport-du-professionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : [FR-Transport-du-professionnel](./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html)
 <br>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-professionnel :**
