@@ -3,17 +3,19 @@
 
 map "Usager : [[contenu_dossier_entete_cda.html En-tête recordTarget]]" as Usager #back:IMPLEMENTATION;header:LightPink {
     matriculeINS => id
-    numeroIndividu => id
+    identifiantLocalUsagerESSMS => id
+    numeroIndividuInitial => id
     nomNaissance => name/family[@qualifier=BR]
     nomUsage => name/family[@qualifier=CL]
-    prenom => name/given \n@qualifier non utilisé
+    prenom => name/given @qualifier non utilisé
     premierPrenomActeNaissance  => name/given[@qualifier=BR]
     prenomUtilise => name/given[@qualifier=CL]
     sexe => administrativeGenderCode
+    civilite => name/prefix
     dateNaissance => birthTime
     ordreNaissance => multipleBirthOrderNumber
-    lieuNaissance => brithPlace/place/addr/county
-    paysNaissance => brithPlace/place/addr/country
+    communeNaissance => brithPlace/place/addr/county
+    paysNaissance => brithPlace/place/addr/county
 }
 
 @enduml

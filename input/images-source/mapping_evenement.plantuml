@@ -49,7 +49,7 @@ map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-T
 map "Transporteur [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as transporteur #back:Ivory;header:LightYellow  {
     idNat_Struct => performer/assignedEntity/representedOrganization/id
     raisonSocial => performer/assignedEntity/representedOrganization/name
-    statutJuridique =>  performer/assignedEntity/representedOrganization/standardIndustryClassCode
+    statutJuridique =>  Non applicable
 }
 
 map "StructureEnCharge [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as structureEnCharge #back:Ivory;header:LightYellow  {
@@ -65,9 +65,10 @@ map "TransportProfessionnel: [[contenu_dossier_corps_cda.html Entrée FR-Transpo
 
 
 map "TransportUsager : [[contenu_dossier_corps_cda.html Entrée FR-Transport-du-patient]]" as TransportUsager#back:ghostWhite;header:LightGray {
-    natureTransport => code/qualifier
     accompagnement => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
     asepsieRigoureuse => [[contenu_dossier_corps_cda.html Entrée FR-Simple-Observation]] value
+    natureTransport => code/qualifier
+
 }
 
 map "LieuEvenement : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as Lieu #back:Ivory;header:LightYellow  {
@@ -90,7 +91,7 @@ map "Professionnel : [[contenu_dossier_corps_cda.html Entrée FR-Evenement]]" as
     idNat_PS => performer/assignedEntity/id
 }
 
-map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as AuteurStatut #back:Ivory;header:LightYellow {
+map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as AuteurStatut #back:Ivory;header:LightYellow {
     idNat_PS => author/assignedAuthor/id
     civilite => author/assignedAuthor/assignedPerson/name/prefix
     nom => author/assignedAuthor/assignedPerson/name/family
@@ -98,7 +99,7 @@ map "Auteur : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as Auteu
     fonction => author/assignedAuthor/code
 }
 
-map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Evaluation]]" as etablissementDeRattachementAuthStatut #back:Ivory;header:LightYellow {
+map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html Entrée FR-Statut]]" as etablissementDeRattachementAuthStatut #back:Ivory;header:LightYellow {
     idNat_Struct => author/assignedAuthor/representedOrganization/id
     raisonSocial => author/assignedAuthor/representedOrganization/name
     statutJuridique => Non applicable
