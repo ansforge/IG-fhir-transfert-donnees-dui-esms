@@ -121,7 +121,7 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>id</td>
 			<td>II</td>
 			<td>[1..1]</td>
-			<td><p><strong>Identifiant unique du document</strong>
+			<td><p><strong>Identifiant unique du document</strong></p>
 			<p>@root (obligatoire) = valeur d'un OID propre à l'émetteur, formé d'un OID complet identifiant l'instance du document.
 			</p></td>
 		</tr>
@@ -141,8 +141,8 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>title</td>
 			<td>ST</td>
 			<td>[1..1]</td>
-			<td><strong>Titre du document</strong>
-			<br>Le titre provient soit de la saisie directe par le PS, soit d'une valeur par défaut générée par le logiciel à partir d'autres éléments (comme le type et la date du document par exemple) et modifiable par le PS.</td>
+			<td><p><strong>Titre du document</strong></p>
+			<p>Le titre provient soit de la saisie directe par le PS, soit d'une valeur par défaut générée par le logiciel à partir d'autres éléments (comme le type et la date du document par exemple) et modifiable par le PS.</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -157,12 +157,12 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>confidentialityCode</td>
 			<td>CE</td>
 			<td>[1..1]</td>
-			<td><p><strong>Niveau de confidentialité du document.</strong>
-			<br>Ni le standard CDA, ni le CI-SIS ne précisent la manière dont chaque niveau doit être interprété. Ces règles d'usage sont à préciser par le système d'information qui donne les accès aux documents.
+			<td><p><strong>Niveau de confidentialité du document.</strong></p>
+			<p>Ni le standard CDA, ni le CI-SIS ne précisent la manière dont chaque niveau doit être interprété. Ces règles d'usage sont à préciser par le système d'information qui donne les accès aux documents.
 			Le niveau de confidentialité peut-être sélectionné par le LPS ou choisi par l'auteur ou encore configuré par défaut à la valeur "N" (normal).</p>
 			<p>@code = à définir
-			<br>@codeSystem = 2.16.840.1.113883.5.25 
-			<bR>@displayName = à définir
+			<br>@codeSystem = 2.16.840.1.113883.5.25
+			<br>@displayName = à définir
 			<br>@codeSystemName = Confidentiality</p></td>
 		</tr>
 		<tr>
@@ -171,15 +171,15 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>CS</td>
 			<td>[1..1]</td>
 			<td><p><strong>Langue principale du document</strong></p>
-			<bR>"fr-FR" pour français métropolitain (la casse des caractères doit être respectée)
-			<bR>@code = « fr-FR »</p></td>
+			<p>"fr-FR" pour français métropolitain (la casse des caractères doit être respectée)
+			<br>@code = « fr-FR »</p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>setID</td>
 			<td>II</td>
 			<td>[1..1]</td>
-			<td><p><strong>Identification du lot de versions du même document</strong>
+			<td><p><strong>Identification du lot de versions du même document</strong></p>
 			<p>@root = valeur d'un OID propre à l'émetteur, formée d'un OID identifiant le lot de versions du document</p></td>
 		</tr>
 		<tr>
@@ -195,56 +195,56 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>recordTarget</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td><strong>Information sur l'identité de l'usager concerné par le document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#recordtarget">recordTarget</a></td>
+			<td><p><strong>Information sur l'identité de l'usager concerné par le document</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#recordtarget">recordTarget</a></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>author</td>
 			<td></td>
 			<td>[1..*]</td>
-			<td><strong>Auteur du document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#author">author</a></td>
+			<td><p><strong>Auteur du document</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#author">author</a></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>custodian</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td><strong>Structure conservant le document et garantissant son cycle de vie</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#custodian">custodian</a></td>
+			<td><p><strong>Structure conservant le document et garantissant son cycle de vie</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#custodian">custodian</a></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>legalAuthenticator</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td><strong>Responsable légal du document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#legalauthentificator">legalAuthenticator</a></td>
+			<td><p><strong>Responsable légal du document</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#legalauthentificator">legalAuthenticator</a></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>documentationOf</td>
 			<td></td>
 			<td>[1..*]</td>
-			<td><strong>Evènement documenté</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#documentationof">documentationOf</a></td>
+			<td><p><strong>Evènement documenté</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#documentationof">documentationOf</a></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>relatedDocument</td>
 			<td></td>
 			<td>[0..1]</td>
-			<td><strong>Document de référence à remplacer, transformer</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#relateddocument">relatedDocument</a></td>
+			<td><p><strong>Document de référence à remplacer, transformer</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#relateddocument">relatedDocument</a></p></td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>componentOf</td>
 			<td></td>
 			<td>[1..1]</td>
-			<td><strong>Association du document à un transfert de données DUI</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#componentof">componentOf</a></td>
+			<td><p><strong>Association du document à un transfert de données DUI</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_entete_cda.html#componentof">componentOf</a></p></td>
 		</tr>
 		<tr id="lvl1">
 			<td>1</td>
@@ -272,8 +272,8 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>section FR-Couvertures-sociales</td>
 			<td></td>
 			<td>[0..1]</td>
-			<td><strong>Description de la couverture sociale du patient.</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-couvertures-sociales">Section FR-Evaluation-du-statut-fonctionnel</a></td>
+			<td><p><strong>Description de la couverture sociale du patient.</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-couvertures-sociales">Section FR-Evaluation-du-statut-fonctionnel</a></p></td>
 		</tr>
 		<tr id="lvl2">
 			<td>3</td>
@@ -287,8 +287,8 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>section FR-Sejours</td>
 			<td></td>
 			<td>[0..1]</td>
-			<td><strong>Cette section contient les informations relatives au séjour d’un usager au sein d’une structure.</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-sejours">Section FR-Sejours</a></td>
+			<td><p><strong>Cette section contient les informations relatives au séjour d’un usager au sein d’une structure.</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-sejours">Section FR-Sejours</a></p></td>
 		</tr>
 		<tr id="lvl2">
 			<td>3</td>
@@ -302,8 +302,8 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>section FR-Evenements</td>
 			<td></td>
 			<td>[0..1]</td>
-			<td><strong>Liste les évènements liés à la prise en charge du patient dans un domaine défini.</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-evenements">Section FR-Evenements</a></td>
+			<td><p><strong>Liste les évènements liés à la prise en charge du patient dans un domaine défini.</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-evenements">Section FR-Evenements</a></p></td>
 		</tr>
 		<tr id="lvl2">
 			<td>3</td>
@@ -317,8 +317,8 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>section FR-Statut-fonctionnel</td>
 			<td></td>
 			<td>[0..1]</td>
-			<td><strong>Cette section permet de décrire des résultats d'évaluation du statut fonctionnel du patient.</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-statut-fonctionnel">Section FR-Statut-fonctionnel</a></td>
+			<td><p><strong>Cette section permet de décrire des résultats d'évaluation du statut fonctionnel du patient.</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-statut-fonctionnel">Section FR-Statut-fonctionnel</a></p></td>
 		</tr>		
 		<tr id="lvl2">
 			<td>3</td>
@@ -332,8 +332,8 @@ Les éléments apparaissant en <blue>bleu</blue> correspondent aux règles spéc
 			<td>section FR-Documents-ajoutes</td>
 			<td></td>
 			<td>[0..1]</td>
-			<td><strong>Informations sur les pièces jointes ajoutées au document</strong>
-			<br>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-documents-ajoutes">FR-Documents-ajoutes</a></td>
+			<td><p><strong>Informations sur les pièces jointes ajoutées au document</strong></p>
+			<p>Le contenu de l'élément est décrit dans la rubrique <a href="contenu_dossier_corps_cda.html#section-fr-documents-ajoutes">FR-Documents-ajoutes</a></p></td>
 		</tr>
 	</tbody>
 </table>
