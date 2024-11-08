@@ -48,12 +48,14 @@ package Séjours #Thistle {
     object Solde #Thistle
     object Réservation #Thistle
     object Inventaire #Thistle
+    object ESSMS #Thistle
     object Contrat #Thistle
 }
 
 Usager "1" - "  *  " Séjour
 Solde "*" - "1" Séjour
 Inventaire "0..1   "-- "1" Séjour
+ESSMS "1" -- "*" Séjour
 Contrat "*" -- "1  " Séjour
 Réservation "*" -- "1" Usager
 Réservation "*" -- "1   " presta
