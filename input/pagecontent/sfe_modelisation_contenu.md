@@ -20,7 +20,8 @@
 
 ##### Classe Usager 
 
-Un usager est une personne physique bénéficiaire d’un service public.
+Terme générique "usager" permet de désigner une personne qui bénéficie d'une prestation ou d'un service lié à la prise en charge de son handicap ou de sa perte d'autonomie, que ce soit à domicile ou en établissement.
+L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le cadre d'une politique publique visant à soutenir les personnes âgées en perte d'autonomie ou les personnes en situation de handicap. Le terme inclut aussi bien les bénéficiaires directs de ces prestations que leurs familles, lorsqu'elles sont impliquées dans l'organisation de la prise en charge.
 
 <table style="width:100%">
   <tr>
@@ -28,43 +29,98 @@ Un usager est une personne physique bénéficiaire d’un service public.
     <th>Description</th>
   </tr>
   <tr>
-    <td>numeroIndividu : [0..1] Identifiant</td>
-    <td>Numéro de l’individu attribué par la MDPH ayant créé le dossier Individu (= MDPH initiale).</td>
-  </tr>
-  <tr>
-    <td>INS : [0..1] INS</td>
-    <td>L'INS référence les données de santé et se compose des éléments suivants :
-    <ul>
-    <li> Un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP)</li>
-    <li> Des traits d'identité de l'état civil : nom de famille (nom de naissance), prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance</li>
-    <li> Des traits complémentaires provenant du Référentiel National d'IdentitoVigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé.</li>
-    </ul>
+    <td>matriculeINS : [0..1] Identifiant</td>
+    <td>Le matricule INS est le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP).<br>
+    Si le matricule INS de l'usager existe, il doit être véhiculé en priorité. Dans le cas où le matricule INS est renseigné, les traits INS (traits d'identité et traits complémentaires issus du RNIV) doivent être transmis conformément à l'<a href="https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis">annexe prise en charge de l'INS dans les volets du ci-sis</a>.
     </td>
   </tr>
   <tr>
-    <td>nomNaissance : [0..1] Texte</td>
-    <td>Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.</td>
+    <td>identifiantLocalUsagerESSMS : Identifiant [0..1]</td>
+    <td>Identifiant local de l’usager au sein de la structure.<br>
+    Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS) : 3+FINESS/identifiantLocalUsagerESSMS</td>
+  </tr>
+   <tr>
+    <td>numeroIndividuInitial : [0..1] Identifiant</td>
+    <td>Numéro de l’individu attribué par la MDPH ayant créé le dossier Individu (= MDPH initiale).</td>
+  </tr>
+  <tr>
+    <td>nomNaissance : [1..1] Texte</td>
+    <td>Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.<br>
+   Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+  </td>
   </tr>
   <tr>
     <td>nomUsage : [0..1] Texte</td>
     <td>Un nom d'usage de la personne.<br>
     Rappel : Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.<br>
     Il est néanmoins possible d'utiliser, dans la vie quotidienne, un autre nom (par exemple le nom marital) appelé nom d'usage.<br>
-    Ce nom d'usage ne remplace en aucun cas le nom de famille qui reste le seul nom mentionné sur les actes d'état civil (acte de naissance ou de mariage, livret de famille, etc.).</td>
+    Ce nom d'usage ne remplace en aucun cas le nom de famille qui reste le seul nom mentionné sur les actes d'état civil (acte de naissance ou de mariage, livret de famille, etc.).<br>
+    S’il s’agit de l’identité qualifiée INS, il est obligatoire lorsqu’il est différent du nom de naissance. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).</td>
   </tr>
   <tr>
     <td>prenom : [0..*] Texte</td>
-    <td>Tous les prénoms de l'usager.</td>
+    <td>Liste des prénoms de naissance de l'usager.<br>
+    La liste des prénoms de naissance fait partie des traits INS. Elle est obligatoire si l’identité INS est qualifiée.<br>
+    Ils sont préconisés si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
+    </td>
+  </tr>
+<tr>
+    <td>premierPrenomActeNaissance : [0..1] Texte</td>
+    <td>Premier prénom dans la liste des prénoms de naissance de l'usager<br>
+    Cet élément est obligatoire s’il s’agit de l’identité qualifiée INS. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
+    </td>
+  </tr>
+  <tr>
+    <td>prenomUtilise : [0..1] Texte</td>
+    <td>Prénom réellement porté par la personne physique dans la vie courante. Il peut s'agir du prénom usuel, du surnom ou du pseudonyme de la personne physique.<br>
+    S’il s’agit de l’identité qualifiée INS, il est obligatoire lorsqu’il est différent du premier prénom de naissance. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).<br>
+    </td>
   </tr>
   <tr>
     <td>sexe : [0..1] Code</td>
     <td>Sexe de la personne physique.<br>
-    Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a></td>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J143-AdministrativeGender-CISIS.html">JDV-J143-AdministrativeGender-CISIS</a><br>
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
+    </td>
   </tr>
   <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de l’usager.<br>
     Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a></td>
+  </tr>
+  <tr>
+    <td>dateNaissance : [0..1] Date</td>
+    <td>Date de naissance de l’usager.
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.</td>
+  </tr>
+   <tr>
+    <td>ordreNaissance : [0..1] Numerique </td>
+    <td>Ordre d’enregistrement de la naissance dans le registre d’état civil de la commune de naissance pour le mois de la naissance. Il compose les <a href="https://www.ameli.fr/llle-et-vilaine/assure/droits-demarches/principes/numero-securite-sociale">3 derniers chiffres du NIR de l'usager avant </a> la clé de sécurité et permet de distinguer les personnes nées au même lieu et à la même période.<br>
+    Il est obligatoire si le NIR n'est pas transmis.
+    </td>
+  </tr>
+  <tr>
+    <td>CommuneNaissance : [0..1] Code</td>
+    <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J120-CommuneHistorisee/JDV_J120-CommuneHistorisee.pdf">JDV_J120-CommuneHistorisee</a><br>
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.
+    </td>
+  </tr>
+   <tr>
+    <td>departementNaissance : [0..1] Code</td>
+    <td>Département de naissance de la personne. Code officiel géographique (COG) du département.<br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J84-DepartementOM-RASS/JDV_J84-DepartementOM-RASS.pdf">TRE_G09-DepartementOM</a></td>
+  </tr>
+  <tr>
+    <td>paysNaissance : [0..1] Code</td>
+    <td>Pays de naissance de la personne. Code officiel géographique (COG) du pays.<br>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J74-Pays-RASS/JDV_J74-Pays-RASS.pdf">TRE_R20-Pays</a>
+    Cet attribut fait partie des traits INS. Il est obligatoire si l’identité INS est qualifiée.<br>
+    Il est préconisé si le NIR ou l'identifiant local est véhiculé et que l'identité n'est pas qualifiée.</td>
   </tr>
   <tr>
     <td>situationFamiliale : [0..1] Code</td>
@@ -84,34 +140,11 @@ Un usager est une personne physique bénéficiaire d’un service public.
   <tr>
     <td>langueParlee : [0..*] Code</td>
     <td>Langue parlée par l’usager. <br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_G00-Langue/TRE_G00-Langue.pdf">TRE_G00-Langue</a></td>
-  </tr>
-  <tr>
-    <td>dateNaissance : [0..1] Date</td>
-    <td>Date de naissance de l’usager.</td>
-  </tr>
-  <tr>
-    <td>ordreNaissance : [0..1] Numerique </td>
-    <td>Ordre d’enregistrement de la naissance dans le registre d’état civil de la commune de naissance pour le mois de la naissance. Il compose les <a href="https://www.ameli.fr/llle-et-vilaine/assure/droits-demarches/principes/numero-securite-sociale">3 derniers chiffres du NIR avant </a> avant la clé de sécurité et permet de distinguer les personnes nées au même lieu et à la même période.</td>
-  </tr>
-  <tr>
-    <td>communeNaissance : [0..1] Code</td>
-    <td>Commune de naissance de l’usager. Code officiel géographique (COG) de la commune.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/TRE_R13-CommuneOM.pdf">TRE_R13-CommuneOM</a></td>
-  </tr>
-  <tr>
-    <td>departementNaissance : [0..1] Code</td>
-    <td>Département de naissance de la personne. Code officiel géographique (COG) du département.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/TRE_G09-DepartementOM.pdf">TRE_G09-DepartementOM</a></td>
-  </tr>
-  <tr>
-    <td>paysNaissance : [0..1] Code</td>
-    <td>Pays de naissance de la personne. Code officiel géographique (COG) du pays.<br>
-    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/TRE_R20-Pays.pdf">TRE_R20-Pays</a></td>
+    Nomenclature(s) associée(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J115-Langue-ENREG/JDV_J115-Langue-ENREG.pdf">JDV_J115-Langue-ENREG</a></td>
   </tr>
     <tr>
-    <td>dateDeces : [0..1] Date</td>
-    <td>Date de décès de l’usager.</td>
+    <td>dateDeces : [0..1] DateHeure</td>
+    <td>Date et heure de décès de l’usager.</td>
   </tr>
   <tr>
     <td>causeMortalite : [0..*] Code</td>
@@ -977,7 +1010,7 @@ Décision du juge des tutelles de désigner une personne morale ou physique en v
 
 Séjour d’un usager dans un ESSMS.
 
-La classe EntiteJuridique est définie dans le MOS et profilée pour ce volet.
+La classe EntiteJuridique est définie dans le MOS et est profilée pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -985,7 +1018,7 @@ La classe EntiteJuridique est définie dans le MOS et profilée pour ce volet.
     <th>Description</th>
   </tr>
    <tr>
-    <td>ESSMS : [0..1] EntiteJuridique</td>
+    <td>ESSMS : [1..1] EntiteJuridique</td>
     <td>Établissement ou service social ou médico-social.</td>
   </tr>
   <tr>
@@ -1017,8 +1050,8 @@ La classe EntiteJuridique est définie dans le MOS et profilée pour ce volet.
     <td>Libellé du mode de sortie du séjour.</td>
   </tr>
   <tr>
-    <td>numeroDossier : [1..1] Identifiant</td>
-    <td>Numéro de dossier administratif du séjour.</td>
+    <td>idSejour : [1..1] Identifiant</td>
+    <td>Cet identifiant est obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de six caractères "SEJOUR" et numéro de dossier administratif du séjour dans le DUI (numeroDossier) : <br>idSejour = 3+FINESS/identifiantLocalUsagerESSMS-SEJOUR-numeroDossier</td>
   </tr>
   <tr>
     <td>commentaire : [0..1] Texte</td>
@@ -1155,36 +1188,36 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
   </tr>
   <tr>
     <td>idEvaluation : Identifiant [1..1]</td>
-    <td>Identifiant technique de l’évaluation.</td>
+    <td>Identifiant technique de l’évaluation obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de quatre caractères "EVAL" et du numéro de l’évaluation dans le DUI (numEvaluation) : <br>idEvaluation = 3+FINESS/identifiantLocalUsagerESSMS-EVAL-numEvaluation</td>
   </tr>
    <tr>
-    <td>type : [1..1] Code</td>
+    <td>typeEvaluation : [1..1] Code</td>
     <td>Type de l’évaluation.<br>
     Jeu(x) de valeur(s) associé(s) : JDV_TypeEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.802 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
     <tr>
-    <td>date : [0..1] DateHeure</td>
-    <td>Date de l’évaluation.</td>
+    <td>dateEvaluation : [0..1] DateHeure</td>
+    <td>Date et heure de l’évaluation.</td>
   </tr>
   <tr>
-    <td>resultat : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
+    <td>resultatEvaluation : [0..1] Le type du résultat est dépendant du type d'évaluation</td>
     <td>Résultat global de l’évaluation. Le resultat est à renseigner uniquement lorsqu'il s'agit d'une Evaluation AGGIR PH SSIAD ou Evaluation AGGIR PA SSIAD<br>
     - Evaluation AGGIR PH SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Evaluation AGGIR PA SSIAD : JDV_GIR_CISIS avec l'OID 1.2.250.1.213.1.1.5.53 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
     </td>
   </tr>
    <tr>
-    <td>commentaire : [0..1] Texte</td>
+    <td>commentaireEvaluation : [0..1] Texte</td>
     <td>Commentaire libre sur l’évaluation.</td>
   </tr>
    <tr>
-    <td>pieceJointe : [0..1] Texte</td>
+    <td>pieceJointeEvaluation : [0..*] ObjetBinaire</td>
     <td>Pièces jointes relatives à l’évaluation.</td>
   </tr>
 </table>
 
-##### Classe GrilleEvaluation
+##### Classe DetailEvaluation
 
 Grille utilisée pour évaluer le niveau de la perte d'autonomie d'une personne. Elle est associée à l'évaluation globale de la personne.
 Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné à la personne.
@@ -1200,9 +1233,9 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
     Jeu(x) de valeur(s) associé(s) : un jeu de valeur par type d'évaluation <br>
     - Evaluation AGGIR PH SSIAD : jeu de valeur à définir.<br>
     - Evaluation AGGIR PA SSIAD : jeu de valeur à définir.<br>
-    - Evaluation de la situation SSIAD : JDV_Evaluation_SSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
+    - Evaluation de la situation SSIAD : JDV_EvaluationSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
     publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
-    - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J285-Besoins_SERAFIN/JDV_J285-Besoins_SERAFIN.pdf">JDV_J285-Besoins_SERAFIN</a>
     </td>
   </tr>
   <tr>
@@ -1217,16 +1250,29 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
 
 ##### Classe Evaluateur
 
-** Classe spécialisée, hérite de la classe Professionnel qui est issue du MOS et profilée pour ce volet.
+** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser l'évaluateur.
+Cette classe regroupe les items pouvant caractériser la personne ayant réalisé l'évaluation.<br>
+
+Dans le cas d'une auto évaluation, l'évaluateur étant l'usager cet élément n'est pas requis.
 
 ##### Classe Responsable
 
-** Classe spécialisée, hérite de la classe Professionnel du MOS.
+** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
 
-Cette classe regroupe les items pouvant caractériser le responsable de l'évaluation.
+Cette classe regroupe les items pouvant caractériser le professionnel prenant la responsabilité de l'évaluation, par exemple dans le cas où l'évaluation aurait été rédigée par une secrétaire médicale<br>
 
+Dans le cas d'une auto évaluation, le responsable étant l'usager cet élément n'est pas requis.
+
+##### Classe Auteur
+
+** Classe spécialisée, hérite de la classe Professionnel du MOS profilée pour ce volet.
+
+Cette classe regroupe les items pouvant caractériser la personne ayant rédigé l'évaluation mais ne l'ayant pas réalisée et ne pouvant pas en assumer la responsabilité (ex : secrétaire médical).<br>
+
+Dans le cas d'une auto évaluation, l'auteur étant l'usager cet élément n'est pas requis.<br>
+<br>
+<u>Remarque</u> : Hormis le cas de l'auto évaluation, au moins un des 3 éléments (Evaluateur, Responsable, Auteur) doit être renseigné.
 
 ### Partie Coordination des acteurs
 
@@ -1238,7 +1284,7 @@ Cette classe regroupe les items pouvant caractériser le responsable de l'évalu
 
 Evènements liés à la prise en charge de l’usager dans une structure ESSMS.
 
-Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profilées pour ce volet.
+Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et sont profilées pour ce volet.
 
 <table style="width:100%">
   <tr>
@@ -1246,15 +1292,23 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
     <th>Description</th>
   </tr>
   <tr>
-    <td>idEvenement : Identifiant [1..1]</td>
-    <td>Identifiant technique de l’évènement obtenue par la concaténation de l'identifiant national de structure (idNat_Struct), du numéro de l’évènement dans le DUI (idFonctionnel) et de l'identifiant local de l’usager au sein de la structure (idUsager) : <br> idEvenement = idNat_Struct - idFonctionnel - idUsager </br> </td>
+    <td>idEvenement : [1..1] Identifiant</td>
+    <td>Identifiant technique de l’évènement obtenu par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de trois caractères "EVN" et du numéro de l’évènement dans le DUI (numEvenement) :<br> idEvenement = 3+FINESS/identifiantLocalUsagerESSMS-EVN-numEvenement</td>
   </tr>
    <tr>
-    <td>typeEvenement : [0..*] Code</td>
+    <td>typeEvenement : [0..*] Code ou Texte</td>
     <td>Type de l’évènement.<br>
-    Jeu(x) de valeur(s) associé(s) :<br>
-    - JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
-    - Jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
+    Cas d’usage SSIAD : le type de l'évènement est issu <br>
+    <ul>
+        - d'un code issu du jeu de valeur associé : JDV_TypeEvenementSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.811 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+        - peut contenir un code issu de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte.  Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J284-PrestationsDirects_SERAFIN/JDV_J284-PrestationsDirects_SERAFIN.pdf">JDV_J284-PrestationsDirects_SERAFIN</a>, <a href="https://mos.esante.gouv.fr/NOS/JDV_J283-PrestationsIndirects_SERAFIN/JDV_J283-PrestationsIndirects_SERAFIN.pdf">JDV_J283-PrestationsIndirects_SERAFIN</a><br>
+        - peut contenir un texte non structuré véhiculant les autres types d’évènements.<br>
+        </ul>
+    Autre cas d'usage : le type de l'évènement est issu<br>
+    <ul>
+      - du jeu de valeur issue de la terminologie Serafin correspondant aux familles 2-PrestationDirecte et 3-PrestationIndirecte. Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J284-PrestationsDirects_SERAFIN/JDV_J284-PrestationsDirects_SERAFIN.pdf">JDV_J284-PrestationsDirects_SERAFIN</a>, <a href="https://mos.esante.gouv.fr/NOS/JDV_J283-PrestationsIndirects_SERAFIN/JDV_J283-PrestationsIndirects_SERAFIN.pdf">JDV_J283-PrestationsIndirects_SERAFIN</a><br>
+      - et/ou d’un texte non structuré véhiculant les autres types d’évènements.
+      </ul>
     </td>
   </tr>
     <tr>
@@ -1262,8 +1316,8 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
     <td>Titre donné à l’évènement par la structure.</td>
   </tr>
    <tr>
-    <td>commentaireEvenement : [0..1] Texte</td>
-    <td>Commentaire sur le déroulé de l'évènement.</td>
+    <td>commentaireEvenement : [0..*] Texte</td>
+    <td>Commentaires sur le déroulé de l'évènement.</td>
   </tr>
   <tr>
     <td>compteRenduEvenement : [0..1] Texte</td>
@@ -1301,28 +1355,27 @@ Les classes EntiteJuridique, Lieu et Professionnel sont issues du MOS et profil�
     <td>usagerPresent : [0..1] Indicateur</td>
     <td>Evènement nécessitant ou non la présence physique de l’usager.</td>
   </tr>
-<tr>
-   <td>motifNonRealisation : [0..1] Code</td>
-    <td>Motif de non-réalisation de l’évènement.<br>
-    Jeu(x) de valeur(s) associé(s) : JDV_MotifNonRealisationEvenement_CISIS avec l'OID 1.2.250.1.213.1.1.5.803
-    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
-    </td>
-  </tr>
   <tr>
    <td>repas : [0..1] Indicateur</td>
     <td>Repas du professionnel prévu dans le cadre de l'événement.</td>
   </tr>
  <tr>
    <td>typeRessourceUtilisee: [0..*] Code</td>
-    <td>Type de ressources utilisées dans le cadre de l’évènement (véhicule, matériel médical, salle spécialisée…).</td>
+    <td>Type de ressources utilisées dans le cadre de l’évènement (matériel, immobilier, véhicule).<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_RessourceUtilisee_CISIS avec l'OID 1.2.250.1.213.1.1.5.807 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
+    </td>
   </tr>
-<tr>
-   <td>dateDerniereModification : [0..1] DateHeure</td>
-    <td>Date et heure de la dernière modification de l’évènement.</td>
+  <tr>
+   <td>detailTypeRessourceUtilisee: [0..*] Code</td>
+    <td>Détail du type de ressources utilisées dans le cadre de l’évènement (pour matériel : matériel médical, matériel pédagogique ; pour immobilier : bâtiment, salle, chambre).<br>
+    Jeu(x) de valeur(s) associé(s) :<br>
+    - JDV_DetailMaterielSpecialise_CISIS avec l'OID 1.2.250.1.213.1.1.5.808 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+    - JDV_DetailRessourceImmobiliereUtilisee_CISIS avec l'OID 1.2.250.1.213.1.1.5.809 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
+    </td>
   </tr>
-<tr>
-   <td>dateValidation : [0..1] DateHeure</td>
-    <td>Date et heure de la validation de l’évènement.</td>
+  <tr>
+    <td>dateModificationEvenement : [0..1] DateHeure</td>
+    <td>Date de la dernière modification de l'événement.</td>
   </tr>
 </table>
 
@@ -1350,13 +1403,6 @@ Classe générique socle décrivant le transport d’une personne physique (prof
     <td>typeMotorisation : [0..1] Code</td>
     <td>Type de motorisation associée au véhicule utilisé lors du transport.<br>
     Jeu(x) de valeur(s) associé(s) : JDV_TypeMotorisation_CISIS avec l'OID 1.2.250.1.213.1.1.5.801 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
-    </td>
-  </tr>
-  <tr>
-    <td>natureTransport : [0..1] Code</td>
-    <td>Nature du transport.<br>
-    Jeu de valeur issue de la terminologie Serafin correspondant aux familles (3.2.4.1, 3.2.4.2, 3.2.4.3).<br>
-    Jeu(x) de valeur(s) associé(s) : à définir dans NOS.
     </td>
   </tr>
   <tr>
@@ -1403,11 +1449,15 @@ Classe générique socle décrivant le transport d’une personne physique (prof
 
 Cette classe regroupe les items pouvant caractériser le transport du professionnel lors de l'évènement.
 
+L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de cinq caractères "TPPro" et du numéro de transport du professionnel dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/identifiantLocalUsagerESSMS-TPPro-idTransport
+
 ##### Classe TransportUsager
 
 ** Classe spécialisée, hérite de la classe Transport
 
 Cette classe regroupe les items pouvant caractériser le transport de l'usager lors de l'évènement.
+
+L'identifiant technique du transport est obtenu dans ce contexte par par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne), de l'identifiant de la structure (numéro FINESS), de l'identifiant local de l’usager au sein de la structure (identifiantLocalUsagerESSMS), de cinq caractères "TPPat" et du numéro de transport de l'usager dans le DUI (idTransport) :<br> idTrajet = 3+FINESS/identifiantLocalUsagerESSMS-TPPat-idTransport
 
 <table style="width:100%">
   <tr>
@@ -1422,13 +1472,20 @@ Cette classe regroupe les items pouvant caractériser le transport de l'usager l
     <td>asepsieRigoureuse : [0..1] Identifiant</td>
     <td>Lors du transport de l'usager l'asepsie est rigoureusement respectée ou n'est pas nécessaire.</td>
   </tr>
+  <tr>
+    <td>natureTransport : [0..1] Code</td>
+    <td>Nature du transport de l'usager.<br>
+    Jeu de valeur issue de la terminologie Serafin correspondant aux familles (3.2.4.1, 3.2.4.2, 3.2.4.3).<br>
+    Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN/JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN.pdf">JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN</a>
+    </td>
+  </tr>
 </table>
 
 ### Classes du MOS profilées pour ce volet
 
 ##### Classe Profesionnel
 
-Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.
+Données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.
 
 <table style="width:100%">
   <tr>
@@ -1436,8 +1493,8 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
     <th>Description</th>
   </tr>
   <tr>
-    <td>idNat_PS : [0..1] Identifiant</td>
-    <td>Identification nationale principale du professionne. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
+    <td>idNat_PS : [1..1] Identifiant</td>
+    <td>Identification nationale principale du professionnel. Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature TRE_G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique. Voir la description complète de idNat_PS dans le MOS.</td>
   </tr>
    <tr>
     <td>civilite : [0..1] Code</td>
@@ -1454,8 +1511,8 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
     <td>Prénom usuel de la personne.</td>
   </tr>
    <tr>
-    <td>specialite : [0..1] Code</td>
-    <td>Profession ou spécialité exercée par la personne. <br>
+    <td>fonction : [0..1] Code</td>
+    <td>Profession / savoir-faire ou rôle du professionnel. <br>
     Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
     </td>
   </tr>
@@ -1475,7 +1532,7 @@ Pour ce volet l'Entité Juridique est une personne morale inscrite dans le FINES
     <th>Description</th>
   </tr>
   <tr>
-    <td>idNat_Struct : [0..1] Identifiant</td>
+    <td>idNat_Struct : [1..1] Identifiant</td>
     <td>Identification nationale de l'Entité juridique. Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature <a href="https://interop.esante.gouv.fr/ig/nos/CodeSystem-TRE-G07-TypeIdentifiantStructure.html">TRE_G07-TypeIdentifiantStructure</a>) et de l'identifiant de la structure: ** 1 + N° FINESS.</td>
   </tr>
  <tr>
@@ -1508,10 +1565,6 @@ Portion déterminée de l'espace où se sont déroulés des événements.
     <td>nom : [0..1] Texte</td>
     <td>Nom, exprimé sous la forme de texte, du lieu.</td>
   </tr>
-   <!-- tr>
-    <td>typeLieu : [0..1] Code</td>
-    <td>Information catégorisant physiquement le lieu, par exemple un bâtiment, un véhicule, une chambre, une route, etc.</td>
-  </tr -->
   <tr>
     <td>adresse : [0..1] Adresse</td>
     <td>Adresse géopostale du lieu.</td>
@@ -1535,17 +1588,24 @@ Cette classe décrit le statut des ressources (Evenement, Evaluation).
     <th>Description</th>
   </tr>
   <tr>
-    <td>statut : [0..1] Code</td>
+    <td>statut : [1..1] Code</td>
     <td>Statut de la ressource impactée. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J281-StatutsRessourcesMS.html">JDV_J281-StatutsRessourcesMS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J281-StatutsRessourcesMS/JDV_J281-StatutsRessourcesMS.pdf">JDV_J281-StatutsRessourcesMS</a>
     </td>
   </tr>
   <tr>
-    <td>dateModificationStatut : [0..1] DateHeure</td>
-    <td>Date de la dernière modification du statut de la ressource.</td>
+   <td>motifNonRealisation : [0..1] Code</td>
+    <td>Motif associé au statut de non-réalisation de l’évènement.<br>
+    Jeu(x) de valeur(s) associé(s) : JDV_MotifNonRealisationEvenement_CISIS avec l'OID 1.2.250.1.213.1.1.5.803
+    publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a> 
+    </td>
+  </tr>
+   <tr>
+    <td>dateStatut : [0..1] DateHeure</td>
+    <td>Date et heure du renseignement du statut.</td>
   </tr>
    <tr>
     <td>auteur : [0..1] Professionnel</td>
-    <td>Le professionnel ayant effectué la dernière modification du statut de la ressource.</td>
+    <td>Le professionnel ayant effectué la dernière modification du statut associé à la ressource.</td>
   </tr>
 </table>
