@@ -35,13 +35,13 @@ pages:
         sfe_definition_processus.md:
             title : Définition des processus collaboratifs
         sfe_modelisation_contenu.md :
-            title : Modélisation du contenu du DUI
-    mapping_fonctionnelle_technique.md:
-        title : Mapping CDA du modèle de contenu DUI
+            title : Modélisation du contenu du DUI    
     contenu_dossier.md: 
-        title : Contenu du dossier
+        title : Contenu du dossier CDA
         contenu_dossier_contexte.md:
             title : Contexte
+        mapping_fonctionnelle_technique.md:
+            title : Mapping CDA du modèle de contenu DUI
         contenu_dossier_structure_cda.md:
             title: Structure générale du document CDA
         contenu_dossier_entete_cda.md:
@@ -51,7 +51,7 @@ pages:
         terminology_cda.md:
             title : Jeux de Valeurs CDA
     description_flux.md:
-        title : Description des flux
+        title : Description des flux FHIR
         description_flux_synthese.md:
             title: Synthèse des flux
         description_flux_1_ajout_doc.md:
@@ -93,20 +93,20 @@ pages:
 
 
 menu:
-    Accueil: index.html
+    Accueil : index.html
     Spécifications fonctionnelles :
         Cadre juridique et orientations organisationnelles : sfe_cadre_juridique.html
         Organisation du contexte métier : sfe_organisation_contexte_metier.html
         Définition des processus collaboratifs : sfe_definition_processus.html
-        Modélisation du contenu du DUI : sfe_modelisation_contenu.html
-    Mapping CDA du modèle de contenu DUI : mapping_fonctionnelle_technique.html
-    Contenu du dossier :
+        Modélisation du contenu du DUI : sfe_modelisation_contenu.html    
+    Contenu du dossier CDA :
         Contexte: contenu_dossier_contexte.html
+        Mapping CDA du modèle de contenu DUI : mapping_fonctionnelle_technique.html
         Structure générale du document CDA : contenu_dossier_structure_cda.html
         Entête du document CDA : contenu_dossier_entete_cda.html
         Corps du document CDA : contenu_dossier_corps_cda.html
         Jeux de valeurs CDA : terminology_cda.html
-    Description des flux:
+    Description des flux FHIR:
         Synthèse des flux: description_flux_synthese.html
         Flux 1 - Ajout d'un document: description_flux_1_ajout_doc.html
         Flux 2 - Ajout d'un lot de documents: description_flux_2_ajout_lot_doc.html
