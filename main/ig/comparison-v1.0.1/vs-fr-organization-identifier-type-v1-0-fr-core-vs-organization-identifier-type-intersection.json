@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "70876252-cce5-46e5-bc01-d40914f05297-33",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/70876252-cce5-46e5-bc01-d40914f05297-33",
+  "id" : "61f521f5-9ffd-4412-a6f8-ccc8f321240a-33",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/61f521f5-9ffd-4412-a6f8-ccc8f321240a-33",
   "name" : "Intersectionfr-organization-identifier-typeAndFRCoreValueSetOrganizationIdentifierType",
   "title" : "Intersection of null And FR Core ValueSet Organization identifier type",
   "status" : "active",
-  "date" : "2024-11-13T21:46:13+00:00",
+  "date" : "2024-11-13T21:48:17+00:00",
   "compose" : {
     "include" : [{
       "concept" : [{
