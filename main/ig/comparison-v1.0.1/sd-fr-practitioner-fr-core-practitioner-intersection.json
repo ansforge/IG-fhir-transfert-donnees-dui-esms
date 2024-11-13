@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ea13a0ba-339e-458a-a359-75d1ced9fd30-24",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ea13a0ba-339e-458a-a359-75d1ced9fd30-24",
+  "id" : "bbd44e44-3a0b-4c48-b652-a08d577b74a0-24",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/bbd44e44-3a0b-4c48-b652-a08d577b74a0-24",
   "name" : "IntersectionFrPractitionerAndFRCorePractitionerProfile",
   "title" : "Intersection of null And FR Core Practitioner Profile",
   "status" : "active",
-  "date" : "2024-11-13T16:25:30+00:00",
+  "date" : "2024-11-13T16:33:32+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Practitioner",
@@ -511,7 +511,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/ea13a0ba-339e-458a-a359-75d1ced9fd30-27"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/bbd44e44-3a0b-4c48-b652-a08d577b74a0-27"
       },
       "mapping" : [{
         "identity" : "v2",

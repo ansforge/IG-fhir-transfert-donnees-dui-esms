@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ea13a0ba-339e-458a-a359-75d1ced9fd30-30",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ea13a0ba-339e-458a-a359-75d1ced9fd30-30",
+  "id" : "bbd44e44-3a0b-4c48-b652-a08d577b74a0-30",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/bbd44e44-3a0b-4c48-b652-a08d577b74a0-30",
   "name" : "IntersectionFrOrganizationAndFRCoreOrganizationProfile",
   "title" : "Intersection of null And FR Core Organization Profile",
   "status" : "active",
-  "date" : "2024-11-13T16:25:30+00:00",
+  "date" : "2024-11-13T16:33:32+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Organization",
@@ -514,7 +514,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/ea13a0ba-339e-458a-a359-75d1ced9fd30-33"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/bbd44e44-3a0b-4c48-b652-a08d577b74a0-33"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1118,7 +1118,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/ea13a0ba-339e-458a-a359-75d1ced9fd30-36"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/bbd44e44-3a0b-4c48-b652-a08d577b74a0-36"
       },
       "mapping" : [{
         "identity" : "rim",
