@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ec60e695-86f0-4115-9c72-0640fe836138-6",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ec60e695-86f0-4115-9c72-0640fe836138-6",
+  "id" : "6a974e7c-a61b-4ae8-b861-0fbbaf304ddb-6",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/6a974e7c-a61b-4ae8-b861-0fbbaf304ddb-6",
   "name" : "IntersectionTDDUIDocumentReferenceAndTDDUIDocumentReference",
   "title" : "Intersection of TDDUI Document Reference And TDDUI Document Reference",
   "status" : "active",
-  "date" : "2024-11-13T16:18:00+00:00",
+  "date" : "2024-11-13T16:19:53+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -2721,7 +2721,7 @@
       "path" : "DocumentReference.context.period",
       "short" : "Time of service that is being documented",
       "definition" : "The time period over which the service that is described by the document was provided.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{

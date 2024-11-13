@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ec60e695-86f0-4115-9c72-0640fe836138-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ec60e695-86f0-4115-9c72-0640fe836138-2",
+  "id" : "6a974e7c-a61b-4ae8-b861-0fbbaf304ddb-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/6a974e7c-a61b-4ae8-b861-0fbbaf304ddb-2",
   "name" : "UnionTDDUIBundleAndTDDUIBundle",
   "title" : "Union of TDDUI Bundle And TDDUI Bundle",
   "status" : "active",
-  "date" : "2024-11-13T16:18:00+00:00",
+  "date" : "2024-11-13T16:19:53+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
