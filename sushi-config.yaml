@@ -20,6 +20,8 @@ dependencies:
 
 parameters:
     shownav: 'true'
+    path-pages:
+        - input/cda
 
 
 
