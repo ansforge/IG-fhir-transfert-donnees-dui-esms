@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "bbd44e44-3a0b-4c48-b652-a08d577b74a0-18",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/bbd44e44-3a0b-4c48-b652-a08d577b74a0-18",
+  "id" : "36f568d8-ce72-4499-80cc-d0b16e270ae1-18",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/36f568d8-ce72-4499-80cc-d0b16e270ae1-18",
   "name" : "IntersectionFrAddressAndFRCoreAddressProfile",
   "title" : "Intersection of null And FR Core Address Profile",
   "status" : "active",
-  "date" : "2024-11-13T16:33:32+00:00",
+  "date" : "2024-11-13T21:45:44+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Address",
