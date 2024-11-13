@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "36f568d8-ce72-4499-80cc-d0b16e270ae1-9",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/36f568d8-ce72-4499-80cc-d0b16e270ae1-9",
+  "id" : "70876252-cce5-46e5-bc01-d40914f05297-9",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/70876252-cce5-46e5-bc01-d40914f05297-9",
   "name" : "IntersectionFrPatientAndFRCorePatientProfile",
   "title" : "Intersection of FrPatient And FR Core Patient Profile",
   "status" : "active",
-  "date" : "2024-11-13T21:45:44+00:00",
+  "date" : "2024-11-13T21:46:13+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Patient",
@@ -702,7 +702,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "The domestic partnership status of a person.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/36f568d8-ce72-4499-80cc-d0b16e270ae1-21"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/70876252-cce5-46e5-bc01-d40914f05297-21"
       },
       "mapping" : [{
         "identity" : "v2",

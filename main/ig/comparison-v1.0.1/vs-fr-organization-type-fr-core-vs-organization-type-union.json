@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "36f568d8-ce72-4499-80cc-d0b16e270ae1-35",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/36f568d8-ce72-4499-80cc-d0b16e270ae1-35",
+  "id" : "70876252-cce5-46e5-bc01-d40914f05297-35",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/70876252-cce5-46e5-bc01-d40914f05297-35",
   "name" : "Unionfr-organization-typeAndFRCoreValueSetOrganizationType",
   "title" : "Union of null And FR Core ValueSet Organization type",
   "status" : "active",
-  "date" : "2024-11-13T21:45:44+00:00",
+  "date" : "2024-11-13T21:46:13+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
