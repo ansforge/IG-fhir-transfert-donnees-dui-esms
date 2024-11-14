@@ -10,5 +10,5 @@
 [Modélisation grille évaluation et événement usager](https://github.com/ansforge/IG-fhir-medicosocial-transfert-donnees-dui/pull/123)
 [ANS-006-121 - #99 #101 - création page annexe nomenclatures + renommages pages annexes + MAJ documentsReference](https://github.com/ansforge/IG-fhir-medicosocial-transfert-donnees-dui/pull/103)
 [ANS-006-121 - MAJ contenu - formatage, coquilles et précision](https://github.com/ansforge/IG-fhir-medicosocial-transfert-donnees-dui/pull/102)
-[ANS-006-121 - #77 - Ajout dépendances NOS](https://github.com/ansforge/IG-fhir-medicosocial-transfert-donnees-dui/pull/95)
+[ANS-006-121 - #77 - Ajout dépendances NOS](https://github.com/ansforge/IG-fhir-medicosocial-transfert-donnees-dui/pull/95
 [ANS-006-121 - #19 - #44 - #81 - #93 - MAJ page d'accueil](https://github.com/ansforge/IG-fhir-medicosocial-transfert-donnees-dui/pull/94)
