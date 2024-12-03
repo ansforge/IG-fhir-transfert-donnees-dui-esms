@@ -1231,8 +1231,8 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
     <td>champsEvalue : [1..1] Code</td>
     <td>Critère d'évaluation de la grille.<br>
     Jeu(x) de valeur(s) associé(s) : un jeu de valeur par type d'évaluation <br>
-    - Evaluation AGGIR PH SSIAD : jeu de valeur à définir.<br>
-    - Evaluation AGGIR PA SSIAD : jeu de valeur à définir.<br>
+    - Evaluation AGGIR PH SSIAD :  JDV_EvaluationAGGIRPH_CISIS avec l'OID 1.2.250.1.213.1.1.5.805 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
+    - Evaluation AGGIR PA SSIAD : JDV_EvaluationAGGIRPA_CISIS avec l'OID 1.2.250.1.213.1.1.5.806 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Evaluation de la situation SSIAD : JDV_EvaluationSSIAD_CISIS avec l'OID 1.2.250.1.213.1.1.5.804
     publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a><br>
     - Evaluation Serafin : Jeu de valeur issue de la terminologie Serafin correspondant à la famille 1-Besoin. Jeu(x) de valeur(s) associé(s) : <a href="https://mos.esante.gouv.fr/NOS/JDV_J285-Besoins_SERAFIN/JDV_J285-Besoins_SERAFIN.pdf">JDV_J285-Besoins_SERAFIN</a>
