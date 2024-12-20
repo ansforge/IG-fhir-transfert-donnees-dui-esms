@@ -319,33 +319,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="sejourAdmission">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="id">
-			<td>id</td>
+        <tr id="id">
+            <td>id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant unique du séjour</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-SEJOUR-numeroDossier</td>
-		</tr>
+            <td><strong>Identifiant unique du séjour</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-SEJOUR-numeroDossier</td>
+        </tr>
         <tr id="code">
-			<td>code</td>
+            <td>code</td>
             <td>[1..1]</td>
-			<td>Valeur fixée à : <br />@code = GEN-351 <br />@codeSystem = 1.2.250.1.213.1.1.4.322 <br />@displayName = Établissement ou service social ou médico-social (ESSMS) (optionnel)</td>
-		</tr>
-		<tr id="participantId">
+            <td>Valeur fixée à : <br />@code = GEN-351 <br />@codeSystem = 1.2.250.1.213.1.1.4.322 <br />@displayName = Établissement ou service social ou médico-social (ESSMS) (optionnel)</td>
+        </tr>
+        <tr id="participantId">
             <td>participant[@classCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'entité juridique responsable du séjour</strong>
-			<br />L'identifiant de la structure est requis.</td>
+            <td><strong>Identifiant de l'entité juridique responsable du séjour</strong>
+            <br />L'identifiant de la structure est requis.</td>
         </tr>
         <tr id="participantStatut">
             <td>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
-			<td><strong>Entité juridique responsable du séjour</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+            <td><strong>Entité juridique responsable du séjour</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
     </tbody>
 </table>
@@ -364,23 +364,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="modaliteE">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="text">
-			<td>text/reference</td>
+        <tr id="text">
+            <td>text/reference</td>
             <td>[0..1]</td>
-			<td>Référence le texte décrivant le libellé du mode d'entrée du séjour.</td>
-		</tr>
-		<tr id="value">
-			<td>value</td>
+            <td>Référence le texte décrivant le libellé du mode d'entrée du séjour.</td>
+        </tr>
+        <tr id="value">
+            <td>value</td>
             <td>[1..1]</td>
-			<td>nullFlavor='NA'</td>
-		</tr>
+            <td>nullFlavor='NA'</td>
+        </tr>
     </tbody>
 </table>
 <p><br /></p>
@@ -398,25 +398,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="modaliteS">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="text">
-			<td>text/reference</td>
+        <tr id="text">
+            <td>text/reference</td>
             <td>[0..1]</td>
-			<td>Référence le texte décrivant le libellé du mode de sortie du séjour.</td>
-		</tr>
-		<tr id="value">
-			<td>value</td>
+            <td>Référence le texte décrivant le libellé du mode de sortie du séjour.</td>
+        </tr>
+        <tr id="value">
+            <td>value</td>
             <td>[1..1]</td>
-			<td>nullFlavor='NA'</td>
-		</tr>
+            <td>nullFlavor='NA'</td>
+        </tr>
     </tbody>
 </table>
+
+<p><br /></p>
 
 <h3 id="section-fr-evenements">Section FR-Evenements</h3>
 
@@ -593,23 +595,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="transportPatient">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
         <tr id="moodCode">
-			<td>@moodCode</td>
+            <td>@moodCode</td>
             <td>[1..1]</td>
-			<td>Valeur fixée à EVN</td>
-		</tr>
+            <td>Valeur fixée à EVN</td>
+        </tr>
         <tr id="id">
-			<td>id</td>
+            <td>id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant unique du transport</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-TPPat-idTransport</td>
-		</tr>
+            <td><strong>Identifiant unique du transport</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-TPPat-idTransport</td>
+        </tr>
         <tr id="code">
             <td>code</td>
             <td>[1..1]</td>
@@ -635,29 +637,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
         </tr>
         <tr id="effectiveTimeLow">
-			<td>effectiveTime/low</td>
+            <td>effectiveTime/low</td>
             <td>[1..1]</td>
-			<td>L'attribut nullFlavor est interdit.</td>
-		</tr>
+            <td>L'attribut nullFlavor est interdit.</td>
+        </tr>
         <tr id="effectiveTimeHigh">
-			<td>effectiveTime/high</td>
+            <td>effectiveTime/high</td>
             <td>[1..1]</td>
-			<td>L'attribut nullFlavor est interdit.</td>
-		</tr>
+            <td>L'attribut nullFlavor est interdit.</td>
+        </tr>
         <tr id="performerId">
             <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant du transporteur</strong><br />Si le transporteur est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant du transporteur</strong><br />Si le transporteur est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="performer">
             <td>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
             <td>[0..1]</td>
-			<td><strong>Statut juridique du transporteur</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+            <td><strong>Statut juridique du transporteur</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="entryCode">
-			<td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/code</td>
+            <td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/code</td>
             <td>[1..1]</td>
-			<td><strong>Précision sur le trajet ou le transport du patient</strong><br />Dans l'entrée FR-Transport-du-patient, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
+            <td><strong>Précision sur le trajet ou le transport du patient</strong><br />Dans l'entrée FR-Transport-du-patient, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
             <ul>
                 <li>@code = "MED-1124" @codeSystem = "1.2.250.1.213.1.1.4.322" @displayName = "Patient nécessitant un accompagnement par un tiers"</li>
                 <li>@code = "ORG-200" @codeSystem = "1.2.250.1.213.1.1.4.322" @displayName = "Budget réel"</li>
@@ -667,49 +669,49 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 <li>@code = "103208-5" @codeSystem = "2.16.840.1.113883.6.1" @displayName = "Distance parcourue"</li>
             </ul>
             </td>
-		</tr>
+        </tr>
         <tr id="entryValue">
-			<td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/value</td>
+            <td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/value</td>
             <td>[1..1]</td>
-			<td><strong>Précision sur le trajet ou le transport du patient</strong><br />Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
-		</tr>
-	</tbody>
+            <td><strong>Précision sur le trajet ou le transport du patient</strong><br />Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
+        </tr>
+    </tbody>
 </table>
 
 <p>Dans les entrées FR-Simple-Observation, le type de l’élément value dépend de la valeur de l’élément code :</p>
 
 <table id="TransportPatObs">
     <thead>
-		<tr>
-			<th>Valeur de l'attribut code/@code</th>
-			<th>Contenu de l'élément value</th>
-		</tr>
+        <tr>
+            <th>Valeur de l'attribut code/@code</th>
+            <th>Contenu de l'élément value</th>
+        </tr>
     </thead>
     <tbody>
         <tr id="1">
-			<td>MED-1124 (Patient nécessitant un accompagnement par un tiers)</td>
+            <td>MED-1124 (Patient nécessitant un accompagnement par un tiers)</td>
             <td>BL</td>
-		</tr>
+        </tr>
         <tr id="2">
-			<td>ORG-200 (Budget réel)</td>
+            <td>ORG-200 (Budget réel)</td>
             <td>MO</td>
-		</tr>
+        </tr>
         <tr id="3">
-			<td>ORG-201 (Budget prévisionnel)</td>
+            <td>ORG-201 (Budget prévisionnel)</td>
             <td>MO</td>
-		</tr>
+        </tr>
         <tr id="4">
-			<td>GEN-353 (Durée de transport théorique)</td>
+            <td>GEN-353 (Durée de transport théorique)</td>
             <td>IVL_TS</td>
-		</tr>
+        </tr>
         <tr id="5">
-			<td>275827007 (Maintien de l'asepsie)</td>
+            <td>275827007 (Maintien de l'asepsie)</td>
             <td>BL</td>
-		</tr>
+        </tr>
         <tr id="6">
-			<td>103208-5 (Distance parcourue)</td>
+            <td>103208-5 (Distance parcourue)</td>
             <td>PQ</td>
-		</tr>
+        </tr>
     </tbody>
 </table>
 
@@ -728,23 +730,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="transportPro">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
         <tr id="moodCode">
-			<td>@moodCode</td>
+            <td>@moodCode</td>
             <td>[1..1]</td>
-			<td>Valeur fixée à EVN</td>
-		</tr>
+            <td>Valeur fixée à EVN</td>
+        </tr>
         <tr id="id">
-			<td>id</td>
+            <td>id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant unique du transport</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-TPPro-idTransport</td>
-		</tr>
+            <td><strong>Identifiant unique du transport</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-TPPro-idTransport</td>
+        </tr>
         <tr id="code">
             <td>code</td>
             <td>[1..1]</td>
@@ -770,39 +772,39 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
         </tr>
         <tr id="effectiveTimeLow">
-			<td>effectiveTime/low</td>
+            <td>effectiveTime/low</td>
             <td>[1..1]</td>
-			<td>L'attribut nullFlavor est interdit.</td>
-		</tr>
+            <td>L'attribut nullFlavor est interdit.</td>
+        </tr>
         <tr id="effectiveTimeHigh">
-			<td>effectiveTime/high</td>
+            <td>effectiveTime/high</td>
             <td>[1..1]</td>
-			<td>L'attribut nullFlavor est interdit.</td>
+            <td>L'attribut nullFlavor est interdit.</td>
         </tr>
         <tr id="participantId">
             <td>participant[@typeCode="RCV"]/participantRole/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant du professionnel</strong><br />L'identifiant du professionnel est requis.</td>
+            <td><strong>Identifiant du professionnel</strong><br />L'identifiant du professionnel est requis.</td>
         </tr>
-		<tr id="participantEJId">
+        <tr id="participantEJId">
             <td>participant[@typeCode="RCV"]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'établissement de rattachement du professionnel</strong><br />Si l'établissement de rattachement du professionnel est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant de l'établissement de rattachement du professionnel</strong><br />Si l'établissement de rattachement du professionnel est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="participantCode">
             <td>participant[@typeCode="RCV"]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
-			<td><strong>Statut juridique de l'établissement de rattachement du professionnel</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+            <td><strong>Statut juridique de l'établissement de rattachement du professionnel</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="performerId">
             <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant du transporteur</strong><br />Si le transporteur est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant du transporteur</strong><br />Si le transporteur est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="entryCode">
-			<td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/code</td>
+            <td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/code</td>
             <td>[1..1]</td>
-			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br />Dans l'entrée FR-Transport-du-professionnel, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
+            <td><strong>Précision sur le trajet ou le transport du professionnel</strong><br />Dans l'entrée FR-Transport-du-professionnel, l'élément code de l'entrée FR-Simple-Observation doit prendre l'une des valeurs suivantes :
             <ul>
                 <li>@code = "ORG-200" @codeSystem = "1.2.250.1.213.1.1.4.322" @displayName = "Budget réel"</li>
                 <li>@code = "ORG-201" @codeSystem = "1.2.250.1.213.1.1.4.322" @displayName = "Budget prévisionnel"</li>
@@ -810,43 +812,45 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 <li>@code = "103208-5" @codeSystem = "2.16.840.1.113883.6.1" @displayName = "Distance parcourue"</li>
             </ul>
             </td>
-		</tr>
+        </tr>
         <tr id="entryValue">
-			<td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/value</td>
+            <td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/value</td>
             <td>[1..1]</td>
-			<td><strong>Précision sur le trajet ou le transport du professionnel</strong><br />Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
-		</tr>
-	</tbody>
+            <td><strong>Précision sur le trajet ou le transport du professionnel</strong><br />Le type de l'élément value de l'entrée FR-Simple-Observation est détaillé ci-dessous.</td>
+        </tr>
+    </tbody>
 </table>
 
 <p>Dans les entrées FR-Simple-Observation, le type de l’élément value dépend de la valeur de l’élément code :</p>
 
 <table id="TransportProObs">
     <thead>
-		<tr>
-			<th>Valeur de l'attribut code/@code</th>
-			<th>Contenu de l'élément value</th>
-		</tr>
+        <tr>
+            <th>Valeur de l'attribut code/@code</th>
+            <th>Contenu de l'élément value</th>
+        </tr>
     </thead>
     <tbody>
         <tr id="1">
-			<td>ORG-200 (Budget réel)</td>
+            <td>ORG-200 (Budget réel)</td>
             <td>MO</td>
-		</tr>
+        </tr>
         <tr id="2">
-			<td>ORG-201 (Budget prévisionnel)</td>
+            <td>ORG-201 (Budget prévisionnel)</td>
             <td>MO</td>
-		</tr>
+        </tr>
         <tr id="3">
-			<td>GEN-353 (Durée de transport théorique)</td>
+            <td>GEN-353 (Durée de transport théorique)</td>
             <td>IVL_TS</td>
-		</tr>
+        </tr>
         <tr id="4">
-			<td>103208-5 (Distance parcourue)</td>
+            <td>103208-5 (Distance parcourue)</td>
             <td>PQ</td>
-		</tr>
+        </tr>
     </tbody>
 </table>
+
+<p><br /></p>
 
 <h3 id="section-fr-couvertures-sociales">Section FR-Couvertures-sociales</h3>
 
@@ -907,19 +911,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="organizer">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="code">
-			<td>code</td>
+        <tr id="code">
+            <td>code</td>
             <td>[1..1]</td>
-			<td>Valeur issue du JDV_TypeEvaluation_CISIS</td>
-		</tr>
-	</tbody>
+            <td>Valeur issue du JDV_TypeEvaluation_CISIS</td>
+        </tr>
+    </tbody>
 </table>
 <p><br /></p>
 
@@ -936,93 +940,93 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="evaluation">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="id">
-			<td>id</td>
+        <tr id="id">
+            <td>id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant unique de l'évaluation</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-EVAL-numEvaluation</td>
-		</tr>
-		<tr id="code">
-			<td>code</td>
-			<td>[1..1]</td>
-			<td><strong>Type d'évaluation</strong><br />Valeur issue du JDV_TypeEvaluation_CISIS</td>
-		</tr>
-		<tr id="performerId">
+            <td><strong>Identifiant unique de l'évaluation</strong><br />L'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS-EVAL-numEvaluation</td>
+        </tr>
+        <tr id="code">
+            <td>code</td>
+            <td>[1..1]</td>
+            <td><strong>Type d'évaluation</strong><br />Valeur issue du JDV_TypeEvaluation_CISIS</td>
+        </tr>
+        <tr id="performerId">
             <td>performer/assignedEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'évaluateur</strong><br />Si l'évaluateur est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant de l'évaluateur</strong><br />Si l'évaluateur est renseigné, son identifiant est requis.</td>
         </tr>
-		<tr id="performerEJid">
+        <tr id="performerEJid">
             <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'établissement de rattachement de l'évaluateur</strong><br />Si l'établissement de rattachement de l'évaluateur est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant de l'établissement de rattachement de l'évaluateur</strong><br />Si l'établissement de rattachement de l'évaluateur est renseigné, son identifiant est requis.</td>
         </tr>
-		<tr id="auteurId">
+        <tr id="auteurId">
             <td>author/assignedAuthor/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'auteur de l'évaluation</strong><br />Si l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant de l'auteur de l'évaluation</strong><br />Si l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
-		<tr id="auteurEJid">
+        <tr id="auteurEJid">
             <td>author/assignedAuthor/representedOrganization/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'établissement de rattachement de l'auteur de l'évaluation</strong><br />Si l'établissement de rattachement de l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant de l'établissement de rattachement de l'auteur de l'évaluation</strong><br />Si l'établissement de rattachement de l'auteur de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="participantId">
             <td>participant[@typeCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant du responsable de l'évaluation</strong><br />Si le responsable de l'évaluation est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant du responsable de l'évaluation</strong><br />Si le responsable de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
-		<tr id="participantEJid">
+        <tr id="participantEJid">
             <td>participant[@typeCode=RESP]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
-			<td><strong>Identifiant de l'établissement de rattachement du responsable de l'évaluation</strong><br />Si l'établissement de rattachement du responsable de l'évaluation est renseigné, son identifiant est requis.</td>
+            <td><strong>Identifiant de l'établissement de rattachement du responsable de l'évaluation</strong><br />Si l'établissement de rattachement du responsable de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
         <tr id="participantStatut">
             <td>participant[@typeCode=RESP]/participantRole/scopingEntity/code</td>
             <td>[0..1]</td>
-			<td><strong>Statut juridique de l'établissement de rattachement du responsable de l'évaluation</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
+            <td><strong>Statut juridique de l'établissement de rattachement du responsable de l'évaluation</strong><br />Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
-	</tbody>
+    </tbody>
 </table>
 
 <p>Dans l’entrée FR-Evaluation, le résultat de l’évaluation (value) dépend du type de l’évaluation (code). Le type de l’évaluation doit quant à lui être identique au type du groupe d’évaluation (code) de l’entrée FR-Groupe-de-questionnaires-d-evaluation :</p>
 
 <table id="valeurEvaluation">
     <thead>
-		<tr>
-			<th>Code du groupe d'évaluation <br />(FR-Groupe-de-questionnaires-d-evaluation élément code)</th>
-			<th>Type d'évaluation <br />(FR-Evaluation élément code)</th>
-			<th>Résultat de l'évaluation <br />(FR-Evaluation élément value)</th>
-		</tr>
+        <tr>
+            <th>Code du groupe d'évaluation <br />(FR-Groupe-de-questionnaires-d-evaluation élément code)</th>
+            <th>Type d'évaluation <br />(FR-Evaluation élément code)</th>
+            <th>Résultat de l'évaluation <br />(FR-Evaluation élément value)</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="code">
-		    <td>Evaluation AGGIR PH SSIAD</td>
-			<td>Evaluation AGGIR PH SSIAD</td>
-			<td>Valeur issue du JDV_GIR_CISIS<br />L'attribut nullFlavor est interdit.</td>
-		</tr>
+        <tr id="code">
+            <td>Evaluation AGGIR PH SSIAD</td>
+            <td>Evaluation AGGIR PH SSIAD</td>
+            <td>Valeur issue du JDV_GIR_CISIS<br />L'attribut nullFlavor est interdit.</td>
+        </tr>
         <tr id="value">
-		    <td>Evaluation AGGIR PA SSIAD</td>
-			<td>Evaluation AGGIR PA SSIAD</td>
-			<td>Valeur issue du JDV_GIR_CISIS<br />L'attribut nullFlavor est interdit.</td>
-		</tr>
+            <td>Evaluation AGGIR PA SSIAD</td>
+            <td>Evaluation AGGIR PA SSIAD</td>
+            <td>Valeur issue du JDV_GIR_CISIS<br />L'attribut nullFlavor est interdit.</td>
+        </tr>
         <tr id="value">
-			<td>Evaluation de la situation SSIAD</td>
-			<td>Evaluation de la situation SSIAD</td>
-			<td>nullFlavor='NA'</td>
-		</tr>
+            <td>Evaluation de la situation SSIAD</td>
+            <td>Evaluation de la situation SSIAD</td>
+            <td>nullFlavor='NA'</td>
+        </tr>
         <tr id="value">
-			<td>Evaluation SERAFIN</td>
-			<td>Evaluation SERAFIN</td>
-			<td>nullFlavor='NA'</td>
-		</tr>
-	</tbody>
+            <td>Evaluation SERAFIN</td>
+            <td>Evaluation SERAFIN</td>
+            <td>nullFlavor='NA'</td>
+        </tr>
+    </tbody>
 </table>
 <p><br /></p>
 
@@ -1041,35 +1045,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="valeurEvaluation">
     <thead>
-		<tr>
-			<th>Type d'évaluation <br />(FR-Evaluation élément code)</th>
-			<th>Champs évalué <br />(FR-Evaluation-Composant élément code)</th>
-			<th>Type de résultat du champs évalué <br />(FR-Evaluation-Composant élément value)</th>
-		</tr>
+        <tr>
+            <th>Type d'évaluation <br />(FR-Evaluation élément code)</th>
+            <th>Champs évalué <br />(FR-Evaluation-Composant élément code)</th>
+            <th>Type de résultat du champs évalué <br />(FR-Evaluation-Composant élément value)</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="code">
-			<td>Evaluation AGGIR PH SSIAD</td>
-			<td>Jeu de valeurs en cours d'élaboration</td>
-			<td>BL</td>
-		</tr>
+        <tr id="code">
+            <td>Evaluation AGGIR PH SSIAD</td>
+            <td>Jeu de valeurs en cours d'élaboration</td>
+            <td>BL</td>
+        </tr>
         <tr id="value">
-			<td>Evaluation AGGIR PA SSIAD</td>
-			<td>Jeu de valeurs en cours d'élaboration</td>
-			<td>BL</td>
-		</tr>
+            <td>Evaluation AGGIR PA SSIAD</td>
+            <td>Jeu de valeurs en cours d'élaboration</td>
+            <td>BL</td>
+        </tr>
         <tr id="value">
-			<td>Evaluation de la situation SSIAD</td>
-			<td>Valeur issue du JDV_EvaluationSSIAD_CISIS<br />L'attribut nullFlavor est interdit.</td>
-			<td>BL</td>
-		</tr>
+            <td>Evaluation de la situation SSIAD</td>
+            <td>Valeur issue du JDV_EvaluationSSIAD_CISIS<br />L'attribut nullFlavor est interdit.</td>
+            <td>BL</td>
+        </tr>
         <tr id="value">
-			<td>EvaLuation SERAFIN</td>
-			<td>Jeu de valeurs en cours d'élaboration</td>
-			<td>INT</td>
-		</tr>
-	</tbody>
+            <td>EvaLuation SERAFIN</td>
+            <td>Jeu de valeurs en cours d'élaboration</td>
+            <td>INT</td>
+        </tr>
+    </tbody>
 </table>
+
 <p><br /></p>
 
 <h3 id="section-fr-documents-ajoutes">Section FR-Documents-ajoutes</h3>
@@ -1098,24 +1103,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <table id="statut">
     <thead>
-		<tr>
-			<th>Elément XML</th>
-			<th>Card.</th>
-			<th>Contenu de l'élément CDA</th>
-		</tr>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
     </thead>
     <tbody>
-		<tr id="value">
-			<td>value</td>
-			<td>[1..1]</td>
-			<td><strong>Statut métier</strong><br />Valeur issue du JDV_J281-StatutsRessourcesMS</td>
-		</tr>
-		<tr id="value">
-			<td>value[@code="ANNULE"]/qualifier/value</td>
-			<td>[1..1]</td>
-			<td><strong>Motif associé au statut de non-réalisation de l’évènement</strong><br />Lorsque le statut est à "Annulé", le motif est issu du JDV_MotifNonRealisationEvenement_CISIS.</td>
-		</tr>
-	</tbody>
+        <tr id="value">
+            <td>value</td>
+            <td>[1..1]</td>
+            <td><strong>Statut métier</strong><br />Valeur issue du JDV_J281-StatutsRessourcesMS</td>
+        </tr>
+        <tr id="value">
+            <td>value[@code="ANNULE"]/qualifier/value</td>
+            <td>[1..1]</td>
+            <td><strong>Motif associé au statut de non-réalisation de l’évènement</strong><br />Lorsque le statut est à "Annulé", le motif est issu du JDV_MotifNonRealisationEvenement_CISIS.</td>
+        </tr>
+    </tbody>
 </table>
 <p><br /></p>
 
@@ -1193,7 +1198,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.tddui#1.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 17, 2024 16:40+0000">2024-12-17</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.tddui#1.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 20, 2024 14:27+0000">2024-12-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

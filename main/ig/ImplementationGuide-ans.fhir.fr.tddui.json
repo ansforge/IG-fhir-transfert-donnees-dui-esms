@@ -10,7 +10,7 @@
   "name" : "TDDUI",
   "title" : "Médicosocial - Transfert de données DUI",
   "status" : "active",
-  "date" : "2024-12-17T16:40:19+00:00",
+  "date" : "2024-12-20T14:27:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -830,6 +830,60 @@
           }],
           "nameUrl" : "terminology_cda.html",
           "title" : "Jeux de Valeurs CDA",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "contenu_sejour.html"
+          }],
+          "nameUrl" : "contenu_sejour.html",
+          "title" : "Sejour",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "contenu_evenement.html"
+          }],
+          "nameUrl" : "contenu_evenement.html",
+          "title" : "Evénement",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "contenu_couvertures.html"
+          }],
+          "nameUrl" : "contenu_couvertures.html",
+          "title" : "Couvertures sociales",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "contenu_evaluation.html"
+          }],
+          "nameUrl" : "contenu_evaluation.html",
+          "title" : "Evaluation",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "contenu_documents_ajoutes.html"
+          }],
+          "nameUrl" : "contenu_documents_ajoutes.html",
+          "title" : "Documents ajoutés",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "contenu_elements_transversaux.html"
+          }],
+          "nameUrl" : "contenu_elements_transversaux.html",
+          "title" : "Eléments transversaux",
           "generation" : "markdown"
         }]
       },
