@@ -19,7 +19,7 @@ Usage: #definition
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 * rest.resource[0].type = #DocumentReference
 * rest.resource[=].profile = "https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-documentreference"
-* rest.resource[=].interaction.code = #create
-* rest.resource[=].interaction.code = #patch
+* rest.resource[=].interaction[0].code = #create
+* rest.resource[=].interaction[+].code = #patch
 * rest.interaction[0].code = #transaction
 * rest.interaction[=].documentation = "https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-bundle"
