@@ -4,6 +4,8 @@ The Digital User File (DUI) centralizes all information concerning the person be
 The aim of this implementation guide is to define the specifications for DUI data transfer.
 </p>
 
+{% if site.data.info.releaselabel == 'ci-build' %}
+<div style="width: 65%">
 <blockquote class="stu-note">
 <p>
   <b>Attention !</b>
@@ -11,6 +13,8 @@ The aim of this implementation guide is to define the specifications for DUI dat
  Cet Implementation Guide est actuellement en concertation.
 </p>
 </blockquote>
+</div>
+{% endif %}
 
 <div class="figure" style="width:65%;">
     <img style="height: auto; width: 100%;" src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS">
