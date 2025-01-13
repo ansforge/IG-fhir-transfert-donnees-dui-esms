@@ -3,7 +3,7 @@ TDDUI : Validation Results
 
 err = 0, warn = 28, info = 15
 IG Publisher Version: 1.8.7
-Generated Mon Jan 13 11:03:01 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.tddui#1.1.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/tddui)
+Generated Mon Jan 13 13:11:49 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.tddui#1.1.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/tddui)
  Build Errors : 6 / 14 / 1
  /home/runner/work/IG-fhir-medicosocial-transfert-donnees-dui/IG-fhir-medicosocial-transfert-donnees-dui/igSource/fsh-generated/resources/Bundle-TDDUIBundleExample : 0 / 0 / 7
  /home/runner/work/IG-fhir-medicosocial-transfert-donnees-dui/IG-fhir-medicosocial-transfert-donnees-dui/igSource/fsh-generated/resources/CapabilityStatement-TDDUIConsommateur : 0 / 0 / 1
