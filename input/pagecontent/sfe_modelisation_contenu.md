@@ -1511,9 +1511,15 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
     <td>Prénom usuel de la personne.</td>
   </tr>
    <tr>
-    <td>fonction : [0..1] Code</td>
-    <td>Profession / savoir-faire ou rôle du professionnel. <br>
+    <td>profession : [0..1] Code</td>
+    <td>Profession du professionnel. <br>
     Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>role : [0..1] Code</td>
+    <td>Rôle du professionnel. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J47-FunctionCode-CISIS.html">JDV-J47-FunctionCode-CISIS</a>
     </td>
   </tr>
   <tr>
