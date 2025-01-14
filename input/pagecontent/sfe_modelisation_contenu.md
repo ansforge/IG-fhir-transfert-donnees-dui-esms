@@ -36,12 +36,12 @@ L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le 
   </tr>
 <tr>
     <td>NSS-NIR : [0..1] Identifiant</td>
-    <td>Numéro de sécurité social NIR de l'usager.
+    <td>Numéro de sécurité sociale NIR de l'usager.
     </td>
   </tr>
 <tr>
     <td>NSS-NIA : [0..1] Identifiant</td>
-    <td>Numéro de sécurité social NIA de l'usager en instance d’attribution d’un NIR.
+    <td>Numéro de sécurité sociale NIA de l'usager en instance d’attribution d’un NIR.
     </td>
   </tr>
 <tr>
