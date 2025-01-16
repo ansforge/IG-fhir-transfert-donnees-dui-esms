@@ -1499,7 +1499,7 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
    <tr>
     <td>civilite : [0..1] Code</td>
     <td>Civilité de la personne. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J245-Civilite-CISIS.html">JDV_J245-Civilite-CISIS</a>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/JDV_J245-Civilite-CISIS.pdf">JDV_J245-Civilite-CISIS</a>
     </td>
   </tr>
    <tr>
@@ -1511,9 +1511,15 @@ Données d'identification pérennes d’une personne physique, qui travaille en 
     <td>Prénom usuel de la personne.</td>
   </tr>
    <tr>
-    <td>fonction : [0..1] Code</td>
-    <td>Profession / savoir-faire ou rôle du professionnel. <br>
-    Jeu(x) de valeur(s) associé(s) :  <a href="https://interop.esante.gouv.fr/ig/nos/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    <td>profession : [0..1] Code</td>
+    <td>Profession / Spécialité du professionnel. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/JDV_J01-XdsAuthorSpecialty-CISIS.pdf">JDV_J01-XdsAuthorSpecialty-CISIS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>role : [0..1] Code</td>
+    <td>Rôle fonctionnel du professionnel. <br>
+    Jeu(x) de valeur(s) associé(s) :  <a href="https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/JDV_J47-FunctionCode-CISIS.pdf">JDV-J47-FunctionCode-CISIS</a>
     </td>
   </tr>
   <tr>
