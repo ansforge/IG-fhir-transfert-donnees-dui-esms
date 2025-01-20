@@ -105,6 +105,12 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYN
             <td>[0..1]</td>
             <td><strong>Statut juridique de l'établissement de rattachement du responsable de l'évaluation</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
+        <tr id="entryRelationship">
+            <td>entryRelationship[observation/templateId/@root="1.2.250.1.213.1.1.3.214"]</td>
+            <td>[0..*]</td>
+            <td><strong>Champ évalué</strong><br>Dans le cadre d'une évaluation de type "Evaluation AGGIR PH SSIAD"/"Evaluation AGGIR PA SSIAD", l'ensemble des composants du JDV_EvaluationAGGIRPH_CISIS/JDV_EvaluationAGGIRPA_CISIS doivent être évalués. Le nombre d'entrées FR-Evaluation-Composant est ainsi équivalent au nombre de composants présents dans les jeux de valeurs.
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -154,7 +160,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DY
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
 
-Le champ évalué (code) et le type de résultat de ce champs évalué (value) dépendent du type d'évaluation (code) véhiculé dans l'entrée FR-Evaluation :
+Le champ évalué (code), le type de résultat de ce champ évalué (value) ainsi que le détail du champ évalué (FR-Evaluation-Composant-N2) dépendent du type d'évaluation (code) véhiculé dans l'entrée FR-Evaluation :
 
 <table id="valeurEvaluation">
     <thead>
@@ -162,28 +168,70 @@ Le champ évalué (code) et le type de résultat de ce champs évalué (value) d
             <th>Type d'évaluation <br>(FR-Evaluation élément code)</th>
             <th>Champs évalué <br>(FR-Evaluation-Composant élément code)</th>
             <th>Type de résultat du champs évalué <br>(FR-Evaluation-Composant élément value)</th>
+            <th>Cardinalité de l'entrée FR-Evaluation-Composant-N2<br>(FR-Evaluation-Composant élément entryrelationship[observation/@root="1.2.250.1.213.1.1.3.220"])</th>
         </tr>
     </thead>
     <tbody>
         <tr id="code">
             <td>Evaluation AGGIR PH SSIAD</td>
-            <td>Jeu de valeurs en cours d'élaboration</td>
-            <td>BL</td>
+            <td>Valeur issue du JDV_EvaluationAGGIRPH_CISIS<br>L'attribut nullFlavor est interdit</td>
+            <td>CD<br>Valeur issue du JDV_ResultatEvaluation_CISIS<br>L’attribut nullFlavor est autorisé</td>
+            <td>Chaque champ évalué doit être détaillé selon 4 critères : [4..4]</td>
         </tr>
         <tr id="value">
             <td>Evaluation AGGIR PA SSIAD</td>
-            <td>Jeu de valeurs en cours d'élaboration</td>
-            <td>BL</td>
+            <td>Valeur issue du JDV_EvaluationAGGIRPA_CISIS<br>L'attribut nullFlavor est interdit</td>
+            <td>CD<br>Valeur issue du JDV_ResultatEvaluation_CISIS<br>L’attribut nullFlavor est autorisé</td>
+            <td>Chaque champ évalué doit être détaillé selon 4 critères : [4..4]</td>
         </tr>
         <tr id="value">
             <td>Evaluation de la situation SSIAD</td>
             <td>Valeur issue du JDV_EvaluationSSIAD_CISIS<br>L'attribut nullFlavor est interdit.</td>
             <td>BL</td>
+            <td>[0..0]</td>
         </tr>
         <tr id="value">
-            <td>EvaLuation SERAFIN</td>
-            <td>Jeu de valeurs en cours d'élaboration</td>
+            <td>Evaluation SERAFIN</td>
+            <td>Valeur issue du JDV_J285-Besoins_SERAFIN<br>L'attribut nullFlavor est interdit.</td>
             <td>INT</td>
+            <td>[0..0]</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+##### Entrée FR-Evaluation-Composant-N2
+
+L'entrée FR-Evaluation-Composant-N2 permet d’associer à un champ AGGIR évalué le résultat détaillé de l’évaluation.
+
+La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.220-DYNAMIC.html" height="400" id="FR-Evaluation-Composant-N2" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.220-DYNAMIC.html" target="_blank">FR-Evaluation-Composant-N2</a>
+
+**Contraintes spécifiques à l'entrée FR-Evaluation-Composant-N2 :**
+
+Cette entrée est utilisée uniquement dans le cadre d’une évaluation de type « Evaluation AGGIR PH SSIAD » ou « Evaluation AGGIR PA SSIAD » :
+
+<table id="evaluationComposantN2">
+    <thead>
+        <tr>
+            <th>Elément XML</th>
+            <th>Card.</th>
+            <th>Contenu de l'élément CDA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="code">
+            <td>code</td>
+            <td>[1..1]</td>
+            <td><strong>Critère évalué</strong><br>Valeur issue du JDV_ResultatQuestionEvaluation_CISIS<br>L'attribut nullFlavor est interdit.</td>
+        </tr>
+        <tr id="value">
+            <td>value</td>
+            <td>[1..1]</td>
+            <td><strong>Résultat du critère évalué</strong><br>L'élément est de type BL</td>
         </tr>
     </tbody>
 </table>
