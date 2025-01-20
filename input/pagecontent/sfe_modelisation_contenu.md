@@ -360,7 +360,11 @@ Assurance maladie obligatoire de l’usager.
   </tr>
   <tr>
     <td>ouvrantDroit : [0..1] Identifiant</td>
-    <td>Identifiant de l’ouvrant droit si ce n’est pas l’usager</td>
+    <td>Identifiant (NIR) de l’ouvrant droit (assuré).</td>
+  </tr>
+  <tr>
+    <td>ayantsDroit : [0..*] Identifiant</td>
+    <td>Identifiants (NIR) des bénéficiaires du contrat d'assurance maladie obligatoire.</td>
   </tr>
   <tr>
     <td>nomOrganisme : [0..1] Texte</td>
@@ -420,8 +424,12 @@ Assurance maladie complémentaire de l’usager.
     <td>Numéro de contrat.</td>
   </tr>
   <tr>
-    <td>ouvrantDroit : [0..1]  idContactPersonnePhysique</td>
-    <td>Identifiant de l’ouvrant droit si ce n’est pas l’usager</td>
+    <td>ouvrantDroit : [0..1]  identifiant</td>
+    <td>Identifiant (NIR) de l’ouvrant droit (bénéficiaire) si ce n’est pas l’usager.</td>
+  </tr>
+  <tr>
+    <td>ayantsDroit : [0..*] Identifiant</td>
+    <td>Identifiants (NIR) des bénéficiaires du contrat d'assurance maladie complémentaire.</td>
   </tr>
   <tr>
     <td>nomOrganisme : [0..1] Texte</td>
