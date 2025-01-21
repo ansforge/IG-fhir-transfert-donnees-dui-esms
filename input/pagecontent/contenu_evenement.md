@@ -42,12 +42,12 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DY
         <tr id="typeEvnName">
             <td>code/qualifier/name</td>
             <td>[0..1]</td>
-            <td><strong>Type évènement SSIAD</strong><br>S'il s'agit d'un évènement SSIAD, la valeur de l'élément name est fixée à : <br>@code = "GEN-364" <br>@codeSystem = "1.2.250.1.213.1.1.4.322" <br>@displayName = "Réforme SSIAD"</td>
+            <td><strong>Type évènement SSIAD</strong><br>S'il s'agit d'un évènement SSIAD, la valeur de l'élément name est fixée à : <br>@code = "GEN-364" <br>@codeSystem = "1.2.250.1.213.1.1.4.322" <br>@displayName = "Réforme SSIAD"<br><br><strong>Type évènement SERAFIN</strong><br>S'il s'agit d'un évènement SERAFIN, la valeur de l'élément name est fixée à : <br>@code = "GEN-363" <br>@codeSystem = "1.2.250.1.213.1.1.4.322" <br>@displayName = "Réforme SERAFIN"</td>
         </tr>
         <tr id="typeEvnValue">
-            <td>code/qualifier[name/@code="GEN-364"]/value</td>
+            <td>code/qualifier/value</td>
             <td>[1..1]</td>
-            <td><strong>Type évènement SSIAD</strong><br>Valeur issue du JDV_TypeEvenementSSIAD_CISIS</td>
+            <td><strong>Type évènement SSIAD</strong><br>Valeur issue du JDV_TypeEvenementSSIAD_CISIS<br><br><strong>Type évènement SERAFIN</strong><br>Valeur issue du JDV_J283-PrestationsIndirects_SERAFIN ou du JDV_J284-PrestationsDirects_SERAFIN</td>
         </tr>
         <tr id="typeEvnTexte">
             <td>code/originalText</td>
@@ -88,11 +88,6 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DY
             <td>participant[@typeCode="RESP"]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
 			<td><strong>Identifiant de l'entité juridique responsable de l'évènement</strong><br>Si l'entité juridique responsable de l'évènement est renseignée, son identifiant est requis.</td>
-        </tr>
-        <tr id="participantStatut">
-            <td>participant[@typeCode="RESP"]/participantRole/scopingEntity/code</td>
-            <td>[0..1]</td>
-			<td><strong>Statut juridique de l'entité juridique responsable de l'évènement</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="performer">
             <td>performer/assignedEntity/id</td>
@@ -136,7 +131,7 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 		</tr>
         <tr id="2">
         <td>GEN-349 (Type de ressource utilisée)</td>
-            <td>CE <br>Valeur issue du JDV_RessourceUtilisee_CISIS
+            <td>CD<br>Valeur issue du JDV_RessourceUtilisee_CISIS
                 <ul>
                     <li>Si l'élément value/@code = "ORG-206" (Matériel spécialisé) alors la valeur de l'élément value/qualifier est issue du JDV_DetailMaterielSpecialise_CISIS.</li>
                     <li>Si l'élément value/@code = "ORG-207" (Ressource immobilière) alors la valeur de l'élément value/qualifier est issue du JDV_DetailRessourceImmobiliereUtilisee_CISIS.</li>
@@ -205,7 +200,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYN
         </tr>
         <tr id="codeQualifier">
             <td>code/qualifier[name/@code="GEN-346"]</td>
-            <td>[0..1]</td>
+            <td>[1..1]</td>
             <td><strong>Type de motorisation</strong><br>L'élément qualifier permettant de véhiculer le type de motorisation (l'attribut @code de l'élément name prend la valeur "GEN-346") ne doit pas être renseigné lorsque l'élément code de l'entrée FR-Transport-du-patient prend l'une des valeurs suivantes :
             <ul>
                 <li>code/@code = "ORG-204" (Transport en commun)</li>
@@ -213,6 +208,11 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYN
                 <li>code/@code = "GEN-092.06.08" (Autre mode de transport)</li>
             </ul>
             </td>
+        </tr>
+        <tr id="codeQualifierNature">
+            <td>code/qualifier[name/@code="GEN-345"]</td>
+            <td>[1..1]</td>
+            <td><strong>Nature du transport</strong><br>Valeur issue du JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN</td>
         </tr>
         <tr id="effectiveTimeLow">
             <td>effectiveTime/low</td>
@@ -228,11 +228,6 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYN
             <td>performer/assignedEntity/representedOrganization/id</td>
             <td>[1..1]</td>
             <td><strong>Identifiant du transporteur</strong><br>Si le transporteur est renseigné, son identifiant est requis.</td>
-        </tr>
-        <tr id="performer">
-            <td>performer/assignedEntity/representedOrganization/standardIndustryClassCode</td>
-            <td>[0..1]</td>
-            <td><strong>Statut juridique du transporteur</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="entryCode">
             <td>entryRelationship/observation[templateId/@root="1.2.250.1.213.1.1.3.48"]/code</td>
@@ -368,11 +363,6 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DY
             <td>participant[@typeCode="RCV"]/participantRole/scopingEntity/id</td>
             <td>[1..1]</td>
             <td><strong>Identifiant de l'établissement de rattachement du professionnel</strong><br>Si l'établissement de rattachement du professionnel est renseigné, son identifiant est requis.</td>
-        </tr>
-        <tr id="participantCode">
-            <td>participant[@typeCode="RCV"]/participantRole/scopingEntity/code</td>
-            <td>[0..1]</td>
-            <td><strong>Statut juridique de l'établissement de rattachement du professionnel</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
         </tr>
         <tr id="performerId">
             <td>performer/assignedEntity/representedOrganization/id</td>
