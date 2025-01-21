@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "TDDUIDocumentReference"] ; # 
   fhir:title [ fhir:v "TDDUI Document Reference"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-01-21T10:20:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-21T11:11:15+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
