@@ -20,7 +20,7 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYN
 
 **Contrainte spécifique à l'entrée FR-Groupe-de-questionnaires-d-evaluation :**
 
-Une entrée FR-Groupe-de-questionnaires-d-evaluation doit être créer par type d'évaluation véhiculé.
+Une entrée FR-Groupe-de-questionnaires-d-evaluation doit être créée par type d'évaluation véhiculé.
 
 <table id="organizer">
     <thead>
@@ -100,14 +100,9 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYN
             <td>[1..1]</td>
             <td><strong>Identifiant de l'établissement de rattachement du responsable de l'évaluation</strong><br>Si l'établissement de rattachement du responsable de l'évaluation est renseigné, son identifiant est requis.</td>
         </tr>
-        <tr id="participantStatut">
-            <td>participant[@typeCode=RESP]/participantRole/scopingEntity/code</td>
-            <td>[0..1]</td>
-            <td><strong>Statut juridique de l'établissement de rattachement du responsable de l'évaluation</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
-        </tr>
         <tr id="entryRelationship">
             <td>entryRelationship[observation/templateId/@root="1.2.250.1.213.1.1.3.214"]</td>
-            <td>[0..*]</td>
+            <td>[1..*]</td>
             <td><strong>Champ évalué</strong><br>Dans le cadre d'une évaluation de type "Evaluation AGGIR PH SSIAD"/"Evaluation AGGIR PA SSIAD", l'ensemble des composants du JDV_EvaluationAGGIRPH_CISIS/JDV_EvaluationAGGIRPA_CISIS doivent être évalués. Le nombre d'entrées FR-Evaluation-Composant est ainsi équivalent au nombre de composants présents dans les jeux de valeurs.
             </td>
         </tr>
@@ -151,7 +146,7 @@ Dans l'entrée FR-Evaluation, le résultat de l'évaluation (value) dépend du t
 
 ##### Entrée FR-Evaluation-Composant
 
-L'entrée FR-Evaluation-Composant permet de porter le résultat d'un critère d'évaluation.
+L'entrée FR-Evaluation-Composant permet de porter le résultat d'un champ évalué. Le détail de l’évaluation de ce champ peut être transmis à travers des sous-entrées FR-Evaluation-Composant-N2.
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
@@ -168,7 +163,7 @@ Le champ évalué (code), le type de résultat de ce champ évalué (value) ains
             <th>Type d'évaluation <br>(FR-Evaluation élément code)</th>
             <th>Champs évalué <br>(FR-Evaluation-Composant élément code)</th>
             <th>Type de résultat du champs évalué <br>(FR-Evaluation-Composant élément value)</th>
-            <th>Cardinalité de l'entrée FR-Evaluation-Composant-N2<br>(FR-Evaluation-Composant élément entryrelationship[observation/@root="1.2.250.1.213.1.1.3.220"])</th>
+            <th>Cardinalité de l'entrée FR-Evaluation-Composant-N2<br>(FR-Evaluation-Composant élément entryRelationship[observation/@root="1.2.250.1.213.1.1.3.220"])</th>
         </tr>
     </thead>
     <tbody>
@@ -231,7 +226,7 @@ Cette entrée est utilisée uniquement dans le cadre d’une évaluation de type
         <tr id="value">
             <td>value</td>
             <td>[1..1]</td>
-            <td><strong>Résultat du critère évalué</strong><br>L'élément est de type BL</td>
+            <td><strong>Résultat du critère évalué</strong><br>L'élément est de type BL.</td>
         </tr>
     </tbody>
 </table>
