@@ -1,6 +1,6 @@
 /*
     Copyright © ART-DECOR Expert Group and ART-DECOR Open Tools
-    see https://art-decor.org/mediawiki/index.php?title=Copyright
+    see https://docs.art-decor.org/copyright and https://docs.art-decor.org/licenses
     
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
