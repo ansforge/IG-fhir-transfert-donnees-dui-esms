@@ -22,13 +22,13 @@ map "Evaluateur : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée
     civilite => performer/assignedEntity/assignedPerson/name/prefix
     nom => performer/assignedEntity/assignedPerson/name/family
     prenom => performer/assignedEntity/assignedPerson/name/given
-    fonction => performer/assignedEntity/code
+    profession => performer/assignedEntity/code
+    role => performer/sdtc:functionCode
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée FR-Evaluation]]" as etablissementDeRattachementEval #back:Ivory;header:LightYellow {
     idNat_Struct => performer/assignedEntity/representedOrganization/id
     raisonSocial => performer/assignedEntity/representedOrganization/name
-    statutJuridique =>  Non applicable
 }
 
 map "Responsable : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée FR-Evaluation]]" as Responsable#back:Ivory;header:LightYellow {
@@ -36,13 +36,13 @@ map "Responsable : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entré
     civilite => participant[@typeCode=RESP]/participantRole/playingEntity/name/prefix
     nom => participant[@typeCode=RESP]/participantRole/playingEntity/name/family
     prenom => participant[@typeCode=RESP]/participantRole/playingEntity/name/given
-    fonction => participant[@typeCode=RESP]/participantRole/playingEntity/code
+    profession => participant[@typeCode=RESP]/participantRole/playingEntity/code
+    role => NA
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée FR-Evaluation]]" as etablissementDeRattachementResp #back:Ivory;header:LightYellow {
     idNat_Struct => participant[@typeCode=RESP]/participantRole/scopingEntity/id
     raisonSocial => participant[@typeCode=RESP]/participantRole/scopingEntity/desc
-    statutJuridique => participant[@typeCode=RESP]/participantRole/scopingEntity/code
 }
 
 map "Auteur : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée FR-Evaluation]]" as Auteur#back:Ivory;header:LightYellow {
@@ -50,13 +50,13 @@ map "Auteur : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée FR-
     civilite => author/assignedAuthor/assignedPerson/name/prefix
     nom => author/assignedAuthor/assignedPerson/name/family
     prenom => author/assignedAuthor/assignedPerson/name/given
-    fonction => author/assignedAuthor/code
+    profession => author/assignedAuthor/code
+    role => author/functionCode
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-evaluation Entrée FR-Evaluation]]" as etablissementDeRattachementAuth #back:Ivory;header:LightYellow {
     idNat_Struct => author/assignedAuthor/representedOrganization/id
     raisonSocial => author/assignedAuthor/representedOrganization/name
-    statutJuridique => Non applicable
 }
 
 map "Statut : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
@@ -70,13 +70,13 @@ map "Auteur : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Stat
     civilite => author/assignedAuthor/assignedPerson/name/prefix
     nom => author/assignedAuthor/assignedPerson/name/family
     prenom => author/assignedAuthor/assignedPerson/name/given
-    fonction => author/assignedAuthor/code
+    profession => author/assignedAuthor/code
+    role => author/functionCode
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as etablissementDeRattachementAuthStatut #back:Ivory;header:LightYellow {
     idNat_Struct => author/assignedAuthor/representedOrganization/id
     raisonSocial => author/assignedAuthor/representedOrganization/name
-    statutJuridique => Non applicable
 }
 
 'Liens entre éléments

@@ -17,7 +17,6 @@ map "Sejour : [[contenu_dossier_corps_cda.html#entrée-fr-sejour Entrée FR-Sejo
 map "ESSMS: [[contenu_dossier_corps_cda.html#entrée-fr-sejour-admission Entrée FR-Sejour-Admission]]" as ESSMS #back:Ivory;header:LightYellow {
     idNat_Struct => participant[@typeCode=RESP]/participantRole/scopingEntity/id
     raisonSocial => participant[@typeCode=RESP]/participantRole/scopingEntity/desc
-    statutJuridique => participant[@typeCode=RESP]/participantRole/scopingEntity/code
 }
 
 map "Evenement : [[contenu_dossier_corps_cda.html#entrée-fr-reference-interne Entrée FR-Rerence-interne]] référençant une entrée FR-Evenement" as Evenement #back:LightYellow;header:LightYellow{

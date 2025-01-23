@@ -10,13 +10,6 @@ Ce mapping représente les données fonctionnelles trouvant leur équivalence da
 {%include mapping_usager.svg%}</div>
 <br>
 
-#### Mapping Assurance maladie
-
-<div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
-{%include mapping_assuranceMaladie.svg%}</div>
-<br>
-
-
 #### Mapping Séjour
 
 <div class="figure" style="width:100%; display: flex; align-items: center; justify-content: center;">
