@@ -6,14 +6,14 @@
   "status" : "active",
   "package-id" : "ans.fhir.fr.tddui",
   "ig-ver" : "1.1.0-ballot",
-  "date" : "Wed, 22 Jan, 2025 20:47:02 +0000",
-  "dateISO8601" : "2025-01-22T20:47:02+00:00",
+  "date" : "Thu, 23 Jan, 2025 19:08:18 +0000",
+  "dateISO8601" : "2025-01-23T19:08:18+00:00",
   "errs" : 0,
-  "warnings" : 28,
+  "warnings" : 50,
   "hints" : 15,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1808217976
+  "maxMemory" : 2053872640
 }
