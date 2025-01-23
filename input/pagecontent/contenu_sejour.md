@@ -56,11 +56,6 @@ Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.218-DY
             <td><strong>Identifiant de l'entité juridique responsable du séjour</strong>
             <br>L'identifiant de la structure est requis.</td>
         </tr>
-        <tr id="participantStatut">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
-            <td>[0..1]</td>
-            <td><strong>Entité juridique responsable du séjour</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
-        </tr>
     </tbody>
 </table>
 <br>
