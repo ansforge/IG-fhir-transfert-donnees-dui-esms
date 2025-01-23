@@ -16,6 +16,17 @@
             </td>
          </tr>
       </table>
+      <script>
+         // Envoie la hauteur du contenu de l'iframe au parent
+         function sendHeight() {
+           var height = document.documentElement.scrollHeight || document.body.scrollHeight;
+           window.parent.postMessage({ height: height }, "*");
+         }
+
+         // Envoie la hauteur à chaque fois que le contenu change (utile si le contenu est dynamique)
+         window.onload = sendHeight;
+         window.onresize = sendHeight;  // Envoie la hauteur si la fenêtre est redimensionnée
+       </script>       
       <div class="TabbedPanelsContent">
          <div id="Accordionvs" class="Accordion">
             <h3>Value Sets</h3>
