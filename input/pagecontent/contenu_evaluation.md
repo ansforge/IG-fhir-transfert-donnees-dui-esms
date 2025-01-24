@@ -4,8 +4,8 @@ La section FR-Statut-fonctionnel permet de fournir les résultats d’évaluatio
 
 La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.246-DYNAMIC.html" height="400" id="FR-Statut-fonctionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.246-DYNAMIC.html" target="_blank">FR-Statut-fonctionnel</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.2.246-DYNAMIC.html" height="400" id="FR-Statut-fonctionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.2.246-DYNAMIC.html" target="_blank">FR-Statut-fonctionnel</a>
 
 <br>
 
@@ -15,8 +15,8 @@ L'entrée FR-Groupe-de-questionnaires-d-evaluation permet de regrouper les éval
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" height="400" id="FR-Groupe-de-questionnaires-d-evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" target="_blank">FR-Groupe-de-questionnaires-d-evaluation</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" height="400" id="FR-Groupe-de-questionnaires-d-evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.95-DYNAMIC.html" target="_blank">FR-Groupe-de-questionnaires-d-evaluation</a>
 
 **Contrainte spécifique à l'entrée FR-Groupe-de-questionnaires-d-evaluation :**
 
@@ -46,8 +46,8 @@ L'entrée FR-Evaluation permet de véhiculer le résultat d'une évaluation de l
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" height="400" id="FR-Evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" target="_blank">FR-Evaluation</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" height="400" id="FR-Evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" target="_blank">FR-Evaluation</a>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation :**
 
@@ -149,8 +149,8 @@ L'entrée FR-Evaluation-Composant permet de porter le résultat d'un critère d'
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" height="400" id="FR-Evaluation-Composant" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" target="_blank">FR-Evaluation-Composant</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" height="400" id="FR-Evaluation-Composant" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.214-DYNAMIC.html" target="_blank">FR-Evaluation-Composant</a>
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant :**
 
