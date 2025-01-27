@@ -66,3 +66,45 @@ La structure de l'entrée se conforme aux contraintes et définitions présenté
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.36-DYNAMIC.html" target="_blank">FR-Reference-interne</a>
 
 <br>
+
+#### Elément FR-Participant
+
+L'élément FR-Participant permet de décrire un participant dans une section ou une entrée.
+
+La structure de l'élément se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.109-DYNAMIC.html" height="400" id="FR-Participant" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.109-DYNAMIC.html" target="_blank">FR-Participant</a>
+
+<br>
+
+#### Elément FR-Performer
+
+L'élément FR-Performer permet de décrire une personne ayant exécuté un acte.
+
+La structure de l'élément se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
+
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.99.99.10.85-DYNAMIC.html" height="400" id="FR-Performer" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.99.99.10.85-DYNAMIC.html" target="_blank">FR-Performer</a>
+
+**Contrainte spécifique à l'élément FR-Performer :**
+
+Certains rôles du professionnel sont à véhiculer en utilisant conjointement les éléments sdtc:functionCode et assignedEntity/code :
+
+<table id="performer">
+    <thead>
+        <tr>
+            <th>Rôle fonctionnel</th>
+            <th>Valeur sdtc:functionCode</th>
+            <th>Valeur assignedEntity/code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="value">
+            <td>Infirmier coordinateur (IDEC)</td>
+            <td>@code = "330"<br>@displayName = "Coordonnateur de parcours"<br>@codeSystem = "1.2.250.1.213.1.6.1.107"</td>
+            <td>@code = "G15_60"<br>@displayName = "Infirmier"<br>@codeSystem = "1.2.250.1.213.1.1.4.5"</td>
+        </tr>
+    </tbody>
+</table>
+<br>
