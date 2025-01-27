@@ -61,8 +61,8 @@ La structure du RecordTarget se conforme aux contraintes et définitions présen
 Dans la mesure du possible, le RecordTarget doit également se conformer à l'annexe CI-SIS de [Prise en charge de l’identité nationale de santé (INS) dans
 les standards d’interopérabilité et les volets du CI-SIS](https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis).
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" height="400" id="RecordTarget" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" target="_blank">RecordTarget</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" height="400" id="RecordTarget" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.html" target="_blank">RecordTarget</a>
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
@@ -171,8 +171,8 @@ L’Author permet d'enregistrer un auteur du document. Dans le contexte de ce vo
 
 La structure de l'Author se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html" height="400" id="Author" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html" target="_blank">Author</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html" height="400" id="Author" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.7-DYNAMIC.html" target="_blank">Author</a>
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
@@ -235,8 +235,8 @@ Le Custodian représente la structure chargée de la conservation du document. I
 
 La structure du Custodian se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.5-DYNAMIC.html" height="400" id="Custodian" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.5-DYNAMIC.html" target="_blank">Custodian</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.5-DYNAMIC.html" height="400" id="Custodian" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.5-DYNAMIC.html" target="_blank">Custodian</a>
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
@@ -273,8 +273,8 @@ Le LegalAuthentificator représente le responsable du document. Dans le cadre de
 
 La structure du LegalAuthentificator se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** : 
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.6-DYNAMIC.html" height="400" id="LegalAuthenticator" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.6-DYNAMIC.html" target="_blank">LegalAuthentificator</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.6-DYNAMIC.html" height="400" id="LegalAuthenticator" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.6-DYNAMIC.html" target="_blank">LegalAuthentificator</a>
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
@@ -326,8 +326,8 @@ Le DocumentationOf documente le transfert de données depuis un logiciel DUI.
 
 La structure du DocumentationOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.4-DYNAMIC.html" height="400" id="DocumentationOf" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.4-DYNAMIC.html" target="_blank">DocumentationOf</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.4-DYNAMIC.html" height="400" id="DocumentationOf" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.4-DYNAMIC.html" target="_blank">DocumentationOf</a>
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
@@ -391,8 +391,8 @@ L'élément RelatedDocument est facultatif dans le cas où le document actuel es
 
 La structure du RelatedDocument se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.3-DYNAMIC.html" height="400" id="RelatedDocument" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.3-DYNAMIC.html" target="_blank">RelatedDocument</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.3-DYNAMIC.html" height="400" id="RelatedDocument" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.3-DYNAMIC.html" target="_blank">RelatedDocument</a>
 
 <br>
 
@@ -402,8 +402,8 @@ Le ComponentOf permet de lier le document à un transfert de données DUI.
 
 La structure du ComponentOf se conforme aux contraintes et définitions présentées dans le **Volet Structuration minimale des documents de santé** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.2-DYNAMIC.html" height="400" id="ComponentOf" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.1.1.10.2-DYNAMIC.html" target="_blank">ComponentOf</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.1.1.10.2-DYNAMIC.html" height="400" id="ComponentOf" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.2-DYNAMIC.html" target="_blank">ComponentOf</a>
 
 **Le tableau ci-dessous présente les contraintes spécifiques à l'entête TDDUI :**
 
