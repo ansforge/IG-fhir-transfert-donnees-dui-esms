@@ -102,7 +102,7 @@ Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" 
         </tr>
         <tr id="entryRelationship">
             <td>entryRelationship[observation/templateId/@root="1.2.250.1.213.1.1.3.214"]</td>
-            <td>[1..*]</td>
+            <td>[0..*]</td>
             <td><strong>Champ évalué</strong><br>Dans le cadre d'une évaluation de type "Evaluation AGGIR PH SSIAD"/"Evaluation AGGIR PA SSIAD", l'ensemble des composants du JDV_EvaluationAGGIRPH_CISIS/JDV_EvaluationAGGIRPA_CISIS doivent être évalués. Le nombre d'entrées FR-Evaluation-Composant est ainsi équivalent au nombre de composants présents dans les jeux de valeurs.
             </td>
         </tr>
