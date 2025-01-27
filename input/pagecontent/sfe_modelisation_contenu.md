@@ -1248,7 +1248,12 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
   </tr>
   <tr>
     <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
-    <td>Résultat du critère d'évaluation de la grille par rapport aux 4 critères possibles d'évaluation : : JDV_ResultatQuestionEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.817 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs</a>
+    <td>
+    - Evaluation AGGIR PH PA SSIAD : Le résultat du champ évalué peut véhiculer un code intermédiaire : JDV_ResultatEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.816 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs.</a><br>
+    Et doit contenir l'évaluation des 4 critères : JDV_ResultatQuestionEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.817 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs.</a><br>
+    Deux niveaux de détail sont possibles.<br>
+    - Evaluation de la situation SSIAD : Le résultat attendu pour chaque champ évalué d'une évaluation de la situation des SSIAD est un booléen.<br>
+    - Evaluation Serafin : Le résultat attendu pour chaque champ évalué d'une évaluation SERAFIN est un entier.
     </td>
   </tr>
   <tr>
