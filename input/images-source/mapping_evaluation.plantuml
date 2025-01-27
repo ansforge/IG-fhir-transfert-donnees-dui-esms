@@ -62,7 +62,7 @@ map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-e
 map "Statut : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
     statut => value
     motifNonRealisation => value/qualifier
-    dateModificationStatut => effectiveTime
+    dateStatut => effectiveTime
 }
 
 map "Auteur : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as AuteurStatut #back:Ivory;header:LightYellow {

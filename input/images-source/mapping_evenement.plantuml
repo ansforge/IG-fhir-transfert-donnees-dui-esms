@@ -82,7 +82,7 @@ map "Evaluation : [[contenu_dossier_corps_cda.html#entrée-fr-reference-interne 
 map "Statut : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
     statut => value
     motifNonRealisation => value/qualifier
-    dateModificationStatut => effectiveTime
+    dateStatut => effectiveTime
 }
 
 map "Professionnel : [[contenu_dossier_corps_cda.html#entrée-fr-evenement Entrée FR-Evenement]]" as ProfessionnelEvn #back:Ivory;header:LightYellow{
