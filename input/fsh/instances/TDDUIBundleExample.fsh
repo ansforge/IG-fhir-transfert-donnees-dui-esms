@@ -2,8 +2,6 @@ Instance: TDDUIBundleExample
 InstanceOf: TDDUIBundle
 Usage: #example
 * type = #transaction
-* link.relation = "self"
-* link.url = "https://interop.esante.gouv.fr/matchbox/fhir/DocumentReference?_elements=id&_lastUpdated=gt2023-10-01&type=57830-2"
 * entry[DUIDocumentReference].resource = TDDUIDocumentReference1
 * entry[DUIDocumentReference].request.method = #POST
 * entry[DUIDocumentReference].request.url = "TDDUIDocumentReference1"
