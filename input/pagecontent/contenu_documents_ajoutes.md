@@ -1,6 +1,6 @@
 ### Section FR-Documents-ajoutes
 
-La section FR-Documents-ajoutes permet d’ajouter les documents ou pièce jointes qui sont spécifiques à ce volet.
+La section FR-Documents-ajoutes permet d’ajouter les documents ou pièces jointes qui sont spécifiques à ce volet.
 
 La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
@@ -18,6 +18,8 @@ La structure de l'entrée se conforme aux contraintes et définitions présenté
 <iframe src="./cda/tmp-1.2.250.1.213.1.1.3.18-DYNAMIC.html" height="400" id="FR-Document-attache" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.18-DYNAMIC.html" target="_blank">FR-Document-attache</a>
 
+<br>
+
 #### Entrée FR-Type-document-attache
 
 L'entrée FR-Type-document-attache définit le type de document attaché.
@@ -26,3 +28,5 @@ La structure de l'entrée se conforme aux contraintes et définitions présenté
 
 <iframe src="./cda/tmp-1.2.250.1.213.1.1.3.48.18-DYNAMIC.html" height="400" id="FR-Type-document-attache" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.48.18-DYNAMIC.html" target="_blank">FR-Type-document-attache</a>
+
+<br>
