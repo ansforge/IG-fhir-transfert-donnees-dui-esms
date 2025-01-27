@@ -15,8 +15,8 @@ L'entrée FR-Document-attache permet de regrouper dans une même entrée un él�
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.18-DYNAMIC.html" height="400" id="FR-Groupe-de-questionnaires-d-evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.18-DYNAMIC.html" target="_blank">FR-Document-attache</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.18-DYNAMIC.html" height="400" id="FR-Document-attache" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.18-DYNAMIC.html" target="_blank">FR-Document-attache</a>
 
 #### Entrée FR-Type-document-attache
 
@@ -24,5 +24,5 @@ L'entrée FR-Type-document-attache définit le type de document attaché.
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.18-DYNAMIC.html" height="400" id="FR-Groupe-de-questionnaires-d-evaluation" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.48.18-DYNAMIC.html" target="_blank">FR-Type-document-attache</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.48.18-DYNAMIC.html" height="400" id="FR-Type-document-attache" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.48.18-DYNAMIC.html" target="_blank">FR-Type-document-attache</a>
