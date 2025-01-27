@@ -19,6 +19,9 @@
 						Entrée FR-Sejour : ajout des typeCodes obligatoires sur tous les component
 						Entrée FR-Groupe-de-questionnaires-d-evaluation : ajout du typeCode obligatoire sur le component
 						Traduction du displayname distance, status, date and time of last update data
+        27/01/2025 :    Ajout d'une catégorie d'établissement (componentOf/encompassingEncounter/location/healthCareFacility/code/translation)
+		        		Ajout d'une évaluation AGGIR PH SSIAD
+		        		Ajout du templateId FR-Type-document-attache
 	**********************************************************************************************************
 -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
