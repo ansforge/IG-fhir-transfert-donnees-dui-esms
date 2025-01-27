@@ -4,8 +4,8 @@ Cette section contient l'ensemble des évènements (passés ou à venir) d'un us
 
 La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" height="400" id="FR-Evenements" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" target="_blank">FR-Evenements</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" height="400" id="FR-Evenements" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.2.248-DYNAMIC.html" target="_blank">FR-Evenements</a>
 
 <br>
 
@@ -15,8 +15,8 @@ Cette entrée permet de décrire un évènement de l'usager passé ou à venir.
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" height="400" id="FR-Evenement" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" target="_blank">FR-Evenement</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" height="400" id="FR-Evenement" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.215-DYNAMIC.html" target="_blank">FR-Evenement</a>
 
 **Contraintes spécifiques à l'entrée FR-Evenement :**
 
@@ -166,8 +166,8 @@ Cette entrée permet de décrire le transport de l'usager lors de l'évènement.
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" height="400" id="FR-Transport-du-patient" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" target="_blank">FR-Transport-du-patient</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" height="400" id="FR-Transport-du-patient" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" target="_blank">FR-Transport-du-patient</a>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-patient :**
 
@@ -301,8 +301,8 @@ Cette entrée permet de décrire le transport d'un professionnel lors de l'évè
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" height="400" id="FR-Transport-du-professionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
-Lien vers le template : <a href="./cda/TDDUI-html/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" target="_blank">FR-Transport-du-professionnel</a>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" height="400" id="FR-Transport-du-professionnel" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
+Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.216-DYNAMIC.html" target="_blank">FR-Transport-du-professionnel</a>
 
 **Contraintes spécifiques à l'entrée FR-Transport-du-professionnel :**
 
