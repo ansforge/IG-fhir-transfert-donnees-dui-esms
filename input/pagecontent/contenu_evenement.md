@@ -210,7 +210,7 @@ Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.24-DYNAMIC.html" 
             </td>
         </tr>
         <tr id="codeQualifierNature">
-            <td>code/qualifier[name/@code="GEN-345"]</td>
+            <td>code/qualifier[name/@code="GEN-345"]/value</td>
             <td>[1..1]</td>
             <td><strong>Nature du transport</strong><br>Valeur issue du JDV_J282-TransportsLiesAuProjetIndividuel_SERAFIN</td>
         </tr>
