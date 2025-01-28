@@ -42,7 +42,7 @@ Une entrée FR-Groupe-de-questionnaires-d-evaluation doit être créée par type
 
 ##### Entrée FR-Evaluation
 
-L'entrée FR-Evaluation permet de véhiculer le résultat d'une évaluation de l'usager. Le détail de l'évaluation peut être transmis à travers des sous-entrées FR-Evaluation-Composant.
+L'entrée FR-Evaluation permet de véhiculer le résultat d'une évaluation de l'usager. Le détail de l'évaluation peut être transmis à travers des sous-entrées FR-Evaluation-Composant et FR-Evaluation-Composant-N2.
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
@@ -103,7 +103,7 @@ Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.25-DYNAMIC.html" 
         <tr id="entryRelationship">
             <td>entryRelationship[observation/templateId/@root="1.2.250.1.213.1.1.3.214"]</td>
             <td>[0..*]</td>
-            <td><strong>Champ évalué</strong><br>Dans le cadre d'une évaluation de type "Evaluation AGGIR PH SSIAD"/"Evaluation AGGIR PA SSIAD", l'ensemble des composants du JDV_EvaluationAGGIRPH_CISIS/JDV_EvaluationAGGIRPA_CISIS doivent être évalués. Le nombre d'entrées FR-Evaluation-Composant est ainsi équivalent au nombre de composants présents dans les jeux de valeurs.
+            <td><strong>Champ évalué</strong><br>Dans le cadre d'une évaluation de type "Evaluation AGGIR PH SSIAD"/"Evaluation AGGIR PA SSIAD", l'ensemble des composants des jeux de valeurs respectifs JDV_EvaluationAGGIRPH_CISIS/JDV_EvaluationAGGIRPA_CISIS doivent être évalués. Le nombre d'entrées FR-Evaluation-Composant est ainsi équivalent au nombre de composants présents dans les jeux de valeurs.
             </td>
         </tr>
     </tbody>
@@ -198,7 +198,7 @@ Le champ évalué (code), le type de résultat de ce champ évalué (value) ains
 
 ##### Entrée FR-Evaluation-Composant-N2
 
-L'entrée FR-Evaluation-Composant-N2 permet d’associer à un champ AGGIR évalué le résultat détaillé de l’évaluation.
+L'entrée FR-Evaluation-Composant-N2 permet d’associer à un champ évalué le résultat détaillé de l’évaluation.
 
 La structure de l'entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
@@ -207,26 +207,26 @@ Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.220-DYNAMIC.html"
 
 **Contraintes spécifiques à l'entrée FR-Evaluation-Composant-N2 :**
 
-Cette entrée est utilisée uniquement dans le cadre d’une évaluation de type « Evaluation AGGIR PH SSIAD » ou « Evaluation AGGIR PA SSIAD » :
+Le critère évalué (code) et le type de résultat de ce critère évalué (value) dépendent du type d’évaluation (code) véhiculé dans l’entrée FR-Evaluation :
 
-<table id="evaluationComposantN2">
+<table id="evaluationN2">
     <thead>
         <tr>
-            <th>Elément XML</th>
-            <th>Card.</th>
-            <th>Contenu de l'élément CDA</th>
+            <th>Type d'évaluation <br>(FR-Evaluation élément code)</th>
+            <th>Critère évalué <br>(FR-Evaluation-Composant-N2 élément code)</th>
+            <th>Type de résultat du critère évalué <br>(FR-Evaluation-Composant-N2 élément value)</th>
         </tr>
     </thead>
     <tbody>
         <tr id="code">
-            <td>code</td>
-            <td>[1..1]</td>
-            <td><strong>Critère évalué</strong><br>Valeur issue du JDV_ResultatQuestionEvaluation_CISIS<br>L'attribut nullFlavor est interdit.</td>
+            <td>Evaluation AGGIR PH SSIAD</td>
+            <td>Valeur issue du JDV_ResultatQuestionEvaluation_CISIS<br>L'attribut nullFlavor est interdit.</td>
+            <td>BL</td>
         </tr>
         <tr id="value">
-            <td>value</td>
-            <td>[1..1]</td>
-            <td><strong>Résultat du critère évalué</strong><br>L'élément est de type BL.</td>
+            <td>Evaluation AGGIR PA SSIAD</td>
+            <td>Valeur issue du JDV_ResultatQuestionEvaluation_CISIS<br>L'attribut nullFlavor est interdit.</td>
+            <td>BL</td>
         </tr>
     </tbody>
 </table>
