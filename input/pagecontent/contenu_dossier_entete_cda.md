@@ -80,7 +80,18 @@ Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.1.1.10.10-DYNAMIC.h
             <td>[1..*]</td>
             <td><strong>Identifiants</strong><br>
                 <ul>
-                    <li>Matricule INS de l'usager (à véhiculer s'il est disponible)</li>
+                    <li>Matricule INS de l'usager (à véhiculer s'il est disponible) :
+                        <ul>
+                            <li>Si INS-NIR  : @root="1.2.250.1.213.1.4.8"</li>
+                            <li>Si INS-NIA : @root="1.2.250.1.213.1.4.9"</li>
+                        </ul>
+                    </li>
+                    <li>Numéro de sécurité sociale de l'usager :
+                        <ul>
+                            <li>Si NSS-NIR  : @root="1.2.250.1.213.1.4.13"</li>
+                            <li>Si NSS-NIA : @root="1.2.250.1.213.1.4.14"</li>
+                        </ul>
+                    </li>
                     <li>Identifiant local de l'usager au sein de l'ESMS ; l'identifiant se forme en concaténant : 3+FINESS/identifiantLocalUsagerESSMS</li>
                     <li>Identifiant initial attribué par la MDPH</li>
                 </ul> 
