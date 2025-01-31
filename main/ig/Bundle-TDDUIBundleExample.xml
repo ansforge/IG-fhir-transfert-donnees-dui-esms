@@ -6,10 +6,6 @@
     <profile value="https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-bundle"/>
   </meta>
   <type value="transaction"/>
-  <link>
-    <relation value="self"/>
-    <url value="https://interop.esante.gouv.fr/matchbox/fhir/DocumentReference?_elements=id&amp;_lastUpdated=gt2023-10-01&amp;type=57830-2"/>
-  </link>
   <entry>
     <resource>
       <DocumentReference>

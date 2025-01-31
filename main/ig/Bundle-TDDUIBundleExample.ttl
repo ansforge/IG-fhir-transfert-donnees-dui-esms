@@ -15,10 +15,6 @@
      ] )
   ] ; # 
   fhir:type [ fhir:v "transaction"] ; # 
-  fhir:link ( [
-     fhir:relation [ fhir:v "self" ] ;
-     fhir:url [ fhir:v "https://interop.esante.gouv.fr/matchbox/fhir/DocumentReference?_elements=id&_lastUpdated=gt2023-10-01&type=57830-2"^^xsd:anyURI ]
-  ] ) ; # 
   fhir:entry ( [
      fhir:resource ( [
        a fhir:DocumentReference ;
