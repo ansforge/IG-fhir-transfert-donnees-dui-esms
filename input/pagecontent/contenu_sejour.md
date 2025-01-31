@@ -4,7 +4,7 @@ Cette section contient les informations relatives au(x) séjour(s) d'un usager d
 
 La structure de la section se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/tmp-1.2.250.1.213.1.1.2.249-DYNAMIC.html" height="400" name="FR-Sejours" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.2.249-DYNAMIC.html" height="400" id="FR-Sejours" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.2.249-DYNAMIC.html" target="_blank">FR-Sejours</a>
 
 <br>
@@ -15,7 +15,7 @@ Cette entrée est un élément de type organizer permettant de décrire le séjo
 
 La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.219-DYNAMIC.html" height="400" name="FR-Sejour" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.219-DYNAMIC.html" height="400" id="FR-Sejour" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.219-DYNAMIC.html" target="_blank">FR-Sejour</a>
 
 <br>
@@ -26,7 +26,7 @@ Cette entrée permet de décrire les données relatives à l'admission de l'usag
 
 La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.218-DYNAMIC.html" height="400" name="FR-Sejour-Admission" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.218-DYNAMIC.html" height="400" id="FR-Sejour-Admission" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.218-DYNAMIC.html" target="_blank">FR-Sejour-Admission</a>
 
 **Contraintes spécifiques à l'entrée FR-Sejour-Admission :**
@@ -56,11 +56,6 @@ Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.218-DYNAMIC.html"
             <td><strong>Identifiant de l'entité juridique responsable du séjour</strong>
             <br>L'identifiant de la structure est requis.</td>
         </tr>
-        <tr id="participantStatut">
-            <td>participant[@classCode=RESP]/participantRole/scopingEntity/code</td>
-            <td>[0..1]</td>
-            <td><strong>Entité juridique responsable du séjour</strong><br>Valeur issue du JDV_J100-FinessStatutJuridique-RASS.</td>
-        </tr>
     </tbody>
 </table>
 <br>
@@ -71,7 +66,7 @@ Cette entrée permet d'indiquer la modalité d'entrée d'un usager dans un étab
 
 La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.48.6-DYNAMIC.html" height="400" name="FR-Modalite-entree" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.48.6-DYNAMIC.html" height="400" id="FR-Modalite-entree" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.48.6-DYNAMIC.html" target="_blank">FR-Modalite-entree</a>
 
 **Contraintes spécifiques à l'entrée FR-Modalite-entree :**
@@ -105,7 +100,7 @@ Cette entrée permet d'indiquer la modalité de sortie d'un usager dans un étab
 
 La structure de l’entrée se conforme aux contraintes et définitions présentées dans les **Modèles de contenus CDA** :
 
-<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.48.7-DYNAMIC.html" height="400" name="FR-Modalite-sortie" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe src="./cda/tmp-1.2.250.1.213.1.1.3.48.7-DYNAMIC.html" height="400" id="FR-Modalite-sortie" style="border: 1px solid black" sandbox="allow-same-origin allow-scripts"></iframe>
 Lien vers le template : <a href="./cda/tmp-1.2.250.1.213.1.1.3.48.7-DYNAMIC.html" target="_blank">FR-Modalite-sortie</a>
 
 **Contraintes spécifiques à l'entrée FR-Modalite-sortie :**
