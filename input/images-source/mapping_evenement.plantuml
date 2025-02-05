@@ -37,25 +37,23 @@ map "Professionnel : [[contenu_dossier_corps_cda.html#entrée-fr-transport-du-pr
     civilite => participant[@typeCode=RCV]/participantRole/playingEntity/name/prefix
     nom => participant[@typeCode=RCV]/participantRole/playingEntity/name/family
     prenom => participant[@typeCode=RCV]/participantRole/playingEntity/name/given
-    fonction => participant[@typeCode=RCV]/participantRole/playingEntity/code
+    profession => participant[@typeCode=RESP]/participantRole/playingEntity/code
+    role => NA
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-transport-du-professionnel Entrée FR-Transport-du-professionnel]]" as etablissementDeRattachement #back:Ivory;header:LightYellow {
     idNat_Struct => participant[@typeCode=RCV]/participantRole/scopingEntity/id
     raisonSocial => participant[@typeCode=RCV]/participantRole/scopingEntity/desc
-    statutJuridique => participant[@typeCode=RCV]/participantRole/scopingEntity/code
 }
 
 map "Transporteur [[contenu_dossier_corps_cda.html#entrée-fr-evenement Entrée FR-Evenement]]" as transporteur #back:Ivory;header:LightYellow  {
     idNat_Struct => performer/assignedEntity/representedOrganization/id
     raisonSocial => performer/assignedEntity/representedOrganization/name
-    statutJuridique =>  Non applicable
 }
 
 map "StructureEnCharge [[contenu_dossier_corps_cda.html#entrée-fr-evenement Entrée FR-Evenement]]" as structureEnCharge #back:Ivory;header:LightYellow  {
     idNat_Struct => participant[@typeCode=RESP]/participantRole/scopingEntity/id
     raisonSocial => participant[@typeCode=RESP]/participantRole/scopingEntity/desc
-    statutJuridique => participant[@typeCode=RESP]/participantRole/scopingEntity/code
 }
 
 
@@ -84,7 +82,7 @@ map "Evaluation : [[contenu_dossier_corps_cda.html#entrée-fr-reference-interne 
 map "Statut : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as Statut #back:Ivory;header:LightYellow{
     statut => value
     motifNonRealisation => value/qualifier
-    dateModificationStatut => effectiveTime
+    dateStatut => effectiveTime
 }
 
 map "Professionnel : [[contenu_dossier_corps_cda.html#entrée-fr-evenement Entrée FR-Evenement]]" as ProfessionnelEvn #back:Ivory;header:LightYellow{
@@ -96,13 +94,13 @@ map "Auteur : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Stat
     civilite => author/assignedAuthor/assignedPerson/name/prefix
     nom => author/assignedAuthor/assignedPerson/name/family
     prenom => author/assignedAuthor/assignedPerson/name/given
-    fonction => author/assignedAuthor/code
+    profession => author/assignedAuthor/code
+    role => author/functionCode
 }
 
 map "EtablissementDeRattachement : [[contenu_dossier_corps_cda.html#entrée-fr-statut Entrée FR-Statut]]" as etablissementDeRattachementAuthStatut #back:Ivory;header:LightYellow {
     idNat_Struct => author/assignedAuthor/representedOrganization/id
     raisonSocial => author/assignedAuthor/representedOrganization/name
-    statutJuridique => Non applicable
 }
 
 
