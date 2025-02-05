@@ -16,4 +16,4 @@
 
 | Nom  | description |
 | --- | --- |
-| [CDA_TDDUI_Exemple_SSIAD](CDA_TDDUI_Exemple_SSIAD_v1.1.0.xml) | Exemple de document CDA décrivant un cas d'usage d'évènement SSIAD intégrant un séjour, deux évaluations (une évaluation AGGIR PH SSIAD et une évaluation de la situation SSIAD) et un transport de professionnel |
+| [CDA_TDDUI_Exemple](CDA_TDDUI_Exemple_v1.1.0.xml) | Exemple de document CDA décrivant un séjour, un évènement SSIAD, un transport de professionnel, une évaluation AGGIR PH SSIAD et une évaluation de la situation SSIAD.|

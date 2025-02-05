@@ -2,7 +2,7 @@
 <!-- 
 	**********************************************************************************************************
 	Système : ANS
-	Document : Transfert de données DUI ( MS-TD-DUI_2024.09)	
+	Document : Export du Dossier Usager Informatisé (Médicosocial - Transfert de données DUI (TDDUI))
 	**********************************************************************************************************
 	format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
 	**********************************************************************************************************	
@@ -19,9 +19,10 @@
 						Entrée FR-Sejour : ajout des typeCodes obligatoires sur tous les component
 						Entrée FR-Groupe-de-questionnaires-d-evaluation : ajout du typeCode obligatoire sur le component
 						Traduction du displayname distance, status, date and time of last update data
-        27/01/2025 :    Ajout d'une catégorie d'établissement (componentOf/encompassingEncounter/location/healthCareFacility/code/translation)
+		27/01/2025 :    Ajout d'une catégorie d'établissement (componentOf/encompassingEncounter/location/healthCareFacility/code/translation)
 		        		Ajout d'une évaluation AGGIR PH SSIAD
 		        		Ajout du templateId FR-Type-document-attache
+		        		Ajout du rôle d'infirmier coordinateur pour le professionnel ayant réalisé l'évènement
 	**********************************************************************************************************
 -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -428,10 +429,11 @@
 							</effectiveTime>
 							<!-- Professionnel ayant réalisé l'évènement -->
 							<performer typeCode="PRF">
+								<sdtc:functionCode code = "330" displayName = "Coordonnateur de parcours" codeSystem = "1.2.250.1.213.1.6.1.107"/>
 								<assignedEntity>
 									<!-- Identifiant FINESS du professionnel -->
 									<id root="1.2.250.1.71.4.2.1" extension="10103441234" />
-									<!-- Fonction du professionnel : "Infirmière diplômée d'état" non inclus dans le JDV_J01 - DM NOS en cours -->
+									<code code = "G15_60" displayName = "Infirmier" codeSystem = "1.2.250.1.213.1.1.4.5"/>
 									<!-- Identité du professionnel -->
 									<assignedPerson>
 										<name>
