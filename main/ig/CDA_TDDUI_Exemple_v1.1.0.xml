@@ -2,7 +2,7 @@
 <!-- 
 	**********************************************************************************************************
 	Système : ANS
-	Document : Transfert de données DUI ( MS-TD-DUI_2024.09)	
+	Document : Export du Dossier Usager Informatisé (Médicosocial - Transfert de données DUI (TDDUI))
 	**********************************************************************************************************
 	format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
 	**********************************************************************************************************	
@@ -19,6 +19,10 @@
 						Entrée FR-Sejour : ajout des typeCodes obligatoires sur tous les component
 						Entrée FR-Groupe-de-questionnaires-d-evaluation : ajout du typeCode obligatoire sur le component
 						Traduction du displayname distance, status, date and time of last update data
+		27/01/2025 :    Ajout d'une catégorie d'établissement (componentOf/encompassingEncounter/location/healthCareFacility/code/translation)
+		        		Ajout d'une évaluation AGGIR PH SSIAD
+		        		Ajout du templateId FR-Type-document-attache
+		        		Ajout du rôle d'infirmier coordinateur pour le professionnel ayant réalisé l'évènement
 	**********************************************************************************************************
 -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -213,7 +217,11 @@
 				<!-- Modalité d'exercice de la structure effectuant le transfert (Valeur issue du JDV_J02_XdsHealthcareFacilityTypeCode_CISIS) -->
 					<code code="SA41"
 					codeSystem="1.2.250.1.71.4.2.4"
-					displayName="Autre établissement du domaine social ou médico-social"/>
+					displayName="Autre établissement du domaine social ou médico-social">
+						<translation code="354" 
+								displayName="Service de Soins Infirmiers A Domicile (S.S.I.A.D)"
+								codeSystem="1.2.250.1.213.1.6.1.8"/>
+					</code>
 				</healthCareFacility>
 			</location>
 		</encompassingEncounter>
@@ -421,10 +429,11 @@
 							</effectiveTime>
 							<!-- Professionnel ayant réalisé l'évènement -->
 							<performer typeCode="PRF">
+								<sdtc:functionCode code = "330" displayName = "Coordonnateur de parcours" codeSystem = "1.2.250.1.213.1.6.1.107"/>
 								<assignedEntity>
 									<!-- Identifiant FINESS du professionnel -->
 									<id root="1.2.250.1.71.4.2.1" extension="10103441234" />
-									<!-- Fonction du professionnel : "Infirmière diplômée d'état" non inclus dans le JDV_J01 - DM NOS en cours -->
+									<code code = "G15_60" displayName = "Infirmier" codeSystem = "1.2.250.1.213.1.1.4.5"/>
 									<!-- Identité du professionnel -->
 									<assignedPerson>
 										<name>
@@ -472,7 +481,6 @@
 									<value xsi:type="CD" code="261324000" displayName="Véhicule" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
 								</observation>
 							</entryRelationship>
-							
 							<!-- [1..1] Entrée FR-Simple-Observation : Date de dernière mise à jour -->
 							<entryRelationship typeCode="COMP" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
@@ -599,7 +607,6 @@
 									<statusCode code="completed"/>
 								</act>
 							</entryRelationship>
-							
 							<!-- [0..*] Entrée FR-Statut : statut métier de l'évènement-->
 							<entryRelationship typeCode="COMP" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
@@ -628,10 +635,8 @@
 							</entryRelationship>
 						</encounter>
 					</entry>
-					
 				</section>
 			</component>
-			
 			<!-- [1..1] Section FR-Statut-fonctionnel-->
 			<component>
 				<section>
@@ -649,7 +654,94 @@
 						<table border="0">
 							<thead>
 								<tr>
-									<th>Date d'admission</th>
+									<th>Type d'évaluation</th>
+									<th>Résultat d'évaluation</th>
+									<th>Statut</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID="grilleEvaluation">Evaluation AGGIR PH SSIAD</td>
+									<td>GIR-2</td>
+									<td ID="statutEvaluation">Terminé</td>
+								</tr>
+							</tbody>
+						</table>
+						<table border="0">
+							<thead>
+								<tr>
+									<th>Critère d'évaluation</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID="spontanement">fait spontanément</td>
+								</tr>
+								<tr>
+									<td ID="totalement">fait totalement</td>
+								</tr>
+								<tr>
+									<td ID="correctement">fait correctement</td>
+								</tr>
+								<tr>
+									<td ID="habituellement">fait habituellement</td>
+								</tr>
+							</tbody>
+						</table>
+						<table border="0">
+							<thead>
+								<tr>
+									<th>Champ évalué</th>
+									<th>Détail du résultat du champ évalué</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td ID="composantEval01">Conversation</td>
+									<td>Aucune difficulté : fait seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval02">Fonctions d'orientation</td>
+									<td>Aucune difficulté : fait seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval1">Se laver</td>
+									<td>Difficulté absolue : ne fait pas seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval3">S'habiller</td>
+									<td>Difficulté absolue : ne fait pas seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval6">Manger</td>
+									<td>Difficulté modérée : ne fait pas seul totalement / fait seul spontanément, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval8">Aller aux toilettes</td>
+									<td>Difficulté modérée : ne fait pas seul totalement / fait seul spontanément, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval10">Se transférer</td>
+									<td>Difficulté absolue : ne fait pas seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval11">Se déplacer dans la maison</td>
+									<td>Difficulté absolue : ne fait pas seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval12">Se déplacer en dehors de la maison et d'autres bâtiments</td>
+									<td>Difficulté absolue : ne fait pas seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+								<tr>
+									<td ID="composantEval13">Utiliser des appareils et des techniques de communication</td>
+									<td>Aucune difficulté : fait seul spontanément, totalement, correctement, habituellement</td>
+								</tr>
+							</tbody>
+						</table>
+						<table border="0">
+							<thead>
+								<tr>
+									<th>Type d'évaluation</th>
 									<th>Déficience continence urinaire</th>
 									<th>Incontinence des matières fécales</th>
 									<th>Obésité, sans précision</th>
@@ -662,15 +754,15 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td ID="grilleEvaluation">Evaluation de la situation SSIAD</td>
-									<td ID="composantEval1">Non</td>
-									<td ID="composantEval2">Non</td>
-									<td ID="composantEval3">Non</td>
-									<td ID="composantEval4">Oui</td>
-									<td ID="composantEval5">Non</td>
-									<td ID="composantEval6">Non</td>
-									<td ID="composantEval7">Non</td>
-									<td ID="statutEvaluation">Terminé</td>
+									<td ID="grilleEvaluation2">Evaluation de la situation SSIAD</td>
+									<td ID="composantEvalSSIAD1">Non</td>
+									<td ID="composantEvalSSIAD2">Non</td>
+									<td ID="composantEvalSSIAD3">Non</td>
+									<td ID="composantEvalSSIAD4">Oui</td>
+									<td ID="composantEvalSSIAD5">Non</td>
+									<td ID="composantEvalSSIAD6">Non</td>
+									<td ID="composantEvalSSIAD7">Non</td>
+									<td ID="statutEvaluation2">Terminé</td>
 								</tr>
 							</tbody>
 						</table>
@@ -685,12 +777,9 @@
 							<!-- FR-Groupe-de-questionnaires-d-evaluation (FR CI-SIS) -->
 							<templateId root="1.2.250.1.213.1.1.3.95"/>
 							<id root="12DA3A06-18E7-40B7-9397-1FA5B1555683"/>
-							<code code="MED-1290"
-											displayName="Evaluation de la situation SSIAD"
-											codeSystem="1.2.250.1.213.1.1.4.322"
-											codeSystemName="TA_ASIP"/>
+							<code code="MED-1292" displayName="Evaluation AGGIR PH SSIAD" codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TA_ASIP"/>
 							<statusCode code="completed"/>
-							<effectiveTime value="20230414"/>						   
+							<effectiveTime value="20230406"/>						   
 							<!-- [1..1] Entrée FR-Evaluation -->
 							<component typeCode="COMP">
 									<observation classCode="OBS" moodCode="EVN">
@@ -704,18 +793,16 @@
 										<templateId root="1.2.250.1.213.1.1.3.25"/>
 										<!-- Identifiant de l'évaluation (concaténation 3+FINESS/idUsagerInterne-EVAL-idEvaluation) -->
 										<id root="1.2.250.2345.3245.13"
-											extension="3480787529/147720425367411-EVAL-21564654"/>
+											extension="3480787529/147720425367411-EVAL-21564655"/>
 										<!-- code permettant de véhiculer la nature de l'évaluation -->
-										<code code="MED-1290"
-											displayName="Evaluation de la situation SSIAD"
-											codeSystem="1.2.250.1.213.1.1.4.322"
-											codeSystemName="TA_ASIP"/>
+										<code code="MED-1292" displayName="Evaluation AGGIR PH SSIAD" codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TA_ASIP"/>
 										<text>
 											<reference value="#grilleEvaluation"/>
 										</text>
 										<statusCode code="completed"/>
-										<effectiveTime value="20230414"/>
-										<value xsi:type="CD" nullFlavor="NA"/>
+										<effectiveTime value="20230406"/>
+										<value xsi:type="CD" 
+												code ="MED-340" displayName="GIR-2" codeSystem="1.2.250.1.213.1.1.4.322"/>
 										<!-- Evaluateur -->
 										<performer>
 											<assignedEntity classCode="ASSIGNED">                   
@@ -723,7 +810,233 @@
 												<id root="1.2.250.1.71.4.2.1" extension="10103441234"/>											
 											</assignedEntity>
 										</performer>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Déficience continence urinaire -->
+										<!-- [0..*] Entrée FR-Evaluation-Composant : Conversation -->
+										<entryRelationship typeCode="COMP" inversionInd="false">
+											<observation classCode="OBS"
+														moodCode="EVN">
+												<!-- Conformité Simple Observation (CCD) -->
+												<templateId root="2.16.840.1.113883.10.20.1.31"/>
+												<!-- Conformité IHE PPC -->
+												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+												<templateId root="1.2.250.1.213.1.1.3.214"/>
+												<!-- Identifiant de l'observation -->
+												<id root="3E7A9CAE-7484-4BCD-A4AF-D0DBBDBAC551"/>
+												<code code="d350"
+													displayName="Conversation"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
+												<text>
+													<reference value="#composantEval01"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime nullFlavor="NA"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc0"
+														displayName="Aucune difficulté"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="1E0F15BF-8354-49C5-93C4-3D770C96C23C"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="038FCD0E-0BAA-4786-B63C-BF284AB3483D"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="186ECFD0-9658-4699-840B-99950A56A446"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="32904D6D-E21A-4133-8C02-E7871C589871"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+											</observation>
+										</entryRelationship>
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Orientation -->
+										<entryRelationship typeCode="COMP" inversionInd="false">
+											<observation classCode="OBS"
+														moodCode="EVN">
+												<!-- Conformité Simple Observation (CCD) -->
+												<templateId root="2.16.840.1.113883.10.20.1.31"/>
+												<!-- Conformité IHE PPC -->
+												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+												<templateId root="1.2.250.1.213.1.1.3.214"/>
+												<!-- Identifiant de l'observation -->
+												<id root="87F5F921-F8E2-462E-B16C-CE524F5FDFB5"/>
+												<code code="b114"
+													displayName="Fonctions d'orientation"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
+												<text>
+													<reference value="#composantEval02"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime nullFlavor="NA"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+													code="qc0"
+													displayName="Aucune difficulté"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>										
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="529AFAE9-8726-476B-A67A-6ABDBE76BAE5"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="595FC5A2-3E11-4120-BDB8-5C281FF0F68E"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="9C0B0618-31D6-4308-A71F-D2A9D6E1330D"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="361EE809-F56D-4E8F-93BE-79838B7F80E2"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+											</observation>
+										</entryRelationship>                                      
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Se laver -->
 										<entryRelationship typeCode="COMP" inversionInd="false">
 											<observation classCode="OBS"
 														moodCode="EVN">
@@ -735,21 +1048,108 @@
 												<templateId root="1.2.250.1.213.1.1.3.214"/>
 												<!-- Identifiant de l'observation -->
 												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E1"/>
-												<code code="R32"
-													displayName="Incontinence urinaire, sans précision"
-													codeSystem="2.16.840.1.113883.6.3"
-													codeSystemName="CIM-10"/>
+												<code code="d510"
+													displayName="Se laver"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
 												<text>
 													<reference value="#composantEval1"/>
 												</text>
 												<statusCode code="completed"/>
 												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur du champs évalué -->
-												<value xsi:type="BL"
-													value="false"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc4"
+														displayName="Difficulté absolue"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>										
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="4C46931F-9622-474D-8B15-2D5E5D70D2E2"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="8166EE8F-70C3-4DE2-9EFC-A684AAD8194A"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="F055D95D-2BDF-4B40-BE13-04B5F78BFC78"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="1535C88A-A486-4EFA-9CFF-B002D38A1491"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
 											</observation>
 										</entryRelationship>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Incontinence des matières fécales -->
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : S'habiller -->
 										<entryRelationship typeCode="COMP" inversionInd="false">
 											<observation classCode="OBS"
 														moodCode="EVN">
@@ -760,48 +1160,109 @@
 												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
 												<templateId root="1.2.250.1.213.1.1.3.214"/>
 												<!-- Identifiant de l'observation -->
-												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E2"/>
-												<code code="R15"
-													displayName="Incontinence des matières fécales"
-													codeSystem="2.16.840.1.113883.6.3"
-													codeSystemName="CIM-10"/>
-												<text>
-													<reference value="#composantEval2"/>
-												</text>
-												<statusCode code="completed"/>
-												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur de la version de l'évaluation -->
-												<value xsi:type="BL"
-													value="false"/>
-											</observation>
-										</entryRelationship>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Obésité, sans précision -->
-										<entryRelationship typeCode="COMP" inversionInd="false">
-											<observation classCode="OBS"
-														moodCode="EVN">
-												<!-- Conformité Simple Observation (CCD) -->
-												<templateId root="2.16.840.1.113883.10.20.1.31"/>
-												<!-- Conformité IHE PPC -->
-												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
-												<templateId root="1.2.250.1.213.1.1.3.214"/>
-												<!-- Identifiant de l'observation -->
-												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E3"/>
-												<code code="E66.9"
-													displayName="Obésité, sans précision"
-													codeSystem="2.16.840.1.113883.6.3"
-													codeSystemName="CIM-10"/>
+												<id root="F12E647E-7CB8-4D2F-AF56-96D7CFC717D3"/>
+												<code code="d540"
+													displayName="S'habiller"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
 												<text>
 													<reference value="#composantEval3"/>
 												</text>
 												<statusCode code="completed"/>
 												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur de la version de l'évaluation -->
-												<value xsi:type="BL"
-													value="false"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc4"
+														displayName="Difficulté absolue"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>										
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="7CC4073C-4907-41C4-9347-141B86B11718"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="324F4FBB-379B-454A-9F47-9D87F8D7F597"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="3ED4269D-C46E-4E34-95EA-DF45829A61CD"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="6EB303FD-DE10-4F4B-9866-696B31EB9E9D"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
 											</observation>
 										</entryRelationship>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Trouble cognitif léger -->
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Manger -->
 										<entryRelationship typeCode="COMP" inversionInd="false">
 											<observation classCode="OBS"
 														moodCode="EVN">
@@ -812,74 +1273,110 @@
 												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
 												<templateId root="1.2.250.1.213.1.1.3.214"/>
 												<!-- Identifiant de l'observation -->
-												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E4"/>
-												<code code="F06.7"
-													displayName="Trouble cognitif léger"
-													codeSystem="2.16.840.1.113883.6.3"
-													codeSystemName="CIM-10"/>
-												<text>
-													<reference value="#composantEval4"/>
-												</text>
-												<statusCode code="completed"/>
-												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur de la version de l'évaluation -->
-												<value xsi:type="BL"
-													value="true"/>
-											</observation>
-										</entryRelationship>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Trouble de la personnalité et du comportement chez l'adulte, sans précision -->
-										<entryRelationship typeCode="COMP" inversionInd="false">
-											<observation classCode="OBS"
-														moodCode="EVN">
-												<!-- Conformité Simple Observation (CCD) -->
-												<templateId root="2.16.840.1.113883.10.20.1.31"/>
-												<!-- Conformité IHE PPC -->
-												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
-												<templateId root="1.2.250.1.213.1.1.3.214"/>
-												<!-- Identifiant de l'observation -->
-												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E5"/>
-												<code code="F69"
-													displayName="Trouble de la personnalité et du comportement chez l'adulte, sans précision"
-													codeSystem="2.16.840.1.113883.6.3"
-													codeSystemName="CIM-10"/>
-												<text>
-													<reference value="#composantEval5"/>
-												</text>
-												<statusCode code="completed"/>
-												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur de la version de l'évaluation -->
-												<value xsi:type="BL"
-													value="false"/>
-											</observation>
-										</entryRelationship>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Soins IDE pour escarres et autres plaies chroniques -->
-										<entryRelationship typeCode="COMP" inversionInd="false">
-											<observation classCode="OBS"
-														moodCode="EVN">
-												<!-- Conformité Simple Observation (CCD) -->
-												<templateId root="2.16.840.1.113883.10.20.1.31"/>
-												<!-- Conformité IHE PPC -->
-												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
-												<templateId root="1.2.250.1.213.1.1.3.214"/>
-												<!-- Identifiant de l'observation -->
-												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E6"/>
-												<code code="MED-1294"
-													displayName="Soins IDE pour escarres et autres plaies chroniques"
-													codeSystem="1.2.250.1.213.1.1.4.322"
-													codeSystemName="TA_ASIP"/>
+												<id root="2263806C-6E32-4665-8AEC-6FDC1A82447A"/>
+												<code code="d550"
+													displayName="Manger"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
 												<text>
 													<reference value="#composantEval6"/>
 												</text>
 												<statusCode code="completed"/>
 												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur de la version de l'évaluation -->
-												<value xsi:type="BL"
-													value="false"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc2"
+														displayName="Difficulté modérée"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>									
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="2C0C1783-37AC-4719-85D4-171AE1105D7F"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="5DF91C51-EA25-465B-9A66-B16A774E0DA6"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="34627DF3-707E-4128-A0A2-E9E44F6342B8"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="CFD89FC6-B747-45C9-9E8B-9BC07C09227F"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
 											</observation>
 										</entryRelationship>
-										<!-- [0..*] Entrée FR-Evaluation-Composant : Prise en charge IDE du diabète insulinotraité -->
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Aller aux toilettes  -->
 										<entryRelationship typeCode="COMP" inversionInd="false">
 											<observation classCode="OBS"
 														moodCode="EVN">
@@ -890,19 +1387,558 @@
 												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
 												<templateId root="1.2.250.1.213.1.1.3.214"/>
 												<!-- Identifiant de l'observation -->
-												<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E7"/>
-												<code code="MED-1295"
-													displayName="Prise en charge IDE du diabète insulinotraité"
-													codeSystem="1.2.250.1.213.1.1.4.322"
-													codeSystemName="TA_ASIP"/>
+												<id root="6C8364BB-C5E5-4708-84EB-D8A2F31B5652"/>
+												<code code="d530"
+													displayName="Aller aux toilettes"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
 												<text>
-													<reference value="#composantEval7"/>
+													<reference value="#composantEval8"/>
 												</text>
 												<statusCode code="completed"/>
 												<effectiveTime nullFlavor="NA"/>
-												<!-- Valeur de la version de l'évaluation -->
-												<value xsi:type="BL"
-													value="false"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc2"
+														displayName="Difficulté modérée"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>									
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="6A55A55C-7806-46EF-82EE-5798485A23BC"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="627DED96-4DF1-4DF1-B116-643943FAADEC"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="207AE547-F054-4A12-A20A-3FCBB3795AAD"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="07ECBCCB-1157-4D04-8F8F-91749D0ED198"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+											</observation>
+										</entryRelationship>
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Se transférer -->
+										<entryRelationship typeCode="COMP" inversionInd="false">
+											<observation classCode="OBS"
+														moodCode="EVN">
+												<!-- Conformité Simple Observation (CCD) -->
+												<templateId root="2.16.840.1.113883.10.20.1.31"/>
+												<!-- Conformité IHE PPC -->
+												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+												<templateId root="1.2.250.1.213.1.1.3.214"/>
+												<!-- Identifiant de l'observation -->
+												<id root="C6D6B130-6FD6-4B09-BF3F-AB6332E94636"/>
+												<code code="d420"
+													displayName="Se transférer"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
+												<text>
+													<reference value="#composantEval10"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime nullFlavor="NA"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc4"
+														displayName="Difficulté absolue"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>
+										        <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="66CBB984-C6DD-46CA-A61F-2EB71EEA8C2E"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="1D98639D-0A48-43D8-9222-EB32ABC02DBF"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="C9C167B6-1CF9-4B38-B2D8-F3A56EBD953C"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="B1DF5063-242B-44C0-B246-96796698EAD5"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+											</observation>
+										</entryRelationship>
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Se déplacer dans la maison -->
+										<entryRelationship typeCode="COMP" inversionInd="false">
+											<observation classCode="OBS"
+														moodCode="EVN">
+												<!-- Conformité Simple Observation (CCD) -->
+												<templateId root="2.16.840.1.113883.10.20.1.31"/>
+												<!-- Conformité IHE PPC -->
+												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+												<templateId root="1.2.250.1.213.1.1.3.214"/>
+												<!-- Identifiant de l'observation -->
+												<id root="D6B25CC4-5624-4789-B768-2F82DA1368DE"/>
+												<code code="d4600"
+													displayName="Se déplacer dans la maison"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
+												<text>
+													<reference value="#composantEval11"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime nullFlavor="NA"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc4"
+														displayName="Difficulté absolue"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>										
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="E3123C31-F628-4DA5-A622-51E4F01DC01D"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="31F2A25A-894A-44E2-AC47-CA82BCE91499"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="165E3FD1-F986-49F2-A350-D259745BA437"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="CB876B66-EEAD-4E00-804E-D4A27D321AC7"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+											</observation>
+										</entryRelationship>
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Se déplacer en dehors de la maison et d'autres bâtiments -->
+										<entryRelationship typeCode="COMP" inversionInd="false">
+											<observation classCode="OBS"
+														moodCode="EVN">
+												<!-- Conformité Simple Observation (CCD) -->
+												<templateId root="2.16.840.1.113883.10.20.1.31"/>
+												<!-- Conformité IHE PPC -->
+												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+												<templateId root="1.2.250.1.213.1.1.3.214"/>
+												<!-- Identifiant de l'observation -->
+												<id root="60D780DD-1065-4073-B90C-FE0175D49960"/>
+												<code code="d4602"
+													displayName="Se déplacer en dehors de la maison et d'autres bâtiments"
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
+												<text>
+													<reference value="#composantEval12"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime nullFlavor="NA"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc4"
+														displayName="Difficulté absolue"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>										
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="2C1BCE9D-8E81-495B-AF52-96A471EBBE8B"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="BCA9DC6C-15F1-4784-BFE4-80A263652203"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="E790C848-613B-4CB7-BF1C-D592BA6D2E97"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="B24F89AC-E64B-49E9-95E0-3F0BF4854665"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="false"/>
+                                                    </observation>
+                                                </entryRelationship>
+											</observation>
+										</entryRelationship>
+                                        <!-- [0..*] Entrée FR-Evaluation-Composant : Alerter -->
+										<entryRelationship typeCode="COMP" inversionInd="false">
+											<observation classCode="OBS"
+														moodCode="EVN">
+												<!-- Conformité Simple Observation (CCD) -->
+												<templateId root="2.16.840.1.113883.10.20.1.31"/>
+												<!-- Conformité IHE PPC -->
+												<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+												<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+												<templateId root="1.2.250.1.213.1.1.3.214"/>
+												<!-- Identifiant de l'observation -->
+												<id root="0AC99F74-1166-4A1F-8D7E-2E6A7F3AC08B"/>
+												<code code="d360"
+													displayName="Utiliser des appareils et des techniques de communication "
+													codeSystem="2.16.840.1.113883.6.254"
+													codeSystemName="ICF"/>
+												<text>
+													<reference value="#composantEval13"/>
+												</text>
+												<statusCode code="completed"/>
+												<effectiveTime nullFlavor="NA"/>
+												<!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+												<value xsi:type="CD"
+														code="qc0"
+														displayName="Aucune difficulté"
+														codeSystem="2.16.840.1.113883.6.254"
+													    codeSystemName="ICF"/>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait spontanément  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="D43B29CA-2BB7-441B-80C5-6FFA7E794677"/>
+                                                        <code code="MED-1307"
+                                                            displayName="fait spontanément"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#spontanement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait totalement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="43378623-D9DF-4390-8AF7-D89E6922306E"/>
+                                                        <code code="MED-1308"
+                                                            displayName="fait totalement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                        	<reference value="#totalement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait correctement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="FA5B55D8-DAD4-40E2-B776-23968EB4F9C3"/>
+                                                        <code code="MED-1309"
+                                                            displayName="fait correctement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#correctement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
+                                                <!-- [0..*] Entrée FR-Evaluation-Composant-N2 : fait habituellement  -->
+                                                <entryRelationship typeCode="COMP" inversionInd="false">
+											        <observation classCode="OBS" moodCode="EVN">
+												        <!-- Conformité FR-Evaluation-Composant-N2 (CI-SIS) -->
+                                                        <templateId root="1.2.250.1.213.1.1.3.220"/>
+                                                        <!-- Identifiant de l'observation -->
+                                                        <id root="F9303220-C417-454B-BDFA-B474F6A738C2"/>
+                                                        <code code="MED-1310"
+                                                            displayName="fait habituellement"
+                                                            codeSystem="1.2.250.1.213.1.1.4.322"
+                                                            codeSystemName="TA_ASIP"/>
+                                                        <text>
+                                                            <reference value="#habituellement"/>
+                                                        </text>
+                                                        <statusCode code="completed"/>
+                                                        <effectiveTime nullFlavor="NA"/>
+                                                        <!-- Valeur du champs évalué issue du JDV_ResultatEvaluation_CISIS -->
+                                                        <value xsi:type="BL"
+                                                            value="true"/>
+                                                    </observation>
+                                                </entryRelationship>
 											</observation>
 										</entryRelationship>										
 										<!-- [0..*] Entrée FR-Statut : statut métier de l'évaluation -->
@@ -958,6 +1994,289 @@
 							</component>
 						</organizer>
 					</entry>
+					<!-- [0..*] Entrée FR-Groupe-de-questionnaires-d-evaluation -->
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- Result organizer (CCD) -->
+							<templateId root="2.16.840.1.113883.10.20.1.32"/>
+							<!-- Survey Panel (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.7"/>
+							<!-- FR-Groupe-de-questionnaires-d-evaluation (FR CI-SIS) -->
+							<templateId root="1.2.250.1.213.1.1.3.95"/>
+							<id root="12DA3A06-18E7-40B7-9397-1FA5B1555683"/>
+							<code code="MED-1290"
+								displayName="Evaluation de la situation SSIAD"
+								codeSystem="1.2.250.1.213.1.1.4.322"
+								codeSystemName="TA_ASIP"/>
+							<statusCode code="completed"/>
+							<effectiveTime value="20230414"/>						   
+							<!-- [1..1] Entrée FR-Evaluation -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- Conformité CCD -->
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<!-- Conformité PCC -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<!-- Conformité PCC -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<!-- Conformité FR-Evaluation -->
+									<templateId root="1.2.250.1.213.1.1.3.25"/>
+									<!-- Identifiant de l'évaluation (concaténation 3+FINESS/idUsagerInterne-EVAL-idEvaluation) -->
+									<id root="1.2.250.2345.3245.13"
+										extension="3480787529/147720425367411-EVAL-21564654"/>
+									<!-- code permettant de véhiculer la nature de l'évaluation -->
+									<code code="MED-1290"
+										displayName="Evaluation de la situation SSIAD"
+										codeSystem="1.2.250.1.213.1.1.4.322"
+										codeSystemName="TA_ASIP"/>
+									<text>
+										<reference value="#grilleEvaluation2"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20230414"/>
+									<value xsi:type="CD" nullFlavor="NA"/>
+									<!-- Evaluateur -->
+									<performer>
+										<assignedEntity classCode="ASSIGNED">                   
+											<!-- Identifiant du professionnel -->
+											<id root="1.2.250.1.71.4.2.1" extension="10103441234"/>											
+										</assignedEntity>
+									</performer>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Déficience continence urinaire -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E1"/>
+											<code code="R32"
+												displayName="Incontinence urinaire, sans précision"
+												codeSystem="2.16.840.1.113883.6.3"
+												codeSystemName="CIM-10"/>
+											<text>
+												<reference value="#composantEvalSSIAD1"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur du champs évalué -->
+											<value xsi:type="BL"
+												value="false"/>
+										</observation>
+									</entryRelationship>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Incontinence des matières fécales -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E2"/>
+											<code code="R15"
+												displayName="Incontinence des matières fécales"
+												codeSystem="2.16.840.1.113883.6.3"
+												codeSystemName="CIM-10"/>
+											<text>
+												<reference value="#composantEvalSSIAD2"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur de la version de l'évaluation -->
+											<value xsi:type="BL"
+												value="false"/>
+										</observation>
+									</entryRelationship>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Obésité, sans précision -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E3"/>
+											<code code="E66.9"
+												displayName="Obésité, sans précision"
+												codeSystem="2.16.840.1.113883.6.3"
+												codeSystemName="CIM-10"/>
+											<text>
+												<reference value="#composantEvalSSIAD3"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur de la version de l'évaluation -->
+											<value xsi:type="BL"
+												value="false"/>
+										</observation>
+									</entryRelationship>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Trouble cognitif léger -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E4"/>
+											<code code="F06.7"
+												displayName="Trouble cognitif léger"
+												codeSystem="2.16.840.1.113883.6.3"
+												codeSystemName="CIM-10"/>
+											<text>
+												<reference value="#composantEvalSSIAD4"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur de la version de l'évaluation -->
+											<value xsi:type="BL"
+												value="true"/>
+										</observation>
+									</entryRelationship>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Trouble de la personnalité et du comportement chez l'adulte, sans précision -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E5"/>
+											<code code="F69"
+												displayName="Trouble de la personnalité et du comportement chez l'adulte, sans précision"
+												codeSystem="2.16.840.1.113883.6.3"
+												codeSystemName="CIM-10"/>
+											<text>
+												<reference value="#composantEvalSSIAD5"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur de la version de l'évaluation -->
+											<value xsi:type="BL"
+												value="false"/>
+										</observation>
+									</entryRelationship>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Soins IDE pour escarres et autres plaies chroniques -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E6"/>
+											<code code="MED-1294"
+												displayName="Soins IDE pour escarres et autres plaies chroniques"
+												codeSystem="1.2.250.1.213.1.1.4.322"
+												codeSystemName="TA_ASIP"/>
+											<text>
+												<reference value="#composantEvalSSIAD6"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur de la version de l'évaluation -->
+											<value xsi:type="BL"
+												value="false"/>
+										</observation>
+									</entryRelationship>
+									<!-- [0..*] Entrée FR-Evaluation-Composant : Prise en charge IDE du diabète insulinotraité -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple Observation (CCD) -->
+											<templateId root="2.16.840.1.113883.10.20.1.31"/>
+											<!-- Conformité IHE PPC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Evaluation-Composant (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.214"/>
+											<!-- Identifiant de l'observation -->
+											<id root="4C46931F-9622-474D-8B15-2D5E5D70D2E7"/>
+											<code code="MED-1295"
+												displayName="Prise en charge IDE du diabète insulinotraité"
+												codeSystem="1.2.250.1.213.1.1.4.322"
+												codeSystemName="TA_ASIP"/>
+											<text>
+												<reference value="#composantEvalSSIAD7"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA"/>
+											<!-- Valeur de la version de l'évaluation -->
+											<value xsi:type="BL"
+												value="false"/>
+										</observation>
+									</entryRelationship>										
+									<!-- [0..*] Entrée FR-Statut : statut métier de l'évaluation -->
+									<entryRelationship typeCode="COMP" inversionInd="false">
+										<observation classCode="OBS"
+											moodCode="EVN">
+											<!-- Conformité Simple observation (IHE PCC) -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+											<!-- Conformité FR-Simple-observation (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.48"/>
+											<!-- Conformité FR-Statut (CI-SIS) -->
+											<templateId root="1.2.250.1.213.1.1.3.217"/>
+											<!-- Identifiant de l'observation -->
+											<id root="22CE1BCA-D54F-484B-9DDA-8115FD795A78"/>
+											<code code="106199-3"
+												displayName="Statut"
+												codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC"/>
+											<text>
+												<reference value="#statutEvaluation2"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime value="202404111500+0200"/>
+											<!-- Statut de l'évaluation -->
+											<value xsi:type="CD"
+												code="TERMINE"
+												displayName="Terminé"
+												codeSystem="1.2.250.1.213.3.3.250"/>
+										</observation>
+									</entryRelationship>										
+									<!-- [0..*] Entrée FR-Référence-interne : Référence à l'entrée FR-Document-attache contenant les pièces jointes -->
+									<entryRelationship typeCode="REFR"
+										inversionInd="false">
+										<act classCode="ACT"
+											moodCode="EVN">
+											<!-- Conformité IHE PCC -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.4.1"/>
+											<!-- Conformité FR-Référence-interne CI-SIS -->
+											<templateId root="1.2.250.1.213.1.1.3.36"/>
+											<!-- Identifiant de l'entrée référencée véhiculant la pièce jointe -->
+											<id root="A5516277-3F86-4681-9013-93868243AB67"/>
+											<code code="55107-7"
+												displayName="Document attaché"
+												codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC">
+												<originalText>
+													<reference value="#PJ-Eval-SSIAD"/>
+												</originalText>
+											</code>
+										</act>
+									</entryRelationship>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
 				</section>
 			</component>
 			<!-- [1..1] Section FR-Documents-ajoutés -->
@@ -1010,6 +2329,8 @@
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
 									<!-- Conformité FR-Simple-observation CI-SIS -->
 									<templateId root="1.2.250.1.213.1.1.3.48"/>
+									<!-- Conformité FR-Type-document-attache (CI-SIS) -->
+									<templateId root="1.2.250.1.213.1.1.3.48.18"/>
 									<!-- Identifiant de l'observation -->
 									<id root="2714D00E-26AA-4E7D-95F9-C5AE5316CE1E"/>
 									<code code="69764-9"
