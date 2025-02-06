@@ -11,7 +11,7 @@ Des mises à jour seront proposées pour intégrer progressivement l’ensemble 
 <div style="padding: 5px; border-radius: 5px; border: 2px solid black; width: 100%">
   Les spécifications techniques sont complétées par : 
   <ul>
-    <li>Des <a href="contenu_dossier.html#nomenclatures">éléments sémantiques</a> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
+    <li>Des <a href="terminology_cda.html">éléments sémantiques</a> (jeux de valeurs / terminologies) utilisés pour le codage des éléments métiers ;</li>
     <li>Des <a href="ressources_cda.html#exemples">exemples</a> d'implémentation en CDA R2 niveau 3 ;</li>
     <li>Un outil de vérification en ligne (<a href="https://interop.esante.gouv.fr/">Gazelle</a>) de la compatibilité des documents produits.</li>
   </ul>
