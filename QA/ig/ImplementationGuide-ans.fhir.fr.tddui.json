@@ -10,7 +10,7 @@
   "name" : "TDDUI",
   "title" : "Médicosocial - Transfert de données DUI",
   "status" : "active",
-  "date" : "2025-02-06T12:00:57+00:00",
+  "date" : "2025-02-10T15:32:56+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -641,7 +641,7 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/tddui-bundle"
@@ -653,7 +653,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/tddui-documentreference"
@@ -1028,42 +1028,6 @@
           }],
           "nameUrl" : "downloads.html",
           "title" : "Téléchargements et usages",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "specs_fhir.html"
-          }],
-          "nameUrl" : "specs_fhir.html",
-          "title" : "Spécifications FHIR",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "specs_cda.html"
-          }],
-          "nameUrl" : "specs_cda.html",
-          "title" : "Spécifications CDA",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "site_ans.html"
-          }],
-          "nameUrl" : "site_ans.html",
-          "title" : "Site de l'ANS",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "documentation.html"
-          }],
-          "nameUrl" : "documentation.html",
-          "title" : "Documentation",
           "generation" : "markdown"
         }]
       }]
