@@ -1,5 +1,7 @@
 Instance: TDDUIBundleExample
 InstanceOf: TDDUIBundle
+Title: "TDDUIBundleExample"
+Description: "Exemple de ressource Bundle suivant le profil TDDUIBundle"
 Usage: #example
 * type = #transaction
 * entry[DUIDocumentReference].resource = TDDUIDocumentReference1
@@ -11,6 +13,7 @@ Usage: #example
 
 Instance: TDDUIDocumentReference1
 InstanceOf: TDDUIDocumentReference
+Description: "Exemple de ressource DocumentReference suivant le profil TDDUIDocumentReference"
 Usage: #inline
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-11-07T10:19:37.350+00:00"
@@ -26,6 +29,7 @@ Usage: #inline
 
 Instance: TDDUIDocumentReference2
 InstanceOf: TDDUIDocumentReference
+Description: "Exemple de ressource DocumentReference suivant le profil TDDUIDocumentReference"
 Usage: #inline
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-11-07T10:19:37.350+00:00"
