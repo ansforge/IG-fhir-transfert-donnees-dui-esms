@@ -10,7 +10,7 @@
   <name value="TDDUI"/>
   <title value="Médicosocial - Transfert de données DUI"/>
   <status value="active"/>
-  <date value="2025-02-10T15:32:56+00:00"/>
+  <date value="2025-02-11T14:20:31+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -527,6 +527,7 @@
         <reference value="Bundle/TDDUIBundleExample"/>
       </reference>
       <name value="TDDUIBundleExample"/>
+      <description value="Exemple de ressource Bundle suivant le profil TDDUIBundle"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-bundle"/>
     </resource>
     <resource>
@@ -537,6 +538,7 @@
         <reference value="DocumentReference/TDDUIDocumentReferenceExample"/>
       </reference>
       <name value="TDDUIDocumentReferenceExample"/>
+      <description value="Exemple de ressource DocumentReference suivant le profil TDDUIDocumentReference"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-documentreference"/>
     </resource>
     <page>

@@ -1,8 +1,6 @@
 TDDUI
 =========================================
 
-Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/TDDUIBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
-Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource DocumentReference/TDDUIDocumentReferenceExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Info - The html source does not contain the publish box; this is recommended for publishing support (NOTFOUND)
 Generic: line 0, col 0, Warning - The <script> containing the javascript 'window.treeTableColl'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (INVALID)
 Generic: line 0, col 0, Warning - The <script> containing the javascript '// Envoie la hauteur'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (INVALID)
@@ -64,5 +62,5 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /home/runner/work/IG-fhir-medicosocial-transfert-donnees-dui/IG-fhir-medicosocial-transfert-donnees-dui/igSource/fsh-generated/resources/StructureDefinition-tddui-documentreference.json: line 1, col 162574, Info - The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it (INFORMATIONAL)
 /home/runner/work/IG-fhir-medicosocial-transfert-donnees-dui/IG-fhir-medicosocial-transfert-donnees-dui/igSource/fsh-generated/resources/StructureDefinition-tddui-documentreference.json: line 1, col 165059, Info - The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it (INFORMATIONAL)
 
-err = 0, warn = 47, info = 15
-IG Publisher Version: 1.8.11
+err = 0, warn = 45, info = 15
+IG Publisher Version: 1.8.12
