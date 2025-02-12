@@ -1,4 +1,3 @@
-
 Si vous n'êtes pas redirigé automatiquement, [cliquez ici pour consulter les spécifications FHIR]({{site.data.fhir.path}}index.html).
 
 <script type="text/javascript">

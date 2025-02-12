@@ -1,4 +1,3 @@
-
 Si vous n'êtes pas redirigé automatiquement, [cliquez ici pour consulter les spécifications CDA](https://hl7.org/cda/stds/core/).
 
 <script type="text/javascript">

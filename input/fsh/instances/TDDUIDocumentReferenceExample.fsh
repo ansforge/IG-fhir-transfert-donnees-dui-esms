@@ -1,5 +1,7 @@
 Instance: TDDUIDocumentReferenceExample
 InstanceOf: TDDUIDocumentReference
+Title: "TDDUIDocumentReferenceExample"
+Description: "Exemple de ressource DocumentReference suivant le profil TDDUIDocumentReference"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-11-07T10:19:37.350+00:00"
