@@ -10,7 +10,7 @@
   "name" : "TDDUI",
   "title" : "Médicosocial - Transfert de données DUI",
   "status" : "active",
-  "date" : "2025-02-11T14:20:31+00:00",
+  "date" : "2025-02-12T09:49:49+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -1030,6 +1030,42 @@
           }],
           "nameUrl" : "downloads.html",
           "title" : "Téléchargements et usages",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "specs_fhir.html"
+          }],
+          "nameUrl" : "specs_fhir.html",
+          "title" : "Spécifications FHIR",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "specs_cda.html"
+          }],
+          "nameUrl" : "specs_cda.html",
+          "title" : "Spécifications CDA",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "site_ans.html"
+          }],
+          "nameUrl" : "site_ans.html",
+          "title" : "Site de l'ANS",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "documentation.html"
+          }],
+          "nameUrl" : "documentation.html",
+          "title" : "Documentation",
           "generation" : "markdown"
         }]
       }]
