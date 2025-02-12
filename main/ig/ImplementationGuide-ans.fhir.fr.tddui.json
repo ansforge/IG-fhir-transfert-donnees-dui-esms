@@ -10,7 +10,7 @@
   "name" : "TDDUI",
   "title" : "Médicosocial - Transfert de données DUI",
   "status" : "active",
-  "date" : "2025-02-06T11:04:53+00:00",
+  "date" : "2025-02-12T14:10:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -641,7 +641,7 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/tddui-bundle"
@@ -653,7 +653,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/tddui-documentreference"
@@ -695,6 +695,7 @@
         "reference" : "Bundle/TDDUIBundleExample"
       },
       "name" : "TDDUIBundleExample",
+      "description" : "Exemple de ressource Bundle suivant le profil TDDUIBundle",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-bundle"
     },
     {
@@ -706,6 +707,7 @@
         "reference" : "DocumentReference/TDDUIDocumentReferenceExample"
       },
       "name" : "TDDUIDocumentReferenceExample",
+      "description" : "Exemple de ressource DocumentReference suivant le profil TDDUIDocumentReference",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tddui/StructureDefinition/tddui-documentreference"
     }],
     "page" : {

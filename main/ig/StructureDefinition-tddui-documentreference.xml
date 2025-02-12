@@ -70,7 +70,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
   <name value="TDDUIDocumentReference"/>
   <title value="TDDUI Document Reference"/>
   <status value="active"/>
-  <date value="2025-02-06T11:04:53+00:00"/>
+  <date value="2025-02-12T14:10:39+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -129,6 +129,9 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
   <derivation value="constraint"/>
   <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
     <element id="DocumentReference">
       <path value="DocumentReference"/>
       <short value="A reference to a document"/>
