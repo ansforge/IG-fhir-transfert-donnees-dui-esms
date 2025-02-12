@@ -127,7 +127,12 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
     <tbody>
         <tr id="1">
 			<td>GEN-347 (Evènement hors prestation)</td>
-            <td>BL</td>
+            <td>BL
+                <ul>
+                    <li>"True" si l'évènement n'est pas prévu dans le projet personnalisé de l'usager</li>
+                    <li>"False" si l'évènement est prévu dans le projet personnalisé de l'usager</li>
+                </ul>
+            </td>
 		</tr>
         <tr id="2">
         <td>GEN-349 (Type de ressource utilisée)</td>
@@ -140,11 +145,21 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
 		</tr>
         <tr id="3">
 			<td>GEN-350 (Repas inclus)</td>
-            <td>BL</td>
+            <td>BL
+                <ul>
+                    <li>"True" si le repas est inclus dans le cadre de l'événement</li>
+                    <li>"False" si le repas n'est pas inclus dans le cadre de l'événement</li>
+                </ul>
+            </td>
 		</tr>
         <tr id="4">
 			<td>38887-6 (Personne présente au moment de l'évènement)</td>
-            <td>BL</td>
+            <td>BL
+                <ul>
+                    <li>"True" si l'usager est présent au moment de l'événement</li>
+                    <li>"False" si l'usager n'est pas présent au moment de l'événement</li>
+                </ul>
+            </td>
 		</tr>
         <tr id="5">
 			<td>106177-9 (Date de dernière mise à jour)</td>
@@ -263,7 +278,12 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
     <tbody>
         <tr id="1">
             <td>MED-1124 (Patient nécessitant un accompagnement par un tiers)</td>
-            <td>BL</td>
+            <td>BL
+                <ul>
+                    <li>"True" si l'usager a besoin d'être accompagné</li>
+                    <li>"False" si l'usager n'a pas besoin d'être accompagné</li>
+                </ul>
+            </td>
         </tr>
         <tr id="2">
             <td>ORG-200 (Budget réel)</td>
@@ -279,7 +299,12 @@ Dans les entrées FR-Simple-Observation, le type de l'élément value dépend de
         </tr>
         <tr id="5">
             <td>275827007 (Maintien de l'asepsie)</td>
-            <td>BL</td>
+            <td>BL
+                <ul>
+                    <li>"True" si l'asepsie est rigoureusement à respecter lors du transport de l'usager</li>
+                    <li>"False" si l'asepsie n'est pas nécessaire lors du transport de l'usager</li>
+                </ul>
+            </td>
         </tr>
         <tr id="6">
             <td>103208-5 (Distance parcourue)</td>
