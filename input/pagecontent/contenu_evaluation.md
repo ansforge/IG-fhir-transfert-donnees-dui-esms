@@ -228,8 +228,8 @@ Le critère évalué (code) et le type de résultat de ce critère évalué (val
             <td>Valeur issue du JDV_ResultatQuestionEvaluation_CISIS<br>L'attribut nullFlavor est interdit.</td>
             <td>BL
                 <ul>
-                    <li>"True" si l'usager est capable d'effectuer seul l'activité mentionnée dans le champs évalué selon le critère évalué</li>
-                    <li>"False" si l'usager n'est pas en capacité d'effectuer seul l'activité mentionnée dans le champs évalué selon le critère évalué</li>
+                    <li>"True" si l'usager est capable d'effectuer seul le champs évalué selon le critère évalué</li>
+                    <li>"False" si l'usager n'est pas en capacité d'effectuer seul le champs évalué selon le critère évalué</li>
                 </ul>
             </td>
         </tr>
@@ -238,8 +238,8 @@ Le critère évalué (code) et le type de résultat de ce critère évalué (val
             <td>Valeur issue du JDV_ResultatQuestionEvaluation_CISIS<br>L'attribut nullFlavor est interdit.</td>
             <td>BL
                 <ul>
-                    <li>"True" si l'usager est capable d'effectuer seul l'activité mentionnée dans le champs évalué selon le critère évalué</li>
-                    <li>"False" si l'usager n'est pas en capacité d'effectuer seul l'activité mentionnée dans le champs évalué selon le critère évalué</li>
+                    <li>"True" si l'usager est capable d'effectuer seul le champs évalué selon le critère évalué</li>
+                    <li>"False" si l'usager n'est pas en capacité d'effectuer seul le champs évalué selon le critère évalué</li>
                 </ul>
             </td>
         </tr>
