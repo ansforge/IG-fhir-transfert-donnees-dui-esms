@@ -35,7 +35,8 @@ L'usager est donc la personne qui reçoit une aide ou un accompagnement dans le 
     </td>
   </tr>
     <td>numSecuriteSociale : [0..1] Identifiant</td>
-    <td>Numéro de sécurité sociale de l'usager NIR (NSS-NIR) ou NIA (NSS-NIA) si l'usager est en attente de l'attribution d’un NIR.
+    <td>Numéro de sécurité sociale de l'usager NIR (NSS-NIR) ou NIA (NSS-NIA) si l'usager est en attente de l'attribution d’un NIR.<br>
+     Le numéro de sécurité sociale est utilisé pour la facturation et le remboursement des prestations de santé de la personne prise en charge.
     </td>
   </tr>
 <tr>
