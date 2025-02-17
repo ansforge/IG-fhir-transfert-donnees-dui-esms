@@ -10,7 +10,7 @@
   "name" : "TDDUIDocumentReference",
   "title" : "TDDUI Document Reference",
   "status" : "active",
-  "date" : "2025-01-27T13:10:35+00:00",
+  "date" : "2025-02-17T16:10:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -69,6 +69,10 @@
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/DocumentReference",
   "derivation" : "constraint",
   "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "4.0.1"
+    }],
     "element" : [{
       "id" : "DocumentReference",
       "path" : "DocumentReference",
