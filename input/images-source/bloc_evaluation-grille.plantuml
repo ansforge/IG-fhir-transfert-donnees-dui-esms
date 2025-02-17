@@ -37,14 +37,26 @@ note right of DetailEvaluation::resultatChampsEvalue
   Le type du résultat du champ évalué est dépendant du champ évalué (Code, indicateur,...).
 end note
 
+class DetailUnitaireEvaluation #LightGray {
+    champsEvalue: Code [1..1]
+    resultatChampsEvalue : [1..1]
+    commentaire : Texte [0..1]
+}
+
+note right of DetailUnitaireEvaluation::resultatChampsEvalue
+  Le type du résultat du champ évalué est dépendant du champ évalué (Code, indicateur,...).
+end note
+
 Professionnel <|-- Evaluateur
 Professionnel <|-- Responsable
 Professionnel <|-- Auteur
+
 Evaluateur "0..1" -- "0..*" Evaluation
 Responsable "0..1" -- "0..*" Evaluation
 Auteur "0..1" -- "0..*" Evaluation
 Usager "1" -- "0..*" Evaluation
 Evaluation "1" -- "0..*" DetailEvaluation
+DetailEvaluation "1" -- "0..*" DetailUnitaireEvaluation
 Evaluation "1" -- "0..*" Statut
 
 @enduml

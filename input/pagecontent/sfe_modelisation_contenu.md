@@ -1186,8 +1186,7 @@ Admission prévisionnelle d’un usager dans un ESSMS.
 
 ##### Classe Evaluation
 
-Evaluation globale du niveau de la perte d'autonomie d'un usager.
-À l’issue de l’évaluation, la personne se voit attribuer un résultat caractérisant son niveau de perte d'autonomie.
+Résulatat de l'évaluation globale d'un usager.
 
 <table style="width:100%">
   <tr>
@@ -1227,8 +1226,9 @@ Evaluation globale du niveau de la perte d'autonomie d'un usager.
 
 ##### Classe DetailEvaluation
 
-Grille utilisée pour évaluer le niveau de la perte d'autonomie d'une personne. Elle est associée à l'évaluation globale de la personne.
-Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné à la personne.
+Cette classe permet de porter le résultat d’un champ évalué. Le détail de l’évaluation de ce champ peut être transmis à travers un deuxième niveau de détail sous la forme de la classe "DetailUnitaireEvaluation".<br>
+
+Pour les évaluations AGGIR PH PA SSIAD, chaque champ évalué doit être détaillé selon 4 critères d'évaluations dans la classe "DetailUnitaireEvaluation".
 
 <table style="width:100%">
   <tr>
@@ -1250,8 +1250,6 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
     <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
     <td>
     - Evaluation AGGIR PH PA SSIAD : Le résultat du champ évalué peut véhiculer un code intermédiaire : JDV_ResultatEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.816 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs.</a><br>
-    Et doit contenir l'évaluation des 4 critères : JDV_ResultatQuestionEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.817 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs.</a><br>
-    Deux niveaux de détail sont possibles.<br>
     - Evaluation de la situation SSIAD : Le résultat attendu pour chaque champ évalué d'une évaluation de la situation des SSIAD est un booléen.<br>
     - Evaluation Serafin : Le résultat attendu pour chaque champ évalué d'une évaluation SERAFIN est un entier.
     </td>
@@ -1261,6 +1259,35 @@ Pour chaques rubriques de la grille, un résultat intérmédiaire est décerné 
     <td>Commentaire libre.</td>
   </tr>
 </table>
+
+##### Classe DetailUnitaireEvaluation
+
+Cette classe permet d’associer à un champ évalué de la classe "DetailEvaluation" le résultat détaillé de l’évaluation.
+
+<table style="width:100%">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>champsEvalue : [1..1] Code</td>
+    <td>Critère évalué.<br>
+    Jeu(x) de valeur(s) associé(s) : 
+    - Evaluation AGGIR PH PA SSIAD : ce champ contient la valeur du critère évalué : JDV_ResultatQuestionEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.817 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs.</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td>resultatChampsEvalue : [1..1] Type de résultat du critère évalué. Son type est dépendant de la grille (Code, indicateur,...)</td>
+    <td>
+    - Evaluation AGGIR PH PA SSIAD : Le résultat attendu pour chaque champ évalué est un booléen.
+    </td>
+  </tr>
+  <tr>
+    <td>commentaire : [0..1] Texte</td>
+    <td>Commentaire libre.</td>
+  </tr>
+</table>
+
 
 ##### Classe Evaluateur
 
