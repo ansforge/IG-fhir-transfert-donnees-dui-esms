@@ -1186,7 +1186,7 @@ Admission prévisionnelle d’un usager dans un ESSMS.
 
 ##### Classe Evaluation
 
-Résulatat de l'évaluation globale d'un usager.
+Résultat de l'évaluation globale d'un usager.
 
 <table style="width:100%">
   <tr>
@@ -1226,9 +1226,8 @@ Résulatat de l'évaluation globale d'un usager.
 
 ##### Classe DetailEvaluation
 
-Cette classe permet de porter le résultat d’un champ évalué. Le détail de l’évaluation de ce champ peut être transmis à travers un deuxième niveau de détail sous la forme de la classe "DetailUnitaireEvaluation".<br>
-
-Pour les évaluations AGGIR PH PA SSIAD, chaque champ évalué doit être détaillé selon 4 critères d'évaluations dans la classe "DetailUnitaireEvaluation".
+Cette classe permet de porter le détail structuré d'une grille d'évaluation sous forme de champs évalués associés à un résultat d'évaluation (premier niveau).
+Le détail de l’évaluation de ce champ peut être transmis à travers un deuxième niveau de détail sous la forme d'une deuxième itération cette classe.<br>
 
 <table style="width:100%">
   <tr>
@@ -1247,22 +1246,23 @@ Pour les évaluations AGGIR PH PA SSIAD, chaque champ évalué doit être détai
     </td>
   </tr>
   <tr>
-    <td>resultatChampsEvalue : [1..1] Le type est dépendant de la grille (Code, indicateur,...)</td>
-    <td>
+    <td>resultatChampsEvalue : [1..1]</td>
+    <td>Résultat du champs évalué dont le type est défini selon la grille d'évaluation.<br>
     - Evaluation AGGIR PH PA SSIAD : Le résultat du champ évalué peut véhiculer un code intermédiaire : JDV_ResultatEvaluation_CISIS avec l'OID 1.2.250.1.213.1.1.5.816 publié sur <a href="https://esante.gouv.fr/annexe-vocabulaire-et-jeux-de-valeurs">annexe-vocabulaire-et-jeux-de-valeurs.</a><br>
-    - Evaluation de la situation SSIAD : Le résultat attendu pour chaque champ évalué d'une évaluation de la situation des SSIAD est un booléen.<br>
-    - Evaluation Serafin : Le résultat attendu pour chaque champ évalué d'une évaluation SERAFIN est un entier.
+    Pour les évaluations AGGIR PH PA SSIAD, chaque champ évalué doit être détaillé selon 4 critères dans un deuxième niveau de détail.<br>
+    - Evaluation de la situation SSIAD : booléen.<br>
+    - Evaluation Serafin : entier.
     </td>
   </tr>
   <tr>
     <td>commentaire : [0..1] Texte</td>
-    <td>Commentaire libre.</td>
+    <td>Commentaire libre à l'évaluation du champ évalué.</td>
   </tr>
 </table>
 
-##### Classe DetailUnitaireEvaluation
+<u>Deuxième niveau de détail</u>
 
-Cette classe permet d’associer à un champ évalué de la classe "DetailEvaluation" le résultat détaillé de l’évaluation.
+Ce niveau permet d'associer à un champ évalué de la classe "DetailEvaluation" (premier niveau), un niveau additionnel de détail de l'évaluation de ce champ.
 
 <table style="width:100%">
   <tr>
@@ -1277,14 +1277,14 @@ Cette classe permet d’associer à un champ évalué de la classe "DetailEvalua
     </td>
   </tr>
   <tr>
-    <td>resultatChampsEvalue : [1..1] Type de résultat du critère évalué. Son type est dépendant de la grille (Code, indicateur,...)</td>
-    <td>
-    - Evaluation AGGIR PH PA SSIAD : Le résultat attendu pour chaque champ évalué est un booléen.
+    <td>resultatChampsEvalue : [1..1]</td>
+    <td>Résultat du champs évalué dont le type est défini selon la grille d'évaluation.<br>
+    - Evaluation AGGIR PH PA SSIAD : booléen.
     </td>
   </tr>
   <tr>
     <td>commentaire : [0..1] Texte</td>
-    <td>Commentaire libre.</td>
+    <td>Commentaire libre relatif à l'évaluation du champ évalué.</td>
   </tr>
 </table>
 
