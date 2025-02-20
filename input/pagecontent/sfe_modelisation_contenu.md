@@ -1229,6 +1229,8 @@ Résultat de l'évaluation globale d'un usager.
 Cette classe permet de porter le détail structuré d'une grille d'évaluation sous forme de champs évalués associés à un résultat d'évaluation (premier niveau).
 Le détail de l’évaluation de ce champ peut être transmis à travers un deuxième niveau de détail sous la forme d'une deuxième itération cette classe.<br>
 
+<u>Premier niveau de détail</u>
+
 <table style="width:100%">
   <tr>
     <th>Nom</th>
